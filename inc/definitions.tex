@@ -1,0 +1,484 @@
+\providecommand{\href}[2]{#2}
+
+\newcommand{\incl}{{\tt inclusive}}
+\newcommand{\fidYR}{{\tt fiducial-YR}}
+\newcommand{\fidATLAS}{{\tt fiducial-ATLAS}}
+
+\newcommand{\stepone}{{Step\,I}}
+\newcommand{\steptwo}{{Step\,II}}
+\newcommand{\stepthree}{{Step\,III}}
+
+\newcommand\tS{\tilde{S}}
+\newcommand\F{${\textrm F}$}
+\newcommand\FJ{${\textrm FJ}$}
+\newcommand\FJJ{${\textrm FJJ}$}
+\newcommand\PhiBorn{\Phi_{\scriptscriptstyle \textrm B}}
+\newcommand\PhiReal{\Phi_{\scriptscriptstyle \textrm R}}
+%\newcommand\PhiB{\Phi_{\scriptscriptstyle \textrm H}}
+\newcommand\PhiB{\Phi_{\scriptscriptstyle \textrm F}}
+\newcommand\PhiBres{\Phi_{\scriptscriptstyle \textrm F,res}}
+
+\newcommand{\flav}{\ell}
+\newcommand{\flavBorn}{\flav_{\scriptscriptstyle \textrm B}}
+\newcommand{\fullflavBorn}{\hat \flav_{\scriptscriptstyle \textrm B}}
+\newcommand{\flavprimeBorn}{\flav'_{\scriptscriptstyle \textrm B}}
+\newcommand{\fullflavprimeBorn}{\hat \flav'_{\scriptscriptstyle \textrm B}}
+\newcommand{\flavB}{\flav_{\scriptscriptstyle \textrm F}}
+\newcommand{\fullflavB}{\hat \flav_{\scriptscriptstyle \textrm F}}
+\newcommand{\flavBJ}{\flav_{\scriptscriptstyle \textrm FJ}}
+\newcommand{\fullflavBJ}{\hat \flav_{\scriptscriptstyle \textrm FJ}}
+\newcommand{\flavBJJ}{\flav_{\scriptscriptstyle \textrm FJJ}}
+\newcommand{\fullflavBJJ}{\hat \flav_{\scriptscriptstyle \textrm FJJ}}
+\newcommand{\projflav}{\flavB\leftarrow\flavBJ}
+\newcommand{\CF}{C_{\mathrm{F}}}
+\newcommand{\CA}{C_{\mathrm{A}}}
+\newcommand{\NC}{N_{\mathrm{c}}}
+\newcommand{\nf}{N_f}
+\newcommand{\TF}{T_{\mathrm{F}}}
+
+\newcommand{\flavZg}{\flav_{\scriptscriptstyle Z\gamma}}
+\newcommand{\fullflavZg}{\hat \flav_{\scriptscriptstyle Z\gamma}}
+\newcommand{\flavZgJ}{\flav_{\scriptscriptstyle Z\gamma {\textrm J}}}
+\newcommand{\fullflavZgJ}{\hat \flav_{\scriptscriptstyle Z\gamma {\textrm J}}}
+\newcommand{\flavZgJJ}{\flav_{\scriptscriptstyle Z\gamma {\textrm J}}}
+\newcommand{\fullflavZgJJ}{\hat \flav_{\scriptscriptstyle Z\gamma {\textrm J}}}
+\newcommand{\projflavZg}{\flavZg\leftarrow\flavZgJ}
+
+%\newcommand\PhiBJ{\Phi_{\scriptscriptstyle \textrm HJ}}
+\newcommand\PhiBJ{\Phi_{\scriptscriptstyle \textrm FJ}}
+\newcommand\ZJ{Z\gamma J}
+\newcommand\PhiZJ{\Phi_{\scriptscriptstyle \textrm Z\gamma J}}
+\newcommand\PhiBJbar{{\bar \Phi}'_{\scriptscriptstyle \textrm FJ}}
+\newcommand\PhiBJJ{\Phi_{\scriptscriptstyle \textrm FJJ}}
+\newcommand\PhiZJJ{\Phi_{\scriptscriptstyle \textrm Z\gamma JJ}}
+\newcommand\PhiZgam{\Phi_{\scriptscriptstyle \textrm Z\gamma}}
+\newcommand{\Fcorr}{F^{\tmop{corr}}_\ell}
+\newcommand{\order}[1]{{\cal O}\left(#1\right)}
+\newcommand{\aew}{\alpha_{\text{\scalefont{0.77}EW}}} 
+\newcommand{\aw}{\alpha_w}
+\newcommand{\asCMW}{\alpha_s^{\textrm †CMW}}
+%\newcommand{\cO}[1]{{\cal O}\left(#1\right)}
+\newcommand{\NNLL}{\text{NNLL}}
+\newcommand{\eff}{\epsilon}
+\newcommand{\ee}{\ell^+\ell^-}
+\newcommand{\kt}[1]{k_{\scaleto{\textrm T}{4pt},#1}}
+\newcommand{\veckt}[1]{\vec{k}_{\scaleto{\textrm T}{4pt},#1}}
+%\newcommand{\dk}[1]{\langle \mathd k_{#1}\rangle}
+\newcommand{\fullF}{\mathcal{F}}
+\newcommand{\FNLL}{\mathcal{F}_{\textrm NLL}}
+\newcommand{\FNNLL}{\mathcal{F}_{\textrm NNLL}}
+\newcommand{\ie}{i.e.\,}
+\newcommand{\css}{\text{\scriptsize CSS}}
+\newcommand{\zi}{z_i^{(\ell_i)}}
+\newcommand{\pt}{p_{\text{\relscale{0.77}T}}}
+\newcommand{\GZ}{{\Gamma_Z}}
+\newcommand{\GW}{{\Gamma_W}}
+\newcommand{\thW}{{\theta_W}}
+\newcommand{\mtop}{{m_{\text{\relscale{0.77}top}}}}
+\newcommand{\qt}{{q_{\text{\relscale{0.77}T}}}}
+\newcommand{\ptarg}[1]{{p_{\text{\relscale{0.77}T,$#1$}}}}
+\newcommand{\marg}[1]{{m_{\text{\relscale{0.77}$#1$}}}}
+\newcommand{\ptg}{p_{\text{\relscale{0.77}T,$\gamma$}}}
+\newcommand{\ptgcut}{{p_{\text{\relscale{0.77}T,$\gamma$}}^{\textrm cut}}}
+\newcommand{\ptjcut}{{p_{\text{\relscale{0.77}T,$j$}}^{\textrm cut}}}
+
+%%newdef
+\newcommand{\ptjmin}{\bar{p}_{\text{\relscale{0.77}T,$j$}}}
+\newcommand{\ptgmin}{\bar{p}_{\text{\relscale{0.77}T,$\gamma$}}}
+\newcommand{\ptgone}{p_{\text{\relscale{0.77}T,$\gamma_1$}}}
+\newcommand{\ptgtwo}{p_{\text{\relscale{0.77}T,$\gamma_2$}}}
+\newcommand{\ptgthree}{p_{\text{\relscale{0.77}T,$\gamma_3$}}}
+
+\newcommand{\ptr}{{p_{\text{\relscale{0.77}T}}}^{\text{\relscale{0.9}r}}}
+\newcommand{\ptrad}{{p_{\text{\relscale{0.77}T,rad}}}}
+\newcommand{\pth}{{p_{\text{\relscale{0.77}T,$H$}}}}
+\newcommand{\ptz}{{p_{\text{\relscale{0.77}T,$Z$}}}}
+\newcommand{\ptw}{{p_{\text{\relscale{0.77}T,$W$}}}}
+\newcommand{\ptnu}{{p_{\text{\relscale{0.77}T,$\nu$}}}}
+\newcommand{\mtwz}{{m_{\text{\relscale{0.77}T,$WZ$}}}}
+\newcommand{\dphiwz}{{\Delta\phi_{\text{\relscale{0.77}$WZ$}}}}
+\newcommand{\dyZlW}{{|y_{\text{\relscale{0.77}$Z$}}-y_{\text{\relscale{0.77}$
+\ell_W$}}|}}
+\newcommand{\ptww}{{p_{\text{\relscale{0.77}T,$WW$}}}}
+\newcommand{\ptwp}{{p_{\text{\relscale{0.77}T,$W^+$}}}}
+\newcommand{\ptwm}{{p_{\text{\relscale{0.77}T,$W^-$}}}}
+\newcommand{\mtww}{{m_{\text{\relscale{0.77}T,$WW$}}}}
+\newcommand{\mtwwexp}{{m_{\text{\relscale{0.77}T,$WW$}}^{\textrm exp}}}
+\newcommand{\ptllg}{{p_{\text{\relscale{0.77}T,}\ell\ell\gamma}}}
+\newcommand{\ptzg}{\ptllg}
+\newcommand{\ptll}{{p_{\text{\relscale{0.77}T,$e^+e^-$}}}}
+\newcommand{\ptlnu}{{p_{\text{\relscale{0.77}T,$\mu\nu_\mu$}}}}
+\newcommand{\ptj}{p_{\text{\relscale{0.77}T,$j$}}}
+\newcommand{\ptjone}{{p_{\text{\relscale{0.77}T,$j_1$}}}}
+\newcommand{\ptjoneveto}{{p_{\text{\relscale{0.77}T,$j_1$}}^{\textrm veto}}}
+\newcommand{\ptjtwo}{{p_{\text{\relscale{0.77}T,$j_2$}}}}
+\newcommand{\ptlm}{{p_{\text{\relscale{0.77}T,$\ell^-$}}}}
+\newcommand{\ptl}{{p_{\text{\relscale{0.77}T,$\ell$}}}}
+\newcommand{\ptlone}{{p_{\text{\relscale{0.77}T,$\ell_1$}}}}
+\newcommand{\ptltwo}{{p_{\text{\relscale{0.77}T,$\ell_2$}}}}
+\newcommand{\ptmiss}{{p_{\text{\relscale{0.77}T,miss}}}}
+\newcommand{\ptmissrel}{{p_{\text{\relscale{0.77}T,miss,rel}}}}
+\newcommand{\yh}{{y_{\text{\relscale{0.77}H}}}}
+\newcommand{\yz}{{y_{\text{\relscale{0.77}Z}}}}
+\newcommand{\ywp}{{y_{\text{\relscale{0.77}$W^+$}}}}
+\newcommand{\yl}{{y_{\text{\relscale{0.77}$\ell$}}}}
+\newcommand{\ylone}{{y_{\text{\relscale{0.77}$\ell_1$}}}}
+\newcommand{\dphill}{{\Delta\phi_{\text{\relscale{0.77}$\ell_1\ell_2$}}}}
+\newcommand{\yww}{{y_{\text{\relscale{0.77}$WW$}}}}
+\newcommand{\yjone}{{y_{\text{\relscale{0.77}$j_1$}}}}
+\newcommand{\dyww}{{\Delta y_{\text{\relscale{0.77}$W^-,W^+$}}}}
+\newcommand{\mh}{{m_{\text{\relscale{0.77}H}}}}
+\newcommand{\mz}{{m_{\text{\relscale{0.77}Z}}}}
+\newcommand{\mw}{{m_{\text{\relscale{0.77}W}}}}
+\newcommand{\mww}{{m_{\text{\relscale{0.77}WW}}}}
+\newcommand{\mwsq}{{m^2_{\text{\relscale{0.77}W}}}}
+\newcommand{\mt}{{m_{\text{\relscale{0.77}t}}}}
+\newcommand{\mT}{{m_{\text{\relscale{0.77}T}}}}
+\newcommand{\mgj}{{m_{\text{\relscale{0.77}$\gamma j_1$}}}}
+\newcommand{\mllg}{{m_{\text{\relscale{0.77}$\ell\ell\gamma$}}}}
+\newcommand{\mlnu}{{m_{\text{\relscale{0.77}$\mu\nu_\mu$}}}}
+\newcommand{\etal}{{\eta_{\text{\relscale{0.77}$\ell$}}}}
+\newcommand{\etallg}{{\eta_{\text{\relscale{0.77}$\ell\ell\gamma$}}}}
+\newcommand{\etalone}{{\eta_{\text{\relscale{0.77}$\ell_1$}}}}
+\newcommand{\etaltwo}{{\eta_{\text{\relscale{0.77}$\ell_2$}}}}
+\newcommand{\etag}{{\eta_{\text{\relscale{0.77}$\gamma$}}}}
+\newcommand{\etaj}{{\eta_{\text{\relscale{0.77}j}}}}
+\newcommand{\etah}{{\eta_{\text{\relscale{0.77}H}}}}
+\newcommand{\detallgj}{{\Delta\eta_{\text{\relscale{0.77}$\ell\ell\gamma, j_1$}}}}
+\newcommand{\dphillg}{{\Delta\phi_{\text{\relscale{0.77}$\ell\ell,\gamma$}}}}
+\newcommand{\drlg}{{\Delta R_{\text{\relscale{0.77}$\ell \gamma$}}}}
+\newcommand{\drgjone}{{\Delta R_{\text{\relscale{0.77}$\gamma j_1$}}}}
+\newcommand{\drgjtwo}{{\Delta R_{\text{\relscale{0.77}$\gamma j_2$}}}}
+\newcommand{\drej}{{\Delta R_{\text{\relscale{0.77}$e j$}}}}
+
+%new def
+\newcommand{\rjg}{R_{\text{\relscale{0.77}$j \gamma$}}}
+\newcommand{\rjgone}{R_{\text{\relscale{0.77}$j \gamma_1$}}}
+\newcommand{\rjgtwo}{R_{\text{\relscale{0.77}$j \gamma_2$}}}
+\newcommand{\rjgthree}{R_{\text{\relscale{0.77}$j \gamma_3$}}}
+\newcommand{\rjgmin}{\bar{R}_{\text{\relscale{0.77}$j \gamma$}}}
+\newcommand{\rjonegone}{R_{\text{\relscale{0.77}$j_1 \gamma_1$}}}
+\newcommand{\rjonegtwo}{R_{\text{\relscale{0.77}$j_1 \gamma_2$}}}
+\newcommand{\rjonegthree}{R_{\text{\relscale{0.77}$j_1 \gamma_3$}}}
+\newcommand{\rjtwogone}{R_{\text{\relscale{0.77}$j_2 \gamma_1$}}}
+\newcommand{\rjtwogtwo}{R_{\text{\relscale{0.77}$j_2 \gamma_2$}}}
+\newcommand{\rjtwogthree}{R_{\text{\relscale{0.77}$j_2 \gamma_3$}}}
+
+
+\newcommand{\lw}{\ensuremath{\mu}}
+\newcommand{\lpw}{\ensuremath{\ell^+_{\text{\relscale{0.77}W}}}}
+\newcommand{\lmw}{\ensuremath{\ell^-_{\text{\relscale{0.77}W}}}}
+\newcommand{\lpmw}{\ensuremath{\ell^{\pm}_{\text{\relscale{0.77}W}}}}
+
+\newcommand{\lz}{\ensuremath{e}}
+\newcommand{\lpz}{\ensuremath{e^+}}
+\newcommand{\lmz}{\ensuremath{e^-}}
+\newcommand{\lpmz}{\ensuremath{e^{\pm}_{\text{\relscale{0.77}}}}}
+\newcommand{\lzlead}{\ensuremath{e_{\text{\relscale{0.77}Z,1}}}}
+\newcommand{\lzsubl}{\ensuremath{e_{\text{\relscale{0.77}Z,2}}}}
+
+\newcommand{\ptlz}{\ensuremath{p_{\text{\relscale{0.77}T,\lz}}}}
+\newcommand{\ptlw}{\ensuremath{p_{\text{\relscale{0.77}T,\lw}}}}
+\newcommand{\ptlzlead}{\ensuremath{p_{\text{\relscale{0.77}T,\lzlead}}}}
+\newcommand{\ptlzsubl}{\ensuremath{p_{\text{\relscale{0.77}T,\lzsubl}}}}
+
+\newcommand{\mlll}{\ensuremath{m_{\text{\relscale{0.77}$3\ell$}}}}
+\newcommand{\mwz}{\ensuremath{m_{\text{\relscale{0.77}WZ}}}}
+\newcommand{\mtw}{\ensuremath{m_{\text{\relscale{0.77}T,W}}}}
+\newcommand{\ptwz}{\ensuremath{p_{\text{\relscale{0.77}T,WZ}}}}
+\newcommand{\ptlp}{\ensuremath{p_{\text{\relscale{0.77}T,\ell'}}}}
+\newcommand{\dRll}{\ensuremath{\Delta R_{\text{\relscale{0.77}$\ell\ell$}}}}
+\newcommand{\dRllp}{\ensuremath{\Delta R_{\text{\relscale{0.77}$\ell\ell'$}}}}
+\newcommand{\etalp}{\ensuremath{\eta_{\text{\relscale{0.77}$\ell'$}}}}
+
+\newcommand{\qcdfull}{\ensuremath{\text{NNLO}_{\textrm QCD}^{{\textrm (QCD,QED)}_{\textrm PS}}}}
+\newcommand{\qcdqcd}{\ensuremath{\text{NNLO}_{\textrm QCD}^{{\textrm (QCD)}_{\textrm PS}}}}
+
+\newcommand{\addfull}{\ensuremath{\text{NNLO}_{\textrm QCD}^{\textrm (QCD,QED)_{\textrm PS}} + \delta{\textrm NLO}_{\textrm EW}^{\textrm (QCD,QED)_{\textrm PS}}}}
+\newcommand{\addqcdfull}{\ensuremath{\text{NNLO}_{\textrm QCD}^{\textrm (QCD,QED)_{\textrm PS}} + \delta{\textrm NLO}_{\textrm EW}^{\textrm (QED)_{\textrm PS}}}}
+\newcommand{\addqedfull}{\ensuremath{\text{NLO}_{\textrm EW}^{\textrm (QCD,QED)_{\textrm PS}} + \delta{\textrm NNLO}_{\textrm QCD}^{\textrm (QCD)_{\textrm PS}}}}
+
+\newcommand{\multfull}{\ensuremath{\text{NNLO}_{\textrm QCD}^{\textrm (QCD,QED)_{\textrm PS}} \times \text{K-NLO}_{\textrm EW}^{\textrm (QCD,QED)_{\textrm PS}}}}
+\newcommand{\multqcdfull}{\ensuremath{\text{NNLO}_{\textrm QCD}^{\textrm (QCD,QED)_{\textrm PS}} \times \text{K-NLO}_{\textrm EW}^{\textrm (QED)_{\textrm PS}}}}
+\newcommand{\multqedfull}{\ensuremath{\text{NLO}_{\textrm EW}^{\textrm (QCD,QED)_{\textrm PS}} \times \text{K-NNLO}_{\textrm QCD}^{\textrm (QCD)_{\textrm PS}}}}
+
+\newcommand{\multmatrix}{\ensuremath{\text{NNLO}_{\textrm QCD}^{\textrm (QCD)_{\textrm PS}} \times \text{K-NLO}_{\textrm EW}^{\text{\Matrix{}}}}}
+\newcommand{\QCDpEW}{\ensuremath{ \text{NNLO}_{\textrm QCD+EW}^{\textrm (QCD, QED)_{\textrm PS}}}} 
+\newcommand{\QCDtEW}{\ensuremath{ \text{NNLO}_{\textrm QCDxEW}^{\textrm (QCD, QED)_{\textrm PS}}}} 
+\newcommand{\QCDtEWfo}{\ensuremath{ \text{NNLO}_{\textrm QCD}^{\textrm (QCD)_{\textrm PS}} \times \text{K-NLO}_{\textrm EW}^{\textrm (f.o.)}}} 
+
+
+
+\newcommand{\drlj}{{\Delta R_{\text{\relscale{0.77}$\ell,j$}}}}
+\newcommand{\drgj}{{\Delta R_{\text{\relscale{0.77}$\gamma j$}}}}
+\newcommand{\drgjo}{{\Delta R_{\text{\relscale{0.77}$\gamma j_1$}}}}
+\newcommand{\drgjt}{{\Delta R_{\text{\relscale{0.77}$\gamma j_2$}}}}
+\newcommand{\fcl}{{E_{\text{\relscale{0.77}T}}^{\text{\relscale{0.77}cone$0.2$}}/p_{\text{\relscale{0.77}T},\gamma}}}
+\newcommand{\muF}{{\mu_{\text{\relscale{0.77}F}}}}
+\newcommand{\muR}{{\mu_{\text{\relscale{0.77}R}}}}
+\newcommand{\muFtwo}{{\mu^2_{\text{\relscale{0.77}F}}}}
+\newcommand{\muRtwo}{{\mu^2_{\text{\relscale{0.77}R}}}}
+\newcommand{\muFc}{{\mu_{\text{\relscale{0.77}F},0}}}
+\newcommand{\muRc}{{\mu_{\text{\relscale{0.77}R},0}}}
+\newcommand{\muRy}{{\mu_{\text{\relscale{0.77}R}}^{(0),y}}}
+\newcommand{\muRb}{{\mu_{\text{\relscale{0.77}R}}^{(0),\alpha}}}
+\newcommand{\KF}{K_{\text{\relscale{0.77}F}}}
+\newcommand{\KR}{K_{\text{\relscale{0.77}R}}}
+\newcommand{\KRy}{{K^y_{\text{\relscale{0.77}R}}}}
+\newcommand{\KQ}{{K_{\text{\relscale{0.77}Q}}}}
+\newcommand{\Q}{{Q_{\text{\relscale{0.77}$0$}}}}
+\newcommand{\Qc}{{Q_{\text{\relscale{0.77}res},0}}}
+
+\newcommand{\noun}[1]{{\scshape #1}}
+\newcommand{\MADGRAPH}{\noun{MadGraph v4}}
+\newcommand{\GOSAM}{\noun{GoSam 2.0}}
+\newcommand{\POWHEG}{\noun{Powheg}}
+\newcommand{\POWHEGMiNLO}{\noun{Powheg-MiNLO}}
+\newcommand{\POWHEGBOX}{\noun{Powheg-Box}}
+\newcommand{\POWHEGBOXRES}{\noun{Powheg-Box-Res}}
+\newcommand{\POWHEGBOXVTWO}{\noun{Powheg-Box-V2}}
+\newcommand{\minlobare}{{\noun{MiNLO}}}
+\newcommand{\minlosimple}{{\noun{MiNLO}}}
+\newcommand{\minlo}{{\noun{MiNLO$^{\prime}$}}}
+\newcommand{\minnlo}{{\noun{MiNNLO$_{\textrm{PS}}$}}}
+\newcommand{\GENEVA}{\noun{Geneva}}
+\newcommand{\Matrix}{{\noun{Matrix}}}
+\newcommand{\OpenLoops}{{\noun{OpenLoops}}}
+\newcommand{\PYTHIA}[1]{\noun{Pythia{#1}}}
+
+\newcommand{\NNLOps}{NNLO+PS}
+\newcommand{\fnnlo}{NNLO}
+\newcommand{\fnnnlo}{N$^3$LO}
+\newcommand{\fnlo}{NLO}
+\newcommand{\NLOps}{NLO+PS}
+\newcommand{\setupinclusive}{{\tt inclusive setup}}
+\newcommand{\setupfiducial}{{\tt fiducial setup}}
+\newcommand{\setupatlas}{{\tt ATLAS setup}}
+
+\newcommand{\abar}{\frac{\as}{2\pi}}
+\newcommand{\abarmu}[1]{\frac{\as(#1)}{2\pi}}
+
+\newcommand{\Vsc}{V}
+\newcommand{\Vwa}{V_{\textrm wa}}
+\newcommand{\Vfull}{V}
+\newcommand{\wzc}{V_{\textrm hc}}
+\newcommand{\Vr}{V_{r}}
+\newcommand{\ptB}{p_{t}^{(B)}}
+
+\newcommand{\dZ}{d{\cal Z}[\{R', k_i\}]}
+\newcommand{\RpNLL}{R'_{\mathrm{NLL}}}
+
+\newcommand{\LambdaPWG}{\Lambda_{\textrm pwg}}
+
+\newcommand{\yll}{{y_{\text{\relscale{0.77}\ell\ell}}}}
+\newcommand{\mll}{{m_{\text{\relscale{0.77}\ell\ell}}}}
+\newcommand{\mQQF}{m_{Q\bar Q{\textrm F}}}
+\newcommand{\muQ}{\mu_{Q}}
+\newcommand{\Mdiv}{\mathcal{M}^\textrm{IR-div}}
+\newcommand{\phs}{\ensuremath{\phi^{*}_\eta}\xspace}
+
+
+
+\usepackage{xcolor}
+\newcommand{\mathd}{\mathrm{d}}
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newenvironment{enumeratealpha}{\begin{enumerate}[a{\textup{)}}] }{\end{enumerate}}
+\newenvironment{itemizedot}{\begin{itemize} \renewcommand{\labelitemi}{$\bullet$}\renewcommand{\labelitemii}{$\bullet$}\renewcommand{\labelitemiii}{$\bullet$}\renewcommand{\labelitemiv}{$\bullet$}}{\end{itemize}}
+\newcommand{\Eta}{\mathrm{H}}
+\newcommand{\tmverbatim}[1]{{\ttfamily{#1}}}
+
+\def\collr{orange}
+\def\colsp{blue}
+\def\colmw{purple}
+\def\colsk{cyan}
+\def\coldr{red}
+\def\colpt{red}
+\def\colgz{red}
+\def\coljl{magenta}
+\def\colsz{violet}
+\def\colcb{brown}
+\def\colas{magenta}
+\def\coljm{cyan}
+
+
+\newcommand{\mwcom}[1]{\textit{\textcolor{\colmw}{\{MW: #1 \}}}}
+\newcommand{\gzcom}[1]{\textit{\textcolor{\colpt}{\{GZ: #1 \}}}}
+\newcommand{\cbcom}[1]{\textit{\textcolor{\colcb}{\{CB: #1 \}}}}
+\newcommand{\ascom}[1]{\textit{\textcolor{\colas}{\{AS: #1 \}}}}
+\newcommand{\jmcom}[1]{\textit{\textcolor{\coljm}{\{JM: #1 \}}}}
+
+\newcommand{\asdel}[1]{\textcolor{\colas}{\sout{#1}}}
+\newcommand{\mwdel}[1]{\textcolor{\colmw}{\sout{#1}}}
+\newcommand{\gzdel}[1]{\textcolor{\colmg}{\sout{#1}}}
+\newcommand{\jmdel}[1]{\textcolor{\coljm}{\sout{#1}}}
+
+\newcommand{\mwadd}[2]{\textcolor{\colmw}{\sout{#1}#2}}
+\newcommand{\asadd}[2]{\textcolor{\colas}{\sout{#1}#2}}
+\newcommand{\cbadd}[2]{\textcolor{\colcb}{\sout{#1}#2}}
+\newcommand{\gzadd}[2]{\textcolor{\colgz}{\sout{#1}#2}}
+\newcommand{\jmadd}[2]{\textcolor{\coljm}{\sout{#1}#2}}
+
+
+\def\ltap{\raisebox{-.6ex}{\rlap{$\,\sim\,$}} \raisebox{.4ex}{$\,<\,$}} 
+\def\gtap{\raisebox{-.6ex}{\rlap{$\,\sim\,$}} \raisebox{.4ex}{$\,>\,$}} 
+\def\lra{\leftrightarrow} 
+\def\naive{na\"{\i}ve} 
+%\newcommand\as{\alpha_{\mathrm{S}}} 
+%\newcommand\f[2]{\frac{#1}{#2}} 
+\def\bom#1{{\mbox{\boldmath $#1$}}} 
+\def\to{\rightarrow}
+\def\ito{\leftarrow} 
+\def\nn{\nonumber} 
+\def\mbbggs{m_{2b2\gamma}^{\star}}
+\def\arrowlimit#1{\mathrel{\mathop{\longrightarrow}\limits_{#1}}} 
+\def\ptmin{p_{T}^{\textrm min}}
+\def\ptmax{p_{T}^{\textrm max}}
+\def\ptveto{p_{T,\ell\ell\gamma}^{\textrm veto}}
+\def\ep{\epsilon}
+\def\ms{${\overline {\textrm MS}}$}
+\def\perc{\%}
+\def\mH{m_H}
+\def\mb{m_b}
+\def\mt{m_t}
+\def\mw{m_W}
+\def\mz{m_Z}
+\def\qT{q_T}
+%\def\pT{p_T}
+\def\GeV{\mathrm{GeV}}
+\def\TeV{\mathrm{TeV}}
+\def\tL{{\widetilde L}}
+
+\newcommand{\eqn}[1]{eq.\,(\ref{#1})}
+\newcommand{\neqn}[1]{eqs.\,(\ref{#1})}
+\newcommand{\fig}[1]{figure\,\ref{#1}}
+\newcommand{\figs}[1]{figures\,\ref{#1}}
+\newcommand{\tab}[1]{table\,\ref{#1}}
+\newcommand{\sct}[1]{section\,\ref{#1}}
+\newcommand{\scts}[1]{sections\,\ref{#1}}
+\newcommand{\app}[1]{appendix\,\ref{#1}}
+
+\def\refeq#1{\mbox{eq.\,\eqref{#1}}}
+\def\refeqs#1{\mbox{eqs.\,\eqref{#1}}}
+\def\reffi#1{\mbox{figure\,\ref{#1}}}
+\def\reffitwo#1#2{\mbox{figures\,\ref{#1} and \ref{#2}}}
+\def\reffis#1#2{\mbox{figures\,\ref{#1}--\ref{#2}}}
+\def\refta#1{\mbox{table\,\ref{#1}}}
+\def\reftatwo#1#2{\mbox{tables\,\ref{#1} and \ref{#2}}}
+\def\reftas#1{\mbox{tables\,\ref{#1}}}
+\def\refse#1{\mbox{section\,\ref{#1}}}
+\def\refsetwo#1#2{\mbox{sections\,\ref{#1} and \ref{#2}}}
+\def\refses#1{\mbox{sections\,\ref{#1}}}
+\def\refapp#1{\mbox{app.\,\ref{#1}}}
+\def\citere#1{\mbox{ref.\,\cite{#1}}}
+\def\citeres#1{\mbox{refs.\,\cite{#1}}}
+
+
+\newcommand{\rcut}{\ensuremath{r_{\mathrm{cut}}}}
+%\newcommand{\zz}{\ensuremath{ZZ}}
+\newcommand{\ww}{\ensuremath{W^+W^-}}
+\newcommand{\wz}{\ensuremath{W^\pm Z}}
+\newcommand{\wpz}{\ensuremath{W^+Z}}
+\newcommand{\wmz}{\ensuremath{W^-Z}}
+\newcommand{\z}{\ensuremath{Z}}
+\newcommand{\w}{\ensuremath{W}}
+
+\newcommand{\abbrev}{}
+\newcommand{\llog}{\text{\abbrev LL}}
+\newcommand{\nll}{\text{\abbrev NLL}}
+\newcommand{\nnll}{\text{\abbrev NNLL}}
+\newcommand{\lo}{\text{\abbrev LO}}
+\newcommand{\nlo}{\text{\abbrev NLO}}
+\newcommand{\nnlo}{\text{\abbrev NNLO}}
+\newcommand{\nlonll}{\nlo\plus\nll}
+\newcommand{\nnlonnll}{\nnlo\plus\nnll}
+\newcommand{\qcd}{{\abbrev QCD}}
+\newcommand{\D}{\mathrm{d}}
+
+\newcommand{\cme}{centre-of-mass energy}
+\newcommand{\cmes}{centre-of-mass energies}
+
+\newcommand\Tstrut{\rule{0pt}{3.0ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-1.5ex]{0pt}{0pt}}   % = `bottom' strut
+
+\interfootnotelinepenalty=10000
+%\setlength{\parindent}{0pt}
+
+\newcommand\mlbl[1]{{\mbox{\footnotesize #1}}} 
+
+\newcommand{\elle}{\ensuremath{\ell}}
+\newcommand{\genllln}{\ensuremath{\elle\elle\elle\nu}}
+\newcommand{\llln}{\elle'^\pm{\nu}_{\elle^\prime} \elle^-\elle^+}
+\newcommand{\mllln}{\ensuremath{m_{\llln}}}
+\newcommand{\ptllln}{\ensuremath{p_{T,\llln}}}
+
+
+\setlength{\tabcolsep}{5pt}
+
+\usepackage{etoolbox}
+\makeatletter
+% \tracingpatches
+\patchcmd{\@sect}{#8}{\boldmath #8}{}{}
+\let\ori@chapter\@chapter
+\def\@chapter[#1]#2{\ori@chapter[\boldmath#1]{\boldmath#2}}
+\makeatother
+
+
+
+
+\newcommand{\gev}[1]{$\unit{#1}{\giga\electronvolt}$}
+\newcommand{\tev}[1]{$\unit{#1}{\tera\electronvolt}$}
+
+\newcommand{\gevm}[1]{\unit{#1}{\giga\electronvolt}}
+\newcommand{\tevm}[1]{\unit{#1}{\tera\electronvolt}}
+
+\newcommand{\half}{$\frac{1}{2}$}
+
+\newcommand{\ddk}[1]{\frac{d^d k_{#1}}{(4\pi)^d}}
+\newcommand{\sidenote}[1]{\todo[noline]{#1}}
+
+\newcommand\calo[1]{{\cal O}\hspace{-0.2em}\left(#1\right)}
+
+\newcommand{\cala}{{\cal A}}
+\newcommand{\bbH}{\ensuremath{b\bar{b}\text{H}}}
+\newcommand{\bbtoH}{\ensuremath{b\bar{b}\rightarrow\text{H}}}
+\newcommand{\ttH}{\ensuremath{t\bar{t}\text{H}}}
+\newcommand{\bbphi}{\ensuremath{b\bar{b}\phi}}
+\newcommand{\yt}{\ensuremath{y_t}}
+\newcommand{\ytsq}{\ensuremath{y_t^2}}
+\newcommand{\yb}{\ensuremath{y_b}}
+\newcommand{\ybsq}{\ensuremath{y_b^2}}
+\newcommand{\ybyt}{\ensuremath{y_b\, y_t}}
+
+
+%%% feb15, 2025 - definitions %%%%
+\newcommand{\phiF}{\Phi_{\text{F}}}
+\newcommand{\phirad}{\Phi_{\text{rad}}}
+\newcommand{\phiFJ}{\Phi_{\text{FJ}}}
+\newcommand{\obs}{\mathcal{O}}
+\newcommand{\barphiF}{\bar{\Phi}_{\text{F}}}
+\newcommand{\barphiFJ}{\bar{\Phi}_{\text{FJ}}}
+\newcommand{\dpwg}{\Delta_{\text{pwg}}}
+\newcommand{\lpwg}{\Lambda_{\text{pwg}}}
+\newcommand{\ptF}{{p_{\text{\relscale{0.77}T,$F$}}}}
+\newcommand{\phiFJJ}{\Phi_{\text{FJJ}}}
+\newcommand{\meF}{M_{\scriptscriptstyle\mathrm F}}
+\newcommand{\meFJ}{M_{\scriptscriptstyle\mathrm FJ}}
+
+\newcommand{\phiQQF}{\Phi_{\text{X}}}
+\newcommand{\phiQQFJ}{\Phi_{\text{XJ}}}
+\newcommand{\phiQQFJJ}{\Phi_{\text{XJJ}}}
+\newcommand{\cflavF}{c_{\text{X}}}
+\newcommand{\cflavFJ}{c_{\text{XJ}}}
+\newcommand{\cflavFJJ}{c_{\text{XJJ}}}
+
+\newcommand{\msb}{\overline{\text{MS}}}
+
+\newcommand{\muIR}{{\mu_{\text{\relscale{0.77}S}}}}
+\newcommand{\muRuno}{{\mu_{\text{\relscale{0.77}R,1}}}}
+\newcommand{\muRdue}{{\mu_{\text{\relscale{0.77}R,2}}}}
+\newcommand{\muIRuno}{{\mu_{\text{\relscale{0.77}S,1}}}}
+\newcommand{\muIRdue}{{\mu_{\text{\relscale{0.77}S,2}}}}
+\newcommand{\muRunotwo}{{\mu^2_{\text{\relscale{0.77}R,1}}}}
+\newcommand{\muRduetwo}{{\mu^2_{\text{\relscale{0.77}R,2}}}}
+\newcommand{\muIRunotwo}{{\mu^2_{\text{\relscale{0.77}S,1}}}}
+\newcommand{\muIRduetwo}{{\mu^2_{\text{\relscale{0.77}S,2}}}}

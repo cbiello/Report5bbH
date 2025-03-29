@@ -1,0 +1,241 @@
+% */ vim: set tw=150: */
+\documentclass[11pt,a4paper]{article}
+\pdfoutput=1
+
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+
+\usepackage{jheppub}
+\usepackage{psfrag}
+\usepackage{slashed}
+\usepackage{cancel}
+\usepackage{lscape}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{slashed}
+\usepackage{mathtools}
+\usepackage{comment}
+\usepackage{scalefnt}
+\usepackage{siunitx}[=v2]
+\sisetup{
+    round-mode = off,
+    round-precision = 4,
+    scientific-notation = false,
+    fixed-exponent = 0,
+    group-digits = true,
+    group-separator = {\,},
+}
+
+%{{{ macros
+
+\renewcommand{\arraystretch}{1.3}
+
+\definecolor{mypink}{RGB}{219, 48, 122}
+\definecolor{mygreen}{rgb}{0,0.7,0}
+\definecolor{raspberry}{rgb}{0.53,0.15,0.34}
+\def\SB#1{\textcolor{mygreen}{{\bf\tt [SB: #1]}}}
+\def\SZ#1{\textcolor{raspberry}{{\bf\tt [SZ: #1]}}}
+
+%%% spinor products %%%
+
+\def\zz{\boldsymbol{Z}}
+\def\mi{\mathrm{MI}}
+\def\cF{\mathcal{F}}
+\def\cP{\mathcal{P}}
+\def\cC{\mathcal{C}}
+\def\cA{\mathcal{A}}
+\def\cN{\mathcal{N}}
+\def\cO{\mathcal{O}}
+\def\cD{\mathcal{D}}
+\def\cQ{\mathcal{Q}}
+\def\cJ{\mathcal{J}}
+\def\cI{\mathcal{I}}
+\def\cT{\mathcal{T}}
+\def\nn{\nonumber \\ }
+
+\def\la{\langle}
+\def\ra{\rangle}
+\def\spA#1#2{\la#1#2\ra}
+\def\spB#1#2{[#1#2]}
+\def\spAB#1#2#3{\la#1|#2|#3]}
+\def\spBA#1#2#3{[#1|#2|#3\ra}
+\def\spAA#1#2#3{\la#1|#2|#3\ra}
+\def\spBB#1#2#3{[#1|#2|#3]}
+\def\spab#1#2{\la#1|#2]}
+\def\spaa#1#2#3#4{\la#1|#2|#3|#4\ra}
+\def\spbb#1#2#3#4{[#1|#2|#3|#4]}
+\def\wh#1{\widehat#1}
+\DeclareMathOperator{\tr}{\rm tr}
+\def\trm{\tr_-}
+\def\trp{\tr_+}
+\def\MP#1#2{(#1\cdot#2)}
+\def\trfive{\tr_5}
+\def\spAXB#1#2#3#4#5{\la#1|#2|#3|#4|#5]}
+
+\def\bra#1{\langle #1|}
+\def\ket#1{|#1 \rangle}
+\def\sqbra#1{[#1|}
+\def\sqket#1{|#1]}
+\def\braket#1{\langle #1 \rangle}
+
+\def\eps{\epsilon}
+\def\fl#1{#1^\flat}
+\def\tl#1{\tilde{#1}}
+\def\wh{\widehat}
+\def\tC{\tilde{C}}
+\def\qb{{\bar{q}}}
+\def\sb{\bar{s}}
+\def\Sb{\bar{S}}
+\def\lb{\bar{\ell}}
+\def\tb{{\bar{t}}}
+\def\ttgg{\bar{t}tgg}
+\def\mren{\mathrm{mren}}
+\def\ren{\mathrm{ren}}
+\def\mct{\mathrm{mct}}
+\def\ceps{C_\eps}
+\def\as{\alpha_s}
+\def\dk#1{\frac{d^d k_{#1}}{i\pi^{d/2}e^{-\eps \gamma_E}}}
+
+\def\e{\epsilon}
+\def\tT{\tilde{T}}
+\def\coll#1#2{\overset{#1||#2}{\to}}
+\def\inf{{\rm Inf}}
+\def\gg#1{\gamma_{#1}}
+\def\XX{\chi}
+
+\def\cv#1#2{\AB{#1}{\gamma^\mu}{#2}}
+\def\cvS#1#2#3{\AB{#1}{#2}{#3}}
+
+\def\MHVb{$\overline{\rm MHV}$}
+\def\boxX{$\xcancel{\rm\bf box}$}
+
+\def\fl#1{{#1^{\flat}}}
+\def\flm#1{{#1^{\flat,\mu}}}
+\def\kf#1{{\fl{K_{#1}}}}
+\def\kfm#1{{\flm{K_{#1}}}}
+
+\def\ulim#1{\underset{#1}{\lim}}
+
+\def\fbox#1{F^{(#1)}_{\mathrm{box}}}
+\def\lh{\hat{L}}
+\def\li#1{\mathrm{Li}_{#1}}
+
+\def\finr{{\mathcal{F}}}
+\def\pole{{\mathcal{P}}}
+\def\cusp{{\mathrm{cusp}}}
+
+\newcommand{\njet}{\texttt{NJet}}
+\newcommand{\pentagonfunctions}{\texttt{PentagonFunctions++}}
+\newcommand{\finiteflow}{\texttt{FiniteFlow}}
+\newcommand{\qd}{\texttt{QD}}
+\newcommand{\eigen}{\texttt{Eigen}}
+\newcommand{\nnlojet}{\texttt{NNLOJET}}
+\newcommand{\mathematica}{\texttt{Mathematica}}
+\newcommand{\form}{\texttt{FORM}}
+\newcommand{\qgraf}{\texttt{QGRAF}}
+\newcommand{\spinney}{\texttt{Spinney}}
+\newcommand{\cpp}{\texttt{C++}}
+
+%%Christian's command
+\newcommand{\eqcite}[1]{(\ref{#1})}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+
+\newcommand{\fp}{\texttt{f64}}
+\newcommand{\fpp}{\texttt{f128}}
+\newcommand{\fppp}{\texttt{f256}}
+
+%%%% typesetting equations %%%%
+\def\s#1{s_{#1}}
+\def\d#1#2{#1\cdot #2}
+\def\p#1{#1}
+\def\pp#1{p_{#1}}
+\def\f#1{#1^\flat}
+\def\n#1{\eta_{#1}}
+
+\def\Adcc{B_n^{(1)}}
+
+\def\usepic#1#2{\parbox{#1}{\includegraphics[width=#1]{#2}}}
+\def\usepix#1#2#3#4#5#6{\parbox{#1}{\includegraphics[width=#1,trim= #3 #4 #5 #6,clip=true]{#2}}}
+
+\def\hpl11{{\mathrm{HPL}}_{1,1}}
+
+\newcolumntype{C}[1]{>{\hsize=#1\hsize\centering\arraybackslash}X}%
+
+\newcolumntype{Z}{r<{\hspace{3mm}}}
+\newcommand\mc[2]{\multicolumn{1}{>{\centering}p{#2}}{#1}} % handy shortcut macro
+% }}}
+
+%%\allowdisplaybreaks
+
+\input{inc/definitions.tex}
+
+\title{Modelling associated \bbH{} production for the LHC}
+
+%\author[a]{Authors,}
+%\affiliation[a]{Max-Planck-Institut f\"ur Physik, Boltzmannstrasse 8, 85748 Garching, Germany}
+%\emailAdd{lhc-higgs-bbh-convener@cern.ch}
+
+
+\abstract{
+Higgs production in association with bottom quarks involves both bottom-quark (\(y_b\)) and top-quark Yukawa (\(y_t\)) interactions. We present new, state-of-the-art predictions for SM Higgs, computed in accordance with the recommendations
+of the LHC Higgs Working Group. Together with their relevance in di-Higgs searches, we describe NLO+PS results for the \(y_t^2\) contribution and NNLO+PS predictions for the \(y_b^2\) contribution in both massless and massive flavour schemes. New matched predictions at fixed-order level are provided using the FONLL method to combine N3LO 5FS and NLO 4FS results. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production with resummation analytic results and novel NNLO+PS simulations.
+}
+
+
+\begin{document}
+\maketitle
+\flushbottom
+
+\section{Introduction}
+Introduction by Micheal Spira
+
+\section{Matching of \fnnnlo{} 5FS and \fnlo{} 4FS cross-sections}
+Based on 2004.04752 (ref. Bernhard Mistlberger).
+
+
+\section{Monte Carlo simulations}
+
+\subsection{NNLO+PS in the massless scheme}
+Based on 2402.04025 for \minnlo{}.\cbcom{New numbers ready.}\\
+Based on 250x.xxxxx for \GENEVA{} (ref. Alessandro Gavardi).
+
+\subsubsection{\minnlo{} and \GENEVA{} comparison}
+\cbcom{TODO.}
+\subsubsection{Heavy-Higgs for BSM studies in \minnlo{}}
+\cbcom{Ready.}
+
+\subsection{Bottom-Yukawa squared contribution at NNLO+PS in 4FS}
+Based on 2412.09510 with \minnlo{}.\cbcom{TODO: run with LHCHWG setup.}
+
+\subsection{Top-Yukawa squared contribution at NLO+PS in 4FS}
+Based on 2307.09992 (ref. Marco Zaro).
+
+\section{Modelling \bbH{} for background studies in HH searches}
+Focus on 2307.09992 mainly (and 2412.09510) in fiducial cuts for HH searches (ref. Stefano Manzoni).
+\cbcom{In 2412.09510 we focus only on $2b2\gamma$ but in principle we can do $2b2\tau$ also for the NNLO $y_b^2$ if useful/needed.}
+
+
+\section{Light-quark Yukawa sensitivity in Higgs spectra}
+\subsection{Transverse momentum resummation at NNLL'+aN3LO}
+Based on 2306.16458 (ref. Rebecca von Kuk).
+
+\subsection{Novel predictions at NNLO+PS with \minnlo{}}
+\cbcom{Ready.}
+
+\section{Outlooks and Conclusions}
+MW\\
+
+\textbf{Citation policy. }\\
+
+\textbf{Acknowledgements. }
+
+\end{document}
