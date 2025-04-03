@@ -180,14 +180,13 @@
 
 \title{Modelling associated \bbH{} production for the LHC}
 
-%\author[a]{Authors,}
+%\author[a]{All Authors,}
 %\affiliation[a]{Max-Planck-Institut f\"ur Physik, Boltzmannstrasse 8, 85748 Garching, Germany}
 %\emailAdd{lhc-higgs-bbh-convener@cern.ch}
 
 
 \abstract{
-Higgs production in association with bottom quarks involves both bottom-quark (\(y_b\)) and top-quark Yukawa (\(y_t\)) interactions. We present new, state-of-the-art predictions for SM Higgs, computed in accordance with the recommendations
-of the LHC Higgs Working Group. Together with their relevance in di-Higgs searches, we describe NLO+PS results for the \(y_t^2\) contribution and NNLO+PS predictions for the \(y_b^2\) contribution in both massless and massive flavour schemes. New matched predictions at fixed-order level are provided using the FONLL method to combine N3LO 5FS and NLO 4FS results. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production with resummation analytic results and novel NNLO+PS simulations.
+We present state-of-the-art predictions for Standard Model Higgs production in association with a bottom-quark pair (\bbH{}). Updated cross-sections are computed in accordance with the recommendations of the LHC Higgs Working Group. Different flavour schemes can be adopted: a massless calculation with five active flavours (5FS) or a calculation with massive bottom quarks and four massless flavours (4FS). First, we provide matched predictions between flavour schemes at the fixed-order level using the FONLL method to combine N3LO 5FS and NLO 4FS results. \bbH{} involves both bottom-quark ($y_b$) and top-quark Yukawa ($y_t$) interactions. TOgether with their relevance in di-Higgs searches, we present NLO+PS results for the \(y_t^2\) contribution and NNLO+PS predictions for the \(y_b^2\) contribution in both massless and massive flavor schemes. We assess a Monte Carlo uncertainty by comparing the 5FS NNLO+PS predictions obtained with the \minnlo{} and \GENEVA{} methods. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production using resummed analytic results and novel NNLO+PS simulations.
 }
 
 
@@ -196,46 +195,46 @@ of the LHC Higgs Working Group. Together with their relevance in di-Higgs search
 \flushbottom
 
 \section{Introduction}
-Introduction by Micheal Spira
+Introduction by Micheal Spira.
 
 \section{Matching of \fnnnlo{} 5FS and \fnlo{} 4FS cross-sections}
-Based on 2004.04752 (ref. Bernhard Mistlberger).
-
+Based on~\cite{Duhr:2020kzd} (ref. Bernhard Mistlberger). See if it is possible to recalculate with the new setting. $m_H/4$ can be used as a factorisation scale at a fully-inclusive level, then move to $m_H$ for all the Monte Carlo simulations.
 
 \section{Monte Carlo simulations}
 
 \subsection{NNLO+PS in the massless scheme}
-Based on 2402.04025 for \minnlo{}.\cbcom{New numbers ready.}\\
-Based on 250x.xxxxx for \GENEVA{} (ref. Alessandro Gavardi).
+Based on~\cite{Biello:2024vdh} for \minnlo{}.\cbcom{New numbers/distributions ready.}\\
+Based on 250x.xxxxx for \GENEVA{} (ref. Rebecca von Kuk and Alessandro Gavardi).
 
 \subsubsection{\minnlo{} and \GENEVA{} comparison}
-\cbcom{TODO.}
+\cbcom{TODO: inclusive (ptH, yH) and bjet observables.}
 \subsubsection{Heavy-Higgs for BSM studies in \minnlo{}}
 \cbcom{Ready.}
 
 \subsection{Bottom-Yukawa squared contribution at NNLO+PS in 4FS}
-Based on 2412.09510 with \minnlo{}.\cbcom{TODO: run with LHCHWG setup.}
+Based on \cite{Biello:2024pgo} with \minnlo{}.\cbcom{TODO: run with LHCHWG setup.}
 
 \subsection{Top-Yukawa squared contribution at NLO+PS in 4FS}
-Based on 2307.09992 (ref. Marco Zaro).
+Based on \cite{Manzoni:2023qaf} (ref. Marco Zaro).
 
 \section{Modelling \bbH{} for background studies in HH searches}
-Focus on 2307.09992 mainly (and 2412.09510) in fiducial cuts for HH searches (ref. Stefano Manzoni).
-\cbcom{In 2412.09510 we focus only on $2b2\gamma$ but in principle we can do $2b2\tau$ also for the NNLO $y_b^2$ if useful/needed.}
+Focus on \citere{Manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiducial cuts for HH searches (ref. Stefano Manzoni). NNLO+PS ggF generator with different $n_f$ is running using ATLAS resources.
 
 
 \section{Light-quark Yukawa sensitivity in Higgs spectra}
 \subsection{Transverse momentum resummation at NNLL'+aN3LO}
-Based on 2306.16458 (ref. Rebecca von Kuk).
+Based on \cite{Cal:2023mib} (ref. Rebecca von Kuk and Frank Tackmann).
 
-\subsection{Novel predictions at NNLO+PS with \minnlo{}}
+\subsection{Novel predictions with \minnlo{}}
 \cbcom{Ready.}
 
 \section{Outlooks and Conclusions}
-MW\\
 
 \textbf{Citation policy. }\\
 
 \textbf{Acknowledgements. }
+
+\bibliography{bbh}
+\bibliographystyle{JHEP}
 
 \end{document}
