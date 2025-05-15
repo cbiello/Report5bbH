@@ -187,7 +187,7 @@
 
 
 \abstract{
-We present state-of-the-art predictions for Standard Model Higgs production in association with a bottom-quark pair (\bbH{}). Updated cross-sections are computed in accordance with the recommendations of the LHC Higgs Working Group with a center-of-mass energy of 13.6 TeV. Different flavour schemes can be adopted: a massless calculation with five active flavours (5FS) or a calculation with massive bottom quarks and four massless flavours (4FS). First, we provide matched predictions between flavour schemes at the fixed-order level using the FONLL method to combine N3LO 5FS and NLO 4FS results. Since \bbH{} involves both bottom-quark ($y_b$) and top-quark Yukawa ($y_t$) interactions, we present NLO+PS results for the \(y_t^2\) contribution and NNLO+PS predictions for the \(y_b^2\) contribution in both massless and massive flavour schemes. We assess Monte Carlo uncertainties due to different matching methods by comparing the 5FS NNLO+PS predictions obtained with the \minnlo{} and \GENEVA{} approaches. In addition, we describe the impact of the 4FS predictions in modelling single-Higgs backgrounds in HH searches. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production using resummed analytic results and novel NNLO+PS simulations.
+We present state-of-the-art predictions for Standard Model Higgs production in association with a bottom-quark pair (\bbH{}). Updated cross-sections are computed in accordance with the recommendations of the LHC Higgs Working Group with a center-of-mass energy of 13.6 TeV. Different flavour schemes can be adopted: a massless calculation with five active flavours (5FS) or a calculation with massive bottom quarks and four massless flavours (4FS). First, we provide matched predictions between flavour schemes at the fixed-order level using the FONLL method to combine N3LO 5FS and NLO 4FS results. We then present simulations matched with parton showers in the two schemes and discuss the BSM potentialities. In the massless scheme, we assess Monte Carlo uncertainties due to different matching methods by comparing the 5FS NNLO+PS predictions obtained with the \minnlo{} and \GENEVA{} approaches. In addition, we describe the impact of the 4FS predictions in modelling single-Higgs backgrounds in HH searches. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production using resummed analytic results and novel NNLO+PS simulations.
 }
 
 
@@ -301,9 +301,6 @@ Finally, we compare the differential behaviour of \minnlo{} predictions for the 
 Based on \cite{Biello:2024pgo} with \minnlo{}.\cbcom{NNLO-LC reweighting ready. NNLO-FC running.} \cbcom{Explain the yukawa nf=4 with decoupling from nf=5 alphas.}
 NLO+PS 5FS vs NLO+PS 4Fs and \minnlo{} 5FS vs \minnlo{} 4FS at fully-integrated level and one distribution (pt?).
 
-\subsection{Top-Yukawa squared contribution at NLO+PS in 4FS}
-Based on \cite{Manzoni:2023qaf} (ref. Marco Zaro).
-
 \section{Modelling \bbH{} for background studies in HH searches}
 Focus on \citere{Manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiducial cuts for HH searches (ref. Stefano Manzoni). NNLO+PS ggF generator with different $n_f$ is running using ATLAS resources.
 
@@ -341,23 +338,25 @@ We present in~\tab{tab:qqH_xs} the integrated cross-section values for the total
   \vspace*{0.3ex}
   \begin{center}
 	   \renewcommand{\arraystretch}{1.3}
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{|c||c|c||c|}
     \hline
-    Flavour channel  & \shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}}$ (pb)\\ fully-integrated} &  \shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}(\rightarrow\gamma \gamma)}$ (fb)\\ fully-integrated}  &  \shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}(\rightarrow\gamma \gamma)}$ (fb)\\ \texttt{fiducial $\gamma\gamma$ cuts}}   \\
+    \makecell[c]{Flavour channel} & \makecell[c]{\shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}}$ (pb)\\ \SuSHi{}} } & \makecell[c]{\shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}}$ (pb)\\ \minnlo{}} }&  \makecell[c]{\shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}(\rightarrow\gamma \gamma)}$ (fb)\\ \texttt{fiducial $\gamma\gamma$ cuts}\\ \minnlo{}}}  \\
      \hline \hline
-     $d \bar d \rightarrow$ H  & $11.39(4)_{-2.4\%}^{+2.8\%}$ & $25.86(3)_{-2.4\%}^{+2.8\%}$ & $11.40(9)_{-2.4\%}^{+2.8\%}$ \\
+     $d \bar d \rightarrow$ H & & $11.45(0)_{-2.4\%}^{+2.8\%}$ & $11.40(9)_{-2.4\%}^{+2.8\%}$ \\
      \hline
-      $u \bar u \rightarrow$ H & $16.47(1)_{-1.0\%}^{+2.7\%}$  &  $37.08(1)_{-1.0\%}^{+2.7\%}$  & $13.26(4)_{-0.7\%}^{+2.1\%}$ \\
+      $u \bar u \rightarrow$ H & & $16.42(0)_{-1.0\%}^{+2.7\%}$  &  $13.26(4)_{-0.7\%}^{+2.1\%}$ \\
       \hline
-       $s \bar s \rightarrow$ H  & $4.67(6)_{-2.0\%}^{+3.5\%}$  & $10.61(4)_{-2.0\%}^{+3.5\%}$  & $6.21(4)_{-1.9\%}^{+3.5\%}$  \\
+       $s \bar s \rightarrow$ H &  & $4.52(1)_{-2.0\%}^{+3.5\%}$  & $6.21(4)_{-1.9\%}^{+3.5\%}$  \\
        \hline
-       $c \bar c \rightarrow$ H  & $1.851(4)_{-2.9\%}^{+2.2\%}$  & $4.202(8)_{-2.9\%}^{+2.2\%}$  & $2.497(6)_{-3.0\%}^{+2.0\%}$ \\
+       $c \bar c \rightarrow$ H & & $1.847(7)_{-2.9\%}^{+2.2\%}$  &  $2.497(6)_{-3.0\%}^{+2.0\%}$ \\
+        \hline
+        $b \bar b \rightarrow$ H & & & \\
         \hline
     \end{tabular}
   \end{center}
   \vspace{-1em}
   \caption{
-	 Integrated NNLO+PS cross sections for Higgs boson production via light-quark annihilation, with the Yukawa couplings set to the bottom-quark value. The results include the decay into two photons and are presented both inclusively and within the fiducial region defined in~\eqn{eq:aafidmycuts}. \label{tab:qqH_xs}}
+	 Comparison of the \SuSHi{} cross-section numbers against the integrated \minnlo{} results for Higgs boson production via light-quark annihilation, with the Yukawa couplings set to the bottom-quark value. The last column presents the NNLO+PS results for $H\rightarrow \gamma\gamma$ production within the fiducial region defined in~\eqn{eq:aafidmycuts}. \label{tab:qqH_xs}}
 \end{table}
 
 \begin{figure}[t!]
