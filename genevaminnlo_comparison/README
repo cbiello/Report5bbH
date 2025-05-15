@@ -1,1 +1,5 @@
 Subdirectory for sharing dat and plots between Geneva and MiNNLOPS collaborations
+
+convertpytotop.sh: script to convert py arrays into PWG format. Useful to insert data into the MiNNLO plotting system
+
+geneva_yHiggs.py: rapidity of Higgs from Geneva (May 15, 2025). If possible, please upload the other observables with a similar style.
