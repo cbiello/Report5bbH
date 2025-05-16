@@ -210,53 +210,63 @@ We present state-of-the-art predictions for Standard Model Higgs production in a
 \section{Introduction}
 Introduction by Michael Spira.
 
+\section{Computational Setup}
+All the simulations performed in this paper are performed at a center-of-mass energy of $\sqrt{s}=13.6$ TeV, employing the PDF4LHC21\_40 set~\cite{PDF4LHCWorkingGroup:2022cjn} for the parton distribution functions. 
+\subsection{Numerical Inputs}
+All parametric inputs, including the strong coupling constant and electroweak parameters relevant to the Higgs vacuum expectation value, follow the latest recommendations from the LHC Higgs Working Group~\cite{Karlberg:2024zxx} and the Particle Data Group parameters~\cite{ParticleDataGroup:2024cfk}. The most relevant inputs for \bbH{} predictions are reported for completeness. The predictions in the massive schemes are obtained by considering an on-shell value of the bottom-quark mass of $m_b^{OS}=(4.92\pm0.13)$ GeV. The bottom-quark mass in the $\MSbar{}$ scheme is $m_b(m_b)=(4.18\pm0.03)$ GeV, used as the boundary condition for the running of the bottom-quark Yukawa coupling discussed in the following section. We report the relevant parameters for deriving the Higgs vacuum expectation value ($v$). We consider the following masses and widths for the weak bosons: $m_W = 80.379$ GeV, $\Gamma_W=2.085$ GeV, $m_Z = 91.1876$ GeV, $\Gamma_Z=2.4952$ GeV, and the electroweak coupling sets to $\alpha_{ew}=1/132.34890452162441$. Working in the $\alpha_{ew}$ scheme with complex boson masses, the derived couplings are $G_\mu=1.16436$ and $v=246.403-i3.8060$. The Higgs boson is kept on-shell with a vanishing width in all the simulations. The strong coupling constant is set to $\alpha_s(m_Z)=0.1180$.
+
+\subsection{Running of the bottom-quark}
+The Yukawa coupling is always renormalised in the \MSbar{} scheme. We discuss the recommendation of the \bbH{} subgroup in performing the running of the bottom-quark mass value at the hard scale. \cbcom{TODO: discuss nf dependence}.
+
+\subsection{Scale settings}
+
 \section{Matching of \fnnnlo{} 5FS and \fnlo{} 4FS cross-sections}
 Based on~\cite{Duhr:2020kzd} (ref. Bernhard Mistlberger). See if it is possible to recalculate with the new setting. $m_H/4$ can be used as a factorisation scale at a fully-inclusive level, then move to $m_H$ for all the Monte Carlo simulations.
 
-\section{Monte Carlo simulations}
+\section{Monte Carlo simulations for the bottom-quark Yukawa contribution}
+This section highlights recent advancements in Monte Carlo simulations for modelling the \bbH{} production in the $y_b^2$ contribution. The first matching with parton showers was carried out in the 5FS scheme in~\citere{Biello:2024vdh} using the \minnlo{} method. More recently, the \GENEVA{} approach has been applied to simulate \bbtoH{} production within the same heavy-quark collinear factorisation framework~\cite{}. In this section, we present the numerical comparison of the two matching methods for this process using the LHCHWG setup. We also perform a detailed study of the transverse momentum spectrum, comparing the Monte Carlo predictions against resummed analytic results~\cite{}. We proceed with discussing the BSM studies that can be performed in this scheme using the \minnlo{} generator, with an example as proof-of-concept in the Minimal Supersymmetric Model (MSSM). The last part of the section is dedicated to a Monte Carlo generator at NNLO+PS accuracy in the massive scheme~\cite{Biello:2024pgo}, which allows for the first time access to NNLO corrections in the 4FS using the \minnlo{} method.
 
 \subsection{NNLO+PS in the massless scheme}\label{sec:5FSNNLOPS}
-The simulations are performed at a center-of-mass energy of $\sqrt{s}=13.6$ TeV, employing the PDF4LHC21 set~\cite{PDF4LHCWorkingGroup:2022cjn} for the parton distribution functions. All parametric inputs, including the strong coupling constant and electroweak parameters relevant to the Higgs vacuum expectation value, follow the latest recommendations from the LHC Higgs Working Group~\cite{Karlberg:2024zxx}.\\
-Based on~\cite{Biello:2024vdh} for \minnlo{}.\cbcom{New numbers/distributions ready.}\\
-Based on 250x.xxxxx for \GENEVA{} (ref. Rebecca von Kuk and Alessandro Gavardi).
+\subsubsection{The matching methods in a nutshell}
 
-\subsubsection{\minnlo{} and \GENEVA{} comparison}
-\cbcom{TODO: inclusive (ptH, yH) and bjet observables.}
+\subsubsection{Numerical comparison of \minnlo{} and \GENEVA{}}
+\cbcom{TODO: inclusive (ptH, yH) and jet observables.}
+
+\subsubsection{Transverse-momentum spectrum against resummed predictions}
+
 \subsubsection{Heavy-Higgs for BSM studies in \minnlo{}}
 
 The Higgs production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In some models, \bbH{} can become the dominant production mode of exotic Higgs states. The \minnlo{} generator presented in section~\ref{sec:5FSNNLOPS} is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II Two-Higgs-Doublet Model (2HDM)~\cite{Branco:2011iw} at leading order but deviates from it at higher orders. MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
 \begin{align}
 	\tan\beta=\frac{v_u}{v_d}\,.
 \end{align}
-The other indipendent parameter is the CP-even Higgs mixing angle $\alpha$. This results in five physical Higgs bosons: two CP-even ($H$,$H'$), one CP-odd ($A$) and two charged Higgs bosons ($H^{\pm}$). The lightest Higgs boson ($H$) in MSSM can mimic the SM Higgs, but has different properties depending on model parameters. The tree-level mass of $H$ is bounded from above by $m_Z |\cos 2\beta|$, where $m_Z$ is the Z-boson mass. However, radiative corrections (mainly from the SUSY partners of the bottom and top quarks) can significantly alter the tree-level prediction, allowing for $m_H\sim 125$ GeV~\cite{Heinemeyer:2011aa,Bechtle:2012jw,Draper:2016pys,Bechtle:2016kui,Haber:2017erd}. We perform the NNLO+PS prediction in the benchmark configuration known as $M_H^{125}$ scenario~\cite{Bagnaschi:2018ofa}, where all superparticles are chosen to be so heavy that the presence of these effects has only a mild impact on the production and decay of MSSM Higgs bosons. As a result, the phenomenology of this scenario at the LHC closely resembles that of a Type-II 2HDM with Higgs couplings inspired by the MSSM. For the mass of the supersymmetric partners, we refer to eq. (4) of~\citere{Bagnaschi:2018ofa}. SUSY particles affect the bottom Yukawa coupling, encoded on the resummation of loop-induced effects, which are $\tan\beta$-enhanced. In the 5FS NNLO+PS calculation, only terms proportional to the squared bottom Yukawa coupling contribute. As a result, predictions in the MSSM scenario differ from those in the SM solely by an overall rescaling factor:
+The other indipendent parameter is the CP-even Higgs mixing angle $\alpha$. This results in five physical Higgs bosons: two CP-even (H,H'), one CP-odd (A) and two charged Higgs bosons ($\text{H}^{\pm}$). The lightest Higgs boson ($\text{H}$) in MSSM can mimic the SM Higgs, but has different properties depending on model parameters. The tree-level mass of $\text{H}$ is bounded from above by $m_Z |\cos 2\beta|$, where $m_Z$ is the Z-boson mass. However, radiative corrections (mainly from the SUSY partners of the bottom and top quarks) can significantly alter the tree-level prediction, allowing for $m_H\sim 125$ GeV~\cite{Heinemeyer:2011aa,Bechtle:2012jw,Draper:2016pys,Bechtle:2016kui,Haber:2017erd}. We perform the NNLO+PS prediction in the benchmark configuration known as $M_H^{125}$ scenario~\cite{Bagnaschi:2018ofa}, where all superparticles are chosen to be so heavy that the presence of these effects has only a mild impact on the production and decay of MSSM Higgs bosons. As a result, the phenomenology of this scenario at the LHC closely resembles that of a Type-II 2HDM with Higgs couplings inspired by the MSSM. For the chosen mass of the supersymmetric partners, we refer to eq. (4) of~\citere{Bagnaschi:2018ofa}. SUSY particles affect the bottom Yukawa coupling, encoded on the resummation of loop-induced effects, which are $\tan\beta$-enhanced. We stress that the NNLO+PS calculation in the massless scheme contains only terms proportional to the squared bottom Yukawa coupling. As a result, predictions in the MSSM scenario differ from those in the SM solely by an overall rescaling factor. In the case of the CP-odd Higgs production, we have:
 \begin{align}
-	\dd \sigma_{b\bar b \phi}^{\text{MSSM}} = \dd \sigma_{b\bar b H}^{\text{SM}} \cdot (\tilde g_b^{\phi})^2\,,	\label{eq:BSMYuk}
+	\dd \sigma_{b\bar b \text{A}}^{\text{MSSM}} = \dd \sigma_{\bbH{}}^{\text{SM}} \cdot (\tilde g_b^{\phi})^2\,,	\label{eq:BSMYuk}
 \end{align}
-where $\phi\in\{H,H',A\}$ represents one of the possible three neutral Higgs bosons. The modified couplings are:
+with
 \begin{align}
-	&\tilde{g}_b^h = \frac{g_b^h}{1 + \Delta_b} \left( 1 - \Delta_b \frac{\cot\alpha}{\tan\beta} \right)\,,\\
-	&\tilde{g}_b^H = \frac{g_b^H}{1 + \Delta_b} \left( 1 + \Delta_b \frac{\tan\alpha}{\tan\beta} \right)\,,\\
-	&\tilde{g}_b^A = \frac{g_b^A}{1 + \Delta_b} \left( 1 - \Delta_b \frac{1}{\tan^2\beta} \right)\,.
+	\tilde{g}_b^A = \frac{\tan \beta}{1 + \Delta_b} \left( 1 - \Delta_b \frac{1}{\tan^2\beta} \right)\,.
 \end{align}
-The parameter \( \Delta_b \) resums higher-order sbottom contributions~\cite{Banks:1987iu,Hall:1993gn,Carena:1994bv,Carena:2000uj}. Electroweak corrections from neutralinos and charginos are incorporated into \( \Delta_b \) for this benchmark, with its numerical value determined by \texttt{FeynHiggs}~\cite{Heinemeyer:1998yj,Bahl:2018qog}. The parameters \( g_f^\phi \) represent the genuine Yukawa couplings, which depend on the two angles governing the Higgs-matter interactions as defined in~\tab{tab:MSSMcoup}.\\
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \textbf{Coupling} & \textbf{MSSM value} \\
-        \hline
-        $g_u^H$ &  $\cos\alpha / \sin\beta$ \\
-        $g_d^H$ &  $-\sin\alpha / \cos\beta$ \\
-        $g_u^{H'}$ & $\sin\alpha / \sin\beta$ \\
-        $g_d^{H'}$ & $\cos\alpha / \cos\beta$ \\
-        $g_u^A$ & $\cot\beta$ \\
-        $g_d^A$ & $\tan\beta$ \\
-        \hline
-    \end{tabular}
-    \caption{Relative couplings $g_f^\phi$ with respect to the SM Yukawa coupling. The bottom Yukawa values correspond to the down-type couplings.}\label{tab:MSSMcoup}
-\end{table}
-
-As indicated by the current constraints on \( M_H^{125} \) scenario, we consider the case of a CP-odd Higgs with a mass of 1.4 TeV and \( \tan\beta = 20 \), a point in the parameter space which is currently not excluded. In this scenario, the lightest Higgs has a mass consistent with experimental observations.. We have performed the predictions by running the \minnlo{} 5FS generator with a heavy-Higgs boson and adjusted the Yukawa coupling according to~\eqn{eq:BSMYuk}.
+The parameter \( \Delta_b \) resums higher-order sbottom contributions~\cite{Banks:1987iu,Hall:1993gn,Carena:1994bv,Carena:2000uj}. Electroweak corrections from neutralinos and charginos are incorporated into \( \Delta_b \) for this benchmark, with its numerical value determined by \texttt{FeynHiggs}~\cite{Heinemeyer:1998yj,Bahl:2018qog}. 
+%The parameters \( g_f^\phi \) represent the genuine Yukawa couplings, which depend on the two angles governing the Higgs-matter interactions as defined in~\tab{tab:MSSMcoup}.\\
+%\begin{table}[h]
+%    \centering
+%    \begin{tabular}{|c|c|c|}
+%        \hline
+%        \textbf{Coupling} & \textbf{MSSM value} \\
+%        \hline
+%        $g_u^H$ &  $\cos\alpha / \sin\beta$ \\
+%        $g_d^H$ &  $-\sin\alpha / \cos\beta$ \\
+%        $g_u^{H'}$ & $\sin\alpha / \sin\beta$ \\
+%        $g_d^{H'}$ & $\cos\alpha / \cos\beta$ \\
+%        $g_u^A$ & $\cot\beta$ \\
+%        $g_d^A$ & $\tan\beta$ \\
+%        \hline
+%    \end{tabular}
+%    \caption{Relative couplings $g_f^\phi$ with respect to the SM Yukawa coupling. The bottom Yukawa values correspond to the down-type couplings.}\label{tab:MSSMcoup}
+%\end{table}
+As indicated by the current constraints on \( M_H^{125} \) scenario, we consider the case of a CP-odd Higgs with a mass of 1.4 TeV and \( \tan\beta = 20 \), a point in the parameter space which is currently not excluded. In this scenario, the lightest Higgs has a mass consistent with experimental observations. We have performed the predictions by running the \minnlo{} 5FS generator with a heavy Higgs-boson mass and adjusted the Yukawa coupling according to~\eqn{eq:BSMYuk}.
 
 \begin{figure}[t!]
 \begin{center}
@@ -287,15 +297,15 @@ As indicated by the current constraints on \( M_H^{125} \) scenario, we consider
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/BSM/y_Higgs.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Higgs transverse momentum and rapidity spectra for \minnlo{} results with the heavy CP-odd Higgs $A$ compared to SM predictions.\label{fig:SMvsBSM}}
+\caption{Higgs transverse momentum and rapidity spectra for \minnlo{} results with the heavy CP-odd Higgs $\text{A}$ compared to SM predictions.\label{fig:SMvsBSM}}
 \end{center}
 \end{figure}
 
 In~\fig{fig:yA}, we present a comparison of the rapidity distribution of the Higgs boson A in an exclusive phase-space region. We compare the results before and after interfacing the LHE events with Pythia 8. The jet spectrum becomes slightly harder after the shower. Consequently, the NNLO+PS prediction leads to higher rapidity spectra in the presence of a transverse momentum cut of 30 GeV and 60 GeV for the leading jet. As expected, we verified that in the absence of jet cuts, the shower does not change the Higgs rapidity.  
 
-We now turn to~\fig{fig:MiNLOBSM}, where we present a comparison between \minlo{} and \minnlo{} predictions for the CP-odd Higgs. Due to the high mass of the bosonic state, the resummation region extends over a broader range of the transverse momentum spectrum compared to the SM Higgs, with a mass of 125 GeV. As a result, the NNLO corrections present in \minnlo{} have a greater impact even at intermediate transverse momentum values, leading to more accurate predictions and smaller scale uncertainties compared to the \minlo{} ones. In the second plot of~\fig{fig:MiNLOBSM}, we compare the two predictions for the Higgs rapidity spectrum: NNLO corrections increase the cross-section while having a flat effect in the central region $|y_A|<1$.  
+We now turn to~\fig{fig:MiNLOBSM}, where we present a comparison between \minnlo{}  and \minlo{} predictions for the CP-odd Higgs. Due to the high mass of the bosonic state, the resummation region extends over a broader range of the transverse momentum spectrum compared to the SM Higgs, with a mass of 125 GeV. As a result, the NNLO corrections present in \minnlo{} have a greater impact even at intermediate transverse momentum values, leading to more accurate predictions and smaller scale uncertainties compared to the \minlo{} ones. In the second plot of~\fig{fig:MiNLOBSM}, we compare the two predictions for the Higgs rapidity spectrum: NNLO corrections increase the cross-section while having a flat effect in the central region $|y_A|<1$. Notably, the NNLO effects encoded in \minnlo{} are positive in the case of heavy-Higgs mass, compared to the SM case where the authors of~\citere{Biello:2024vdh} have observed a flat negative correction in the Higgs rapidity spectrum.
 
-Finally, we compare the differential behaviour of \minnlo{} predictions for the heavy Higgs state with the SM distributions in~\fig{fig:SMvsBSM}. As expected, the BSM transverse momentum spectrum is harder. With the chosen settings, BSM effects become at least half as large as, or even larger than, the SM effects for $\pt$ greater than 300 GeV. In the right plot of~\fig{fig:SMvsBSM}, we compare the rapidity distributions. The heavy CP-odd Higgs exhibits a spectrum more concentrated at small rapidity values, with its contribution remaining always below 2\% of the SM prediction. We stress that the numerical comparison is highly sensitive to the choice of MSSM parameters. However, the purpose of this analysis is to focus on a specific choice of the MSSM parameters, but to demonstrate the potential of the \minnlo{} generator for BSM modeling of \bbH{} production at NNLO+PS.
+Finally, we compare the differential behaviour of \minnlo{} predictions for the heavy Higgs state with the SM distributions in~\fig{fig:SMvsBSM}. As expected, the BSM transverse momentum spectrum is harder. With the chosen settings, BSM effects become at least half as large as, or even larger than, the SM effects for transverse-momentum values greater than 300 GeV. In the right plot of~\fig{fig:SMvsBSM}, we compare the rapidity distributions. The heavy CP-odd Higgs exhibits a spectrum more concentrated at small rapidity values, with its contribution remaining always below 2\% of the SM prediction. We stress that the numerical comparison is highly sensitive to the choice of the MSSM parameters. However, the purpose of this analysis is not to focus on a specific choice of the MSSM parameters, but to demonstrate the potential of the \minnlo{} generator for BSM modeling of \bbH{} production at NNLO+PS.
 
 \subsection{Bottom-Yukawa squared contribution at NNLO+PS in 4FS}
 Based on \cite{Biello:2024pgo} with \minnlo{}.\cbcom{NNLO-LC reweighting ready. NNLO-FC running.} \cbcom{Explain the yukawa nf=4 with decoupling from nf=5 alphas.}
@@ -350,7 +360,7 @@ We present in~\tab{tab:qqH_xs} the integrated cross-section values for the total
        \hline
        $c \bar c \rightarrow$ H & $1.849(9)_{-2.9\%}^{+1.5\%}$ & $1.847(7)_{-2.9\%}^{+2.2\%}$  &  $2.497(6)_{-3.0\%}^{+2.0\%}$ \\
         \hline
-        $b \bar b \rightarrow$ H &  $0.585(0)_{-9.2\%}^{+7.0\%}$ & & \\
+        $b \bar b \rightarrow$ H &  $0.585(0)_{-9.2\%}^{+7.0\%}$ &  $0.575(7)_{-8.0\%}^{+4.5\%}$ & $0.807(0)_{-8.2\%}^{+4.7\%}$ \\
         \hline
     \end{tabular}
   \end{center}
