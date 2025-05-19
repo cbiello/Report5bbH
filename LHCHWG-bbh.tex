@@ -187,7 +187,7 @@
 
 
 \abstract{
-We present state-of-the-art predictions for Standard Model Higgs production in association with a bottom-quark pair (\bbH{}). Updated cross-sections are computed in accordance with the recommendations of the LHC Higgs Working Group with a center-of-mass energy of 13.6 TeV. Different flavour schemes can be adopted: a massless calculation with five active flavours (5FS) or a calculation with massive bottom quarks and four massless flavours (4FS). First, we provide matched predictions between flavour schemes at the fixed-order level using the FONLL method to combine N3LO 5FS and NLO 4FS results. We then present simulations matched with parton showers in the two schemes and discuss the BSM potentialities. In the massless scheme, we assess Monte Carlo uncertainties due to different matching methods by comparing the 5FS NNLO+PS predictions obtained with the \minnlo{} and \GENEVA{} approaches. In addition, we describe the impact of the 4FS predictions in modelling single-Higgs backgrounds in HH searches. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production using resummed analytic results and novel NNLO+PS simulations.
+We present state-of-the-art predictions for Standard Model Higgs production in association with a bottom-quark pair (\bbH{}). Updated cross-sections are computed in accordance with the recommendations of the LHC Higgs Working Group with a center-of-mass energy of 13.6 TeV. Different flavour schemes can be adopted: a massless calculation with five active flavours (5FS) or a calculation with massive bottom quarks and four massless flavours (4FS). First, we provide matched predictions between flavour schemes at the fixed-order level using the FONLL method to combine N3LO 5FS and NLO 4FS results. We then present simulations matched with parton showers in the two schemes and discuss the BSM potentialities. In the massless scheme, we assess Monte Carlo uncertainties due to different matching methods by comparing the 5FS NNLO+PS predictions obtained with the \minnlo{} and \GENEVA{} approaches. In addition, we describe the impact of the 4FS predictions in modelling single-Higgs backgrounds in HH searches. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production using resummed analytic results and novel \minnlo{} simulations.
 }
 
 
@@ -208,10 +208,10 @@ We present state-of-the-art predictions for Standard Model Higgs production in a
 }
 
 \section{Introduction}
-Introduction by Michael Spira.
+Introduction by Michael Spira+MW.
 
 \section{Computational Setup}\label{sec:setup}
-All the simulations performed in this paper are performed at a center-of-mass energy of $\sqrt{s}=13.6$ TeV, employing the PDF4LHC21\_40 set~\cite{PDF4LHCWorkingGroup:2022cjn} for the parton distribution functions. 
+All the simulations performed in this paper are performed at a centre-of-mass energy of $\sqrt{s}=13.6$ TeV, employing the PDF4LHC21\_40 set~\cite{PDF4LHCWorkingGroup:2022cjn} for the parton distribution functions. 
 \subsection{Numerical Inputs}
 All parametric inputs, including the strong coupling constant and electroweak parameters relevant to the Higgs vacuum expectation value, follow the latest recommendations from the LHC Higgs Working Group~\cite{Karlberg:2024zxx} and the Particle Data Group parameters~\cite{ParticleDataGroup:2024cfk}. The most relevant inputs for \bbH{} predictions are reported for completeness. The predictions in the massive schemes are obtained by considering an on-shell value of the bottom-quark mass of $m_b^{OS}=(4.92\pm0.13)$ GeV. The bottom-quark mass in the $\MSbar{}$ scheme is $m_b(m_b)=(4.18\pm0.03)$ GeV, used as the boundary condition for the running of the bottom-quark Yukawa coupling discussed in the following section. We report the relevant parameters for deriving the Higgs vacuum expectation value ($v$). We consider the following masses and widths for the weak bosons: $m_W = 80.379$ GeV, $\Gamma_W=2.085$ GeV, $m_Z = 91.1876$ GeV, $\Gamma_Z=2.4952$ GeV, and the electroweak coupling is set to $\alpha_{ew}=1/132.34890452162441$. Working in the $\alpha_{ew}$ scheme with complex boson masses, the derived couplings are $G_\mu=1.16436\,\text{GeV}^{-2}$ and $v=(246.403-i3.8060)$ GeV. The Higgs boson is treated as on-shell with zero width in all simulations, except where its decay into photons or tau leptons is explicitly considered. The strong coupling constant is set to $\alpha_s(m_Z)=0.1180$.
 
@@ -219,6 +219,9 @@ All parametric inputs, including the strong coupling constant and electroweak pa
 The Yukawa coupling is always renormalised in the \MSbar{} scheme. We discuss the recommendation of the \bbH{} subgroup in performing the running of the bottom-quark mass value at the hard scale. \cbcom{TODO: discuss nf dependence}.
 
 \subsection{Scale settings}
+In the Monte Carlo simulations with massless bottom quarks, we consider the Higgs mass as the central value of the factorisation ($\muF$) and renormalisation ($\muR$) scales. The theory uncertainty is estimated using the standard scale variation approach by changing the scales by a factor of 2 with the constraint $\frac{1}{2}\leq\muR/\muF\leq 2$ in order to avoid large logarithmic effects. The renormalisation scales associated with the Yukawa coupling and the strong coupling constant are varied in a correlated manner, by simultaneously rescaling both with the same factor. We have performed detailed studies on the impact of this correlation and found that such a correlated variation provides a reliable estimate of the overall renormalisation uncertainty.
+
+In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse invariant mass of the \bbH{} system—was often adopted. This lower scale resulted in higher 4FS cross sections, which reduced the gap with the 5FS predictions. However, with the inclusion of NNLO QCD corrections in the 4FS, such a scale choice is no longer necessary. As shown in~\citere{Biello:2024pgo}, comparisons between dynamical and fixed scales at NNLO show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with the Higgs-boson mass providing a natural and consistent choice.
 
 \section{Matching of \fnnnlo{} 5FS and \fnlo{} 4FS cross-sections}
 Based on~\cite{Duhr:2020kzd} (ref. Bernhard Mistlberger). See if it is possible to recalculate with the new setting. $m_H/4$ can be used as a factorisation scale at a fully-inclusive level, then move to $m_H$ for all the Monte Carlo simulations.
@@ -228,9 +231,30 @@ This section highlights recent advancements in Monte Carlo simulations for model
 
 \subsection{NNLO+PS in the massless scheme}\label{sec:5FSNNLOPS}
 \subsubsection{The matching methods in a nutshell}
+\cbcom{VERY short description of the two matching methods and differences.}
 
 \subsubsection{Numerical comparison of \minnlo{} and \GENEVA{}}
-\cbcom{TODO: inclusive (ptH, yH) and jet observables.}
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnlo-geneva-ptH.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnlo-geneva-ptHzoom.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Comparison of \minnlo{} (blue, dashed) and \GENEVA{} (brown, dotted) predictions for the transverse momentum distribution of the Higgs boson. \label{fig:genevaptH}}
+\end{center}
+\end{figure}
+
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnlo-geneva-yh.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnlo-geneva-dyhj.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Higgs boson rapidity and difference in rapidity between the scalar and the leading jet as predicted by \minnlo{} (blue, dashed) and \GENEVA{} (brown, dotted). \label{fig:genevay}}
+\end{center}
+\end{figure}
 
 \subsubsection{Transverse-momentum spectrum against resummed predictions}
 
@@ -355,9 +379,9 @@ To enable cross-checks and comparisons with fixed-order predictions, we have ext
      \hline
 	    $u \bar u \rightarrow$ H & $16.46(6)_{-1.1\%}^{+0.6\%}$ & $16.42(0)_{-1.0\%}^{+2.7\%}$  &  $13.26(4)_{-0.7\%}^{+2.1\%}$ \\
       \hline
-	    $s \bar s \rightarrow$ H & $4.45(4)_{-1.4\%}^{+1.0\%}$ & $4.52(1)_{-2.0\%}^{+3.5\%}$  & $6.21(4)_{-1.9\%}^{+3.5\%}$  \\
+	    $s \bar s \rightarrow$ H & $4.45(4)_{-1.4\%}^{+1.0\%}$ & $4.42(5)_{-2.0\%}^{+3.5\%}$  & $6.21(4)_{-1.9\%}^{+3.5\%}$  \\
        \hline
-       $c \bar c \rightarrow$ H & $1.849(9)_{-2.9\%}^{+1.5\%}$ & $1.847(7)_{-2.9\%}^{+2.2\%}$  &  $2.497(6)_{-3.0\%}^{+2.0\%}$ \\
+       $c \bar c \rightarrow$ H & $1.84(9)_{-2.9\%}^{+1.5\%}$ & $1.79(7)_{-2.9\%}^{+2.2\%}$  &  $2.497(6)_{-3.0\%}^{+2.0\%}$ \\
         \hline
         $b \bar b \rightarrow$ H &  $0.585(0)_{-9.2\%}^{+7.0\%}$ &  $0.575(7)_{-8.0\%}^{+4.5\%}$ & $0.807(0)_{-8.2\%}^{+4.7\%}$ \\
         \hline
@@ -365,7 +389,7 @@ To enable cross-checks and comparisons with fixed-order predictions, we have ext
   \end{center}
   \vspace{-1em}
   \caption{
-	 Comparison of the \SuSHi{} cross-section numbers against the integrated \minnlo{} results for Higgs boson production via light-quark annihilation, with the Yukawa couplings set to the bottom-quark value. The last column presents the NNLO+PS results for $H\rightarrow \gamma\gamma$ production within the fiducial region defined in~\eqn{eq:aafidmycuts}. \label{tab:qqH_xs}}
+	 Comparison of \SuSHi{} cross-section numbers against the integrated \minnlo{} results for Higgs boson production via light-quark annihilation, with the Yukawa couplings set to the bottom-quark value. The last column presents the NNLO+PS results for $H\rightarrow \gamma\gamma$ production within the fiducial region defined in~\eqn{eq:aafidmycuts}. \label{tab:qqH_xs}}
 \end{table}
 
 \begin{figure}[t!]
@@ -394,7 +418,7 @@ The results are normalised to the prediction for down-quark fusion (brown, dotte
 
 We now present a selection of differential results. The shape of the Higgs transverse momentum spectrum for quark-initiated processes differs significantly from that in the gluon-initiated channel, offering a clearer possibility to study the interaction between the Higgs boson and partons. In the first plot of figure~\ref{fig:lightpTH}, we show the transverse momentum spectrum of the Higgs boson, reconstructed from the diphoton pair in the fully inclusive setup. It displays similar shapes across the different flavour channels, with normalisation reflecting the corresponding total cross sections. The second plot in figure~\ref{fig:lightpTH} shows the same distribution, but for events where the photons pass the fiducial cuts. In this scenario, more pronounced differences in shape emerge among the various channels. In particular, the up-quark contribution—about 1.5 times larger than the down-quark prediction in the fully inclusive case because of PDF enhancement—has a strong reduction in the fiducial region. Indeed, at intermediate values of transverse momentum, the up- and down-quark channels yield comparable results when the same Yukawa strength is assumed. Moreover, once the relative mass suppression in the Yukawa couplings is taken into account, the up-quark prediction falls below the down-quark one.
 
-The main origin of this effect is the rapidity constraint defined in~\eqn{eq:aafidmycuts}. Indeed, the parton distribution functions influence the photon rapidity shape, yielding distinctive behaviour in the up-quark channel. The first plot in figure~\ref{fig:lightrapidity} shows the rapidity distribution of the photon with the highest transverse momentum across the different channels; similar patterns are observed for the second photon. For strange- and charm-quark fusion, as well as for the bottom-quark case, the distribution peaks around zero rapidity. In contrast, valence quark channels exhibit different shapes due to their characteristic parton luminosities. The down-quark channel shows a plateau for $|y_\gamma| < 2$, whereas the up-quark channel features a distribution not centred around zero rapidity, with a significant fraction of the cross section residing at larger rapidity values. As a result, the cut $|y_\gamma| < 2.37$ has a more pronounced impact on the up-quark distribution, removing a larger portion of the cross section when applying the fiducial selection. We have confirmed a similar trend at leading order, with a shape validated using the 2D scan of PDF4LHC luminosities obtained using \texttt{APFEL}~\cite{Bertone:2013vaa}. This distinctive behaviour, more evident here than in neutral Drell–Yan due to the higher Higgs mass, provides a useful handle for differential studies, as the rapidity spectrum in light-quark fusion differs markedly from dominant production modes. We conclude by presenting the Higgs boson rapidity, reconstructed from the two photons that satisfy the fiducial cuts~\eqref{eq:aafidmycuts}, as shown in the second plot of figure~\ref{fig:lightrapidity}. In the exclusive region, the up-quark behaviour is more similar to the down-quark, with a cross section between 1.1 and 1.3 times that of the down-quark process. The charm-quark and the strange-quark exhibit a steeper distribution compared to the Higgs boson from down-quark fusion.
+The main origin of this effect is the rapidity constraint defined in~\eqn{eq:aafidmycuts}. Indeed, the parton distribution functions influence the photon rapidity shape, yielding distinctive behaviour in the up-quark channel. The first plot in figure~\ref{fig:lightrapidity} shows the rapidity distribution of the photon with the highest transverse momentum across the different channels; similar patterns are observed for the second photon. For strange- and charm-quark fusion, as well as for the bottom-quark case, the distribution peaks around zero rapidity. In contrast, valence quark channels exhibit different shapes due to their characteristic parton luminosities. The down-quark channel shows a plateau for $|y_\gamma| < 2$, whereas the up-quark channel features a distribution not centred around zero rapidity, with a significant fraction of the cross section residing at larger rapidity values. As a result, the cut $|y_\gamma| < 2.37$ has a more pronounced impact on the up-quark distribution, removing a larger portion of the cross section when applying the fiducial selection. We have confirmed a similar trend at leading order, with a shape validated using the mass-rapidity scan of PDF4LHC luminosities obtained using \texttt{APFEL}~\cite{Bertone:2013vaa}. This distinctive behaviour, more evident here than in neutral Drell–Yan due to the higher Higgs mass, provides a useful handle for differential studies, as the rapidity spectrum in light-quark fusion differs markedly from dominant production modes. We conclude by presenting the Higgs boson rapidity, reconstructed from the two photons that satisfy the fiducial cuts~\eqref{eq:aafidmycuts}, as shown in the second plot of figure~\ref{fig:lightrapidity}. In the exclusive region, the up-quark behaviour is more similar to the down-quark, with a cross section between 1.1 and 1.3 times that of the down-quark process. The charm-quark and the strange-quark exhibit a steeper distribution compared to the Higgs boson from down-quark fusion.
 
 In this section, we have presented the NNLO+PS generator for Higgs production via light-parton fusion with decay into photons as a potential tool to constrain light-quark Yukawa couplings. We conclude by noting that alternative channels sensitive to light-quark Yukawa couplings have been experimentally investigated recently, such as the Higgs decay rate into four leptons~\cite{CMS:2025xkn}.
 \section{Outlooks and Conclusions}
