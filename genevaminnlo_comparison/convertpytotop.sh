@@ -1,15 +1,15 @@
 #!/bin/bash                                                                                                                                                                                                                
 
 # Input file
-input="geneva_yHiggs.py"
+input="jet1-Higgs_rapidity_showered.py"
 
 # Output files
-cen_out="geneva_CEN.top"
-min_out="geneva_MIN.top"
-max_out="geneva_MAX.top"
+cen_out="genevashowered_dy-h-H-CEN.top"
+min_out="genevashowered_dy-h-H-MIN.top"
+max_out="genevashowered_dy-h-H-MAX.top"
 
 # First line to add to all output files
-header_line="# y_Higgs index      4"
+header_line="# dy-h-j1-ptj20 index     15"
 
 # Use Python to extract and write the .top files
 python3 <<EOF
