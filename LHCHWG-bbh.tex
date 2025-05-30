@@ -234,7 +234,147 @@ We proceed with discussing the BSM studies that can be performed in this scheme 
 
 \subsection{NNLO+PS in the massless scheme}\label{sec:5FSNNLOPS}
 \subsubsection{The matching methods in a nutshell}
-\cbcom{Ref: AG. Short description of the two matching methods and differences.}
+
+\minnlo{} and \GENEVA{} are two NNLO+PS Monte Carlo event generators
+that match fixed-order calculations with the resummation of the
+relevant resolution variables. Both have been successfully applied to
+many processes of color-singlet production and have proven to work
+with different types of resolution variables. The two generators adopt
+different approaches to reach NNLO perturbative accuracy, whose
+fundamentals are presented below.
+
+\minnlo{} develops from the NLO+PS \POWHEG{} event
+generator~\cite{Alioli:2010xd}, which provides the description of the
+infrared radiation $J_2$ in the production process of the color
+singlet $F$ accompanied by one hard emission $J$. In the \POWHEG{}
+method~\cite{Frixione:2007vw}, the distribution of observables
+inclusive over the emission $J_2$ is controlled by the function
+\begin{equation}
+  \bar{B} = \frac{d\sigma_{\scriptscriptstyle\rm
+      FJ}^{(1)}}{d\Phi_{\scriptscriptstyle\rm FJ}}\!\left(\mu\right) +
+  \frac{d\sigma_{\scriptscriptstyle\rm
+      FJ}^{(2)}}{d\Phi_{\scriptscriptstyle\rm FJ}}\!\left(\mu\right),
+\end{equation}
+which has been written here as the sum of two terms containing the
+contributions at leading and next-to-leading order in the strong
+coupling, respectively. The $\bar{B}$ function, at this level, only
+provides a fixed-order description of the emission $J$, and the
+renormalization and factorization scales (collectively labeled as
+$\mu$) are still unconstrained. In ref.~\cite{Hamilton:2012rf}, a
+prescription for the choice of the scale $\mu$ was introduced, and the
+$\bar{B}$ function was multiplied by a Sudakov form factor
+$e^{-\tilde{S}}$ better to describe the infrared limit of the emission
+$J$. Such an approach, later relabelled as {\small
+  \textsc{MiNLO$^\prime$}}, reaches NLO accuracy for the distributions
+of the observables inclusive over the emission $J$ by redefining
+\begin{equation}
+  \bar{B} = e^{-\tilde{S}\left(p_{\scriptscriptstyle\rm T}\right)}
+  \left\{\frac{d\sigma_{\scriptscriptstyle\rm
+      FJ}^{(1)}}{d\Phi_{\scriptscriptstyle\rm
+      FJ}}\!\left(p_{\scriptscriptstyle\rm T}\right) \left[1 +
+    \tilde{S}^{(1)}\!\left(p_{\scriptscriptstyle\rm T}\right)\right] +
+  \frac{d\sigma_{\scriptscriptstyle\rm
+      FJ}^{(2)}}{d\Phi_{\scriptscriptstyle\rm
+      FJ}}\!\left(p_{\scriptscriptstyle\rm T}\right)\right\},
+\end{equation}
+where $p_{\scriptscriptstyle\rm T}$ is the transverse momentum of the
+emission $J$. Finally, with the introduction of the \minnlo{}
+method~\cite{Monni:2019whf,Monni:2020nks}, the {\small
+  \textsc{MiNLO$^\prime$}} approach was extended by redefining
+\begin{equation}
+  \label{MiNNLOPS_cross_section}
+  \bar{B} = e^{-\tilde{S}\left(p_{\scriptscriptstyle\rm T}\right)}
+  \left\{\frac{d\sigma_{\scriptscriptstyle\rm
+      FJ}^{(1)}}{d\Phi_{\scriptscriptstyle\rm
+      FJ}}\!\left(p_{\scriptscriptstyle\rm T}\right) \left[1 +
+    \tilde{S}^{(1)}\!\left(p_{\scriptscriptstyle\rm T}\right)\right] +
+  \frac{d\sigma_{\scriptscriptstyle\rm
+      FJ}^{(2)}}{d\Phi_{\scriptscriptstyle\rm
+      FJ}}\!\left(p_{\scriptscriptstyle\rm T}\right) + D^{(\geq
+    3)}\!\left(p_{\scriptscriptstyle\rm T}\right)
+  F^{\scriptscriptstyle\rm corr}\!\left(\Phi_{\scriptscriptstyle\rm
+    FJ}\right)\right\},
+\end{equation}
+where $D^{(\geq 3)}$ contains the necessary terms to upgrade the
+accuracy of the distributions of observables inclusive over the
+emission $J$ to NNLO.
+
+While the \minnlo{} event generator descends from the \POWHEG{}
+description of the second QCD radiation, the \GENEVA{} approach
+\cite{Alioli:2015toa, Gavardi:2023aco} builds on the analytic spectrum
+of the zero-jet resolution variable (here generically called $r_0$)
+and generates the partonic events with the aim of not distorting
+it. Conceptually, the \GENEVA{} method boils down to three steps.
+\begin{enumerate}
+\item Matching. The $r_0$ spectrum at fixed order, differential over
+  the phase space with no final state partons $\Phi_0$, is matched
+  additively to its analytic resummation, obtaining
+  \begin{equation}
+    \frac{d\sigma}{d\Phi_0 \> dr_0} =
+    \frac{d\sigma^{\scriptscriptstyle\rm FO}}{d\Phi_0 \> dr_0} +
+    \frac{d\sigma^{\scriptscriptstyle\rm res}}{d\Phi_0 \> dr_0} -
+    \left. \frac{d\sigma^{\scriptscriptstyle\rm res}}{d\Phi_0 \>
+      dr_0}\right|_{\scriptscriptstyle\rm FO}.
+  \end{equation}
+  The last two terms of the above equations play a similar role to the
+  $D^{(\geq 3)}$ function in eq.~(\ref{MiNNLOPS_cross_section}). The
+  main difference is that the \minnlo{} matching is performed
+  multiplicatively, as can be seen from the overall Sudakov form
+  factor $e^{-\tilde{S}}$.
+\item Slicing. A slicing scale $r_0^{\scriptscriptstyle\rm cut}$ is
+  introduced to separate events where the radiation is not resolved
+  from those where it is, whose distributions are described
+  respectively by
+  \begin{equation}
+    \frac{d\sigma_0}{d\Phi_0}\!\left(r_0^{\scriptscriptstyle\rm
+      cut}\right) = \int_0^{r_0^{\scriptscriptstyle\rm cut}} dr_0 \>
+    \frac{d\sigma}{d\Phi_0 \> dr_0}
+    %
+    \quad \mbox{and} \quad
+    %
+    \frac{d\sigma_{\geq 1}}{d\Phi_0 \> dr_0} = \frac{d\sigma}{d\Phi_0
+      \> dr_0} \> \theta\!\left(r_0 - r_0^{\scriptscriptstyle\rm
+      cut}\right).
+  \end{equation}
+  This step is not required in the \minnlo{} approach, where the
+  exponential suppression guaranteed by the overall Sudakov form
+  factor makes the differential cross section numerically integrable
+  up to $p_{\scriptscriptstyle\rm T} = 0$ (after regulating the Landau
+  pole).
+\item Splitting. The ${\cal P}_{0 \to 1}$ function is introduced to
+  make the $r_0$ spectrum differential over the $\Phi_1$ phase space
+  with one final state parton, thus obtaining
+  \begin{equation}
+    \frac{d\sigma_{\geq 1}}{d\Phi_1} =
+    \left\{\frac{d\sigma^{\scriptscriptstyle\rm FO}}{d\Phi_1} +
+    \left[\frac{d\sigma^{\scriptscriptstyle\rm res}}{d\Phi_0 \> dr_0}
+      - \left. \frac{d\sigma^{\scriptscriptstyle\rm res}}{d\Phi_0 \>
+        dr_0}\right|_{\scriptscriptstyle\rm FO} \right] {\cal P}_{0
+      \to 1}\!\left(\Phi_1\right)\right\} \theta\!\left(r_0 -
+    r_0^{\scriptscriptstyle\rm cut}\right).
+  \end{equation}
+  Here, ${\cal P}_{0 \to 1}$ plays the same role as
+  $F^{\scriptscriptstyle\rm corr}$ in
+  eq.~(\ref{MiNNLOPS_cross_section}).
+\end{enumerate}
+The second emission is then generated by iterating this procedure on
+the $d\sigma_{\geq 1} / d\Phi_1$ differential cross section.
+
+Besides resumming the resolution variables in different ways, the two
+approaches may also produce small differences in the distributions
+inclusive over the radiation. The advantage of the additive approach
+adopted by \GENEVA{} is that it enforces the generated events to be
+distributed according to the exact NNLO differential cross section.
+The presence of the Sudakov form factor in front of the fixed-order
+contributions in the \minnlo{} approach instead generates spurious
+subleading terms beyond the NNLO accuracy that might have numerically
+significant effects in some regions of the phase space. On the other
+hand, it also gives \minnlo{} an advantage in statistical precision by
+preventing the events from developing large positive or negative
+weights. The distribution of the QCD emissions is instead more heavily
+dependent on the specifics of the two approaches, and the availability
+of two different methods is the best way to estimate their theoretical
+uncertainties.
 
 \subsubsection{Numerical comparison of \minnlo{} and \GENEVA{}}
 \cbcom{Ref: MW. Please specify that the default of Geneva is the cumulant scale choices with the included matching uncertainty. On the other hand, minnlo includes (only in this section!) a resummation scale uncertainty: the predictions are performed with kQ=0.25, but in the bars, also the kQ=0.5 is included, therefore we have a 14 scale point envelope.}
