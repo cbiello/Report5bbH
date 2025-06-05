@@ -145,6 +145,7 @@
 \newcommand{\qgraf}{\texttt{QGRAF}}
 \newcommand{\spinney}{\texttt{Spinney}}
 \newcommand{\cpp}{\texttt{C++}}
+\DeclareMathOperator{\Tr}{Tr}
 
 %%Christian's command
 \newcommand{\eqcite}[1]{(\ref{#1})}
@@ -480,7 +481,34 @@ Finally, we compare the differential behaviour of \minnlo{} predictions for the 
 Based on \cite{Biello:2024pgo} with \minnlo{}.\cbcom{NNLO-LC reweighting ready. NNLO-FC running.} \cbcom{Explain the yukawa nf=4 with decoupling from nf=5 alphas.}
 NLO+PS 5FS vs NLO+PS 4Fs and \minnlo{} 5FS vs \minnlo{} 4FS at fully-integrated level and one distribution (pt?).
 
-Building on the \minnlo{} matching for \bbH{} in the massless five-flavour scheme (5FS) described in Section~\ref{sec:5FSNNLOPS}, we now turn to an analogous construction in the four-flavour (massive-bottom) scheme (4FS) that captures the \(y_{b}^{2}\) component at NNLO+PS. In Section~\ref{sec:FONLLmatch}, the fixed-order FONLL combination ensured that inclusive 5FS and 4FS cross sections are consistently merged, but it left open the question of how to retain full bottom-mass dependence in a fully differential, shower-matched prediction. Section~\ref{sec:5FSNNLOPS} demonstrated that, in 5FS, the \minnlo{} procedure provides a fully exclusive NNLO+PS generator for the \bbH{} process with massless bottom quarks. While that approach naturally resums all collinear logarithms and reproduces the correct small-\(p_{T}\) behavior for the Higgs, it cannot account for finite-\(m_{b}\) recoil or reliably model observables that depend on the kinematics of hard \(b\)-jets.
+Building on the \minnlo{} matching for \bbH{} in the massless 5FS described in Section~\ref{sec:5FSNNLOPS}, we now turn to an analogous construction in the massive 4FS that captures the \(y_{b}^{2}\) component at NNLO+PS. In Section~\ref{sec:FONLLmatch}, the fixed-order FONLL combination ensured that inclusive 5FS and 4FS cross sections are consistently merged, but it left open the question of how to retain full bottom-mass dependence in a fully differential, shower-matched prediction. Section~\ref{sec:5FSNNLOPS} demonstrated that, in 5FS, the \minnlo{} procedure provides a fully exclusive NNLO+PS generator for the \bbH{} process with massless bottom quarks. While that approach naturally resums all collinear logarithms and reproduces the correct small-\(p_{T}\) behavior for the Higgs, it cannot account for finite-\(m_{b}\) recoil or reliably model observables that depend on the kinematics of hard \(b\)-jets.
+
+To address these shortcomings, we now introduce a fully exclusive NNLO+PS generator for the \bbH{} process in the massive 4FS.  This construction follows the extension of the \minnlo{} method to heavy-quark–associated colour-singlet production (\(Q\bar{Q}F\)) developed in \cite{mazzitelli:2024ura}, which itself builds on the \minnlo{} approach for \(Q\bar{Q}\) production introduced in \cite{mazzitelli:2020jio,mazzitelli:2021mmm}.  While the pattern of large logarithms in the \(Q\bar{Q}F\) final state closely mirrors that of \(Q\bar{Q}\) production at small transverse momentum, the \(Q\bar{Q}F\) kinematics are more general—unlike in pure \(Q\bar{Q}\) production, where the heavy quarks appear back-to-back at Born level.  In both cases, one begins from the factorization theorem in Fourier–conjugate (impact-parameter or \(b\)) space \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei}:
+\begin{align}\label{eq:facformula}
+        \frac{\mathd \sigma}{ \mathd^2\vec{\pt}\, \mathd \Phi_{Q\bar{Q}{\rm F}}}&=\sum_{c=q,\bar{q},g}
+  \frac{|M^{(0)}_{c\bar{c}}|^2}{2 m_{Q\bar{Q}{\rm F}}^2 }\int\frac{ \mathd^2\vec{b}}{(2\pi)^2} e^{i \vec{b}\cdot
+  \vec{\pt} } e^{-S_{c\bar{c}} \left(\frac{b_0}{b}\right)}\sum_{i,j} \Tr({\mathbf H}_{c\bar{c}}{\mathbf \Delta})\,\,
+  ({C}_{ci}\otimes f_i) \,({C}_{\bar{c} j}\otimes f_j) \,,
+\end{align}
+where $b_0=2 e^{-\gamma_\text{E}}$. The factor $e^{-S_{c\bar{c}}}$ represents the same Sudakov radiator that appears in the small-$p_{T}$ resummation for any colour-singlet system.  In Eq.~\eqref{eq:facformula}, the sum over $c=q,\bar{q},g$ spans all possible flavour assignments for the incoming partons, with first parton carrying flavour $c$ and the second parton carrying flavour $\bar{c}$. The collinear coefficient functions
+$C_{ij} = C_{ij}\bigl(z,\,p_{1},\,p_{2},\,\vec{b};\,\alpha_{s}(b_{0}/b)\bigr)$
+encode the constant terms arising from collinear emissions, and the parton densities $f_{i}$ are evaluated at the scale $b_{0}/b$.  The composite factor
+$\Tr\bigl({\mathbf H}_{c\bar{c}}\,{\mathbf \Delta}\bigr)\;\bigl(C_{ci}\otimes f_{i}\bigr)\;\bigl(C_{\bar{c}j}\otimes f_{j}\bigr)$
+differs in its explicit form for the $q\bar{q}$ and $gg$ channels; here it is shown in symbolic form.  In particular, this factor contains a nontrivial Lorentz structure—omitted here for brevity—that generates azimuthal correlations in the collinear limit \cite{Catani:2010pd,Catani:2014qha}.
+
+All quantities in bold face denote operators in colour space, and the trace $\Tr\bigl({\mathbf H}_{c\bar{c}}\,{\mathbf \Delta}\bigr)$
+in Eq.~\eqref{eq:facformula} runs over colour indices.  The hard function \({\mathbf H}_{c\bar{c}}\) is extracted from the infrared-subtracted amplitudes for \(Q\bar{Q}F\) production, with any ambiguity in its definition corresponding to a choice of resummation scheme~\cite{Bozzi:2005wk}.  The operator \({\mathbf \Delta}\) encodes quantum interference arising from soft radiation exchanged at large angles between the initial and final states, as well as among final-state partons. It is given by ${\mathbf \Delta}={\mathbf V}^\dagger{\mathbf D}{\mathbf V}$, where
+\begin{align}
+\label{eq:soft}
+{\mathbf V} &= {\cal
+  P}\exp\left\{-\int_{b_0^2/b^2}^{m_{Q\bar{Q}F}^2}\frac{dq^2}{q^2}{\mathbf
+  \Gamma}_t(\Phi_{\rm Q\bar{Q}F};\alpha_s(q))\right\}\,.%\notag\\
+\end{align}
+The symbol \({\cal P}\) denotes path ordering of the exponential matrix with respect to the integration variable \(q^{2}\), arranging scales from left to right in increasing order.  The anomalous dimension \(\mathbf{\Gamma}_{t}\) governs the effect of real soft radiation emitted at large angles.  Meanwhile, the azimuthal operator $\mathbf{D} \;\equiv\; \mathbf{D}\bigl(\Phi_{Q\bar{Q}F},\,\vec{b},\,\alpha_{s}\bigr)$
+encodes azimuthal correlations of the \(Q\bar{Q}F\) system in the small-\(p_{T}\) limit.  Upon averaging over the azimuthal angle \(\phi\), it satisfies
+$\bigl[\mathbf{D}\bigr]_{\phi} \;=\; \mathbf{1}$.
+
+The procedure to construct a \minnlo{} improved \(\bar{B}\) function for the \(Q\bar{Q}F\) system is the same as that of the colour-singlet case.  One expands Eq.~\eqref{eq:facformula} so as not to spoil NNLO accuracy while retaining leading-logarithmic precision.  The resulting expression in transverse-momentum space then serves to correct the usual \(\bar{B}\) function, ensuring exact NNLO normalization.  All technical details of this derivation are provided in Refs.~\cite{mazzitelli:2020jio,mazzitelli:2021mmm,mazzitelli:2024ura}.
 \begin{table}[ht!]
   \vspace*{0.3ex}
   \begin{center}
