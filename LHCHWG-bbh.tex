@@ -180,6 +180,15 @@
 
 \input{inc/definitions.tex}
 
+\preprint{
+%  \small
+\vspace{-24pt}
+  \begin{flushright}
+  LHCHWG-2025-\#\\
+  MPP-2025-116
+  \end{flushright}
+}
+
 \title{Modelling \bbH{} production for the LHC at 13.6 TeV}
 
 \author[a]{Christian Biello,}
@@ -202,14 +211,14 @@
 \affiliation[d]{Università degli Studi di Milano-Bicocca \& INFN Sezione di Milano-Bicocca, Piazza della Scienza 3, Milano 20126, Italy}
 \affiliation[e]{CERN, CH-1211 Geneva 23, Switzerland}
 \affiliation[f]{PSI Center for Neutron and Muon Sciences, 5232 Villigen PSI, Switzerland}
-\affiliation[g]{Physik Department T31, James-Franck-Straße 1, Technische Universität München, D-85748 Garching, Germany}
+\affiliation[g]{Physik Department T31, James-Franck-Straße 1, Technische Universität München, D-85748\\Garching, Germany}
 \affiliation[h]{Università degli Studi di Milano \& INFN Sezione di Milano, Via Celoria 16, 20133 Milano, Italy}
 
 \emailAdd{biello@mpp.mpg.de, marius.wiesemann@mpp.mpg.de}
 
 
 \abstract{
-We present novel state-of-the-art predictions for Standard Model Higgs production in association with a bottom-quark pair (\bbH{}). Updated cross-sections are computed in accordance with the recommendations of the LHC Higgs Working Group with a center-of-mass energy of 13.6 TeV. Different flavour schemes can be adopted: a massless calculation with five active flavours (5FS) or a calculation with massive bottom quarks and four massless flavours (4FS). First, we provide matched predictions between flavour schemes at the fixed-order level. We then present simulations matched with parton showers in the two schemes and discuss the BSM potentialities. In the massless scheme, we perform the first comparison between the NNLO+PS differential results obtained with the \minnlo{} and \GENEVA{} approaches. In addition, we discuss the role of 4FS predictions in modelling single-Higgs backgrounds for HH searches, focusing on both the top-quark and bottom-quark Yukawa contributions. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production using resummed analytic results and novel \minnlo{} simulations.
+We present novel state-of-the-art predictions for Standard Model Higgs production in association with a bottom-quark pair (\bbH{}). Updated cross-sections are computed in accordance with the recommendations of the LHC Higgs Working Group with a center-of-mass energy of 13.6 TeV. Different flavour schemes can be adopted: a massless calculation with five active flavours (5FS) or a calculation with massive bottom quarks and four massless flavours (4FS). First, we provide matched predictions between flavour schemes at the fixed-order level. We then present simulations matched with parton showers in the two schemes and discuss the BSM potentialities. In the massless scheme, we perform the first comparison between the NNLO+PS differential results obtained with the \minnlo{} and \GENEVA{} methods. In addition, we discuss the role of 4FS predictions in modelling single-Higgs backgrounds for HH searches, focusing on both the top-quark and bottom-quark Yukawa contributions. Finally, we study the sensitivity to light-quark Yukawa couplings in Higgs production using resummed analytic results and novel \minnlo{} simulations.
 }
 
 
@@ -637,7 +646,7 @@ Although the small masses of the first- and second-generation quarks make their 
 \end{figure}
 
 \subsubsection{Simulations with diphoton signature}
-In the \POWHEG{} generator, we consider the Higgs boson as an on-shell asymptotic state. We can perform exclusive simulations with colourless Higgs-boson decays by considering the decay into two photons is simulated using the narrow-width approximation in \PYTHIA{8}, assuming a branching fraction of \({\rm BR}(H \to \gamma\gamma) = 0.227\%\)~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}. Inspired by a fiducial region accessible by both the ATLAS and CMS detectors we apply the following constraints on the rapidities and transverse momenta of the two photons:
+In the \POWHEG{} generator, we consider the Higgs boson as an on-shell asymptotic state. We can perform exclusive simulations with colourless decay products by considering the decay into two photons is simulated using the narrow-width approximation in \PYTHIA{8}, assuming a branching fraction of \({\rm BR}(H \to \gamma\gamma) = 0.227\%\)~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}. Inspired by a fiducial region accessible by both the ATLAS and CMS detectors we apply the following constraints on the rapidities and transverse momenta of the two photons:
 \begin{equation}
 |y(\gamma_i)|< 2.37, \quad
 \frac{p_T(\gamma_1)}{m(\gamma_1, \gamma_2)} > 0.35,\quad \frac{p_T(\gamma_2)}{m(\gamma_1, \gamma_2)} > 0.25\,. \label{eq:aafidmycuts}
