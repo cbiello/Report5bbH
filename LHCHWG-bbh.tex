@@ -264,8 +264,21 @@ In this section, we report inclusive prediction for \bbH{} production at 13.6 Te
 FONLL-B matches NNLO 5FS cross sections with NLO 4FS predictions and agrees with the NNLL+NLO+$y_by_t$ approach, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. The novel FONLL-C matching~\cite{Duhr:2020kzd} combines \fnnnlo{} 5FS and \fnnlo{} 4FS cross sections, representing a significant advancement in predicting the \bbH{} inclusive production rate. The NNLL+NLO+$y_by_t$ combination~\cite{Bonvini:2016fgf}, on the other hand, offers an advantage by introducing a resummation scale $\mu_B$, which enables an estimate of the flavour-matching uncertainty. In addition, using the fact that the bottom-quark PDF is effectively of order $\alpha_s$, the method has the advantage of including the complete fixed-order massive results at each perturbative order. The $y_by_t$  contribution is easily included as a fixed-order non-singular term. Indeed, these interference effects vanish to all orders in the small bottom-quark mass limit.
 %The 5FS cross section corresponds to the resummed prediction, which depends on the resummation (or matching) scale $\mu_B$, used as its factorisation scale. To this, we add the 4FS prediction and subtract the overlap by removing the perturbative expansion of the resummed result, evaluated at the same factorisation scale $\mu_F$ as used in the massive scheme, thereby avoiding double counting.
 
-The sampling of cross-section values using the NNLO+NLO+$y_by_t$ method, with a scan over the Higgs mass of centre-of-mass energies of 13 and 14 TeV, was carried out in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}.
+The setup of the calculation follows that described in~\sct{sec:setup}, with the only difference being the choice of the central scales, which are set to
+\begin{align}
+\mu_{F}=\frac{1}{4}(m_H+2m_b),\hspace{1cm}\mu_R=\frac{1}{2}m_H,,
+\end{align}
+in order to ensure better perturbative convergence.
 
+In~\tab{tab:bbH136lin}, we report the results of a linear interpolation between the existing 13 TeV and 14 TeV results, using the relation
+\begin{align}
+\sigma(13.6,\text{TeV})=0.4\sigma(13.0,\text{TeV})+0.6\sigma(14.0,\text{TeV})\,.
+\end{align}
+The cross section is provided together with an overall theoretical uncertainty. This includes the standard 7-point renormalisation and factorisation scale variation, the resummation scale uncertainty, and the uncertainties associated with the parton distribution functions (PDFs) and the strong coupling constant. An alternative cross-section estimation is presented in~\tab{tab:bbH136log} where the same numbers have been combined using a logarithmic interpolation. In order to test the accuracy of the interpolation, we have also considered linear interpolation of 13.5 TeV and 14 TeV results. Using the latters, we have estimated the cross-section in~\tab{tab:bbH136linalt} with the following linear interpolation,
+\begin{align}
+	\sigma(13.6,\text{TeV})=0.8\sigma(13.5,\text{TeV})+0.2\sigma(14.0,\text{TeV})\,.
+\end{align}
+We observe a good agreement between the cross-section values obtained with different interpolations or different choices of boundary conditions. Due to the good accuracy of the interpolation and the substantial theoretical and parametric uncertainty, dedicated runs at 13.6 TeV are not needed.
 
 \begin{table}[ht!]
 \begin{center}%
