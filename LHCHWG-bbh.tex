@@ -628,7 +628,7 @@ Figure~\ref{fig:4fsB} shows the Higgs transverse momentum distribution in events
 These results underline the importance of the 4FS computation for observables involving identified $b$-jets. Since the 5FS relies on bottom quarks arising only through parton-shower splittings, it lacks the hard matrix-element description of $b$-jet production present in the 4FS. As a result, the 4FS provides a more reliable and accurate prediction, especially in regions sensitive to the kinematics and multiplicity of bottom jets. This makes the 4FS prediction highly relevant for comparisons with experimental measurements involving $b$-tagged final states.
 \section{Modelling \bbH{} for background studies in HH searches}
 Focus on \citere{Manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiducial cuts for HH searches (ref. Stefano Manzoni). NNLO+PS ggF generator with different $n_f$ is running using ATLAS resources.
-
+\cbcom{Do not forget to comment bbaa NNLO+PS yb plots.}
 \begin{figure}[t!]
 \begin{center}
 \begin{tabular}{cc}
@@ -641,16 +641,12 @@ Focus on \citere{Manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiduci
 \end{figure}
 
 \section{Light-quark Yukawa sensitivity in Higgs spectra}
-\subsection{Transverse momentum resummation at N3LL'+aN3LO}
-Based on \cite{Cal:2023mib} (ref. Rebecca von Kuk and Frank Tackmann).
-
-\subsection{Novel predictions with \minnlo{}}
 The \minnlo{} 5FS generator has been recently extended to light-quark parton fusion. These simulations can offer first constraints on anomalously large interactions between the Higgs boson and the light quarks. Indeed, while the bottom-quark Yukawa coupling is strongly constrained through measurements of Higgs decays, no stringent bounds exist for lighter quarks~\cite{Kagan:2014ila}. In particular, the charm Yukawa coupling is only weakly constrained, with an observed upper limit of less than 8.5 times the Standard Model prediction based on analyses of Higgs decay products in Higgsstrahlung events~\cite{Atlas:2022ers}. The development of an NNLO+PS generator for \( q\bar{q} \rightarrow H \) production can provide valuable input for setting constraints on light-quark Yukawa couplings. In particular, it enables the determination of upper bounds for the couplings of up-, down-, and strange-type quarks, owing to the cross-section enhancement driven by their parton distribution functions. 
 The cross-section for single Higgs production via parton fusion is given by:
 \begin{align}
 	\sigma_{\text{H}}(\bar \kappa_q^2)=\sigma_{b\bar b \rightarrow \text{H}}+\bar \kappa_c^2 \bar \sigma_{c\bar c \rightarrow \text{H}}+\bar \kappa_s^2 \bar \sigma_{s\bar s \rightarrow \text{H}}+\bar \kappa_d^2 \bar \sigma_{d\bar d \rightarrow \text{H}}+\bar \kappa_u^2 \bar \sigma_{u\bar u \rightarrow \text{H}}\,.
 \end{align}
-All interference effects at higher orders vanish due to the massless treatment of the \( n_f = 5 \) parton species. In this context, we introduce the coupling \( \bar\kappa_q \), which denotes the Yukawa coupling of a light quark \( q \), normalised to the Standard-Model Yukawa coupling of the bottom quark in the \MSbar{} scheme. In other words, they represent the cross sections obtained by using \( q \)-flavored PDFs and assigning the Yukawa interaction the strength of the bottom-quark coupling.
+All interference effects at higher orders vanish due to the massless treatment of the \( n_f = 5 \) parton species. In this context, we introduce the coupling \( \bar\kappa_q \), which denotes the Yukawa coupling of a light quark \( q \), normalised to the Standard-Model Yukawa coupling of the bottom quark in the \MSbar{} scheme. In other words, they represent the cross sections obtained by using \( q \)-flavoured PDFs and assigning the Yukawa interaction the strength of the bottom-quark coupling.
 
 A value of \( \bar\kappa_q = 1 \) corresponds to a Yukawa coupling for quark \( q \) equal in strength to that of the bottom quark. While the SM expectation is \( \kappa_q = 1 \), the normalised couplings take the following values in the SM:  
 \( \bar \kappa_u \simeq 5.17 \cdot 10^{-4} \),  
@@ -665,6 +661,7 @@ We begin the phenomenological analysis by focusing on the transverse-momentum sp
 
 Although the small masses of the first- and second-generation quarks make their contributions challenging to detect experimentally, the shape of the Higgs transverse-momentum distribution provides a potential handle to disentangle them from the dominant gluon-fusion channel. In particular, the softer spectrum associated with the charm-quark contribution, combined with the intermediate size of its Standard Model Yukawa coupling, makes this observable especially promising for setting experimental constraints in the $c\bar c \text{H}$ mode.
 
+%% If the resummed predictions are available, add in this section
 
 \begin{figure}[t!]
 \begin{center}
@@ -742,6 +739,7 @@ The main origin of this effect is the rapidity constraint defined in~\eqn{eq:aaf
 In this section, we have presented the NNLO+PS generator for Higgs production via light-parton fusion with decay into photons as a potential tool to constrain light-quark Yukawa couplings. We conclude by noting that alternative channels sensitive to light-quark Yukawa couplings have been experimentally investigated recently, such as the Higgs decay rate into four leptons~\cite{CMS:2025xkn}.
 \section{Outlooks and Conclusions}
 Conclusions.\\
+\cbcom{Outlooks: ccH in 3FS at NNLO+PS, alternative estimation of HH background in yt, flavour-matched predictions at differential level with Rhorry or sACOT}
 
 \textbf{Citation policy. }The present work consists of contributions from different collaborations. If some of the results are employed for scientific publications, together with this work, one should cite the corresponding work in~\citeres{Manzoni:2023qaf,Cal:2023mib,Biello:2024vdh,Biello:2024pgo,Gavardi:2025zpf}.
 
