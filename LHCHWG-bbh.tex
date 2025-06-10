@@ -259,6 +259,13 @@ In the Monte Carlo simulations with massless bottom quarks, we consider the Higg
 In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse invariant mass of the \bbH{} system—was often adopted. This lower scale resulted in higher 4FS cross sections, which reduced the gap with the 5FS predictions. However, with the inclusion of NNLO QCD corrections in the 4FS, such a scale choice is no longer necessary. As shown in~\citere{Biello:2024pgo}, comparisons between dynamical and fixed scales at NNLO show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with the Higgs-boson mass providing a natural and consistent choice.
 
 \section{Fixed-order cross-section numbers}
+In this section, we report inclusive prediction for \bbH{} production at 13.6 TeV. A reliable description of this process at the LHC requires a combination of massless and massive calculations. The 5FS setup allows for the resummation of large collinear logarithmic contributions, while the 4FS computation captures all mass effects order by order in perturbative QCD. Two main approaches are currently employed: FONLL~\cite{Forte:2015hba,Forte:2016sja,Duhr:2020kzd} and NNLL+NLO+$y_by_t$~\cite{Bonvini:2015pxa,Bonvini:2016fgf}. 
+
+FONLL-B matches NNLO 5FS cross sections with NLO 4FS predictions and agrees with the NNLL+NLO+$y_by_t$ approach, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. The novel FONLL-C matching~\cite{Duhr:2020kzd} combines \fnnnlo{} 5FS and \fnnlo{} 4FS cross sections, representing a significant advancement in predicting the \bbH{} inclusive production rate. The NNLL+NLO+$y_by_t$ combination~\cite{Bonvini:2016fgf}, on the other hand, offers an advantage by introducing a resummation scale $\mu_B$, which enables an estimate of the flavour-matching uncertainty. In addition, using the fact that the bottom-quark PDF is effectively of order $\alpha_s$, the method has the advantage of including the complete fixed-order massive results at each perturbative order. The $y_by_t$  contribution is easily included as a fixed-order non-singular term. Indeed, these interference effects vanish to all orders in the small bottom-quark mass limit.
+%The 5FS cross section corresponds to the resummed prediction, which depends on the resummation (or matching) scale $\mu_B$, used as its factorisation scale. To this, we add the 4FS prediction and subtract the overlap by removing the perturbative expansion of the resummed result, evaluated at the same factorisation scale $\mu_F$ as used in the massive scheme, thereby avoiding double counting.
+
+The sampling of cross-section values using the NNLO+NLO+$y_by_t$ method, with a scan over the Higgs mass of centre-of-mass energies of 13 and 14 TeV, was carried out in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}.
+
 
 \begin{table}[ht!]
 \begin{center}%
@@ -308,8 +315,6 @@ $125.09$ & $566.4$ & $\pm8.92$ & ${{+3.43}}/{-3.51}$
 \caption{Total bbH{} cross sections in the SM for a LHC CM energy of $\sqrt{s}=13.6$ TeV obtained via linear interpolation of results from 13.5 TeV and 14 TeV.}
 \label{tab:bbH136linalt}
 \end{table}
-
-\cbcom{Talk about the matching methods and NNLO+NLO+ybyt}
 
 \section{Monte Carlo simulations for the bottom-quark Yukawa contribution}
 This section highlights recent advancements in Monte Carlo simulations for modelling the \bbH{} production in the $y_b^2$ contribution. The first matching with parton showers was carried out in the 5FS scheme in~\citere{Biello:2024vdh} using the \minnlo{} method. More recently, the \GENEVA{} approach has been applied to simulate \bbtoH{} production within the same heavy-quark collinear factorisation framework~\cite{Gavardi:2025zpf}. In this section, we present the numerical comparison of the two matching methods for this process using the LHCHWG setup.
