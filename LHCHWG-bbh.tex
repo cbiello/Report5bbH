@@ -285,7 +285,7 @@ We observe a good agreement between the cross-section values obtained with diffe
 \begin{small}%
 \tabcolsep5pt
 \begin{tabular}{cccc}%
-$m_h$[GeV] & $\sigma^{bbH}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
+$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
 $125.00$ & $569.1$ & $\pm8.63$ & ${{+3.35}}/{-3.44}$ \\
 $125.09$ & $567.9$ & $\pm8.63$ & ${{+3.36}}/{-3.44}$ \\
 $125.10$ & $567.7$ & $\pm8.63$ & ${{+3.36}}/{-3.44}$ \\
@@ -302,7 +302,7 @@ $125.20$ & $566.3$ & $\pm8.63$ & ${{+3.35}}/{-3.44}$
 \begin{small}%
 \tabcolsep5pt
 \begin{tabular}{cccc}%
-$m_h$[GeV] & $\sigma^{bbH}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
+$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
 $125.00$ & $568.1$ & $\pm8.64$ & ${{+3.35}}/{-3.44}$ \\
 $125.09$ & $566.9$ & $\pm8.64$ & ${{+3.36}}/{-3.44}$ \\
 $125.10$ & $566.7$ & $\pm8.64$ & ${{+3.36}}/{-3.45}$ \\
@@ -319,7 +319,7 @@ $125.20$ & $565.3$ & $\pm8.64$ & ${{+3.35}}/{-3.45}$
 \begin{small}%
 \tabcolsep5pt
 \begin{tabular}{cccc}%
-$m_h$[GeV] & $\sigma^{bbH}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
+$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
 $125.00$ & $567.7$ & $\pm8.86$ & ${{+3.30}}/{-3.68}$ \\
 $125.09$ & $566.4$ & $\pm8.92$ & ${{+3.43}}/{-3.51}$ 
 \end{tabular}%
@@ -606,6 +606,7 @@ Building on the \minnlo{} matching for \bbH{} in the massless 5FS described in S
 %In Section~\ref{sec:FONLLmatch}, the fixed-order FONLL combination ensured that inclusive 5FS and 4FS cross sections are consistently merged, but it left open the question of how to retain full bottom-mass dependence in a fully differential, shower-matched prediction.
 Section~\ref{sec:5FSNNLOPS} demonstrated that, in 5FS, the \minnlo{} and \GENEVA{} procedures provide fully exclusive NNLO+PS results for the \bbH{} process with massless bottom quarks. While that approach naturally resums all collinear logarithms and reproduces the correct small-\(p_{T}\) behavior for the Higgs, it cannot account for finite-\(m_{b}\) recoil or reliably model observables that depend on the kinematics of hard \(b\)-jets.
 
+\begin{comment}
 To address these shortcomings, we now introduce a fully exclusive NNLO+PS generator for the \bbH{} process in the massive 4FS.  This construction follows the extension of the \minnlo{} method to heavy-quark–associated colour-singlet production (\(Q\bar{Q}F\)) developed in \cite{mazzitelli:2024ura}, which itself builds on the \minnlo{} approach for \(Q\bar{Q}\) production introduced in \cite{mazzitelli:2020jio,mazzitelli:2021mmm}.  While the pattern of large logarithms in the \(Q\bar{Q}F\) final state closely mirrors that of \(Q\bar{Q}\) production at small transverse momentum, the \(Q\bar{Q}F\) kinematics are more general—unlike in pure \(Q\bar{Q}\) production, where the heavy quarks appear back-to-back at Born level.  In both cases, one begins from the factorisation theorem in Fourier–conjugate (impact-parameter or \(b\)) space \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei}:
 \begin{align}\label{eq:facformula}
         \frac{\mathd \sigma}{ \mathd^2\vec{\pt}\, \mathd \Phi_{Q\bar{Q}{\rm F}}}&=\sum_{c=q,\bar{q},g}
@@ -630,13 +631,14 @@ in Eq.~\eqref{eq:facformula} runs over colour indices.  The hard function \({\ma
 The symbol \({\cal P}\) denotes path ordering of the exponential matrix with respect to the integration variable \(q^{2}\), arranging scales from left to right in increasing order.  The anomalous dimension \(\mathbf{\Gamma}_{t}\) governs the effect of real soft radiation emitted at large angles.  Meanwhile, the azimuthal operator $\mathbf{D} \;\equiv\; \mathbf{D}\bigl(\Phi_{Q\bar{Q}F},\,\vec{b},\,\alpha_{s}\bigr)$
 encodes azimuthal correlations of the \(Q\bar{Q}F\) system in the small-\(p_{T}\) limit.  Upon averaging over the azimuthal angle \(\phi\), it satisfies
 $\bigl[\mathbf{D}\bigr]_{\phi} \;=\; \mathbf{1}$.
+\end{comment}
 
-The procedure to construct a \minnlo{} improved \(\bar{B}\) function for the \(Q\bar{Q}F\) system is the same as that of the colour-singlet case.  One expands Eq.~\eqref{eq:facformula} so as not to spoil NNLO accuracy while retaining leading-logarithmic precision.  The resulting expression in transverse-momentum space then serves to correct the usual \(\bar{B}\) function, ensuring exact NNLO normalisation.  All technical details of this derivation are provided in Refs.~\cite{mazzitelli:2020jio,mazzitelli:2021mmm,mazzitelli:2024ura,Biello:2024pgo}.
+To address these shortcomings, we now introduce a fully exclusive NNLO+PS generator for the \bbH{} process in the massive 4FS.  This construction follows the extension of the \minnlo{} method to heavy-quark–associated colour-singlet production (\(Q\bar{Q}F\)) developed in \citere{mazzitelli:2024ura}, which itself builds on the \minnlo{} approach for \(Q\bar{Q}\) production introduced in \cite{mazzitelli:2020jio,mazzitelli:2021mmm}. The procedure to construct a \minnlo{} improved \(\bar{B}\) function for the \(Q\bar{Q}F\) system is the same as that of the colour-singlet case, and it is based on the generation of the factorisation theorem for heavy-quark pair production \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei} in arbitrary kinematics.  All technical details of this derivation are provided in Refs.~\cite{mazzitelli:2020jio,mazzitelli:2021mmm,mazzitelli:2024ura,Biello:2024pgo}.
 
 In the case of \bbH{} production in the 4FS, the two-loop virtual correction required for NNLO accuracy is not available in exact form with finite \(m_b\). To circumvent this, the NNLO+PS prediction relies on an approximate treatment of the two-loop amplitude: the known massless result is massified by retaining all logarithmic and constant terms, while dropping terms that are power-suppressed in \(m_b / m_{H}\). This massification procedure, developed in \citeres{Mitov:2006xs,Wang:2023qbf}, allows one to capture the dominant virtual corrections in the small-\(m_b\) limit. The massless full-colour two-loop amplitudes used as input are taken from \citere{Badger:2024mir}. Hence, the NNLO calculation is complete, except for the missing power-suppressed corrections in the bottom-quark mass of the two-loop contribution.
 
 \subsubsection{Results}
-The setup for the phenomenological results presented here—including input parameters, renormalization and factorization scale choices and PDFs —follows the conventions outlined in Section~\ref{sec:setup}. We now compare theoretical predictions obtained in the 5FS and 4FS for Higgs production in association with bottom quarks. The results are organized in two stages: first, we consider fully inclusive observables that do not rely on identifying bottom quarks in the final state; subsequently, we turn to observables involving b-jets, which require a careful definition of flavour-tagged jets for a meaningful comparison between schemes.
+The setup for the phenomenological results presented here—including input parameters, renormalisation and factorisation scale choices and PDFs —follows the conventions outlined in Section~\ref{sec:setup}. We now compare theoretical predictions obtained in the 5FS and 4FS for Higgs production in association with bottom quarks. The results are organised in two stages: first, we consider fully inclusive observables that do not rely on identifying bottom quarks in the final state; subsequently, we turn to observables involving b-jets, with a careful definition of flavour-tagged jets for a meaningful comparison between schemes.
 \begin{table}[ht!]
   \vspace*{0.3ex}
   \begin{center}
@@ -665,7 +667,7 @@ The setup for the phenomenological results presented here—including input para
 	\label{tab:NNLO4FS_xs}}
 \end{table}
 \footnotetext{%
-  ($a2\ell_{\rm FC}$) stands for approximate two-loop amplitudes in the full-colour limit.
+  ($a2\ell_{\rm FC}$) stands for approximate two-loop amplitudes, obtained by massifying the massless amplitude in the full-colour limit.
 }
 \begin{figure}[t!]
 \begin{center}
@@ -677,8 +679,10 @@ The setup for the phenomenological results presented here—including input para
 \caption{Comparison between different flavour scheme choices for the Higgs transverse momentum spectrum at NLO+PS (left) and NNLO+PS level (right). \label{fig:4fsA}}
 \end{center}
 \end{figure}
-\subsubsection*{Inclusive predictions}
-In the 4FS, NNLO corrections increase the total cross section by about 30\% relative to NLO, as shown in Table~\ref{tab:NNLO4FS_xs}. This highlights the importance of NNLO accuracy for precise predictions in the massive scheme. The \minnlo{} result in the 4FS shows reduced dependence on the scale choices as compared to the NLO+PS prediction. However, \minnlo{} prediction in the 5FS—based on the process \(b\bar{b} \to H+X\)—has a smaller scale uncertainties. This difference arises from the structure of the perturbative expansion: in the 4FS, strong couplings appear already at Born level, and the NNLO corrections are relatively large. Despite these differences, the NNLO+PS predictions in both schemes agree well within their respective scale uncertainties, demonstrating that the long-standing tension between the 4FS and 5FS inclusive results is resolved once NNLO accuracy is included.
+\subsubsection*{Predictions for Higgs observables}
+In the 4FS, NNLO corrections increase the total cross section by about 30\% relative to NLO, as shown in Table~\ref{tab:NNLO4FS_xs}. This highlights the importance of NNLO accuracy for precise predictions in the massive scheme. The \minnlo{} result in the 4FS shows reduced dependence on the scale choices as compared to the NLO+PS prediction. However, \minnlo{} prediction in the 5FS—based on the process \(b\bar{b} \to H+X\)—has a smaller scale uncertainties. 
+%This difference arises from the structure of the perturbative expansion: in the 4FS, strong couplings appear already at Born level, and the NNLO corrections are relatively large.
+Despite these differences, the NNLO+PS predictions in both schemes agree well within their respective scale uncertainties, demonstrating that the long-standing tension between the 4FS and 5FS inclusive results is reduced once NNLO accuracy is included.
 \begin{figure}[t!]
 \begin{center}
 \begin{tabular}{cc}
@@ -690,19 +694,22 @@ In the 4FS, NNLO corrections increase the total cross section by about 30\% rela
 \end{center}
 \end{figure}
 
-Further insight comes from the Higgs transverse-momentum distribution, shown in figure~\ref{fig:4fsA}. At NLO+PS, the 4FS and 5FS predictions differ significantly at low \(p_{T,H}\). At NNLO+PS, this discrepancy is significantly reduced: \minnlo{} matching brings the two predictions into much better agreement across the full \(p_{T,H}\) range. In particular, for \(p_{T,H} \gtrsim 75\)~GeV, the NNLO corrections in the 4FS are nearly flat and well-contained within the scale uncertainty bands.
-\subsubsection*{Exclusive predictions}
-We now turn to the comparison of results with at least one $b$-jet identified in the final state. In this context, the definition of $b$-jets becomes particularly important, especially in the massless 5FS, where bottom quarks originate only through gluon splitting in the parton shower. Applying a jet-flavour algorithm to fixed-order predictions in a massless scheme introduces potential issues due to a mismatch between real and virtual contributions. These mismatches can lead to infrared-unsafe predictions for observables involving flavoured jets, particularly in configurations where a gluon splits into a $b\bar{b}$ pair within the same jet, or when soft, wide-angle $b$-quark emissions are clustered into a jet containing a hard parton. 
+Further insight comes from the Higgs transverse-momentum distribution, shown in figure~\ref{fig:4fsA}. At NLO+PS, the 4FS and 5FS predictions differ significantly at low \(p_{T,H}\). At NNLO+PS, this discrepancy is significantly reduced: \minnlo{} matching brings the two predictions into much better agreement across the full \(p_{T,H}\) range. In particular, in the hard region with \(p_{T,H} \gtrsim 75\)~GeV, the 4FS prediction lies well within the scale uncertainty band of the 5FS prediction.
+ 
+\subsubsection*{Predictions with $b$-jet tagging}
+We now turn to the comparison of results with at least one $b$-jet identified in the final state. In this context, the definition of $b$-jets becomes particularly important, especially in the massless 5FS. Applying a jet-flavour algorithm to fixed-order predictions in a massless scheme introduces potential issues due to a mismatch between real and virtual contributions. These mismatches can lead to infrared-unsafe predictions for observables involving flavoured jets, particularly in configurations where a gluon splits into a $b\bar{b}$ pair within the same jet, or when soft, wide-angle $b$-quark emissions are clustered into a jet containing a hard parton. 
 
-Such divergences arise in tagging strategies like the experimental $b$-tagging definition, referred to as \texttt{EXP} hereafter, which can, however, be directly implemented in the massive 4FS predictions. To ensure a theoretically sound and IRC-safe definition of $b$-jets in the massless scheme, we employ the \emph{Interleaved Flavour Neutralisation} (IFN) algorithm~\cite{Caola:2023wpj}, which systematically removes soft $b$-flavour contamination during clustering. In our setup, we use the recommended parameters $\alpha = 2$ and $\omega = 1$. The IFN algorithm is implemented through a dedicated Fortran--C++ interface to the \texttt{FastJet} plugin, allowing seamless integration into our \POWHEG{} framework for all relevant processes.
+%Such divergences arise in tagging strategies like the experimental $b$-tagging definition, referred to as \texttt{EXP} hereafter, which can, however, be directly implemented in the massive 4FS predictions. 
+To ensure a theoretically sound and IRC-safe definition of $b$-jets in the massless scheme, we employ the \emph{Interleaved Flavour Neutralisation} (IFN) algorithm~\cite{Caola:2023wpj}, which systematically removes soft $b$-flavour contamination during clustering. In our setup, we use the recommended parameters $\alpha = 2$ and $\omega = 1$. 
+%The IFN algorithm is implemented through a dedicated Fortran--C++ interface to the \texttt{FastJet} plugin, allowing seamless integration into our \POWHEG{} framework for all relevant processes.
 
-We now examine the fiducial cross sections in the presence of $b$-jets, comparing 4FS and 5FS predictions at both NLO+PS and NNLO+PS accuracy. As shown in Table~\ref{tab:NNLO4FS_xs}, requiring at least one $b$-jet leads to a significant reduction in the inclusive cross section, by a factor of approximately 5--7. Imposing a second $b$-jet further suppresses the rate by roughly an additional order of magnitude. These trends are seen across both schemes and perturbative orders. At NNLO+PS, the inclusion of higher-order corrections via \minnlo{} improves the overall consistency between the two schemes, particularly in the one- and two-$b$-jet bins, where 4FS results remain slightly below the 5FS but still agree within uncertainties.
+We now examine the fiducial cross sections in the presence of $b$-jets, comparing 4FS and 5FS predictions at both NLO+PS and NNLO+PS accuracy. As shown in Table~\ref{tab:NNLO4FS_xs}, requiring at least one $b$-jet leads to a significant reduction in the inclusive cross section, by a factor of approximately 5. Imposing a second $b$-jet further suppresses the rate by roughly an additional order of magnitude. These trends are seen across both schemes and perturbative orders. At NNLO+PS, the inclusion of higher-order corrections via \minnlo{} improves the overall consistency between the two schemes, particularly in the one- and two-$b$-jet bins, where 4FS results remain slightly below the 5FS but still agree within uncertainties.
 
 % Interestingly, we observe that the NLO+PS predictions in 4FS and 5FS for the $\geq$2 $b$-jet bin are numerically very close—more so than at NNLO+PS. However, this agreement is accidental. In the 5FS, such observables are less reliable at NLO, since bottom quarks only arise from gluon splittings and are not part of the hard matrix element at Born level. The good agreement at the integrated cross-section level does not reflect the underlying physics accuracy, as will become evident in the following, where we examine the corresponding differential distributions.
 
-Figure~\ref{fig:4fsB} shows the Higgs transverse momentum distribution in events with at least one (left) or two (right) $b$-jets identified using the IFN tagging algorithm. The predictions are obtained from \minnlo{} in both the massless 5FS (blue, dashed) and massive 4FS (red, solid) schemes. For the inclusive one-$b$-jet selection, the differences between the schemes remain moderate and largely flat. In the two-$b$-jet case, the 4FS prediction is systematically lower than the 5FS, especially in the low and intermediate $p_{T,H}$ regions. This behavior reflects the more accurate treatment of bottom-quark kinematics in the massive scheme, which becomes particularly relevant when both $b$-jets are required to be hard and well separated.
+Figure~\ref{fig:4fsB} shows the Higgs transverse momentum distribution in events with at least one (left) or two (right) $b$-jets identified using the IFN tagging algorithm. For the inclusive one-$b$-jet selection, the differences between the schemes remain moderate and largely flat. In the two-$b$-jet case, the 4FS prediction is systematically lower than the 5FS, especially in the low and intermediate $p_{T,H}$ regions. This behaviour reflects the more accurate treatment of bottom-quark kinematics in the massive scheme, which becomes particularly relevant when both $b$-jets are required to be hard and well separated.
 
-These results underline the importance of the 4FS computation for observables involving identified $b$-jets. Since the 5FS relies on bottom quarks arising only through parton-shower splittings, it lacks the hard matrix-element description of $b$-jet production present in the 4FS. As a result, the 4FS provides a more reliable and accurate prediction, especially in regions sensitive to the kinematics and multiplicity of bottom jets. This makes the 4FS prediction highly relevant for comparisons with experimental measurements involving $b$-tagged final states.
+These results underline the importance of the 4FS computation for observables involving identified $b$-jets. Due to the partonic structure of the 5FS calculation, it lacks accuracy in the hard matrix-element description of $b$-jet production compared to the 4FS. As a result, the 4FS provides a more reliable and accurate prediction, especially in regions sensitive to the kinematics and multiplicity of bottom jets. This makes the 4FS prediction highly relevant for comparisons with experimental measurements involving $b$-tagged final states.
 \section{Modelling \bbH{} for background studies in HH searches}
 Focus on \citere{Manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiducial cuts for HH searches (ref. Stefano Manzoni). NNLO+PS ggF generator with different $n_f$ is running using ATLAS resources.
 \cbcom{Do not forget to comment bbaa NNLO+PS yb plots.}
