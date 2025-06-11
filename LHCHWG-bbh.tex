@@ -239,7 +239,25 @@ We present novel state-of-the-art predictions for Standard Model Higgs productio
 }
 
 \section{Introduction}
-Introduction by Michael Spira+MW.
+Introduction by Michael Spira+MW. \\
+The inclusive cross section of SM Higgs radiation off bottom quarks is two orders of magnitude smaller than the dominant gluon-fusion cross section and ranks at the same size as the corresponding $t\bar tH$ production. However, as soon as $b$ tagging is applied in experimental analyses, the $b\bar bH$ production rates is further reduced significantly so that this process does not a relevant role for the SM Higgs boson. In the MSSM or the 2HDM of type II, on the other hand, the bottom Yukawa coupling is strongly enhanced for large values of $\tan\beta = v_2/v_1$, where $v_{1,2}$ denote the vacuum expectation values of the two scalar CP-even Higgs fields so that this production mode turns out to the dominant one, i.e. even larger than the gluon-fusion mechanism.
+
+The calculation of the $b\bar bH$ cross section can be performed in two different schemes. In the four-flavour scheme (4FS) no bottom PDFs are taken into account so that the bottom quarks are entirely generated in the final state starting from quark-aniquark and gluon-gluon initial states at LO, see Fig.~\ref{fig:bbhlo}. The calculation requires 4FS PDFs and a 4FS strong coupling $\alpha_s$ in order to avoid artificial large logarithms at higher orders. The 4FS calculation has been performed at NLO QCD some time ago \cite{dittmaier:2003ej,dawson:2003kb}, while NNLO QCD results became available only recently \cite{Biello:2024pgo}.
+\begin{figure}[hbt]
+\begin{center}
+    \includegraphics[height=2cm]{./diags/gg-bbH.pdf}\hspace*{2cm}
+    \includegraphics[height=2cm]{./diags/qq-bbH.pdf}\hspace*{2cm}
+    \includegraphics[height=2cm]{./diags/bb-H.pdf}
+	\vspace{0.2cm}
+  \caption{Typical LO Feynman diagrams contributing to $\bbH$ production in
+the four-flavour scheme (left, centre) and the five-flavour scheme (right).}
+  \label{fig:bbhlo}
+\end{center}
+\end{figure}
+
+In the 4FS, the integration over the transverse momenta of the final-state bottom quarks, however, generate logarithmic contributions that might reduce the perturbative convergence. In order to resum these logarithms, bottom densities need to introduced, the DGLAP evolution of which leads to the resummation. This framework defines the five-flavour scheme (5FS) and starts from a $b\bar b$ initial state at LO (see Fig.~\ref{fig:bbhlo}), while neglecting the off-shellness, transverse momenta and the mass of the initial-state bottom quarks. The first two approximations are resolved by adding higher-order QCD corrections that order by order restore the full kinematics of the bottom quarks. However, finite bottom-mass effects cannot be studied in the 5FS. The NLO QCD corrections in the 5FS have been obtained some time ago \cite{dicus:1998hs,balazs:1998bm} and NNLO QCD corrections are of moderate size \cite{harlander_2003} and stabilize the scale dependence significantly. More recently, the 5FS calculation has been extended to N$^3$LO QCD \cite{duhr:2019kwi}.
+
+At sufficiently high perturbative order the two schemes need to approach each other. However, the comparison of the 4FS at NLO and the 5FS at NNLO shows a discrepancy at the level of 20--30\% so that a reliable combination of both predictions became mandatory to arrive at a single combined prediction. In order to cope with the logarithmic terms in the 4FS, a factorization scale smaller than the Higgs mass has been introduced (typically $M_H/4$) that reduces the differences between the 4FS and 5FS \cite{campbell2004}. The combination of the 4FS and 5FS then has first been performed by applying the empirical Santander matching \cite{harlander:2011aa}, which is based on a logarithmic weighting between the 4FS and 5FS. This approach has been replaced by two proper matching procedures some years ago, the 'FONLL' approach \cite{forte:2015hba,forte:2016sja} and the 'NLO+NLL$_{\mbox{partial}}$+ybyt' method \cite{Bonvini:2015pxa,Bonvini:2016fgf}. Both approaches rely on a systematic expansion of the 4FS parameters and PDFs in 5FS ones and different methods to merge both schemes to avoid double-counting of common contributions. The results show a better agreement with the 5FS at NNLO QCD than with the 4FS at NLO QCD. This situation has changed recently, since after adding the NNLO QCD corrections within the 4FS both approaches agree within 10\% or better thus solving the issue of the discrepancies. The 4FS and 5FS calculations at NNLO QCD have been implemented in MINNLO$_{PS}$ \cite{Biello:2024pgo,Biello:2024vdh} thus providing suitable NNLO event generators for the experimental analyses.
 
 \section{Computational Setup}\label{sec:setup}
 All the simulations performed in this paper are performed at a centre-of-mass energy of $\sqrt{s}=13.6$ TeV, employing the PDF4LHC21\_40 set~\cite{PDF4LHCWorkingGroup:2022cjn} for the parton distribution functions. 
