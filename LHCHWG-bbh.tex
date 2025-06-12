@@ -744,7 +744,37 @@ Figure~\ref{fig:4fsB} shows the Higgs transverse momentum distribution in events
 These results underline the importance of the 4FS computation for observables involving identified $b$-jets. Due to the partonic structure of the 5FS calculation, it lacks accuracy in the hard matrix-element description of $b$-jet production compared to the 4FS. As a result, the 4FS provides a more reliable and accurate prediction, especially in regions sensitive to the kinematics and multiplicity of bottom jets. This makes the 4FS prediction highly relevant for comparisons with experimental measurements involving $b$-tagged final states.
 \section{Modelling \bbH{} for background studies in HH searches}
 Focus on \citere{Manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiducial cuts for HH searches (ref. Stefano Manzoni). NNLO+PS ggF generator with different $n_f$ is running using ATLAS resources.
-\cbcom{Do not forget to comment bbaa NNLO+PS yb plots.}
+
+\begin{equation}
+\label{eq:ptjcuts}
+p_T(j) > 25,\GeV \qquad {\rm and} \qquad |\eta(j)| < 2.5\,.
+\end{equation}
+\begin{equation}
+    \label{eq:mbjcut}
+    80\, \GeV < m(b_1,b_2)< 140\,\GeV\,.
+\end{equation}
+\begin{equation}
+\label{eq:photoncuts}
+    105\,\GeV < m(\gamma_1, \gamma_2) < 160\,\GeV, \quad |\eta(\gamma_i)|< 2.37, \quad
+    \frac{p_T(\gamma_1)}{m(\gamma_1, \gamma_2)} > 0.35, \quad \frac{p_T(\gamma_2)}{m(\gamma_1, \gamma_2)} > 0.25\,.
+\end{equation}
+
+\begin{equation}
+\label{eq:mbbggs}
+    \mbbggs = m_{2b2\gamma} - m(b_1,b_2) - m(\gamma_1,\gamma_2) + 2m_H \,.
+\end{equation}
+
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/4fs/n_b_jets-EXP.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/4fs/m_bb-EXP-2bjet.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{The left plot represents the number of \texttt{EXP} $b$-jets in the NLO+PS and NNLO+PS bottom-Yukawa-induced events. The right plot shows the impact of NNLO corrections in the invariant-mass spectrum of the leading two b-jets.\label{fig:4fsMBB}}
+\end{center}
+\end{figure}
+
 \begin{figure}[t!]
 \begin{center}
 \begin{tabular}{cc}
@@ -752,7 +782,7 @@ Focus on \citere{Manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiduci
 \includegraphics[width=.45\textwidth, page=1]{plots/4fs/mass_2b2gam-EXP-fid-FC.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{\label{fig:4fsC}}
+\caption{Transverse-momentum spectrum of the Higgs boson and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs} in the fiducial volume described by the cuts~(\ref{eq:ptjcuts}-\ref{eq:photoncuts}).\label{fig:4fsFID}}
 \end{center}
 \end{figure}
 
