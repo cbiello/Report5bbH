@@ -226,6 +226,7 @@ We present novel state-of-the-art predictions for Standard Model Higgs productio
 \maketitle
 \flushbottom
 
+\begin{comment}
 {\color{red}
 \textbf{PARAMETERS AND SETTINGS from LHCH WG1+bbH reccomendations. Please consult the page: \href{https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec}{WG1 Twiki}}
 \begin{itemize}
@@ -237,6 +238,7 @@ We present novel state-of-the-art predictions for Standard Model Higgs productio
 	\item For fully-exclusive cross-sections predictions, we use $m_H$ as the central scale of both Yukawa, $\mu_F$ and $\mu_R$ scale vatiations. Scale variations are obtained by changing the renormalisation and factorisation scales by a factor of $2$ with $\frac{1}{2}\leq\mu_R/\mu_F\leq 2$.
 \end{itemize}
 }
+\end{comment}
 
 \section{Introduction}
 The inclusive cross section of SM Higgs radiation off bottom quarks is two orders of magnitude smaller than the dominant gluon-fusion cross section and ranks at the same size as the corresponding $t\bar tH$ production. However, as soon as $b$ tagging is applied in experimental analyses, the $b\bar bH$ production rates is further reduced significantly so that this process does not a relevant role for the SM Higgs boson. In the MSSM or the 2HDM of type II, on the other hand, the bottom Yukawa coupling is strongly enhanced for large values of $\tan\beta = v_2/v_1$, where $v_{1,2}$ denote the vacuum expectation values of the two scalar CP-even Higgs fields so that this production mode turns out to the dominant one, i.e. even larger than the gluon-fusion mechanism.
@@ -269,12 +271,14 @@ In the 4FS, there is an additional contribution that interferes with the purely 
 \end{center}
 \end{figure}
 
+\cbcom{Add introduction to sections}
+
 \section{Computational Setup}\label{sec:setup}
 All the simulations performed in this paper are performed at a centre-of-mass energy of $\sqrt{s}=13.6$ TeV, employing the PDF4LHC21\_40 set~\cite{PDF4LHCWorkingGroup:2022cjn} for the parton distribution functions. 
 \subsection{Numerical Inputs}
 All parametric inputs, including the strong coupling constant and electroweak parameters relevant to the Higgs vacuum expectation value, follow the latest recommendations from the LHC Higgs Working Group~\cite{Karlberg:2024zxx} and the Particle Data Group parameters~\cite{ParticleDataGroup:2024cfk}. The most relevant inputs for \bbH{} predictions are reported for completeness. The predictions in the massive schemes are obtained by considering an on-shell value of the bottom-quark mass of $m_b^{OS}=(4.92\pm0.13)$ GeV. The bottom-quark mass in the $\MSbar{}$ scheme is $m_b(m_b)=(4.18\pm0.03)$ GeV, used as the boundary condition for the running of the bottom-quark Yukawa coupling discussed in the following section. We report the relevant parameters for deriving the Higgs vacuum expectation value ($v$). We consider the following masses and widths for the weak bosons: $m_W = 80.379$ GeV, $\Gamma_W=2.085$ GeV, $m_Z = 91.1876$ GeV, $\Gamma_Z=2.4952$ GeV, and the electroweak coupling is set to $\alpha_{ew}=1/132.34890452162441$. Working in the $\alpha_{ew}$ scheme with complex boson masses, the derived couplings are $G_\mu=1.16436\,\text{GeV}^{-2}$ and $v=(246.403-i3.8060)$ GeV. The Higgs boson is treated as on-shell with zero width in all simulations, except where its decay into photons or tau leptons is explicitly considered. The strong coupling constant is set to $\alpha_s(m_Z)=0.1180$.
 
-\subsection{Running of the bottom-quark}
+\subsection{Running of the bottom-quark mass}
 The Yukawa coupling is always renormalised in the \MSbar{} scheme. We discuss the recommendation of the \bbH{} subgroup in performing the running of the bottom-quark mass value at the hard scale. We derive the coupling $y_b$ from an input value $\hat m_b\equiv m_b(m_b)=4.18$ GeV and evolved to the Higgs mass via four-loop running, based on the solution of the Renormalisation Group Equation (RGE) \cite{harlander:2002wh,baikov_2014}. The evolution of the strong coupling constant depends on its value at both the hard scale and the bottom-quark pole. In the massless scheme, these values are straightforwardly obtained by evolving the input $\alpha_s(m_Z) = 0.1180$ using QCD running with $n_f = 5$ active flavours. In the massive scheme, the procedure follows the approach commonly adopted in modern evolution libraries: starting from $\alpha_s(m_Z) = 0.1180$ with $n_f = 5$, we evolve down to the bottom-quark pole $\hat{m}_b$, where a decoupling relation~\cite{vogt:2004ns} is applied to extract $\alpha_s(\hat{m}_b)$ in the 4-flavour scheme (4FS). This value is then used as a boundary condition for the subsequent QCD evolution at higher scales, performed with $n_f = 4$ active flavours.
 
 To ensure consistency in the perturbative estimation of scale uncertainties, the values of the Yukawa coupling at scales varied by a factor $\KR$ with respect to the central scale are obtained by evolving from the central value, which serves as the boundary condition. The evolution is performed at two-loop accuracy for NLO predictions and at three-loop accuracy for NNLO ones. A consistent number of active flavours is used throughout the running, depending on the treatment of the bottom-quark mass.
@@ -665,7 +669,7 @@ To address these shortcomings, we now introduce a fully exclusive NNLO+PS genera
 
 In the case of \bbH{} production in the 4FS, the two-loop virtual correction required for NNLO accuracy is not available in exact form with finite \(m_b\). To circumvent this, the NNLO+PS prediction relies on an approximate treatment of the two-loop amplitude: the known massless result is massified by retaining all logarithmic and constant terms, while dropping terms that are power-suppressed in \(m_b / m_{H}\). This massification procedure, developed in \citeres{Mitov:2006xs,Wang:2023qbf}, allows one to capture the dominant virtual corrections in the small-\(m_b\) limit. The massless full-colour two-loop amplitudes used as input are taken from \citere{Badger:2024mir}. Hence, the NNLO calculation is complete, except for the missing power-suppressed corrections in the bottom-quark mass of the two-loop contribution.
 
-\subsubsection{Results}
+\subsubsection{Results and flavour-scheme comparison}
 The setup for the phenomenological results presented here—including input parameters, renormalisation and factorisation scale choices and PDFs —follows the conventions outlined in Section~\ref{sec:setup}. We now compare theoretical predictions obtained in the 5FS and 4FS for Higgs production in association with bottom quarks. The results are organised in two stages: first, we consider fully inclusive observables that do not rely on identifying bottom quarks in the final state; subsequently, we turn to observables involving b-jets, with a careful definition of flavour-tagged jets for a meaningful comparison between schemes.
 \begin{table}[ht!]
   \vspace*{0.3ex}
@@ -768,12 +772,12 @@ The High-Luminosity Large Hadron Collider prospects~\cite{deBlas:2019rxi} shows 
 
 The simulations are produced using the \minnlo{} \bbH{} generator in the massless scheme as a starting point. The code modifies the flavour of the initial-state partons via the \texttt{whichlightquark} flag, which is set to the Monte Carlo ID number corresponding to the chosen flavour. The generator consistently calls the appropriate analytic amplitudes, with the sole exception of the double real corrections, which are evaluated numerically using the \OpenLoops{} \texttt{bbhjj} library with a suitable flipping of the parton flavours. The number of active massless species is always set to \( n_f = 5 \), including in the running of the strong coupling and Yukawa factors. The theoretical uncertainty is estimated through the standard 7-point scale variation of the factorisation scale for the PDFs and the renormalisation scale with a correlated variation of Yukawa and strong coupling scales.
 
-\subsubsection{Shapes of transverse-momentum spectra}
+\subsection{Shapes of transverse-momentum spectra}
 We begin the phenomenological analysis by focusing on the transverse-momentum spectrum of the Higgs boson. In~\fig{fig:lightpTHzoom}, we show the normalised distribution for the five different flavour channels. By normalising to the total cross section, we remove the dependence on the Yukawa coupling, making the comparison sensitive only to differences in the parton distribution functions (PDFs) across the channels. We observe that the position of the peak varies significantly with the initial-state flavour, with valence-quark channels exhibiting a softer spectrum. The comparatively harder spectrum in the \bbH{} channel is a consequence of the bottom-quark PDF being generated perturbatively, predominantly from gluon splitting.
 
 Although the small masses of the first- and second-generation quarks make their contributions challenging to detect experimentally, the shape of the Higgs transverse-momentum distribution provides a potential handle to disentangle them from the dominant gluon-fusion channel. In particular, the softer spectrum associated with the charm-quark contribution, combined with the intermediate size of its Standard Model Yukawa coupling, makes this observable especially promising for setting experimental constraints in the $c\bar c \text{H}$ mode.
 
-%% If the resummed predictions are available, add in this section
+The shape behaviour of \minnlo{} predictions for the Higgs transverse-momentum spectrum has also been observed with the analytic description of this observable with resummation methods in figure 13 of~\citere{Cal:2023mib}. Indeed, at NNLO+NLO accuracy, the spectra of the different flavour channels already exhibit different shapes, which are confirmed at the more accurate \nnnres{} level with a substantial reduction of the scale uncertainty.
 
 \begin{figure}[t!]
 \begin{center}
@@ -786,7 +790,7 @@ Although the small masses of the first- and second-generation quarks make their 
 \end{center}
 \end{figure}
 
-\subsubsection{Simulations with diphoton signature}
+\subsection{Simulations with diphoton signature}
 In the POWHEG generator, the Higgs boson is treated as an on-shell asymptotic state. Exclusive simulations with colorless decay products can be performed by modeling its decay into two photons using the narrow-width approximation in Pythia8, assuming a branching ratio of \({\rm BR}(H \to \gamma\gamma) = 0.227\%\)~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}.
 %In the \POWHEG{} generator, we consider the Higgs boson as an on-shell asymptotic state. We can perform exclusive simulations with colourless decay products by considering the decay into two photons is simulated using the narrow-width approximation in \PYTHIA{8}, assuming a branching fraction of \({\rm BR}(H \to \gamma\gamma) = 0.227\%\)~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}. 
 Inspired by a fiducial region accessible by both the ATLAS and CMS detectors we apply the following constraints on the rapidities and transverse momenta of the two photons:
