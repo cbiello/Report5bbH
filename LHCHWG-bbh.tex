@@ -294,7 +294,8 @@ In the Monte Carlo simulations with massless bottom quarks, we consider the Higg
 
 In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse invariant mass of the \bbH{} system—was often adopted. This lower scale resulted in higher 4FS cross sections, which reduced the gap with the 5FS predictions. However, with the inclusion of NNLO QCD corrections in the 4FS, such a scale choice is no longer necessary. As shown in~\citere{Biello:2024pgo}, comparisons between dynamical and fixed scales at NNLO show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with the Higgs-boson mass providing a natural and consistent choice.
 
-\section{Flavour-matched cross-section numbers}\label{sec:matchedinclusivenumbers}
+\section{Analytic predictions}
+\subsection{Flavour-matched cross-section numbers}\label{sec:matchedinclusivenumbers}
 In this section, we report inclusive prediction for \bbH{} production at 13.6 TeV. A reliable description of this process at the LHC requires a combination of massless and massive calculations. The 5FS setup allows for the resummation of large collinear logarithmic contributions, while the 4FS computation captures all mass effects order by order in perturbative QCD. As already introduced in the first section, two main approaches are currently employed: \fonll{}~\cite{forte:2015hba,forte:2016sja,Duhr:2020kzd} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf}. 
 
 FONLL-B matches NNLO 5FS cross sections with NLO 4FS predictions and agrees with the \nlonnllpart{} approach, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. The novel FONLL-C matching~\cite{Duhr:2020kzd} combines \fnnnlo{} 5FS and \fnlo{} 4FS cross sections, representing a significant advancement in predicting the \bbH{} inclusive production rate. The \nlonnllpart{} combination~\cite{Bonvini:2016fgf}, on the other hand, offers an advantage by introducing a resummation scale $\muB$, which enables an estimate of the flavour-matching uncertainty. In addition, using the fact that the bottom-quark PDF is effectively of order $\alpha_s$, the method has the advantage of including the complete fixed-order massive results at each perturbative order\footnote{We specify that with the inclusion of the \fnnnlo{} 5FS corrections, the FONLL-C version matches all the 4FS NLO terms.}. The $y_by_t$  contribution is easily included as a fixed-order non-singular term. Indeed, these interference effects vanish to all orders in the small bottom-quark mass limit.
@@ -371,8 +372,11 @@ This section highlights recent advancements in Monte Carlo simulations for model
 
 We proceed with discussing the BSM studies that can be performed in this scheme using the \minnlo{} generator, with an example as proof-of-concept in the Minimal Supersymmetric Model (MSSM). The last part of the section is dedicated to a Monte Carlo generator at NNLO+PS accuracy in the massive scheme~\cite{Biello:2024pgo}, which allows for the first time access to NNLO corrections in the 4FS using the \minnlo{} method.
 
+\subsection{Higgs transverse momentum resummation}
+\cbcom{Ref RvK.}
+
 \subsection{NNLO+PS in the massless scheme}\label{sec:5FSNNLOPS}
-\subsubsection{The matching methods in a nutshell}
+\subsubsection{The matching methods in a nutshell}\label{sec:nutshell}
 
 \minnlo{} and \GENEVA{} are two NNLO+PS Monte Carlo event generators
 that match fixed-order calculations with the resummation of the
@@ -504,8 +508,7 @@ that adopted the colour-singlet transverse momentum
 $q_{\scriptscriptstyle\rm T}$ instead was presented
 in~\cite{alioli:2021qbf}. This approach was refined and extended
 in~\cite{Gavardi:2025zpf} (also using a $p_{\scriptscriptstyle\rm
-  T}$-like observable as 1-jet resolution variable), where the $b
-\bar{b} \to H$ process was discussed.
+  T}$-like observable as 1-jet resolution variable), where the \bbtoH{} process was discussed.
 
 A subtlety related to the slicing of the phase space in \GENEVA{} is
 that, since the scales appearing in the resummed cumulant and spectrum
@@ -518,8 +521,7 @@ subleading contributions in the distributions inclusive over the
 radiation. Setting the scales in the cumulant and defining the
 spectrum as its derivative, on the other hand, enforces the generated
 events to reproduce the exact NNLO inclusive distributions by
-construction. The difference between the two choices is shown
-in~\fig{fig:genevaptH}.
+construction. The numerical difference between the two choices is discussed in the following section, specifically in~\fig{fig:genevaptH}.
 
 Besides resumming the resolution variables in different ways, the two
 approaches may also produce small differences in the distributions
@@ -539,7 +541,15 @@ of two different methods is the best way to estimate their theoretical
 uncertainties.
 
 \subsubsection{Numerical comparison of \minnlo{} and \GENEVA{}}
-\cbcom{Ref: MW. Please specify that the default of Geneva is the cumulant scale choices with the included matching uncertainty. On the other hand, minnlo includes (only in this section!) a resummation scale uncertainty: the predictions are performed with kQ=0.25, but in the bars, also the kQ=0.5 is included, therefore we have a 14 scale point envelope.}
+In this section, we present a numerical comparison between two Monte Carlo generators for \bbtoH{} production: the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. The \minnlo{} predictions use a four-loop running as implemented in~\citere{harlander:2002wh,baikov_2014}, while the \GENEVA{} generator employs a three-loop running derived from SCET. This difference is numerically small and can be safely neglected in the following comparison.
+
+To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2020nks}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well below the differences observed between the predictions of the two Monte Carlo generators.
+
+On the other hand, the \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables by construction and the default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
+
+We start the comparison by focusing on the transverse momentum spectrum of the Higgs boson in~\fig{fig:genevaptH}. The left plot shows the spectrum in a large range where we observe good agreement in the resummation region for low values of the transverse momentum and a good match in the fixed-order hard region. For intermediate values of the transverse momentum, we observe strong differences between \minnlo{} and \GENEVA{} with cumulative scale choice. In the right plot with a zoom version of the same observable, we include the \GENEVA{} prediction with spectrum scale choices as discussed in~\sct{sec:nutshell}. Indeed, for the transvese momentum spectrum, the spectrum scale is the best choice with 
+
+
 \begin{figure}[t!]
 \begin{center}
 \begin{tabular}{cc}
@@ -937,6 +947,8 @@ Conclusions.\\
 \cbcom{Outlooks: ccH in 3FS at NNLO+PS, alternative estimation of HH background in yt, flavour-matched predictions at differential level with Rhorry or sACOT.}
 
 \textbf{Citation policy. }The present work consists of contributions from different collaborations. If some of the results are employed for scientific publications, together with this work, one should cite the corresponding work in~\citeres{Manzoni:2023qaf,Cal:2023mib,Biello:2024vdh,Biello:2024pgo,Gavardi:2025zpf}.
+
+\textbf{Data Availability Statement.} All data used to produce the plots are available upon request by contacting the LHCHWG bbH/bH theory conveners via email.
 
 \textbf{Acknowledgements. }This work has been carried out within the LHC Higgs Working Group, as a contribution to the Yellow Report 5. We thank all the WG3 conveners for coordinating the activities, in particular Tatjana Lenz. CB is grateful to Tommaso Giani for PDF insights and Jan Lukas Spah for interesting discussions on Yukawa interactions via light-quark fusion. We have used the Max Planck Computing and Data Facility (MPCDF) in Garching to carry out the \minnlo{} simulations presented here for \bbtoH{}, $q\bar q\rightarrow \text{H}$ and \bbH{} production.
 
