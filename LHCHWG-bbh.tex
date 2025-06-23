@@ -1,6 +1,6 @@
 % */ vim: set tw=150: */
 \documentclass[11pt,a4paper]{article}
-\pdfoutput=1
+%\pdfoutput=1
 
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
@@ -272,6 +272,8 @@ In the 4FS, there is an additional contribution that interferes with the purely 
 \end{figure}
 
 In this contribution, we present updated cross-section predictions for Higgs production in association with bottom quarks (\bbH{}) in both the four-flavour (4FS) and five-flavour (5FS) schemes. To ensure a consistent and state-of-the-art overview of the process, all results are obtained using a common computational setup at a centre-of-mass energy of 13.6 TeV, as detailed in~\sct{sec:setup}. Inclusive cross sections are reported in~\sct{sec:matchedinclusivenumbers}, where we employ the \nlonnllpart{} approach to consistently match the NLO 4FS and NNLO 5FS results through an interpolation based on existing LHCHWG data. 
+In~\sct{sec:resummation}, we present a prediction at three-loop order in resummed perturbation
+theory (N$^3$LL$'$) matched to the full fixed-order result at approximate N$^3$LO.
 Section~\ref{sec:MCyb} discusses recently developed Monte Carlo event generators that accurately describe the bottom-quark Yukawa component of the \bbH{} process, including their relevance for BSM applications. We compare predictions obtained with the \minnlo{} and \GENEVA{} methods in the massless scheme, and subsequently examine NNLO+PS predictions in the 4FS.
 In~\sct{sec:HH}, we analyse the role of \bbH{} production as a background in di-Higgs searches, focusing on contributions from top- and bottom-quark Yukawa interactions in phase-space regions relevant for double Higgs studies.
 We also discuss Higgs production via light-quark fusion at NNLO+PS in~\sct{sec:lightYukawa}, with particular emphasis on the impact on transverse-momentum distributions.
@@ -367,17 +369,75 @@ $125.09$ & $566.4$ & $\pm8.92$ & ${{+3.43}}/{-3.51}$
 \end{table}
 
 \subsection{Higgs transverse momentum resummation}\label{sec:resummation}
-See~\fig{fig:resumplot}.\cbcom{Ref RvK.}
-\begin{figure}[t!]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/resummation/ptzoom_Higgs__resum.pdf}
-\end{tabular}
-\vspace*{1ex}
-\caption{Higgs transverse-momentum spectrum predicted by the analytic resummed prediction at $\text{N}^3\text{LL+NNLO}$ (orange, dashed) and at $\text{N}^3\text{LL'+aN}^3\text{LO}$ (green, solid) accuracy. \cbcom{To Rebecca: Let me know when you upload the NNLL+NLO and I can add that line}\label{fig:resumplot}}
-\end{center}
-\end{figure}
+The Higgs transverse momentum spectrum provides a promising approach for extracting the Yukawa coupling from Higgs production processes because its shape is sensitive to the precise value of the coupling.
+In particular, one can exploit the pattern of QCD emissions from the incoming quarks and gluons to discriminate between the gluon and various quark channels in the initial state~\cite{Ebert:2016idf}.
+That is, the radiation pattern for different initial states yields different shapes for the transverse momentum ($q_T$) spectrum of the recoiling Higgs boson. As a result, a precise measurement and fit to the Higgs $q_T$ spectrum, especially at small $q_T$, allows one to gain sensitivity to the quark Yukawa couplings~\cite{Bishara:2016jga, Soreq:2016rae}.
+At small $q_T \ll m_H$,
+this requires the all-order resummation of logarithms of $q_T/m_H$ that would
+otherwise spoil the convergence of perturbation theory in this regime.
 
+In this section, we provide recent results for the resummed $q_T$ spectrum for $b\bar{b}\to H$ at N$^3$LL$'$ order matched to fixed NNLO and approximate N$^3$LO in the 5FS \cite{Cal:2023mib}. Previously the spectrum was calculated to NNLL$^{'}+$NNLO accuracy\footnote{We use the logarithmic counting of ref.~\cite{Berger:2010xi}, where the prime denotes inclusion of higher order boundary terms.} ~\cite{Harlander:2014hya} using the CSS formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use soft-collinear effective theory (SCET)
+\cite{Bauer:2000yr,Bauer:2001ct,Bauer:2001yt,Bauer:2002nz,Beneke:2002ph} to resum the logarithms of $q_T/m_H$ which is equivalent to a modern formulation of the CSS formalism.
+We employ the rapidity
+renormalization group~\cite{Chiu:2012ir} together with the
+exponential regulator~\cite{Li:2016axz} for which the ingredients
+required for the resummation at N$^3$LL$'$ are known.
+The singular cross section can be written in a factorized form as
+\begin{align} \label{tmd_factorization}
+\frac{\mathrm{d} \sigma^\mathrm{sing}}{\mathrm{d} Y \mathrm{d}^2 \qt}
+&= \sum_{a,b} H_{ab}(m_H^2; \mu) [B_a\otimes  B_b \otimes S_{ab}]( x_a, x_b, \qt; \mu)
+\,,\end{align}
+%%%
+where the kinematic quantities $\omega_{a,b}$ and $x_{a,b}$ are given by
+%%%
+\begin{align}
+\omega_{a}=m_H e^{+ Y}, \quad \omega_{b}=m_H e^{-Y} \quad \text{ and} \quad \quad x_{a,b}= \frac{\omega_{a,b}}{E_{cm}}
+\,.\end{align}
+%%%
+The hard function $H_{ab}$ is process dependent and describes physics at the hard scale $\mu\sim m_H$. The beam functions $B_{a,b}$ and the soft function $S_{ab}$ describe collinear and soft radiation at the low scale $\mu \sim q_T$. 
+The term $[B_a\otimes  B_b \otimes S_{ab}]$ is usually evaluated in Fourier-conjugate $b_T$ space, as the convolutions in $q_T$ in
+eq.~(\ref{tmd_factorization}) turn into products in $b_T$ space.
+
+\begin{figure}[t!]
+	\begin{center}
+		\begin{tabular}{cc}
+			\includegraphics[width=.45\textwidth, page=1]{plots/5fs/resummation/ptzoom_Higgs__resum.pdf}
+		\end{tabular}
+		\vspace*{1ex}
+		\caption{Higgs transverse-momentum spectrum predicted by the analytic resummed prediction at $\text{N}^3\text{LL+NNLO}$ (orange, dashed) and at $\text{N}^3\text{LL'+aN}^3\text{LO}$ (green, solid) accuracy.\label{fig:resumplot}}
+	\end{center}
+\end{figure}
+To perform the all-order resummation, each function is first evaluated at its own
+natural boundary scale(s): $\mu_H$, $(\mu_B, \nu_B)$, and $(\mu_S, \nu_S)$. By
+choosing appropriate values for the boundary scales close to their canonical
+values , each function is free of large logarithms and can
+therefore be evaluated in fixed-order perturbation theory. Next, all functions
+are evolved from their respective boundary conditions to a common arbitrary point
+$(\mu, \nu)$ by solving their coupled system of renormalization group equations. For more details we refer to Refs.~\cite{Ebert:2016gcn,Ebert:2020dfc,Cal:2023mib}.
+For the resummation at N$^3$LL$'$ we require the N$^3$LO
+boundary conditions for the hard function~\cite{Gehrmann:2014vha,
+	Ebert:2017uel}, and the beam and soft functions~\cite{Lubbert:2016rku,
+	Li:2016ctv, Billis:2019vxg, Luo:2019szz, Ebert:2020yqt}. We also need the 3-loop
+noncusp virtuality anomalous dimensions~\cite{Lubbert:2016rku, Moch:2005id, Stewart:2010qs,
+	Bruser:2018rad, Billis:2019vxg} and rapidity anomalous
+dimension~\cite{Lubbert:2016rku, Li:2016ctv, Vladimirov:2016dll}, as well as
+the 4-loop cusp anomalous dimension
+$\Gamma_\mathrm{cusp}$~\cite{Korchemsky:1987wg, moch:2004pa, Bruser:2019auj,
+	Henn:2019swt, vonManteuffel:2020vjv} and QCD $\beta$
+function~\cite{Tarasov:1980au, Larin:1993tp, vanRitbergen:1997va,
+	Czakon:2004bu}.
+
+To arrive at a consistent prediction, we need to match the N$^3$LL$'$ resummed cross section to a NNLO Higgs+jet prediction for which we rely on an approximation. 
+Our aN$^3$LO fixed-order cross section must contain the correct singular terms which are part of $\mathrm{d} \sigma^\mathrm{sing}$.
+Further, there are large cancellations between the singular and the non-singular cross sections at large values of $q_T$ which must not be spoil in the approximation procedure.
+To satisfy both requirements,
+we developed a general method to decorrelate the singular and nonsingular contributions in Ref.~\cite{Cal:2023mib} which involves shifting a correlated piece between the singular and the non-singular~\cite{Dehnadi:2022prz}.
+After the decorrelation procedure, we perform a Pad\'e-like approximation for the nonsingular $\mathcal{O}\left(\alpha_s^3\right)$ coefficient. 
+
+Our numerical results for the
+resummed and fixed-order singular contributions are obtained with
+\textsc{SCETlib}~\cite{scetlib}.
+In ~\fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$'+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$'+$aN$^3$LO for the first time.
 \section{Monte Carlo simulations for the bottom-quark Yukawa contribution}\label{sec:MCyb}
 This section highlights recent advancements in Monte Carlo simulations for modelling the \bbH{} production in the $y_b^2$ contribution. The first matching with parton showers was carried out in the 5FS scheme in~\citere{Biello:2024vdh} using the \minnlo{} method. More recently, the \GENEVA{} approach has been applied to simulate \bbtoH{} production within the same heavy-quark collinear factorisation framework~\cite{Gavardi:2025zpf}. In this section, we present the numerical comparison of the two matching methods for this process using the LHCHWG setup.
 %We also perform a detailed study of the transverse momentum spectrum, comparing the Monte Carlo predictions against resummed analytic results~\cite{}.
