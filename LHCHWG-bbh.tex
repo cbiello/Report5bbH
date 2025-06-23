@@ -366,7 +366,7 @@ $125.09$ & $566.4$ & $\pm8.92$ & ${{+3.43}}/{-3.51}$
 \label{tab:bbH136linalt}
 \end{table}
 
-\subsection{Higgs transverse momentum resummation}
+\subsection{Higgs transverse momentum resummation}\label{sec:resummation}
 \cbcom{Ref RvK.}
 
 \section{Monte Carlo simulations for the bottom-quark Yukawa contribution}\label{sec:MCyb}
@@ -541,14 +541,13 @@ of two different methods is the best way to estimate their theoretical
 uncertainties.
 
 \subsubsection{Numerical comparison of \minnlo{} and \GENEVA{}}
-In this section, we present a numerical comparison between two Monte Carlo generators for \bbtoH{} production: the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. The \minnlo{} predictions use a four-loop running as implemented in~\citere{harlander:2002wh,baikov_2014}, while the \GENEVA{} generator employs a three-loop running derived from SCET. This difference is numerically small and can be safely neglected in the following comparison.
+In this section, we present a numerical comparison between two Monte Carlo (MC) generators for \bbtoH{} production: the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. The \minnlo{} predictions use a four-loop running as implemented in~\citere{harlander:2002wh,baikov_2014}, while the \GENEVA{} generator employs a three-loop running derived from SCET. This difference is numerically small and can be safely neglected in the following comparison. Both the MC generators produce events that are showered using~\PYTHIA{8}.
 
 To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2020nks}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well below the differences observed between the predictions of the two Monte Carlo generators.
 
 On the other hand, the \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables by construction and the default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
 
-We start the comparison by focusing on the transverse momentum spectrum of the Higgs boson in~\fig{fig:genevaptH}. The left plot shows the spectrum in a large range where we observe good agreement in the resummation region for low values of the transverse momentum and a good match in the fixed-order hard region. For intermediate values of the transverse momentum, we observe strong differences between \minnlo{} and \GENEVA{} with cumulative scale choice. In the right plot with a zoom version of the same observable, we include the \GENEVA{} prediction with spectrum scale choices as discussed in~\sct{sec:nutshell}. Indeed, for the transvese momentum spectrum, the spectrum scale is the best choice with 
-
+We start the comparison by focusing on the transverse momentum spectrum of the Higgs boson in~\fig{fig:genevaptH}. The left plot shows the spectrum in a large range where we observe good agreement in the resummation region for low values of the transverse momentum and a good match in the fixed-order hard region. For intermediate values of the transverse momentum, we observe strong differences between \minnlo{} and \GENEVA{} with cumulative scale choice. In the right plot, which shows a zoomed-in view of the same observable, we include the \GENEVA{} prediction obtained with the spectrum scale choices discussed in~\sct{sec:nutshell}. For the transverse momentum spectrum, this scale setting is more appropriate. Moreover, in \GENEVA{}, the scale variation is implemented through variations of the profile scales at the spectrum level, making them particularly well-suited for transverse observables when using the spectrum scale choice. In contrast, the cumulant scale choice leads to an artificially large scale uncertainty in the matching region, precisely where a different scale setting would be more justified.
 
 \begin{figure}[t!]
 \begin{center}
@@ -561,18 +560,8 @@ We start the comparison by focusing on the transverse momentum spectrum of the H
 \end{center}
 \end{figure}
 
-\begin{figure}[t!]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-yh.pdf}&
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-dyhj.pdf}
-\end{tabular}
-\vspace*{1ex}
-\caption{Higgs boson rapidity and difference in rapidity between the scalar and the leading jet as predicted by two Monte Carlo generators interfaced with \PYTHIA8{} using the \minnlo{} (blue, dashed) and \GENEVA{} (brown, dotted) methods. \label{fig:genevay}}
-\end{center}
-\end{figure}
+We compare the transverse momentum spectrum of the Higgs boson with the resummed analytic predictions discussed in~\sct{sec:resummation}. In the left plot of~\fig{fig:resVSMCs}, we show the Monte Carlo predictions against the $\text{N}^3\text{LL}+\text{NNLO}$ result. By construction, the \GENEVA{} prediction with the spectrum scale choice matches the analytic result exactly, while the cumulant scale choice shows good agreement in the resummation region ($p_{\text{T,H}} < 20$\,GeV), but begins to deviate at higher transverse momenta, as already observed in~\fig{fig:genevaptH}. The \minnlo{} prediction also shows good agreement within its scale uncertainty band, with the largest deviations appearing at very low transverse momenta, in the region well covered by the resummation scale variation. In the right of~\fig{fig:resVSMCs}, we present the comparison of the same MCs spectra against the more accurate $\text{N}^3\text{LL'+aN}^3\text{LO}$. The inclusion of higher-order corrections in the analytic spectrum results in a negative shift relative to both the \minnlo{} and \GENEVA{} predictions across the entire phase space, with a mostly flat effect for $p_{\text{T,H}} > 10$,GeV. Among the two, the \GENEVA{} prediction with the spectrum scale choice lies closer to the analytic result.
 
-\subsubsection{Transverse-momentum spectrum against resummed predictions}
 
 \begin{figure}[t!]
 \begin{center}
@@ -581,7 +570,20 @@ We start the comparison by focusing on the transverse momentum spectrum of the H
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/n3llan3loresvsMCs-withspectrum.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Comparison of the Higgs transverse-momentum spectrum predicted by analytic resummed predictions (green, solid) at $\text{N}^3\text{LL+NNLO}$ (left plot) and at $\text{N}^3\text{LL'+aN}^3\text{LO}$ against the results obtained by the two Monte Carlo generators: \minnlo{} (blue, dashed) and \GENEVA{} with cumulant (brown, dotted) and spectrum (red, solid) scale choices. \label{fig:genevay}}
+\caption{Comparison of the Higgs transverse-momentum spectrum predicted by analytic resummed predictions (green, solid) at $\text{N}^3\text{LL+NNLO}$ (left plot) and at $\text{N}^3\text{LL'+aN}^3\text{LO}$ against the results obtained by the two Monte Carlo generators: \minnlo{} (blue, dashed) and \GENEVA{} with cumulant (brown, dotted) and spectrum (red, solid) scale choices. \label{fig:resVSMCs}}
+\end{center}
+\end{figure}
+
+We conclude the section by presenting a comparison of two angular observables in~\fig{fig:genevay}. The left plot shows the NNLO-accurate Higgs rapidity distribution, displaying good agreement between the \minnlo{} prediction and the \GENEVA{} result using the cumulant scale choice. The right plot illustrates an example of an observable that depends on the leading jet. Here, we apply a flavour-blind anti-$k_T$ clustering algorithm with radius $R = 0.4$ and compute the rapidity difference between the Higgs boson and the highest-$p_T$ jet, requiring a minimum jet transverse momentum of 20 GeV. We observe good agreement between the central predictions. However, the associated scale uncertainties differ significantly between the two generators, with \GENEVA{} exhibiting a larger theoretical uncertainty at low values of the rapidity difference.
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-yh.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-dyhj.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Higgs boson rapidity and difference in rapidity between the scalar and the leading jet as predicted by two Monte Carlo generators interfaced with \PYTHIA8{} using the \minnlo{} (blue, dashed) and \GENEVA{} (brown, dotted) methods. \label{fig:genevay}}
 \end{center}
 \end{figure}
 
@@ -864,7 +866,7 @@ We begin the phenomenological analysis by focusing on the transverse-momentum sp
 
 Although the small masses of the first- and second-generation quarks make their contributions challenging to detect experimentally, the shape of the Higgs transverse-momentum distribution provides a potential handle to disentangle them from the dominant gluon-fusion channel. In particular, the softer spectrum associated with the charm-quark contribution, combined with the intermediate size of its Standard Model Yukawa coupling, makes this observable especially promising for setting experimental constraints in the $c\bar c \text{H}$ mode.
 
-The shape behaviour of \minnlo{} predictions for the Higgs transverse-momentum spectrum has also been observed with the analytic description of this observable with resummation methods in figure 13 of~\citere{Cal:2023mib}. Indeed, at NNLO+NLO accuracy, the spectra of the different flavour channels already exhibit different shapes, which are confirmed at the more accurate \nnnres{} level with a substantial reduction of the scale uncertainty.
+The shape behaviour of \minnlo{} predictions for the Higgs transverse-momentum spectrum has also been observed with the analytic description of this observable with resummation methods in figure 13 of~\citere{Cal:2023mib}. Indeed, at NNLL+NLO accuracy, the spectra of the different flavour channels already exhibit different shapes, which are confirmed at the more accurate \nnnres{} level with a substantial reduction of the scale uncertainty.
 
 \begin{figure}[t!]
 \begin{center}
