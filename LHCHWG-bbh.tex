@@ -401,10 +401,10 @@ eq.~(\ref{tmd_factorization}) turn into products in $b_T$ space.
 \begin{figure}[t!]
 	\begin{center}
 		\begin{tabular}{cc}
-			\includegraphics[width=.45\textwidth, page=1]{plots/5fs/resummation/ptzoom_Higgs__resum.pdf}
+			\includegraphics[width=.55\textwidth, page=1]{plots/5fs/resummation/ptzoom_Higgs__resum.pdf}
 		\end{tabular}
 		\vspace*{1ex}
-		\caption{Higgs transverse-momentum spectrum predicted by the analytic resummed prediction at $\text{N}^3\text{LL+NNLO}$ (orange, dashed) and at $\text{N}^3\text{LL'+aN}^3\text{LO}$ (green, solid) accuracy.\label{fig:resumplot}}
+		\caption{Higgs transverse-momentum spectrum predicted by the analytic resummed prediction at $\text{NNLO+NLO}$ (orange, dashed), $\text{N}^3\text{LL+NNLO}$ (blue, dotted) and at $\text{N}^3\text{LL'+aN}^3\text{LO}$ (green, solid) accuracy.\label{fig:resumplot}}
 	\end{center}
 \end{figure}
 To perform the all-order resummation, each function is first evaluated at its own
@@ -438,9 +438,10 @@ Our numerical results for the
 resummed and fixed-order singular contributions are obtained with
 \textsc{SCETlib}~\cite{scetlib}.
 In ~\fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$'+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$'+$aN$^3$LO for the first time.
+
+%%%%%%%%% MONTE CARLO SECTION %%%%%%%%%%
 \section{Monte Carlo simulations for the bottom-quark Yukawa contribution}\label{sec:MCyb}
 This section highlights recent advancements in Monte Carlo simulations for modelling the \bbH{} production in the $y_b^2$ contribution. The first matching with parton showers was carried out in the 5FS scheme in~\citere{Biello:2024vdh} using the \minnlo{} method. More recently, the \GENEVA{} approach has been applied to simulate \bbtoH{} production within the same heavy-quark collinear factorisation framework~\cite{Gavardi:2025zpf}. In this section, we present the numerical comparison of the two matching methods for this process using the LHCHWG setup.
-%We also perform a detailed study of the transverse momentum spectrum, comparing the Monte Carlo predictions against resummed analytic results~\cite{}.
 
 We proceed with discussing the BSM studies that can be performed in this scheme using the \minnlo{} generator, with an example as proof-of-concept in the Minimal Supersymmetric Model (MSSM). The last part of the section is dedicated to a Monte Carlo generator at NNLO+PS accuracy in the massive scheme~\cite{Biello:2024pgo}, which allows for the first time access to NNLO corrections in the 4FS using the \minnlo{} method.
 
@@ -612,7 +613,7 @@ uncertainties.
 \subsubsection{Numerical comparison of \minnlo{} and \GENEVA{}}
 In this section, we present a numerical comparison between two Monte Carlo (MC) generators for \bbtoH{} production: the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. The \minnlo{} predictions use a four-loop running as implemented in~\citere{harlander:2002wh,baikov_2014}, while the \GENEVA{} generator employs a three-loop running derived from SCET. This difference is numerically small and can be safely neglected in the following comparison. Both the MC generators produce events that are showered using~\PYTHIA{8} with a local recoil.
 
-To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2020nks}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well below the differences observed between the predictions of the two Monte Carlo generators.
+To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2019whf}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well below the differences observed between the predictions of the two Monte Carlo generators.
 
 On the other hand, the \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables by construction and the default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
 
