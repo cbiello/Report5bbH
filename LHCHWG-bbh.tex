@@ -186,7 +186,7 @@
   \begin{flushright}
   LHCHWG-2025-\#\\
   MPP-2025-116\\
-  DESY-25-XXX
+  DESY-25-093
   \end{flushright}
 }
 
@@ -438,7 +438,7 @@ After the decorrelation procedure, we perform a Pad\'e-like approximation for th
 Our numerical results for the
 resummed and fixed-order singular contributions are obtained with
 \textsc{SCETlib}~\cite{scetlib}.
-In ~\fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$'+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$'+$aN$^3$LO for the first time.
+In ~\fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$'+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$'+$aN$^3$LO which are shown in section~\ref{sec:lightYukawa}.
 
 %%%%%%%%% MONTE CARLO SECTION %%%%%%%%%%
 \section{Monte Carlo simulations for the bottom-quark Yukawa contribution}\label{sec:MCyb}
@@ -931,7 +931,7 @@ A value of \( \bar\kappa_q = 1 \) corresponds to a Yukawa coupling for quark \( 
 \( \bar \kappa_s \simeq 2.2 \cdot 10^{-2} \).
 The High-Luminosity Large Hadron Collider prospects~\cite{deBlas:2019rxi} shows that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_u|\leq 0.66$, $|\bar \kappa_d|\leq 0.70$, $|\bar \kappa_s|\leq 0.66$ at 95\% CL when using the transverse momentum distribution.
 
-In ref.~\cite{Cal:2023mib}, resummed predictions for the Higgs transverse momentum spectrum were obtained for $c\bar{c}H$ and $s\bar{s}H$ channels at N$^3$LL+aN$^3$LO accuracy. These resummed calculations (at a lower, N$^3$LL accuracy) were used to construct a \textsc{Geneva} NNLO+PS generator for the $c\bar{c}H$ process in ref.~\cite{Gavardi:2025zpf} which combines the advantages of having a high resummation accuracy with a fully differential event generator.
+In ref.~\cite{Cal:2023mib}, resummed predictions for the Higgs transverse momentum spectrum were obtained for $c\bar{c}H$ and $s\bar{s}H$ channels at N$^3$LL$'$+aN$^3$LO accuracy. These resummed calculations (at a lower, N$^3$LL accuracy) were used to construct a \textsc{Geneva} NNLO+PS generator for the $c\bar{c}H$ process in ref.~\cite{Gavardi:2025zpf} which combines the advantages of having a high resummation accuracy with a fully differential event generator.
 
 In addition, light-quark fusion has recently been implemented in the fully-differential \minnlo{} generator. In this paper, we present the novel NNLO+PS simulations with a detailed phenomenological study for Higgs-boson production with diphoton decay, $q\bar q\rightarrow \text{H}\rightarrow \gamma\gamma$. The simulations are produced using the \minnlo{} \bbH{} generator in the massless scheme as a starting point. The code modifies the flavour of the initial-state partons via the \texttt{whichlightquark} flag, which is set to the Monte Carlo ID number corresponding to the chosen flavour. The generator consistently calls the appropriate analytic amplitudes, with the sole exception of the double real corrections, which are evaluated numerically using the \OpenLoops{} \texttt{bbhjj} library with a suitable flipping of the parton flavours. The number of active massless species is always set to \( n_f = 5 \), including in the running of the strong coupling and Yukawa factors. The theoretical uncertainty is estimated through the standard 7-point scale variation of the factorisation scale for the PDFs and the renormalisation scale with a correlated variation of Yukawa and strong coupling scales.
 
@@ -940,15 +940,23 @@ We begin the phenomenological analysis by focusing on the transverse-momentum sp
 
 Although the small masses of the first- and second-generation quarks make their contributions challenging to detect experimentally, the shape of the Higgs transverse-momentum distribution provides a potential handle to disentangle them from the dominant gluon-fusion channel. In particular, the softer spectrum associated with the charm-quark contribution, combined with the intermediate size of its Standard Model Yukawa coupling, makes this observable especially promising for setting experimental constraints in the $c\bar c \text{H}$ mode.
 
-The shape behaviour of \minnlo{} predictions for the Higgs transverse-momentum spectrum has also been observed with the analytic description of this observable with resummation methods in figure 13 of~\citere{Cal:2023mib}. Indeed, at NNLL+NLO accuracy, the spectra of the different flavour channels already exhibit different shapes, which are confirmed at the more accurate \nnnres{} level with a substantial reduction of the scale uncertainty.
+This shape behaviour for the Higgs transverse-momentum spectrum has also been observed with the analytic description of this observable at N$^3$LL$'$+aN$^3$LO accuracy~\cite{Cal:2023mib}. Indeed, at NNLL+NLO accuracy, the spectra of the different flavour channels already exhibit different shapes, which are confirmed at the more accurate \nnnres{} level with a substantial reduction of the scale uncertainty. The uncertainties for $b\bar b \text{H}$ are noticeably larger compared to the other channels.
+In fact, the relative uncertainties for $b\bar b \text{H}$ at
+a given order are of similar size as those for $s\bar s \text{H}$ at one lower order.
+The main difference between the channels is the relative size of the PDF luminosities.
+As already pointed out in~\citere{Cal:2023mib} for $b\bar b \text{H}$, the $b\bar b$ Born channel is numerically suppressed by the small b-quark PDFs, the
+gluon-induced PDF channels which start at one higher order play a much more prominent role which explains the observed pattern of uncertainties for the different cases. Further, we want to note that the right panel of~\fig{fig:lightpTHzoom} is only shown for $p_T> 5\, \GeV$. With
+the bottom mass $m_b = 4.18\, \GeV$ the assumption of $m_q \ll p_T$ and therefore our factorization
+theorem are no longer valid for $p_T<5\, \GeV$.
 
 \begin{figure}[t!]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=.62\textwidth, page=1]{plots/5fs/light/ptHzoom_qqH.pdf}
+	\includegraphics[width=.45\textwidth, page=1]{plots/5fs/light/ptHzoom_qqH.pdf}&
+	\includegraphics[width=.45\textwidth, page=1]{plots/5fs/N3LLp_aN3LO/qqH-n3llp-an3lo.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Transverse-momentum spectra of the Higgs boson obtained with \minnlo{}, normalised to the total cross sections, for the different flavour-channel annihilation: bottom (blue, dashed), charm (green, solid), strange (pink, long-dashed), and down (brown, dotted), and  up (black, dotted-dashed) flavours.
+\caption{Transverse-momentum spectra of the Higgs boson obtained with \minnlo{} (left) and at N$^3$LL$'$+aN$^3$LO, normalised to the total cross sections, for the different flavour-channel annihilation: bottom (blue, dashed), charm (green, solid), strange (pink, long-dashed), and down (brown, dotted), and  up (black, dotted-dashed) flavours.
 \label{fig:lightpTHzoom}}
 \end{center}
 \end{figure}
