@@ -399,6 +399,7 @@ calculation, i.e.\ two-loop running for NLO predictions and three-loop running f
 the flavour scheme under consideration.
 
 Predictions involving the top-quark Yukawa contribution employ the on-shell definition of the coupling.
+ {\it \color{red} MW: no top mass is specified}
 
 \subsection{Scale settings}
 In the Monte Carlo simulations with massless bottom quarks, we consider the Higgs mass as the central value for the factorisation ($\muF$) and renormalisation ($\muR$) scales. The theory uncertainty is estimated using the standard 7-point variation, i.e.\ by changing the scales by a factor of 2 with the constraint $\frac{1}{2}\leq\muR/\muF\leq 2$ in order to avoid large logarithmic effects. The renormalisation scales associated with the Yukawa coupling and the strong coupling constant are simultaneously by rescaling both with the same factor. We have performed detailed studies on the impact of this correlation and found that such a correlated variation provides a reliable estimate of the overall renormalisation uncertainty.
@@ -411,26 +412,38 @@ mass providing a natural and consistent choice.
 
 \section{Updated inclusive cross sections at 13.6 TeV}
 \label{sec:matchedinclusivenumbers}
-In this section, we report inclusive prediction for \bbH{} production at 13.6 TeV. A reliable description of this process at the LHC requires a combination of massless and massive calculations. The 5FS setup allows for the resummation of large collinear logarithmic contributions, while the 4FS computation captures all mass effects order by order in perturbative QCD. As already introduced in the first section, two main approaches are currently employed: \fonll{}~\cite{forte:2015hba,forte:2016sja,Duhr:2020kzd} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf}. 
+In this section, we report predictions for the inclusive \bbH{}  cross section at 13.6 TeV. 
+The best description of the \bbH{} process is obtained by combining the calculations in the massless and massive schemes. The 5FS computation includes 
+the resummation of large collinear logarithmic contributions, while the 4FS captures all mass effects order by order in perturbative QCD. 
+As already introduced in the intrdoduction, two main approaches exist that have been applied to obtain the \bbH{} cross section at 
+high accuracy: \fonll{}~\cite{forte:2015hba,forte:2016sja,Duhr:2020kzd} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf}. 
 
-FONLL-B matches NNLO 5FS cross sections with NLO 4FS predictions and agrees with the \nlonnllpart{} approach, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. The novel FONLL-C matching~\cite{Duhr:2020kzd} combines \fnnnlo{} 5FS and \fnlo{} 4FS cross sections, representing a significant advancement in predicting the \bbH{} inclusive production rate. The \nlonnllpart{} combination~\cite{Bonvini:2016fgf}, on the other hand, offers an advantage by introducing a resummation scale $\muB$, which enables an estimate of the flavour-matching uncertainty. In addition, using the fact that the bottom-quark PDF is effectively of order $\alpha_s$, the method has the advantage of including the complete fixed-order massive results at each perturbative order\footnote{We specify that with the inclusion of the \fnnnlo{} 5FS corrections, the FONLL-C version matches all the 4FS NLO terms.}. The $y_by_t$  contribution is easily included as a fixed-order non-singular term. Indeed, these interference effects vanish to all orders in the small bottom-quark mass limit.
-%The 5FS cross section corresponds to the resummed prediction, which depends on the resummation (or matching) scale $\mu_B$, used as its factorisation scale. To this, we add the 4FS prediction and subtract the overlap by removing the perturbative expansion of the resummed result, evaluated at the same factorisation scale $\mu_F$ as used in the massive scheme, thereby avoiding double counting.
+FONLL-B~\cite{forte:2015hba,forte:2016sja} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf} match the NNLO 5FS and the NLO 4FS cross section.
+Both approaches yield results that are fully consistent with each other, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. 
+The novel FONLL-C matching~\cite{Duhr:2020kzd} adds the \fnnnlo{} corrections in the 5FS to FONLL-B.
+he \nlonnllpart{} combination introduces a resummation scale $\muB$, which enables an estimate of the 
+matching uncertainties. 
+{\it \color{red} MW: I don't understand these comments:} T
+In addition, using the fact that the bottom-quark PDF is effectively of order $\alpha_s$, the method has the advantage of including 
+the complete fixed-order massive results at each perturbative order\footnote{We specify that with the inclusion of the \fnnnlo{} 5FS corrections, the FONLL-C version matches all the 4FS NLO terms.}.
+The $y_by_t$  contribution is easily included as a fixed-order non-singular term, since these interference effects are power corrections that 
+vanish to all orders in the small bottom-quark mass limit.
 
 The setup of the calculation follows that described in~\sct{sec:setup}, with the only difference being the choice of the central scales, which are set to
 \begin{align}
 \muF=\frac{1}{4}(m_H+2m_b),\hspace{1cm}\muR=\frac{1}{2}m_H,,
 \end{align}
-in order to ensure better perturbative convergence.
+in order to ensure a better perturbative convergence.
 
 In~\tab{tab:bbH136lin}, we report the results of a linear interpolation between the existing 13 TeV and 14 TeV results, using the relation
 \begin{align}
 \sigma(13.6\,\text{TeV})=0.4\sigma(13.0\,\text{TeV})+0.6\sigma(14.0\,\text{TeV})\,.
 \end{align}
-The cross section is provided together with an overall theoretical uncertainty. This includes the standard 7-point renormalisation and factorisation scale variation, the resummation scale uncertainty, and the uncertainties associated with the parton distribution functions (PDFs) and the strong coupling constant. An alternative cross-section estimation is presented in~\tab{tab:bbH136log} where the same numbers have been combined using a logarithmic interpolation. In order to test the accuracy of the interpolation, we have also considered linear interpolation of 13.5 TeV and 14 TeV results. Using the latters, we have estimated the cross-section in~\tab{tab:bbH136linalt} with the following linear interpolation,
+The cross section is provided together with an overall theoretical uncertainty. This includes the standard 7-point renormalisation and factorisation scale variation, the resummation scale uncertainty, and the uncertainties associated with the parton distribution functions (PDFs) and the strong coupling constant. An alternative cross-section estimation is presented in~\tab{tab:bbH136log} where the same numbers have been combined using a logarithmic interpolation. In order to test the accuracy of the interpolation, we have also considered linear interpolation of 13.5 TeV and 14 TeV results. Using the latter, we have estimated the cross-section in~\tab{tab:bbH136linalt} with the following linear interpolation,
 \begin{align}
 	\sigma(13.6\,\text{TeV})=0.8\sigma(13.5\,\text{TeV})+0.2\sigma(14.0\,\text{TeV})\,.
 \end{align}
-We observe a good agreement between the cross-section values obtained with different interpolations or different choices of boundary conditions. Due to the good accuracy of the interpolation and the substantial theoretical and parametric uncertainty, dedicated runs at 13.6 TeV are not needed.
+We observe a good agreement between the cross-section values obtained with different interpolations or different choices of boundary conditions. Due to the good accuracy of the interpolation and the substantial theoretical and parametric uncertainty, dedicated runs at 13.6 TeV are not required.
 
 \begin{table}[ht!]
 \begin{center}%
@@ -483,7 +496,7 @@ $125.09$ & $566.4$ & $\pm8.92$ & ${{+3.43}}/{-3.51}$
 
 \section{Transverse-momentum resummation at third order}
 \label{sec:resummation}
-The Higgs transverse momentum spectrum provides a promising approach for extracting the Yukawa coupling from Higgs production processes because its shape is sensitive to the precise value of the coupling.
+The Higgs transverse momentum spectrum provides a promising approach for extracting the Yukawa coupling from Higgs production processes, because its shape is sensitive to the precise value of the coupling.
 In particular, one can exploit the pattern of QCD emissions from the incoming quarks and gluons to discriminate between the gluon and various quark channels in the initial state~\cite{Ebert:2016idf}.
 That is, the radiation pattern for different initial states yields different shapes for the transverse momentum ($q_T$) spectrum of the recoiling Higgs boson. As a result, a precise measurement and fit to the Higgs $q_T$ spectrum, especially at small $q_T$, allows one to gain sensitivity to the quark Yukawa couplings~\cite{Bishara:2016jga, Soreq:2016rae}.
 At small $q_T \ll m_H$,
