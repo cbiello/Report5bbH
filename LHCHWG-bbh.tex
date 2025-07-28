@@ -383,6 +383,8 @@ Also in these cases it is treated as on-shell and with zero width.
 The strong coupling constant is set to $\alpha_s(m_Z) = 0.1180$ 
 in the 5FS calculations. The corresponding 4FS value is obtained 
 by accounting for heavy-quark decoupling effects, as discussed below.
+The strong coupling is obtained directly from the corresponding PDF set
+for consistency.
 
 \subsection{Running of the bottom Yukawa}
 The Yukawa coupling is always renormalised in the \MSbar{} scheme. We discuss the recommendation of the \bbH{} subgroup in performing the running of the bottom-quark mass value at the hard scale. We derive the coupling $y_b$ from an input value $\hat m_b\equiv m_b(m_b)=4.18$\,GeV and evolved to the Higgs mass via four-loop running, based on the solution of the Renormalisation Group Equation (RGE) \cite{harlander:2002wh,baikov_2014}. The evolution of the strong coupling constant depends on its value at both the hard scale and the bottom-quark pole. In the massless scheme, these values are straightforwardly obtained by evolving the input $\alpha_s(m_Z) = 0.1180$ using QCD running with $n_f = 5$ active flavours. In the massive scheme, the procedure follows the approach commonly adopted in modern evolution libraries: starting from $\alpha_s(m_Z) = 0.1180$ with $n_f = 5$, we evolve down to the bottom-quark pole $\hat{m}_b$, where a decoupling relation~\cite{vogt:2004ns} is applied to extract $\alpha_s(\hat{m}_b)$ in the 4-flavour scheme (4FS). This value is then used as a boundary condition for the subsequent QCD evolution at higher scales, performed with $n_f = 4$ active flavours.
