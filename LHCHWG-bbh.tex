@@ -145,7 +145,11 @@
 \newcommand{\qgraf}{\texttt{QGRAF}}
 \newcommand{\spinney}{\texttt{Spinney}}
 \newcommand{\cpp}{\texttt{C++}}
+\newcommand*{\NNLOPS}{\textsc{NNLOPS}\xspace}
 \DeclareMathOperator{\Tr}{Tr}
+
+
+
 
 %%Christian's command
 \newcommand{\eqcite}[1]{(\ref{#1})}
@@ -892,7 +896,7 @@ To address these shortcomings, we now introduce a fully exclusive NNLO+PS genera
 In the case of \bbH{} production in the 4FS, the two-loop virtual correction required for NNLO accuracy is not available in exact form with finite \(m_b\). To circumvent this, the NNLO+PS prediction relies on an approximate treatment of the two-loop amplitude: the known massless result is massified by retaining all logarithmic and constant terms, while dropping terms that are power-suppressed in \(m_b / m_{H}\). This massification procedure, developed in \citeres{Mitov:2006xs,Wang:2023qbf}, allows one to capture the dominant virtual corrections in the small-\(m_b\) limit. The massless full-colour two-loop amplitudes used as input are taken from~\citere{Badger:2024mir}. Different from the studies in~\citere{Biello:2024pgo}, which relied on the leading-colour approximation~\cite{badger:2021ega}, here we perform a phenomenological analysis using events generated with the full-colour library of~\citere{Badger:2024mir} as two-loop input for the massification. The NNLO calculation is thus complete in full colour, up to power-suppressed bottom-mass effects in the two-loop term.
 
 \subsubsection{Results and flavour-scheme comparison}
-The setup for the phenomenological results presented here—including input parameters, renormalisation and factorisation scale choices and PDFs —follows the conventions outlined in Section~\ref{sec:setup}. We now compare theoretical predictions obtained in the 5FS and 4FS for Higgs production in association with bottom quarks. The results are organised in two stages: first, we consider fully inclusive observables that do not rely on identifying bottom quarks in the final state; subsequently, we turn to observables involving b-jets, with a careful definition of flavour-tagged jets for a meaningful comparison between schemes.
+The setup for the phenomenological results presented here—including input parameters, renormalisation and factorisation scale choices and PDFs —follows the conventions outlined in section~\ref{sec:setup}. We now compare theoretical predictions obtained in the 5FS and 4FS for Higgs production in association with bottom quarks. The results are organised in two stages: first, we consider fully inclusive observables that do not rely on identifying bottom quarks in the final state; subsequently, we turn to observables involving b-jets, with a careful definition of flavour-tagged jets for a meaningful comparison between schemes.
 \begin{table}[ht!]
   \vspace*{0.3ex}
   \begin{center}
@@ -934,7 +938,7 @@ The setup for the phenomenological results presented here—including input para
 \end{center}
 \end{figure}
 \subsubsection*{Predictions for Higgs observables}
-In the 4FS, NNLO corrections increase the total cross section by about 30\% relative to NLO, as shown in Table~\ref{tab:NNLO4FS_xs}. This highlights the importance of NNLO accuracy for precise predictions in the massive scheme. The \minnlo{} result in the 4FS shows reduced dependence on the scale choices as compared to the NLO+PS prediction. However, \minnlo{} prediction in the 5FS—based on the process \(b\bar{b} \to H+X\)—has a smaller scale uncertainties. 
+In the 4FS, NNLO corrections increase the total cross section by about 30\% relative to NLO, as shown in table~\ref{tab:NNLO4FS_xs}. This highlights the importance of NNLO accuracy for precise predictions in the massive scheme. The \minnlo{} result in the 4FS shows reduced dependence on the scale choices as compared to the NLO+PS prediction. However, \minnlo{} prediction in the 5FS—based on the process \(b\bar{b} \to H+X\)—has a smaller scale uncertainties. 
 %This difference arises from the structure of the perturbative expansion: in the 4FS, strong couplings appear already at Born level, and the NNLO corrections are relatively large.
 Despite these differences, the NNLO+PS predictions in both schemes agree well within their respective scale uncertainties, demonstrating that the long-standing tension between the 4FS and 5FS inclusive results is reduced once NNLO accuracy is included.
 \begin{figure}[t!]
@@ -957,7 +961,7 @@ We now turn to the comparison of results with at least one $b$-jet identified in
 To ensure a theoretically sound and IRC-safe definition of $b$-jets in the massless scheme, we employ the \emph{Interleaved Flavour Neutralisation} (IFN) algorithm~\cite{Caola:2023wpj}, which systematically removes soft $b$-flavour contamination during clustering. In our setup, we use the recommended parameters $\alpha = 2$ and $\omega = 1$. 
 %The IFN algorithm is implemented through a dedicated Fortran--C++ interface to the \texttt{FastJet} plugin, allowing seamless integration into our \POWHEG{} framework for all relevant processes.
 
-We now examine the fiducial cross sections in the presence of $b$-jets, comparing 4FS and 5FS predictions at both NLO+PS and NNLO+PS accuracy. As shown in Table~\ref{tab:NNLO4FS_xs}, requiring at least one $b$-jet leads to a significant reduction in the inclusive cross section, by a factor of approximately 5. Imposing a second $b$-jet further suppresses the rate by roughly an additional order of magnitude. These trends are seen across both schemes and perturbative orders. At NNLO+PS, the inclusion of higher-order corrections via \minnlo{} improves the overall consistency between the two schemes, particularly in the one- and two-$b$-jet bins, where 4FS results remain slightly below the 5FS but still agree within uncertainties.
+We now examine the fiducial cross sections in the presence of $b$-jets, comparing 4FS and 5FS predictions at both NLO+PS and NNLO+PS accuracy. As shown in table~\ref{tab:NNLO4FS_xs}, requiring at least one $b$-jet leads to a significant reduction in the inclusive cross section, by a factor of approximately 5. Imposing a second $b$-jet further suppresses the rate by roughly an additional order of magnitude. These trends are seen across both schemes and perturbative orders. At NNLO+PS, the inclusion of higher-order corrections via \minnlo{} improves the overall consistency between the two schemes, particularly in the one- and two-$b$-jet bins, where 4FS results remain slightly below the 5FS but still agree within uncertainties.
 
 % Interestingly, we observe that the NLO+PS predictions in 4FS and 5FS for the $\geq$2 $b$-jet bin are numerically very close—more so than at NNLO+PS. However, this agreement is accidental. In the 5FS, such observables are less reliable at NLO, since bottom quarks only arise from gluon splittings and are not part of the hard matrix element at Born level. The good agreement at the integrated cross-section level does not reflect the underlying physics accuracy, as will become evident in the following, where we examine the corresponding differential distributions.
 
@@ -967,53 +971,86 @@ These results underline the importance of the 4FS computation for observables in
 \section{Modeling of the \boldmath{$b\bar bH$} background in HH searches}\label{sec:HH}
 
 
-In this section we present rates for the $y_t^2$ contribution in the HH signal region. This closely follows what has been presented in \citere{manzoni:2023qaf}. At variance
-with that work, we update the collider energy and the input parameter in par with the HWG recommendations. We preesent predictions in the 4FS at NLO
-QCD accuracy matched with parton shower, specifically with {\sc Pythia8}~\cite{Bierlich:2022pfr}. Results are obtained in an automatic way with
-{\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca,Frederix:2018nkq}. We compare thee results with the inclusive gluon-fusion MiNNLOPS simulation in the 5FS
-{\bf MZ cite ad comment}.
+%In this section we present rates for the $y_t^2$ contribution, focusing in particular on the signal region of interest di-Higgs ($HH$) searches~\cite{}. This closely follows what has been presented in \citere{manzoni:2023qaf}. At variance with that work, we update the collider energy and the input parameter in par with the HWG recommendations. We preesent predictions in the 4FS at NLO
+%QCD accuracy matched with parton shower, specifically with {\sc Pythia8}~\cite{Bierlich:2022pfr}. Results are obtained in an automatic way with
+%{\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca,Frederix:2018nkq}. We compare these results with the inclusive gluon-fusion {\sc NNLOPS} simulation in the 5FS
+%{\bf MZ cite ad comment}.
+%
+%The HH signal region is inspired to the $bb\gamma\gamma$ final state. In particular, we require two $b$-tagged, anti-$k_T$~\cite{Cacciari:2005hq,Cacciari:2008gp,Cacciari:2011ma} jets with
+%\begin{equation}
+%\label{eq:ptjcuts}
+%p_T(j) > 25,\GeV \qquad {\rm and} \qquad |\eta(j)| < 2.5\,,
+%\end{equation}
+%and with their invariant mass compatible with the Higgs
+%\begin{equation}
+%    \label{eq:mbjcut}
+%    80\, \GeV < m(b_1,b_2)< 140\,\GeV\,.
+%\end{equation}
+%Furthermore, we require the presence of two photons (in our simulations, they are produced by the Higgs decay), which satisfy the following cuts:
+%\begin{equation}
+%\label{eq:photoncuts}
+%    105\,\GeV < m(\gamma_1, \gamma_2) < 160\,\GeV, \quad |\eta(\gamma_i)|< 2.37, \quad
+%    \frac{p_T(\gamma_1)}{m(\gamma_1, \gamma_2)} > 0.35, \quad \frac{p_T(\gamma_2)}{m(\gamma_1, \gamma_2)} > 0.25\,.
+%\end{equation}
+%The presence of two $b$ jets and two photons passing the aforementioned cuts defines the \emph{fiducial} region. Such a selection
+%can be made more strict by employing the kinematic variable
+%\begin{equation}
+%\label{eq:mbbggs}
+%    \mbbggs = m_{2b2\gamma} - m(b_1,b_2) - m(\gamma_1,\gamma_2) + 2m_H \,,
+%\end{equation}
+%and further imposing cuts on it (see the ATLAS analysis \cite{ } {\bf MZ add citation!!!}). We will consider two scenarios 
+%where the fiducial cuts are supplemented by the requirement $\mbbggs< 500$ GeV or  $\mbbggs< 350$ GeV. Our results are shown in
+%Tab.~\ref{tab:XS-fid}. Numbers include the $H\to \gamma\gamma$ branching ratio, $\textrm{BR}(H\to\gamma\gamma)=0.227\%$~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}.
+%We quote the uncertainties stemming from scale variations, where the factorisation and renormalisation scale are varied independently around 
+%the central value by a factor 2 (9-point variatons). Other sources of uncertainties, such as those stemming from the variation
+%of the shower starting scale, from the usage of different parton showers, or from variations of the MC@NLO matching details~\cite{Frixione:2002ik,Frederix:2020trv}
+%have been considered in \citere{manzoni:2023qaf} and have been found to be subleading.
+%
+%{\bf MZ part on minnlops to be written by S. Manzoni}
+%Focus on \citere{manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiducial cuts for HH searches (ref. Stefano Manzoni). NNLO+PS ggF generator with different $n_f$ is running using ATLAS resources.
 
-The HH signal region is inspired to the $bb\gamma\gamma$ final state. In particular, we require two $b$-tagged, anti-$k_T$~\cite{Cacciari:2005hq,Cacciari:2008gp,Cacciari:2011ma} jets with
+
+
+%In this section, we present rate predictions for the $y_t^2$ contribution, focusing in particular on the signal region relevant for in Higgs boson pair production ($HH$) searches~\cite{}. Our study closely follows the work presented in \citere{manzoni:2023qaf}, with the main differences being an updated collider energy and input parameters in line with setup discussed in section~\ref{}. We provide predictions in the 4FS at NLO QCD accuracy, matched to PS using {\sc Pythia8}~\cite{Bierlich:2022pfr}. The results are obtained automatically with {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca,Frederix:2018nkq}. We compare these results to an inclusive gluon-fusion NNLOPS~\cite{Hamilton:2012rf,Hamilton:2013fea,Hamilton:2015nsa} simulation in the 5FS, generated using {\sc Powheg\_Box\_v2}~\cite{Nason:powheg-1,Frixione:powheg-2,Alioli:powheg-3}. This setup achieves NNLO accuracy for inclusive Higgs boson observables. However, it only provides LO accuracy for final states in which the Higgs boson is produced in association with two additional jets. In the {\sc NNLOPS} calculation the renormalisation and factorisation scales are set to $\muR = \muF = m_H/2$, the PDF4LHC21 set for the parton distribution functions are used~\cite{PDF4LHCWorkingGroup:2022cjn},
+%and Pythia8 is employed to perform the parton showering and to include the decay of the Higgs boson to two photons.
+
+In this section, we present rate predictions for the $y_t^2$ contribution, focusing in particular on the signal region relevant for Higgs boson pair production ($HH$) searches~\cite{HDBS-2021-18,CMS-HIG-22-001}. Our study closely follows the work presented in \citere{manzoni:2023qaf}, with the main differences being the updated collider energy and input parameters, as described in section~\ref{sec:setup}. Predictions are provided in the 4FS at NLO QCD accuracy, matched to a parton shower using {\sc Pythia8}~\cite{Bierlich:2022pfr}. The results are obtained automatically with {\sc MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca,Frederix:2018nkq}.
+
+We compare these predictions to those from an inclusive gluon-fusion {\sc NNLOPS} simulation~\cite{Hamilton:2012rf,Hamilton:2013fea,Hamilton:2015nsa} in the 5FS, generated using {\sc Powheg\_Box\_v2}~\cite{Nason:powheg-1,Frixione:powheg-2,Alioli:powheg-3}. This setup achieves NNLO accuracy for inclusive Higgs boson observables but only provides LO accuracy for final states in which the Higgs boson is produced in association with two additional jets. In the {\sc NNLOPS} calculation, the renormalisation and factorisation scales are set to $\mu_R = \mu_F = m_H/2$, the PDF4LHC21 parton distribution functions are used~\cite{PDF4LHCWorkingGroup:2022cjn}, and {\sc Pythia8} is employed both for parton showering and for simulating the decay of the Higgs boson into two photons.
+
+
+
+The HH signal region is inspired by the $HH \to b\bar{b}\gamma\gamma$ final state~\cite{HDBS-2021-10,CMS-HIG-19-018}. Specifically, we require two $b$-tagged anti-$k_T$~\cite{Cacciari:2005hq,Cacciari:2008gp,Cacciari:2011ma} jets satisfying
 \begin{equation}
 \label{eq:ptjcuts}
-p_T(j) > 25,\GeV \qquad {\rm and} \qquad |\eta(j)| < 2.5\,,
+p_T(j) > 25\,\GeV \qquad {\rm and} \qquad |\eta(j)| < 2.5\,,
 \end{equation}
-and with their invariant mass compatible with the Higgs
+with their invariant mass constrained to be compatible with the Higgs boson mass:
 \begin{equation}
     \label{eq:mbjcut}
-    80\, \GeV < m(b_1,b_2)< 140\,\GeV\,.
+    80\,\GeV < m(b_1,b_2)< 140\,\GeV\,.
 \end{equation}
-Furthermore, we require the presence of two photons (in our simulations, they are produced by the Higgs decay), which satisfy the following cuts:
+Additionally, we require two photons—produced in the simulation via Higgs decays—to pass the following selection criteria:
 \begin{equation}
 \label{eq:photoncuts}
     105\,\GeV < m(\gamma_1, \gamma_2) < 160\,\GeV, \quad |\eta(\gamma_i)|< 2.37, \quad
     \frac{p_T(\gamma_1)}{m(\gamma_1, \gamma_2)} > 0.35, \quad \frac{p_T(\gamma_2)}{m(\gamma_1, \gamma_2)} > 0.25\,.
 \end{equation}
-The presence of two $b$ jets and two photons passing the aforementioned cuts defines the \emph{fiducial} region. Such a selection
-can be made more strict by employing the kinematic variable
+The presence of two $b$ jets and two photons satisfying the above requirements defines the \emph{fiducial} region. This selection can be further refined in the context of $HH$ analyses by imposing a cut on the variable
 \begin{equation}
 \label{eq:mbbggs}
-    \mbbggs = m_{2b2\gamma} - m(b_1,b_2) - m(\gamma_1,\gamma_2) + 2m_H \,,
+    \mbbggs = m_{2b2\gamma} - m(b_1,b_2) - m(\gamma_1,\gamma_2) + 2m_H \,.
 \end{equation}
-and further imposing cuts on it (see the ATLAS analysis \cite{ } {\bf MZ add citation!!!}). We will consider two scenarios 
-where the fiducial cuts are supplemented by the requirement $\mbbggs< 500$\,GeV or  $\mbbggs< 350$\,GeV. Our results are shown in
-Tab.~\ref{tab:XS-fid}. Numbers include the $H\to \gamma\gamma$ branching ratio, $\textrm{BR}(H\to\gamma\gamma)=0.227\%$~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}.
-We quote the uncertainties stemming from scale variations, where the factorisation and renormalisation scale are varied independently around 
-the central value by a factor 2 (9-point variatons). Other sources of uncertainties, such as those stemming from the variation
-of the shower starting scale, from the usage of different parton showers, or from variations of the MC@NLO matching details~\cite{Frixione:2002ik,Frederix:2020trv}
-have been considered in \citere{manzoni:2023qaf} and have been found to be subleading.
-
-{\bf MZ part on minnlops to be written by S. Manzoni}
-Focus on \citere{manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiducial cuts for HH searches (ref. Stefano Manzoni). NNLO+PS ggF generator with different $n_f$ is running using ATLAS resources.
-
+This observable is used in $HH$ searches~\cite{HDBS-2021-10,HDBS-2019-27,CMS-HIG-19-018,ATLAS:2025hhd} to separate the selected events into two regions of phase space: one that is more sensitive to potential modifications of the Higgs self-coupling or other BSM effects ($m_{2b2\gamma}^{*} < 350$~GeV), and one that is more representative of the Standard Model expectation ($m_{2b2\gamma}^{*} > 350$~GeV). We consider two scenarios in which the fiducial selection includes by the requirements $\mbbggs < 500$\,GeV and $\mbbggs < 350$\,GeV, respectively. The numerical results comparing the \bbH{} $y_t^2$ component, computed at NLO in the 4FS using {\sc MadGraph5\_aMC@NLO}, with the expected rate obtained from the {\sc NNLOPS} simulation, with and without $g\rightarrow b\bar{b}$ splitting in the PS, are presented in table~\ref{tab:XS-fid}. For reference, table~\ref{tab:XS-fid} also includes the rates in the same fiducial regions for the \bbH{} $y_b^2$ component, evaluated at NNLO accuracy as discussed in section~\ref{sec:bbH4FS}. All rates include the Higgs branching ratio into photons, $\textrm{BR}(H \to \gamma\gamma) = 0.227\%$~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}. Uncertainties due to renormalisation and factorisation scale variations are quoted, where each scale is independently varied by a factor of two around the central value following the standard 9-point prescription. Additional theoretical uncertainties such as those associated with variations of the shower starting scale, the choice of parton shower algorithm, or modifications to the MC@NLO matching procedure~\cite{Frixione:2002ik,Frederix:2020trv} were examined in \citere{manzoni:2023qaf} and found to be subleading. {\sc NNLOPS} uncertainty
+are evaluated via multiple sources accounting the modelling of jet multiplicity, the Higgs boson $\ptH$, $\ptHjj$, and $\mjj$~\cite{deFlorian:2016spz,Liu:2013hba,Stewart:2013faa,Boughezal:2013oha,Stewart:2011cf,Gangal:2013nxa}, as discussed in \citere{ATLAS:2022tnm}.
 %---------------Table------------------------------------------------------------------------------------------
 \begin{table}[ht!]
   \vspace*{0.3ex}
   \begin{center}
 	   \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
   \hline 
-	Fiducial region  & \makecell[c]{\shortstack{\rule{0pt}{2ex} $y_b^2$ NNLO   \\ (\bbH{} \minnlo{})} }  &  \makecell[c]{\shortstack{\rule{0pt}{2ex} $y_t^2$ NLO   \\ (NLO+PS)} } & \makecell[c]{\shortstack{\rule{0pt}{2ex} $y_t^2$ LO  $\cancel{g\to b\bar{b}}$  \\ (ggF NNLOPS)} }   \\
+	Fiducial region  & \makecell[c]{\shortstack{\rule{0pt}{2ex} $y_b^2$ NNLO   \\ (\bbH{} \minnlo{})} }  &  \makecell[c]{\shortstack{\rule{0pt}{2ex} $y_t^2$ NLO   \\ (NLO+PS)} } & \makecell[c]{\shortstack{\rule{0pt}{2ex} $y_t^2$ LO  \\ (ggF NNLOPS)} }  & \makecell[c]{\shortstack{\rule{0pt}{2ex} $y_t^2$ LO  $\cancel{g\to b\bar{b}}$  \\ (ggF NNLOPS)} }   \\
   \hline \hline
    \begin{tabular}{@{}c@{}} No cut \end{tabular}
 %  \multirow{1}{*}{\makecell{No cut}} 
@@ -1037,6 +1074,15 @@ Focus on \citere{manzoni:2023qaf} mainly (and \citere{Biello:2024pgo}) in fiduci
   \caption{
 Cross sections in ab for the $y_b^2$ and $y_t^2$ contributions to $pp \to b \bar b H$ with $H\to \gamma\gamma$ decay at $\sqrt{s}=13.6$ TeV. \label{tab:XS-fid}}
 \end{table}
+Significant differences are observed between the {\sc MadGraph5\_aMC@NLO} and {\sc NNLOPS} predictions with the {\sc NNLOPS} fiducial cross section nearly twice as large when the  $g\rightarrow b\bar{b}$ splitting is included in the PS. As discussed in~\citere{manzoni:2023qaf}, the PS likely induces a double counting of the gg$H$ + 2~$b$-jets process, which is already included at matrix-element level in the {\sc NNLOPS} generation and is formally beyond the nominal accuracy of that prediction. The mismodelling originated by the {\sc NNLOPS} sample is currently covered by a conservatinve 100\% uncertainty in $HH$ analyses~\cite{HDBS-2021-10,ATLAS:2025hhd}. In all categories the $y_b^2$ and $y_t^2$
+contribution to the \bbH{} cross section remains at the same order as the $HH$ signal cross section~\cite{manzoni:2023qaf}, making their accurate modelling crucial. $y_t^2$ component is the dominant component of the \bbH{} cross section in the fiducial cuts region except for the lower $\mbbggs$ phase space.
+
+In all categories, the $y_b^2$ and $y_t^2$ contributions to the \bbH{} cross section remain of the same order as the $HH$ signal cross section~\cite{manzoni:2023qaf} (not included in the table), highlighting the importance of their accurate modelling to obtain a precise measurment of the $HH$ process. The $y_t^2$ term dominates the \bbH{} cross section in most of the fiducial regions, except in the lower $\mbbggs$ phase space, where its contribution becomes comparable to $y_b^2$ one. As shown in \fig{fig:4fsMBB} and \fig{fig:4fsFID}, the inclusion of NNLO corrections increases the $y_b^2$ contribution by up to 60\%-40\% and leads to a significant reduction in scale uncertainties. In \fig{fig:4fsNNLOPS}~\citere{atlaspub}, the distributions of $p_T^H$ and $\mbbggs$ are presented for the {\sc MadGraph5\_aMC@NLO} and {\sc NNLOPS} samples, after applying the $b$-jet-only selection defined in \eqref{eq:ptjcuts}. The distributions are normalised to unity to highlight the harder spectra predicted by {\sc MadGraph5\_aMC@NLO}, when disentagle from the large rate differences observed with respect to {\sc NNLOPS}.
+
+
+
+
+
 
 \begin{figure}[t!]
 \begin{center}
@@ -1059,6 +1105,77 @@ Cross sections in ab for the $y_b^2$ and $y_t^2$ contributions to $pp \to b \bar
 \caption{Transverse-momentum spectrum of the Higgs boson and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs} in the fiducial volume described by the cuts~(\ref{eq:ptjcuts}-\ref{eq:photoncuts}).\label{fig:4fsFID}}
 \end{center}
 \end{figure}
+
+
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/ATLAS/BJetCuts_Higgs1_Pt_shape_comparison_ratio.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/ATLAS/BJetCuts_yybb_Mass_shape_comparison_ratio.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Distributions~\citere{atlaspub} of the Higgs boson $\pt$, and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs}  for the {\sc MadGraph5\_aMC@NLO} and {\sc NNLOPS} samples after requiring at least 2 $b$-jets in the final state as describe by \eqref{eq:ptjcuts}. All distributions are normalised to unity. The blue and green shaded bands represent the scale uncertainties (shape only) of the {\sc NNLOPS} and {\sc MadGraph5\_aMC@NLO} samples respectively. The lower panel displays the ratio of the two predictions.\label{fig:4fsNNLOPS}}
+\end{center}
+\end{figure}
+
+\subsection{Combination of \bbH{} from {\sc MadGraph5\_aMC@NLO} with {\sc NNLOPS} $H+J$ 5FS generator}
+
+In analyses focusing on final states containing $b$-jets, it is essential to accurately model the contributions from light-flavor and charm jets that may enter the event selection due to mis-tagging. To facilitate the use of the {\sc MadGraph5\_aMC@NLO} sample in ATLAS physics studies while maintaining a realistic description of all jet flavor components, the $gg \to b\bar{b}H$ process is supplemented with the {\sc NNLOPS} $H + j$ sample. The {\sc NNLOPS} simulation includes the $gg \to H$ process accompanied by light-flavor and charm jets, which are not represented in the {\sc MadGraph5\_aMC@NLO} sample.
+
+To prevent double counting of events featuring $gg \to H$ production with two $b$-jets, the {\sc NNLOPS} sample is filtered to exclude any events that contain at least one bottom quark, whether originating from the hard scatter or from parton showering. To ensure complete orthogonality between the samples, events with a single bottom quark are also removed from the {\sc NNLOPS} sample. This excludes $g + b \to b + H$ contributions, which are already accounted for in the {\sc MadGraph5\_aMC@NLO} prediction via unresolved $g \to b\bar{b}$ splittings. This effectively removes the $b\bar{b}H$ component from {\sc NNLOPS} sample. The filtered {\sc NNLOPS} sample can then be reliably combined with the {\sc MadGraph5\_aMC@NLO} prediction for $gg \to b\bar{b}H$. Although this method involves combining results from the 5FS and 4FS, it provides a coherent and practical approach for estimating the $gg \to H$ plus $b$-jets contribution at analysis level, without the need to regenerate the {\sc NNLOPS} sample in the 4FS. This strategy is consistent with approaches used in similar contexts, such as the modeling of $Z$ boson production with two bottom quarks in Ref.~\cite{Zaro:Zplusbb}, and the treatment of the $t\bar{t}+b\bar{b}$ process in~\citere{PhysRevD.93.014019}.  As discussed in~\citere{}, the filtering efficiency, defined as the fraction of {\sc NNLOPS} events surviving the bottom quark veto, is found to be 94\%. The filtered {\sc NNLOPS} sample is then normalized to the inclusive $gg \to H$ cross section at N$^3$LO, after subtracting $\sigma_{gg \to \bbH}^{\text{NLO}}$ for the $y_t^2$ as listed in~\tab{tab:bbHyt13p6}~and~\tab{tab:bbHyt13}. Comparison of nominal and filtered {\sc NNLOPS} is discussed in~\citere{atlaspub}.
+
+
+\begin{table}[ht!]
+\begin{center}%
+\begin{small}%
+\tabcolsep5pt
+\begin{tabular}{cccc}%
+$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
+$125.00$  \\
+$125.09$ \\
+$125.10$  \\
+$125.20$ \\
+\end{tabular}%
+\end{small}%
+\end{center}%
+\caption{Total \bbH{} cross sections for the $y_t^2$ contribution in the SM for a LHC CM energy of $\sqrt{s}=13.6$ TeV.}
+\label{tab:bbHyt13p6}
+\end{table}
+
+
+\begin{table}[ht!]
+\begin{center}%
+\begin{small}%
+\tabcolsep5pt
+\begin{tabular}{cccc}%
+$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
+$125.00$ \\
+$125.09$\\
+$125.10$  \\
+$125.20$ \\
+\end{tabular}%
+\end{small}%
+\end{center}%
+\caption{Total \bbH{} cross sections for the $y_t^2$ contribution in the SM for a LHC CM energy of $\sqrt{s}=13$ TeV.}
+\label{tab:bbHyt13}
+\end{table}
+
+
+
+
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/ATLAS/BJetCuts_Higgs1_Pt_shape_comparison_ratio.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/ATLAS/BJetCuts_yybb_Mass_shape_comparison_ratio.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Distributions~\citere{atlaspub} of the Higgs boson $\pt$, and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs}  for the {\sc MadGraph5\_aMC@NLO} and {\sc NNLOPS} samples after requiring at least 2 $b$-jets in the final state as describe by \eqref{eq:ptjcuts}. All distributions are normalised to unity. The blue and green shaded bands represent the scale uncertainties (shape only) of the {\sc NNLOPS} and {\sc MadGraph5\_aMC@NLO} samples respectively. The lower panel displays the ratio of the two predictions.\label{fig:4fsNNLOPS}}
+\end{center}
+\end{figure}
+
+
+
 
 \section{Light-quark Yukawa contributions to Higgs production}\label{sec:lightYukawa}
 In addition to the $b\bar{b}H$ channel, studies of light-quark fusion are also interesting due to their ability to constrain the light-quark Yukawa couplings. Indeed, while the bottom-quark Yukawa coupling is strongly constrained through measurements of Higgs decays, no stringent bounds exist for lighter quarks~\cite{Kagan:2014ila}. In particular, the charm Yukawa coupling is only weakly constrained, with an observed upper limit of less than 8.5 times the Standard Model prediction based on analyses of Higgs decay products in Higgsstrahlung events~\cite{Atlas:2022ers}. In ref.~\cite{Bishara:2016jga} it was suggested that bounds could be obtained from measurements of the Higgs transverse momentum spectrum, which could be used to measure the bottom and charm Yukawa couplings and  enable upper bounds to be placed on couplings of lighter quarks. The cross-section for single Higgs production via parton fusion is given by:
@@ -1176,13 +1293,13 @@ In the present paper, we have presented updated predictions for \bbH{} productio
 
 We then presented the first numerical comparison of the \minnlo{} and \GENEVA{} generators for \bbtoH{} production in the massless scheme at NNLO+PS accuracy. They are compatible within theoretical uncertainties for the observables studied, showing good agreement with resummation results for the Higgs transverse momentum spectrum. We also included a proof-of-concept study of the \minnlo{} generator for BSM scenarios involving heavy-Higgs production in the enhanced bottom-quark channel. The NNLO corrections for the bottom-Yukawa contribution in the massive scheme have recently been computed with all-order parton shower matching in the \minnlo{} framework, with updated cross-sections compared against the massless prediction and lower-order results. The increasing QCD accuracy in this process shows improved compatibility between the two scheme choices and a corresponding reduction in theoretical uncertainty in the \bbH{} modelling.
 
-\bbH{} production is an important background for HH searches in all channels involving at least one Higgs boson decaying into two bottom quarks. We discussed the impact of massive scheme predictions in fiducial phase-space regions relevant for HH studies. The top-quark Yukawa contribution is the dominant one, which can be modelled by selecting events from the NNLOPS ggF generator or using the MC@NLO generator for the $y_t^2$ terms at NLO+PS. We included a discussion on the impact of the bottom-Yukawa contribution, with a strong reduction in scale uncertainty using the \minnlo{} code in the 4FS. An important outlook for HH studies is the calculation of \bbH{} production via ggF Higgs boson production at NNLO+PS. Indeed, current \minnlo{} technology enables NNLO corrections for this process, with the main bottleneck being the missing two-loop contribution in the $y_t^2$ channel.
+\bbH{} production is an important background for HH searches in all channels involving at least one Higgs boson decaying into two bottom quarks. We discussed the impact of massive scheme predictions in fiducial phase-space regions relevant for HH studies. The top-quark Yukawa contribution is the dominant one, which can be modelled by selecting events from the {\sc NNLOPS} ggF generator or using the MC@NLO generator for the $y_t^2$ terms at NLO+PS. We included a discussion on the impact of the bottom-Yukawa contribution, with a strong reduction in scale uncertainty using the \minnlo{} code in the 4FS. An important outlook for HH studies is the calculation of \bbH{} production via ggF Higgs boson production at NNLO+PS. Indeed, current \minnlo{} technology enables NNLO corrections for this process, with the main bottleneck being the missing two-loop contribution in the $y_t^2$ channel.
 
 In the last section of the report, we discuss how to extend \bbH{} studies to Yukawa interactions with lighter quarks (\qqtoH{}). The shape of the transverse momentum spectrum is very sensitive to the different valence- and sea-quark PDFs that induce Higgs boson production. We presented a phenomenological study of \qqtoH{} production with the Higgs decaying into two photons, making use of \minnlo{} predictions in the massless scheme. To improve the theoretical input for constraints on the charm-quark Yukawa coupling in Higgs production, the calculation of NNLO(+PS) corrections for \ccH{} production in the 3FS is feasible with the \minnlo{} method by addressing numerical instabilities and using a well-justified massification of two-loop amplitudes, as performed for \bbH{} production in 4FS.
 
 %In the present paper, we have presented updated predictions for \bbH{} production at the LHC at a centre-of-mass energy of 13.6 TeV. All the cross-sections are computed following the recommendations of the LHC Higgs Working Group. We firstly reported matched inclusive numbers obtained using the \nlonnllpart{} method with interpolations of 13 TeV and 14 TeV cross-sections. The matching of the different flavour schemes has been performed only at the inclusive level for \bbH{} production, while differential matched prediction can be performed using for examples the methods presented in~\citeres{Gauld:2021zmq,guzzi:2024can}. In addition, we have reported on the analytic predictions for the transverse momentum spectrum of the Higgs boson at $\text{N}^3\text{LL'+aN}^3\text{LO}$. The matching with exact $\text{N}^3\text{LO}$ prediction is highly desirable, due to the importance of this observable in the experimental studies for Higgs production via bottom-quark fusion. 
 %We have then showed the first numerical comparison of the \minnlo{} and \GENEVA{} generators for the \bbtoH{} production in the massless scheme at NNLO+PS accuracy. They are compatible within the theoretical uncertainty for the studied observables, with a good compatibility with resummation results in the Higgs transverse momentum spectrum. We also include a proof-of-concept study of the \minnlo{} generator for BSM studies for heavy-Higgs production in the enhanced bottom-quark channel. The NNLO corrections for the bottom-Yukawa contribution in the massive scheme have been recently computed with an all-order parton shower matching in the \minnlo{} framework with updated cross-sections compared against the massless prediction and lower-order predictions. The increasing QCD accuracy in this process shows a better compatibility between the two scheme choices with an associated reduction of the theoretical uncertainty in the \bbH{} modelling.
-%The \bbH{} production is an important background for HH searches in all the channels with at least one Higgs boson decaying into two bottom quarks. We discussed the impact of massive scheme predictions in the fiducial phase-space regions useful for HH studies. The top-quark Yukawa contribution is the dominant contribution, which can be modelled with a selection of events from the NNLOPS ggF generator or usingthe MC@NLO generator for the $y_t^2$ terms at NLO+PS. We have included a discussion on the impact of the bottom-Yukawa contribution, with a strong reduction of the scale uncertainty using the \minnlo{} code in 4FS. An important outlook for HH studies is the calculation of the \bbH{} production via ggF Higgs boson production at NNLO+PS. Indeed, the current \minnlo{} technology enables NNLO corrections for this process with the main bottleneck provided by the missing two-loop contribution in the $y_t^2$ channel.
+%The \bbH{} production is an important background for HH searches in all the channels with at least one Higgs boson decaying into two bottom quarks. We discussed the impact of massive scheme predictions in the fiducial phase-space regions useful for HH studies. The top-quark Yukawa contribution is the dominant contribution, which can be modelled with a selection of events from the {\sc NNLOPS} ggF generator or usingthe MC@NLO generator for the $y_t^2$ terms at NLO+PS. We have included a discussion on the impact of the bottom-Yukawa contribution, with a strong reduction of the scale uncertainty using the \minnlo{} code in 4FS. An important outlook for HH studies is the calculation of the \bbH{} production via ggF Higgs boson production at NNLO+PS. Indeed, the current \minnlo{} technology enables NNLO corrections for this process with the main bottleneck provided by the missing two-loop contribution in the $y_t^2$ channel.
 %In the last section of the report, we discuss how to extend the \bbH{} studies for Yukawa interactions with lighter quarks (\qqtoH{}). The shape of the transverse momentum spectrum is very sensitive to the different valence- and sea-quark PDFs that induce the Higgs boson production. We have presented a phenomenological study for \qqtoH{} production with the Higgs decaying into two photons, making use of novel \minnlo{} predictions in the massless scheme. In order to improve the theoretical input for constraints in the charm-quark Yukawa coupling in Higgs production, the calculation of NNLO(+PS) corrections for \ccH{} production in the 3FS is possible by addressing numerical instabilities and using a well-justified massification of two-loop amplitudes as performed in \bbH{} in 4FS.
 
 \textbf{Citation policy. }The present work consists of contributions from different collaborations. If some of the results are employed for scientific publications, together with this work, one should cite the corresponding work in~\citeres{manzoni:2023qaf,Cal:2023mib,Biello:2024vdh,Biello:2024pgo,Gavardi:2025zpf}.
