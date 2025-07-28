@@ -373,9 +373,9 @@ All simulations in this paper are obtained at a centre-of-mass energy of $\sqrt{
 The parametric inputs, including the strong coupling constant and electroweak parameters relevant for the Higgs vacuum expectation value, follow the latest recommendations from the LHC Higgs Working Group~\cite{Karlberg:2024zxx} and the Particle Data Group parameters~\cite{ParticleDataGroup:2024cfk}. For completeness, the most relevant inputs for \bbH{} predictions are reported in the following: The predictions in the massive schemes are obtained using
 an on-shell value of the bottom-quark mass of $m_b^{\rm OS}=(4.92\pm0.13)$\,GeV for internal and external bottom quark lines.
 The Yukawa coupling, on the other hand, is renormalized in the $\MSbar{}$ scheme using an input value of $m_b(m_b)=(4.18\pm0.03)$\,GeV
-for the renormalization group running of the Yukawa mass. This scheme choice for the Yukawa is crucial in order to evaluate it at its natural
+for the renormalisation group running of the Yukawa mass. This scheme choice for the Yukawa is crucial in order to evaluate it at its natural
 scale, which is of order of the Higgs boson mass, and to avoid large logarithmic corrections. The scale settings are discussed in the following subsection.
-The Higgs vacuum expectation value ($v$) is derived through $m_W = 80.379$\,GeV, $\Gamma_W=2.085$\,GeV, $m_Z = 91.1876$\,GeV, $\Gamma_Z=2.4952$\,GeV. Working in the $G_\mu$ scheme with the input value $G_\mu=1.16436\,\text{GeV}^{-2}$\,, we obtain the electromagnetic coupling $\alpha=1/132.3489045$. Employing complex masses, the corresponding vacuum expectation value is $v=(246.403-i3.8060)$\,GeV.
+The following EW input parameters are used: $m_W = 80.379$\,GeV, $\Gamma_W=2.085$\,GeV, $m_Z = 91.1876$\,GeV, $\Gamma_Z=2.4952$\,GeV. Working in the $G_\mu$ scheme with the input value $G_\mu=1.16436\,\text{GeV}^{-2}$\,, we obtain the electromagnetic coupling $\alpha=1/132.3489045$. Employing complex masses, the corresponding vacuum expectation value is $v=(246.403-3.8060\,i)$\,GeV.
 The Higgs boson is considered to be stable in all simulations,
 except where its decay into photons or tau leptons is explicitly considered. 
 Also in these cases it is treated as on-shell and with zero width.
@@ -386,16 +386,28 @@ The strong coupling is obtained directly from the corresponding PDF set
 for consistency.
 
 \subsection{Running of the bottom Yukawa}
-The Yukawa coupling is always renormalised in the \MSbar{} scheme. We discuss the recommendation of the \bbH{} subgroup in performing the running of the bottom-quark mass value at the hard scale. We derive the coupling $y_b$ from an input value $\hat m_b\equiv m_b(m_b)=4.18$\,GeV and evolved to the Higgs mass via four-loop running, based on the solution of the Renormalisation Group Equation (RGE) \cite{harlander:2002wh,baikov_2014}. The evolution of the strong coupling constant depends on its value at both the hard scale and the bottom-quark pole. In the massless scheme, these values are straightforwardly obtained by evolving the input $\alpha_s(m_Z) = 0.1180$ using QCD running with $n_f = 5$ active flavours. In the massive scheme, the procedure follows the approach commonly adopted in modern evolution libraries: starting from $\alpha_s(m_Z) = 0.1180$ with $n_f = 5$, we evolve down to the bottom-quark pole $\hat{m}_b$, where a decoupling relation~\cite{vogt:2004ns} is applied to extract $\alpha_s(\hat{m}_b)$ in the 4-flavour scheme (4FS). This value is then used as a boundary condition for the subsequent QCD evolution at higher scales, performed with $n_f = 4$ active flavours.
+The Yukawa coupling is renormalized in the \MSbar{} scheme in both the 4FS and the 5FS, adapting the following recommendation: We derive the coupling $y_b(\muR)=m_b(\muR)/v$ by 
+evolving $\hat{m}_b\equiv m_b(m_b)=4.18$\,GeV to $m_b(\muR)$ via four-loop running, solving the Renormalisation Group Equation (RGE) \cite{harlander:2002wh,baikov_2014}. 
+This evolution is directly related to the one of the strong coupling constant, which is evaluated both at $\muR$ and at $\hat{m}_b$. 
+In the massless scheme, these values are straightforwardly obtained by evolving the input $\alpha_s(m_Z) = 0.1180$ with four-loop QCD running and $n_f = 5$ active flavours.
+In the massive scheme, the procedure follows the approach commonly adopted in modern PDF evolution libraries: starting from $\alpha_s(m_Z) = 0.1180$ we evolve down to $\hat{m}_b$
+with $n_f = 5$, where the decoupling relation~\cite{vogt:2004ns} is applied to extract $\alpha_s(\hat{m}_b)$ in the 4FS. 
+This value is then used as a boundary condition to evolve to $\alpha_s(\muR)$ with $n_f = 4$ active flavours.
 
-To ensure consistency in the perturbative estimation of scale uncertainties, the values of the Yukawa coupling at scales varied by a factor $\KR$ with respect to the central scale are obtained by evolving from the central value, which serves as the boundary condition. The evolution is performed at two-loop accuracy for NLO predictions and at three-loop accuracy for NNLO ones. A consistent number of active flavours is used throughout the running, depending on the treatment of the bottom-quark mass.
+For consistency, scale uncertainties are obtained by varying the scale with respect to the central one using the order of the evolution consistent with the 
+calculation, i.e.\ two-loop running for NLO predictions and three-loop running for NNLO calculations, and with the number of active flavours consistent with 
+the flavour scheme under consideration.
 
-For completeness, predictions involving the top-quark Yukawa contribution are based on an on-shell definition of the coupling.
+Predictions involving the top-quark Yukawa contribution employ the on-shell definition of the coupling.
 
 \subsection{Scale settings}
-In the Monte Carlo simulations with massless bottom quarks, we consider the Higgs mass as the central value of the factorisation ($\muF$) and renormalisation ($\muR$) scales. The theory uncertainty is estimated using the standard scale variation approach by changing the scales by a factor of 2 with the constraint $\frac{1}{2}\leq\muR/\muF\leq 2$ in order to avoid large logarithmic effects. The renormalisation scales associated with the Yukawa coupling and the strong coupling constant are varied in a correlated manner, by simultaneously rescaling both with the same factor. We have performed detailed studies on the impact of this correlation and found that such a correlated variation provides a reliable estimate of the overall renormalisation uncertainty.
+In the Monte Carlo simulations with massless bottom quarks, we consider the Higgs mass as the central value for the factorisation ($\muF$) and renormalisation ($\muR$) scales. The theory uncertainty is estimated using the standard 7-point variation, i.e.\ by changing the scales by a factor of 2 with the constraint $\frac{1}{2}\leq\muR/\muF\leq 2$ in order to avoid large logarithmic effects. The renormalisation scales associated with the Yukawa coupling and the strong coupling constant are simultaneously by rescaling both with the same factor. We have performed detailed studies on the impact of this correlation and found that such a correlated variation provides a reliable estimate of the overall renormalisation uncertainty.
 
-In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse invariant mass of the \bbH{} system—was often adopted. This lower scale resulted in higher 4FS cross sections, which reduced the gap with the 5FS predictions. However, with the inclusion of NNLO QCD corrections in the 4FS, such a scale choice is no longer necessary. As shown in~\citere{Biello:2024pgo}, comparisons between dynamical and fixed scales at NNLO show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with the Higgs-boson mass providing a natural and consistent choice.
+In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse mass of the \bbH{} system—was often adopted. Such small scale
+resulted in higher 4FS cross sections, which reduced the gap with the 5FS predictions. However, with the inclusion of NNLO QCD corrections in the 4FS, 
+such a scale choice is no longer necessary. Moreover, as shown in~\citere{Biello:2024pgo}, comparisons between dynamical and fixed scales at NNLO 
+show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with the Higgs-boson 
+mass providing a natural and consistent choice.
 
 \section{Updated inclusive cross sections at 13.6 TeV}
 \label{sec:matchedinclusivenumbers}
@@ -481,7 +493,7 @@ otherwise spoil the convergence of perturbation theory in this regime.
 In this section, we provide recent results for the resummed $q_T$ spectrum for $b\bar{b}\to H$ at N$^3$LL$'$ order matched to fixed NNLO and approximate N$^3$LO in the 5FS \cite{Cal:2023mib}. Previously the spectrum was calculated to NNLL$^{'}+$NNLO accuracy\footnote{We use the logarithmic counting of ref.~\cite{Berger:2010xi}, where the prime denotes inclusion of higher order boundary terms.} ~\cite{Harlander:2014hya} using the CSS formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use soft-collinear effective theory (SCET)
 \cite{Bauer:2000yr,Bauer:2001ct,Bauer:2001yt,Bauer:2002nz,Beneke:2002ph} to resum the logarithms of $q_T/m_H$ which is equivalent to a modern formulation of the CSS formalism.
 We employ the rapidity
-renormalization group~\cite{Chiu:2012ir} together with the
+renormalisation group~\cite{Chiu:2012ir} together with the
 exponential regulator~\cite{Li:2016axz} for which the ingredients
 required for the resummation at N$^3$LL$'$ are known.
 The singular cross section can be written in a factorized form as
@@ -515,7 +527,7 @@ choosing appropriate values for the boundary scales close to their canonical
 values , each function is free of large logarithms and can
 therefore be evaluated in fixed-order perturbation theory. Next, all functions
 are evolved from their respective boundary conditions to a common arbitrary point
-$(\mu, \nu)$ by solving their coupled system of renormalization group equations. For more details we refer to Refs.~\cite{Ebert:2016gcn,Ebert:2020dfc,Cal:2023mib}.
+$(\mu, \nu)$ by solving their coupled system of renormalisation group equations. For more details we refer to Refs.~\cite{Ebert:2016gcn,Ebert:2020dfc,Cal:2023mib}.
 For the resummation at N$^3$LL$'$ we require the N$^3$LO
 boundary conditions for the hard function~\cite{Gehrmann:2014vha,
 	Ebert:2017uel}, and the beam and soft functions~\cite{Lubbert:2016rku,
@@ -574,7 +586,7 @@ which has been written here as the sum of two terms containing the
 contributions at leading and next-to-leading order in the strong
 coupling, respectively. The $\bar{B}$ function, at this level, only
 provides a fixed-order description of the emission $J$, and the
-renormalization and factorization scales (collectively labeled as
+renormalisation and factorisation scales (collectively labeled as
 $\mu$) are still unconstrained. In ref.~\cite{Hamilton:2012rf}, a
 prescription for the choice of the scale $\mu$ was introduced, and the
 $\bar{B}$ function was multiplied by a Sudakov form factor
