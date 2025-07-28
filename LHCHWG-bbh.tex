@@ -398,8 +398,7 @@ For consistency, scale uncertainties are obtained by varying the scale with resp
 calculation, i.e.\ two-loop running for NLO predictions and three-loop running for NNLO calculations, and with the number of active flavours consistent with 
 the flavour scheme under consideration.
 
-Predictions involving the top-quark Yukawa contribution employ the on-shell definition of the coupling.
- {\it \color{red} MW: no top mass is specified}
+Predictions involving the top-quark Yukawa contribution employ the on-shell definition of the coupling. A top-quark mass of $172.5$\,GeV is used throughout the simulations.
 
 \subsection{Scale settings}
 In the Monte Carlo simulations with massless bottom quarks, we consider the Higgs mass as the central value for the factorisation ($\muF$) and renormalisation ($\muR$) scales. The theory uncertainty is estimated using the standard 7-point variation, i.e.\ by changing the scales by a factor of 2 with the constraint $\frac{1}{2}\leq\muR/\muF\leq 2$ in order to avoid large logarithmic effects. The renormalisation scales associated with the Yukawa coupling and the strong coupling constant are simultaneously by rescaling both with the same factor. We have performed detailed studies on the impact of this correlation and found that such a correlated variation provides a reliable estimate of the overall renormalisation uncertainty.
@@ -422,20 +421,17 @@ FONLL-B~\cite{forte:2015hba,forte:2016sja} and \nlonnllpart{}~\cite{Bonvini:2015
 Both approaches yield results that are fully consistent with each other, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. 
 The novel FONLL-C matching~\cite{Duhr:2020kzd} adds the \fnnnlo{} corrections in the 5FS to FONLL-B.
 he \nlonnllpart{} combination introduces a resummation scale $\muB$, which enables an estimate of the 
-matching uncertainties. 
-{\it \color{red} MW: I don't understand these comments:} T
-In addition, using the fact that the bottom-quark PDF is effectively of order $\alpha_s$, the method has the advantage of including 
-the complete fixed-order massive results at each perturbative order\footnote{We specify that with the inclusion of the \fnnnlo{} 5FS corrections, the FONLL-C version matches all the 4FS NLO terms.}.
+matching uncertainties.
 The $y_by_t$  contribution is easily included as a fixed-order non-singular term, since these interference effects are power corrections that 
 vanish to all orders in the small bottom-quark mass limit.
 
 The setup of the calculation follows that described in~\sct{sec:setup}, with the only difference being the choice of the central scales, which are set to
 \begin{align}
-\muF=\frac{1}{4}(m_H+2m_b),\hspace{1cm}\muR=\frac{1}{2}m_H,,
+\muF=\frac{1}{4}(m_H+2m_b),\hspace{1cm}\muR=\frac{1}{2}m_H\,,
 \end{align}
 in order to ensure a better perturbative convergence.
 
-In~\tab{tab:bbH136lin}, we report the results of a linear interpolation between the existing 13 TeV and 14 TeV results, using the relation
+In~\tab{tab:bbH136lin}, we report the results of the \nlonnllpart{} combination via a linear interpolation between the existing 13 TeV and 14 TeV results, using the relation
 \begin{align}
 \sigma(13.6\,\text{TeV})=0.4\sigma(13.0\,\text{TeV})+0.6\sigma(14.0\,\text{TeV})\,.
 \end{align}
