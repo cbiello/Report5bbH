@@ -753,16 +753,41 @@ agree within their respective uncertainties, especially for observables inclusiv
 over radiation, where any difference is beyond NNLO QCD and should be 
 covered by scale uncertainties.
 
-\subsubsection{Numerical comparison of \minnlo{} and \GENEVA{}}
-In this section, we present a numerical comparison between two Monte Carlo (MC) generators for \bbtoH{} production: the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. The \minnlo{} predictions use a four-loop running as implemented in~\citere{harlander:2002wh,baikov_2014}, while the \GENEVA{} generator employs a three-loop running derived from SCET. This difference is numerically small and can be safely neglected in the following comparison. Both the MC generators produce events that are showered using~\PYTHIA{8} with a local recoil.
+\subsubsection{Numerical comparison of \minnlo{} and \GENEVA{} predictions}
+In this section, we present a numerical comparison between two Monte Carlo (MC) generators for \bbtoH{} production in the 5FS in the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. {\it\bf MW: I don't get this} The \minnlo{} predictions use a four-loop running as implemented in~\citere{harlander:2002wh,baikov_2014}, while the \GENEVA{} generator employs a three-loop running derived from SCET. This difference is numerically small and can be safely neglected in the following comparison. Both the MC generators produce events that are showered using~\PYTHIA{8} with a local recoil.
 
-To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2019whf}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well below the differences observed between the predictions of the two Monte Carlo generators.
+To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed towards large transverse momenta using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2019whf}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well below the differences observed between the predictions of the two Monte Carlo generators.
 
-On the other hand, the \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables by construction and the default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
+The \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables with NNLO QCD predictions. Moreover, it applies default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
 
-We start the comparison by focusing on the transverse momentum spectrum of the Higgs boson in~\fig{fig:genevaptH}. The left plot shows the spectrum in a large range where we observe good agreement in the resummation region for low values of the transverse momentum and a smooth match in the fixed-order hard region. For intermediate values of the transverse momentum, we observe strong differences between \minnlo{} and \GENEVA{} with cumulative scale choice. The right plot provides a zoomed-in view of the same observable and includes the \GENEVA{} prediction obtained using the spectrum scale choices described in~\sct{sec:nutshell}, which are more appropriate for the transverse momentum spectrum. 
-%In the right plot, which shows a zoomed-in view of the same observable, we include the \GENEVA{} prediction obtained with the spectrum scale choices discussed in~\sct{sec:nutshell}. For the transverse momentum spectrum, this scale setting is more appropriate. 
-Moreover, in \GENEVA{}, the scale variation is implemented through variations of the profile scales at the spectrum level, making them particularly well-suited for transverse observables when using the spectrum scale choice. In contrast, the cumulant scale choice leads to an artificially large scale uncertainty in the matching region, precisely where a different scale setting would be more justified.
+We start the comparison by focusing on the transverse momentum spectrum of the Higgs boson in~\fig{fig:genevaptH}. The left plot shows the spectrum in a large range. As 
+expected, we observe good agreement between \minnlo{} and \GENEVA{} predictions
+at large transverse momenta, where both calculations are effectively NLO accurate and 
+governed by $H$+jet production. Also at the peak both generators yield relatively 
+close results, consistent within their respective uncertainty. However, directly
+before and after the peak, and especially for intermediate values of 
+transverse momentum, we observe substantial differences between \minnlo{} and \GENEVA{} with cumulative scale choice, barely covered by scale uncertainties,
+which are particularly large for \GENEVA{} in that range. Moreover, the shape
+of the \GENEVA{} spectrum appears somewhat unnatural featuring a slight bump
+around $70$\,GeV.
+
+The right plot of \fig{fig:genevaptH} provides a zoomed-in view of the same observable and includes also the \GENEVA{} prediction obtained using the spectrum scale choices, as described in~\sct{sec:nutshell}, which are more appropriate for the transverse momentum spectrum. 
+Moreover, in \GENEVA{}, the scale variation is implemented through variations of the profile scales at the spectrum level, making them particularly well-suited for transverse observables when using the spectrum scale choice. Indeed, the substantial 
+scale uncertainties observed for the cumulant scale choice
+in the matching region are strongly reduced for the spectrum scale choice, which 
+features uncertainties that are of similar size as the \minnlo{} ones.
+Most notably, we find that \minnlo{} and \GENEVA{} predictions are in significantly 
+better agreement, when the spectrum scale choice is applied in \GENEVA{}.
+In fact, the two predictions are in excellent agreement within their respective scale
+uncertainties over the entire transverse momentum range.
+We stress that at small transverse momenta all 5FS predictions
+become essentially unphysical, as power corrections in the 
+bottom mass become crucial for $p_T\lesssim m_b$, which are included only 
+in 4FS calculations. Indeed, we observe that the scale uncertainty bands are
+severely inflated at small transverse momenta and the predictions can
+even turn negative in the first bins, because the bottom PDFs are not valid below
+the bottom mass threshold.
+
 
 \begin{figure}[t!]
 \begin{center}
@@ -775,7 +800,8 @@ Moreover, in \GENEVA{}, the scale variation is implemented through variations of
 \end{center}
 \end{figure}
 
-We compare the transverse momentum spectrum of the Higgs boson with the resummed analytic predictions discussed in~\sct{sec:resummation}. In the left plot of~\fig{fig:resVSMCs}, we show the Monte Carlo predictions against the $\text{N}^3\text{LL}+\text{NNLO}$ result. By construction, the \GENEVA{} prediction with the spectrum scale choice matches the analytic result exactly before the parton shower, and the shower does not introduce important effects. On the other hand, the cumulant scale choice shows good agreement in the resummation region ($p_{\text{T,H}} < 20$\,GeV), but begins to deviate at higher transverse momenta, as already observed in~\fig{fig:genevaptH}. The \minnlo{} prediction also shows good agreement within its scale uncertainty band, with the largest deviations appearing at very low transverse momenta, in the region well covered by the resummation scale variation. In the right of~\fig{fig:resVSMCs}, we present the comparison of the same MCs spectra against the more accurate $\text{N}^3\text{LL'+aN}^3\text{LO}$. The inclusion of higher-order corrections in the analytic spectrum results in a negative shift relative to both the \minnlo{} and \GENEVA{} predictions across the entire phase space, with a mostly flat effect for $p_{\text{T,H}} > 10$,GeV. Compared to the others, the \GENEVA{} prediction with the spectrum scale choice lies closer to the analytic result.
+We compare the transverse momentum spectrum of the Higgs boson with the resummed analytic predictions discussed in~\sct{sec:resummation}. In the left plot of~\fig{fig:resVSMCs}, we show the Monte Carlo predictions against the $\text{N}^3\text{LL}+\text{NNLO}$ result. By construction, the \GENEVA{} prediction with the spectrum scale choice matches the analytic result exactly before the parton shower, and the shower does not introduce sizable numerical effects due to the local dipole
+recoil prescription selected in the calculations. On the other hand, the cumulant scale choice shows good agreement in the resummation region ($p_{\text{T,H}} < 20$\,GeV), but begins to substantially deviate at higher transverse momenta, as already observed in~\fig{fig:genevaptH}. The \minnlo{} prediction also shows good agreement within its scale uncertainty band, with the largest deviations appearing at very low transverse momenta, in the region well covered by the resummation scale variation. In the right of~\fig{fig:resVSMCs}, we present the comparison of the same MCs spectra against the more accurate $\text{N}^3\text{LL'+aN}^3\text{LO}$. The inclusion of higher-order corrections in the analytic spectrum results in a negative shift relative to both the \minnlo{} and \GENEVA{} predictions across the entire phase space, with a mostly flat effect for $p_{\text{T,H}} > 10$,GeV. Compared to the others, the \GENEVA{} prediction with the spectrum scale choice lies closer to the analytic result.
 
 
 \begin{figure}[t!]
