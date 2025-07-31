@@ -423,8 +423,7 @@ high accuracy: \fonll{}~\cite{forte:2015hba,forte:2016sja,Duhr:2020kzd} and \nlo
 
 FONLL-B~\cite{forte:2015hba,forte:2016sja} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf} match the NNLO 5FS and the NLO 4FS cross section.
 Both approaches yield results that are fully consistent with each other, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. 
-The novel FONLL-C matching~\cite{Duhr:2020kzd} adds the \fnnnlo{} corrections in the 5FS to FONLL-B.
-he \nlonnllpart{} combination introduces a resummation scale $\muB$, which enables an estimate of the 
+The novel FONLL-C matching~\cite{Duhr:2020kzd} adds the \fnnnlo{} corrections in the 5FS to FONLL-B. The \nlonnllpart{} combination introduces a resummation scale $\muB$, which enables an estimate of the 
 matching uncertainties.
 The $y_by_t$  contribution is easily included as a fixed-order non-singular term, since these interference effects are power corrections that 
 vanish to all orders in the small bottom-quark mass limit.
@@ -564,7 +563,8 @@ After the decorrelation procedure, we perform a Pad\'e-like approximation for th
 Our numerical results for the
 resummed and fixed-order singular contributions are obtained with
 \textsc{SCETlib}~\cite{scetlib}.
-In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$^{\prime}+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$^{\prime}+$aN$^3$LO which are shown in section~\ref{sec:lightYukawa}.
+In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$^{\prime}+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. 
+%In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$^{\prime}+$aN$^3$LO which are shown in section~\ref{sec:lightYukawa}.
 
 %%%%%%%%% MONTE CARLO SECTION %%%%%%%%%%
 \section{Monte Carlo simulations at NNLO+PS}\label{sec:MCyb}
@@ -847,7 +847,7 @@ rapidities.
 
 \subsubsection{Heavy-Higgs for BSM studies in \minnlo{}}
 
-The Higgs production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In many models, \bbH{} production can become the dominant production mode of exotic Higgs states. The \minnlo{} generator, introduced earlier this section, is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II Two-Higgs-Doublet Model (2HDM)~\cite{Branco:2011iw} at leading order, but deviates from it at higher orders. The MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
+The Higgs production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In many models, \bbH{} production can become the dominant production mode of exotic Higgs states. The \minnlo{} generator, introduced earlier in this section, is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II Two-Higgs-Doublet Model (2HDM)~\cite{Branco:2011iw} at leading order, but deviates from it at higher orders. The MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
 \begin{align}
 	\tan\beta=\frac{v_u}{v_d}\,.
 \end{align}
@@ -914,24 +914,23 @@ We have performed the predictions by running the \minnlo{} 5FS generator with a 
 \end{center}
 \end{figure}
 
-In~\fig{fig:yA}, we present a comparison of the rapidity distribution of the pseudo-scalar Higgs boson, requiring a flavour-blind anti-$k_T$ jet with with radius $R = 0.4$ and 
+In~\fig{fig:yA}, we present a comparison of the rapidity distribution of the pseudo-scalar Higgs boson, requiring a flavour-blind anti-$k_T$ jet with radius $R = 0.4$ and 
 a minimum jet transverse momentum of 30\,GeV (left plot) and 60\,GeV (right plot). We compare the results before and after interfacing the LHE events with \PYTHIA{8}. 
 Since the jet spectrum becomes slightly harder after the shower, the NNLO+PS prediction features a higher rapidity distribution in the 
 presence of a jet when shower effects are included. The shower effect becomes stronger for the 60\,GeV jet compared to the 30\,GeV one. 
 In terms of shape, \PYTHIA{8} has a rather flat impact on the LHE predictions, although it tends to slightly increase the forward rapidity region, which becomes 
-more pronounced with a higher jet transverse momentum cut. Note that we have verified that in the absence of any jet cuts the shower does not change the 
+more pronounced with a higher jet transverse momentum cut. Note that we have verified that in the absence of any jet cuts, the shower does not change the 
 Higgs rapidity, as expected.  
 
 We now turn to~\fig{fig:MiNLOBSM}, where we present a comparison between \minnlo{}  and \minlo{} predictions. 
-The left plot show the transverse momentum spectrum.
+The left plot shows the transverse momentum spectrum.
 Due to the high mass of the bosonic state, the resummation region extends over a broader range of the transverse momentum spectrum compared to the SM Higgs, with a mass of 125\,GeV. As a result, the NNLO corrections present in \minnlo{} have a larger impact even at intermediate transverse momentum values up to $\sim 600$\,GeV, leading to more accurate predictions and smaller scale uncertainties for \minnlo{} compared to the \minlo{} in a broad transverse momentum range. 
 In the right plot of~\fig{fig:MiNLOBSM}, we compare the two predictions for the Higgs rapidity spectrum: NNLO corrections increase the cross-section with a flat correction in the central region $|y_A|<1$. Notably, the NNLO effects encoded in \minnlo{} are positive in the case of a 1.4 TeV Higgs boson, compared to the SM case where the authors of~\citere{Biello:2024vdh} have observed a flat negative correction in the Higgs rapidity spectrum.
 
-Finally, we compare the differential behaviour of \minnlo{} predictions for the heavy Higgs state with the SM distributions in~\fig{fig:SMvsBSM}. In the left plot we show
-the transverse momentum distribution. 
+Finally, we compare the differential behaviour of \minnlo{} predictions for the heavy Higgs state with the SM distributions in~\fig{fig:SMvsBSM}. In the left plot, we show the transverse momentum distribution. 
 As expected, the BSM transverse momentum spectrum is substantially harder. With the chosen settings, BSM effects become even larger than the SM prediction for transverse-momentum values greater than 400\,GeV. 
 In the right plot of~\fig{fig:SMvsBSM}, we compare the rapidity distributions. The heavy pseudo-scalar Higgs receives a larger contribution from central rapidities compared to the SM one, with the total contribution remaining always below 2\% of the SM prediction. We stress that the numerical comparison is highly sensitive to the choice of the MSSM parameters. However, the purpose of this analysis is not to focus on a specific choice of the MSSM parameters, but to demonstrate the potential of the \minnlo{} generator 
-for the modeling of a BSM signal of \bbH{} production at NNLO+PS.
+for the modelling of a BSM signal of \bbH{} production at NNLO+PS.
 
 
 
@@ -1009,13 +1008,13 @@ The setup for the phenomenological results presented here—including input para
     \makecell[c]{\shortstack{\rule{0pt}{2ex}\minnlo{} \\ 5FS} } &  
     \makecell[c]{\shortstack{\rule{0pt}{2ex}\minnlo{} \\ 4FS ($a2\ell_{\rm FC}$)\footnotemark} } \\
     \hline \hline
-	    H & $725.(3)_{-10\%}^{+11\%}$ & $ 389.(9)_{-20\%}^{+24\%}$ & $ 575.(5)_{-8.0\%}^{+4.5\%}$ & $ 520.(9)_{-15\%}^{+19\%}$\\
+	    H & $725.4(2)_{-10\%}^{+11\%}$ & $ 389.0(1)_{-20\%}^{+24\%}$ & $ 574.8(4)_{-8.0\%}^{+4.5\%}$ & $ 519.6(3)_{-15\%}^{+19\%}$\\
      \hline
-	    H $+\geq1\,bj_{\text{IFN}}$ & $105.(6)_{-10\%}^{+10\%}$ & $ 76.4(4)_{-20\%}^{+26\%}$ & $ 116.(8)_{-8.8\%}^{+9.3\%}$& $ 98.6(5)_{-12\%}^{+7.7\%}$\\
+	    H $+\geq1\,bj_{\text{IFN}}$ & $104.7(1)_{-10\%}^{+10\%}$ & $ 76.44(6)_{-20\%}^{+26\%}$ & $ 115.9(1)_{-8.8\%}^{+9.3\%}$& $ 98.57(2)_{-12\%}^{+7.7\%}$\\
       \hline
-	    H $+\geq2\,bj_{\text{IFN}}$ & $5.9(1)_{-10\%}^{+10\%} $ & $ 5.0(1)_{-23\%}^{+32\%}$ & $ 8.5(6)_{-10\%}^{+11\%}$& $ 7.0(2)_{-10\%}^{+1.6\%}$ \\
+	    H $+\geq2\,bj_{\text{IFN}}$ & $5.911(3)_{-10\%}^{+10\%} $ & $ 5.001(1)_{-23\%}^{+32\%}$ & $ 8.464(3)_{-10\%}^{+11\%}$& $ 7.028(6)_{-10\%}^{+1.6\%}$ \\
        \hline
-        H $+0\,bj_{\text{IFN}}$  & $621.(1)_{-10\%}^{+11\%}$ & $ 313.(6)_{-20\%}^{+23\%}$ & $ 459.(8)_{-7.8\%}^{+3.3\%}$&$ 421.(0)_{-15\%}^{+21\%}$ \\
+        H $+0\,bj_{\text{IFN}}$  & $620.7(9)_{-10\%}^{+11\%}$ & $ 312.6(4)_{-20\%}^{+23\%}$ & $ 458.9(3)_{-7.8\%}^{+3.3\%}$&$ 421.0(2)_{-15\%}^{+21\%}$ \\
         \hline
     \end{tabular}
   \end{center}
@@ -1345,15 +1344,15 @@ To enable cross-checks and comparisons with fixed-order predictions, we have ext
     \hline
     \makecell[c]{Flavour channel} & \makecell[c]{\shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}}$ (pb)\\ \SuSHi{}} } & \makecell[c]{\shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}}$ (pb)\\ \minnlo{}} }&  \makecell[c]{\shortstack{$\bar \sigma_{q\bar q \rightarrow \text{H}(\rightarrow\gamma \gamma)}$ (fb)\\ \texttt{fiducial $\gamma\gamma$ cuts}\\ \minnlo{}}}  \\
      \hline \hline
-	    $d \bar d \rightarrow$ H & $11.46(6)_{-1.1\%}^{+0.5\%}$ & $11.44(2)_{-2.4\%}^{+2.8\%}$ & $11.40(9)_{-2.4\%}^{+2.8\%}$ \\
+	    $d \bar d \rightarrow$ H & $11.46(6)_{-1.1\%}^{+0.5\%}$ & $11.442(3)_{-2.4\%}^{+2.8\%}$ & $11.420(5)_{-2.4\%}^{+2.8\%}$ \\
      \hline
-	    $u \bar u \rightarrow$ H & $16.46(6)_{-1.1\%}^{+0.6\%}$ & $16.18(1)_{-2.3\%}^{+2.7\%}$  &  $13.16(9)_{-2.1\%}^{+2.5\%}$ \\
+	    $u \bar u \rightarrow$ H & $16.46(6)_{-1.1\%}^{+0.6\%}$ & $16.182(5)_{-2.3\%}^{+2.7\%}$  &  $13.169(8)_{-2.1\%}^{+2.5\%}$ \\
       \hline
-	    $s \bar s \rightarrow$ H & $4.45(4)_{-1.4\%}^{+1.0\%}$ & $4.67(6)_{-1.8\%}^{+3.7\%}$  & $6.21(5)_{-1.7\%}^{+3.5\%}$  \\
+	    $s \bar s \rightarrow$ H & $4.45(4)_{-1.4\%}^{+1.0\%}$ & $4.676(1)_{-1.8\%}^{+3.7\%}$  & $6.215(3)_{-1.7\%}^{+3.5\%}$  \\
        \hline
-       $c \bar c \rightarrow$ H & $1.84(9)_{-2.9\%}^{+1.5\%}$ & $1.77(8)_{-0.9\%}^{+2.3\%}$  &  $2.40(0)_{-1.0\%}^{+2.3\%}$ \\
+       $c \bar c \rightarrow$ H & $1.84(9)_{-2.9\%}^{+1.5\%}$ & $1.778(6)_{-0.9\%}^{+2.3\%}$  &  $2.399(1)_{-1.0\%}^{+2.3\%}$ \\
         \hline
-        $b \bar b \rightarrow$ H &  $0.585(0)_{-9.2\%}^{+7.0\%}$ &  $0.575(7)_{-8.0\%}^{+4.5\%}$ & $0.807(0)_{-8.2\%}^{+4.7\%}$ \\
+        $b \bar b \rightarrow$ H &  $0.585(0)_{-9.2\%}^{+7.0\%}$ &  $0.5757(4)_{-8.0\%}^{+4.5\%}$ & $0.8089(8)_{-8.2\%}^{+4.7\%}$ \\
         \hline
     \end{tabular}
   \end{center}
