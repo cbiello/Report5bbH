@@ -563,7 +563,8 @@ After the decorrelation procedure, we perform a Pad\'e-like approximation for th
 Our numerical results for the
 resummed and fixed-order singular contributions are obtained with
 \textsc{SCETlib}~\cite{scetlib}.
-In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$^{\prime}+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$^{\prime}+$aN$^3$LO which are shown in section~\ref{sec:lightYukawa}.
+In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$^{\prime}+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. 
+%In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$^{\prime}+$aN$^3$LO which are shown in section~\ref{sec:lightYukawa}.
 
 %%%%%%%%% MONTE CARLO SECTION %%%%%%%%%%
 \section{Monte Carlo simulations at NNLO+PS}\label{sec:MCyb}
@@ -846,7 +847,7 @@ rapidities.
 
 \subsubsection{Heavy-Higgs for BSM studies in \minnlo{}}
 
-The Higgs production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In many models, \bbH{} production can become the dominant production mode of exotic Higgs states. The \minnlo{} generator, introduced earlier this section, is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II Two-Higgs-Doublet Model (2HDM)~\cite{Branco:2011iw} at leading order, but deviates from it at higher orders. The MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
+The Higgs production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In many models, \bbH{} production can become the dominant production mode of exotic Higgs states. The \minnlo{} generator, introduced earlier in this section, is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II Two-Higgs-Doublet Model (2HDM)~\cite{Branco:2011iw} at leading order, but deviates from it at higher orders. The MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
 \begin{align}
 	\tan\beta=\frac{v_u}{v_d}\,.
 \end{align}
@@ -913,24 +914,23 @@ We have performed the predictions by running the \minnlo{} 5FS generator with a 
 \end{center}
 \end{figure}
 
-In~\fig{fig:yA}, we present a comparison of the rapidity distribution of the pseudo-scalar Higgs boson, requiring a flavour-blind anti-$k_T$ jet with with radius $R = 0.4$ and 
+In~\fig{fig:yA}, we present a comparison of the rapidity distribution of the pseudo-scalar Higgs boson, requiring a flavour-blind anti-$k_T$ jet with radius $R = 0.4$ and 
 a minimum jet transverse momentum of 30\,GeV (left plot) and 60\,GeV (right plot). We compare the results before and after interfacing the LHE events with \PYTHIA{8}. 
 Since the jet spectrum becomes slightly harder after the shower, the NNLO+PS prediction features a higher rapidity distribution in the 
 presence of a jet when shower effects are included. The shower effect becomes stronger for the 60\,GeV jet compared to the 30\,GeV one. 
 In terms of shape, \PYTHIA{8} has a rather flat impact on the LHE predictions, although it tends to slightly increase the forward rapidity region, which becomes 
-more pronounced with a higher jet transverse momentum cut. Note that we have verified that in the absence of any jet cuts the shower does not change the 
+more pronounced with a higher jet transverse momentum cut. Note that we have verified that in the absence of any jet cuts, the shower does not change the 
 Higgs rapidity, as expected.  
 
 We now turn to~\fig{fig:MiNLOBSM}, where we present a comparison between \minnlo{}  and \minlo{} predictions. 
-The left plot show the transverse momentum spectrum.
+The left plot shows the transverse momentum spectrum.
 Due to the high mass of the bosonic state, the resummation region extends over a broader range of the transverse momentum spectrum compared to the SM Higgs, with a mass of 125\,GeV. As a result, the NNLO corrections present in \minnlo{} have a larger impact even at intermediate transverse momentum values up to $\sim 600$\,GeV, leading to more accurate predictions and smaller scale uncertainties for \minnlo{} compared to the \minlo{} in a broad transverse momentum range. 
 In the right plot of~\fig{fig:MiNLOBSM}, we compare the two predictions for the Higgs rapidity spectrum: NNLO corrections increase the cross-section with a flat correction in the central region $|y_A|<1$. Notably, the NNLO effects encoded in \minnlo{} are positive in the case of a 1.4 TeV Higgs boson, compared to the SM case where the authors of~\citere{Biello:2024vdh} have observed a flat negative correction in the Higgs rapidity spectrum.
 
-Finally, we compare the differential behaviour of \minnlo{} predictions for the heavy Higgs state with the SM distributions in~\fig{fig:SMvsBSM}. In the left plot we show
-the transverse momentum distribution. 
+Finally, we compare the differential behaviour of \minnlo{} predictions for the heavy Higgs state with the SM distributions in~\fig{fig:SMvsBSM}. In the left plot, we show the transverse momentum distribution. 
 As expected, the BSM transverse momentum spectrum is substantially harder. With the chosen settings, BSM effects become even larger than the SM prediction for transverse-momentum values greater than 400\,GeV. 
 In the right plot of~\fig{fig:SMvsBSM}, we compare the rapidity distributions. The heavy pseudo-scalar Higgs receives a larger contribution from central rapidities compared to the SM one, with the total contribution remaining always below 2\% of the SM prediction. We stress that the numerical comparison is highly sensitive to the choice of the MSSM parameters. However, the purpose of this analysis is not to focus on a specific choice of the MSSM parameters, but to demonstrate the potential of the \minnlo{} generator 
-for the modeling of a BSM signal of \bbH{} production at NNLO+PS.
+for the modelling of a BSM signal of \bbH{} production at NNLO+PS.
 
 
 
