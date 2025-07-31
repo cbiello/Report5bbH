@@ -930,16 +930,24 @@ In the right plot of~\fig{fig:MiNLOBSM}, we compare the two predictions for the 
 Finally, we compare the differential behaviour of \minnlo{} predictions for the heavy Higgs state with the SM distributions in~\fig{fig:SMvsBSM}. In the left plot we show
 the transverse momentum distribution. 
 As expected, the BSM transverse momentum spectrum is substantially harder. With the chosen settings, BSM effects become even larger than the SM prediction for transverse-momentum values greater than 400\,GeV. 
-In the right plot of~\fig{fig:SMvsBSM}, we compare the rapidity distributions. The heavy heavy pseudo-scalar Higgs receives a larger contribution from central rapidities compared to the SM one, with the total contribution remaining always below 2\% of the SM prediction. We stress that the numerical comparison is highly sensitive to the choice of the MSSM parameters. However, the purpose of this analysis is not to focus on a specific choice of the MSSM parameters, but to demonstrate the potential of the \minnlo{} generator 
+In the right plot of~\fig{fig:SMvsBSM}, we compare the rapidity distributions. The heavy pseudo-scalar Higgs receives a larger contribution from central rapidities compared to the SM one, with the total contribution remaining always below 2\% of the SM prediction. We stress that the numerical comparison is highly sensitive to the choice of the MSSM parameters. However, the purpose of this analysis is not to focus on a specific choice of the MSSM parameters, but to demonstrate the potential of the \minnlo{} generator 
 for the modeling of a BSM signal of \bbH{} production at NNLO+PS.
 
-\subsection{NNLO+PS predictions in 4FS}\label{sec:bbH4FS}
-Building on the \minnlo{} matching for \bbH{} in the massless 5FS described in Section~\ref{sec:5FSNNLOPS}, we now turn to an analogous construction in the massive 4FS that captures the \(y_{b}^{2}\) component at NNLO+PS. 
-%In Section~\ref{sec:FONLLmatch}, the fixed-order FONLL combination ensured that inclusive 5FS and 4FS cross sections are consistently merged, but it left open the question of how to retain full bottom-mass dependence in a fully differential, shower-matched prediction.
-Section~\ref{sec:5FSNNLOPS} demonstrated that, in 5FS, the \minnlo{} and \GENEVA{} procedures provide fully exclusive NNLO+PS results for the \bbH{} process with massless bottom quarks. While that approach naturally resums all collinear logarithms and reproduces the correct small-\(p_{T}\) behavior for the Higgs, it cannot account for finite-\(m_{b}\) recoil or reliably model observables that depend on the kinematics of hard \(b\)-jets.
 
-\begin{comment}
-To address these shortcomings, we now introduce a fully exclusive NNLO+PS generator for the \bbH{} process in the massive 4FS.  This construction follows the extension of the \minnlo{} method to heavy-quark–associated colour-singlet production (\(Q\bar{Q}F\)) developed in \citere{mazzitelli:2024ura}, which itself builds on the \minnlo{} approach for \(Q\bar{Q}\) production introduced in \citere{mazzitelli:2020jio,mazzitelli:2021mmm}.  While the pattern of large logarithms in the \(Q\bar{Q}F\) final state closely mirrors that of \(Q\bar{Q}\) production at small transverse momentum, the \(Q\bar{Q}F\) kinematics are more general—unlike in pure \(Q\bar{Q}\) production, where the heavy quarks appear back-to-back at Born level.  In both cases, one begins from the factorisation theorem in Fourier–conjugate (impact-parameter or \(b\)) space \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei}:
+
+\subsection{NNLO+PS predictions in 4FS}\label{sec:bbH4FS}
+
+We now turn to NNLO+PS predictions computed in the massive 4FS for the $y_{b}^{2}$ component of \bbH{} production, i.e.\ the 
+corresponding 4FS calculation to the 5FS one presented in the previous section.
+Section~\ref{sec:5FSNNLOPS} demonstrated that, in 5FS, the \minnlo{} and \GENEVA{} procedures provide fully exclusive 
+NNLO+PS results for the \bbH{} process with massless bottom quarks. While that approach naturally resums collinear logarithms 
+through the $b$-PDFs, it cannot account for power corrections in $m_{b}$, which become particularly important at 
+small Higgs transverse momenta. Moreover, the 4FS is better suited to model observables that depend on the $b$-jet kinematics.
+
+To this end, we consider a fully exclusive NNLO+PS generator for the \bbH{} process in the 4FS \cite{Biello:2024pgo}.  This generator has been constructed by using 
+the extension of the \minnlo{} method to heavy-quark–associated colour-singlet ($Q\bar{Q}F$) production, developed in \citere{mazzitelli:2024ura}, 
+which itself builds on the \minnlo{} approach for $Q\bar{Q}$ production in \citere{mazzitelli:2020jio,mazzitelli:2021mmm}. 
+While the pattern of large logarithms in the \(Q\bar{Q}F\) final state closely mirrors that of \(Q\bar{Q}\) production at small transverse momentum, the \(Q\bar{Q}F\) kinematics are more general—unlike in pure \(Q\bar{Q}\) production, where the heavy quarks appear back-to-back at Born level.  In both cases, one begins from the factorisation theorem in Fourier–conjugate (impact-parameter or \(b\)) space \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei}:
 \begin{align}\label{eq:facformula}
         \frac{\mathd \sigma}{ \mathd^2\vec{\pt}\, \mathd \Phi_{Q\bar{Q}{\rm F}}}&=\sum_{c=q,\bar{q},g}
   \frac{|M^{(0)}_{c\bar{c}}|^2}{2 m_{Q\bar{Q}{\rm F}}^2 }\int\frac{ \mathd^2\vec{b}}{(2\pi)^2} e^{i \vec{b}\cdot
@@ -963,7 +971,6 @@ in \eqn{eq:facformula} runs over colour indices.  The hard function \({\mathbf H
 The symbol \({\cal P}\) denotes path ordering of the exponential matrix with respect to the integration variable \(q^{2}\), arranging scales from left to right in increasing order.  The anomalous dimension \(\mathbf{\Gamma}_{t}\) governs the effect of real soft radiation emitted at large angles.  Meanwhile, the azimuthal operator $\mathbf{D} \;\equiv\; \mathbf{D}\bigl(\Phi_{Q\bar{Q}F},\,\vec{b},\,\alpha_{s}\bigr)$
 encodes azimuthal correlations of the \(Q\bar{Q}F\) system in the small-\(p_{T}\) limit.  Upon averaging over the azimuthal angle \(\phi\), it satisfies
 $\bigl[\mathbf{D}\bigr]_{\phi} \;=\; \mathbf{1}$.
-\end{comment}
 
 To address these shortcomings, we now introduce a fully exclusive NNLO+PS generator for the \bbH{} process in the massive 4FS.  This construction follows the extension of the \minnlo{} method to heavy-quark–associated colour-singlet production (\(Q\bar{Q}F\)) developed in \citere{mazzitelli:2024ura}, which itself builds on the \minnlo{} approach for \(Q\bar{Q}\) production introduced in \citere{mazzitelli:2020jio,mazzitelli:2021mmm}. The procedure to construct a \minnlo{} improved \(\bar{B}\) function for the \(Q\bar{Q}F\) system is the same as that of the colour-singlet case, and it is based on the generation of the factorisation theorem for heavy-quark pair production \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei} in arbitrary kinematics.  All technical details of this derivation are provided in Refs.~\cite{mazzitelli:2020jio,mazzitelli:2021mmm,mazzitelli:2024ura,Biello:2024pgo}.
 
