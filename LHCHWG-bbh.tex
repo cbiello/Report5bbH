@@ -944,24 +944,33 @@ NNLO+PS results for the \bbH{} process with massless bottom quarks. While that a
 through the $b$-PDFs, it cannot account for power corrections in $m_{b}$, which become particularly important at 
 small Higgs transverse momenta. Moreover, the 4FS is better suited to model observables that depend on the $b$-jet kinematics.
 
-To this end, we consider a fully exclusive NNLO+PS generator for the \bbH{} process in the 4FS \cite{Biello:2024pgo}.  This generator has been constructed by using 
+\subsubsection{\minnlo{} method for $Q\bar Q F$ production}\label{sec:bbH4FS}
+
+We consider a fully exclusive NNLO+PS generator for the \bbH{} process in the 4FS \cite{Biello:2024pgo}.  This generator has been constructed by using 
 the extension of the \minnlo{} method to heavy-quark–associated colour-singlet ($Q\bar{Q}F$) production, developed in \citere{mazzitelli:2024ura}, 
 which itself builds on the \minnlo{} approach for $Q\bar{Q}$ production in \citere{mazzitelli:2020jio,mazzitelli:2021mmm}. 
-While the pattern of large logarithms in the \(Q\bar{Q}F\) final state closely mirrors that of \(Q\bar{Q}\) production at small transverse momentum, the \(Q\bar{Q}F\) kinematics are more general—unlike in pure \(Q\bar{Q}\) production, where the heavy quarks appear back-to-back at Born level.  In both cases, one begins from the factorisation theorem in Fourier–conjugate (impact-parameter or \(b\)) space \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei}:
+While large logarithmic contributions at small transverse momentum in the $Q\bar{Q}F$ final state have the same 
+general structure as for $Q\bar{Q}$ production, the more general kinematics of the $Q\bar{Q}F$ system, compared to the back-to-back configuration
+for $Q\bar Q$ production, has to be accounted for in the calculation of the coefficient functions for the resummation. The singular structure is governed
+by the factorisation theorem, which is expressed in Fourier-conjugate (impact-parameter or $b$) space \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei}:
 \begin{align}\label{eq:facformula}
         \frac{\mathd \sigma}{ \mathd^2\vec{\pt}\, \mathd \Phi_{Q\bar{Q}{\rm F}}}&=\sum_{c=q,\bar{q},g}
   \frac{|M^{(0)}_{c\bar{c}}|^2}{2 m_{Q\bar{Q}{\rm F}}^2 }\int\frac{ \mathd^2\vec{b}}{(2\pi)^2} e^{i \vec{b}\cdot
   \vec{\pt} } e^{-S_{c\bar{c}} \left(\frac{b_0}{b}\right)}\sum_{i,j} \Tr({\mathbf H}_{c\bar{c}}{\mathbf \Delta})\,\,
   ({C}_{ci}\otimes f_i) \,({C}_{\bar{c} j}\otimes f_j) \,,
 \end{align}
-where $b_0=2 e^{-\gamma_\text{E}}$. The factor $e^{-S_{c\bar{c}}}$ represents the same Sudakov radiator that appears in the small-$p_{T}$ resummation for any colour-singlet system.  In \eqn{eq:facformula}, the sum over $c=q,\bar{q},g$ spans all possible flavour assignments for the incoming partons, with first parton carrying flavour $c$ and the second parton carrying flavour $\bar{c}$. The collinear coefficient functions
-$C_{ij} = C_{ij}\bigl(z,\,p_{1},\,p_{2},\,\vec{b};\,\alpha_{s}(b_{0}/b)\bigr)$
-encode the constant terms arising from collinear emissions, and the parton densities $f_{i}$ are evaluated at the scale $b_{0}/b$.  The composite factor
+where $b_0=2 e^{-\gamma_\text{E}}$. The factor $e^{-S_{c\bar{c}}}$ represents the same Sudakov radiator that appears in the small-$p_{T}$ resummation for 
+colour-singlet production.  In \eqn{eq:facformula}, the sum over $c=q,\bar{q},g$ spans all possible flavour assignments for the incoming partons, with first parton carrying flavour $c$ and the second parton carrying flavour $\bar{c}$. The collinear coefficient functions
+$C_{ij} = C_{ij}\bigl(z,\,p_{1},\,p_{2},\,\vec{b};\,\alpha_{s}(b_{0}/b)\bigr)$ arise from collinear emissions, which include
+also the constant terms, and the parton densities $f_{i}$ are evaluated at the soft scale $b_{0}/b$.  The composite factor
 $\Tr\bigl({\mathbf H}_{c\bar{c}}\,{\mathbf \Delta}\bigr)\;\bigl(C_{ci}\otimes f_{i}\bigr)\;\bigl(C_{\bar{c}j}\otimes f_{j}\bigr)$
-differs in its explicit form for the $q\bar{q}$ and $gg$ channels; here it is shown in symbolic form.  In particular, this factor contains a nontrivial Lorentz structure—omitted here for brevity—that generates azimuthal correlations in the collinear limit \cite{Catani:2010pd,Catani:2014qha}.
+encodes the differences with respect to colour singlet production originating from the more involved colour structure 
+and initial-final/final-final interferences for $Q\bar{Q}$ processes. It differs in its explicit form for the $q\bar{q}$ and $gg$ channels and written symbolically here.
+ In particular, this factor contains a nontrivial Lorentz structure—omitted here for brevity—that generates azimuthal correlations in the collinear limit \cite{Catani:2010pd,Catani:2014qha}.
 
 All quantities in bold face denote operators in colour space, and the trace $\Tr\bigl({\mathbf H}_{c\bar{c}}\,{\mathbf \Delta}\bigr)$
-in \eqn{eq:facformula} runs over colour indices.  The hard function \({\mathbf H}_{c\bar{c}}\) is extracted from the infrared-subtracted amplitudes for \(Q\bar{Q}F\) production, with any ambiguity in its definition corresponding to a choice of resummation scheme~\cite{Bozzi:2005wk}.  The operator \({\mathbf \Delta}\) encodes quantum interference arising from soft radiation exchanged at large angles between the initial and final states, as well as among final-state partons. It is given by ${\mathbf \Delta}={\mathbf V}^\dagger{\mathbf D}{\mathbf V}$, where
+in \eqn{eq:facformula} runs over colour indices.  The hard function \({\mathbf H}_{c\bar{c}}\) is extracted from the infrared-subtracted amplitudes for $Q\bar{Q}F$ production, 
+where the ambiguity in its definition corresponds to a choice of resummation scheme~\cite{Bozzi:2005wk}.  The operator \({\mathbf \Delta}\) encodes quantum interferences arising from soft radiation exchanged at large angles between the initial and final states, as well as among final-state quarks. It is given by ${\mathbf \Delta}={\mathbf V}^\dagger{\mathbf D}{\mathbf V}$, where
 \begin{align}
 \label{eq:soft}
 {\mathbf V} &= {\cal
@@ -971,10 +980,20 @@ in \eqn{eq:facformula} runs over colour indices.  The hard function \({\mathbf H
 The symbol \({\cal P}\) denotes path ordering of the exponential matrix with respect to the integration variable \(q^{2}\), arranging scales from left to right in increasing order.  The anomalous dimension \(\mathbf{\Gamma}_{t}\) governs the effect of real soft radiation emitted at large angles.  Meanwhile, the azimuthal operator $\mathbf{D} \;\equiv\; \mathbf{D}\bigl(\Phi_{Q\bar{Q}F},\,\vec{b},\,\alpha_{s}\bigr)$
 encodes azimuthal correlations of the \(Q\bar{Q}F\) system in the small-\(p_{T}\) limit.  Upon averaging over the azimuthal angle \(\phi\), it satisfies
 $\bigl[\mathbf{D}\bigr]_{\phi} \;=\; \mathbf{1}$.
+Starting from the $Q\bar Q F$ resummation formula, the procedure to construct a \minnlo{} improved $\bar{B}$ function system is the same as that of the colour-singlet case.
+All technical details of this derivation are provided in Refs.~\cite{mazzitelli:2020jio,mazzitelli:2021mmm,mazzitelli:2024ura,Biello:2024pgo}.
 
-To address these shortcomings, we now introduce a fully exclusive NNLO+PS generator for the \bbH{} process in the massive 4FS.  This construction follows the extension of the \minnlo{} method to heavy-quark–associated colour-singlet production (\(Q\bar{Q}F\)) developed in \citere{mazzitelli:2024ura}, which itself builds on the \minnlo{} approach for \(Q\bar{Q}\) production introduced in \citere{mazzitelli:2020jio,mazzitelli:2021mmm}. The procedure to construct a \minnlo{} improved \(\bar{B}\) function for the \(Q\bar{Q}F\) system is the same as that of the colour-singlet case, and it is based on the generation of the factorisation theorem for heavy-quark pair production \cite{Zhu:2012ts,Li:2013mia,Catani:2014qha,Catani:2018mei} in arbitrary kinematics.  All technical details of this derivation are provided in Refs.~\cite{mazzitelli:2020jio,mazzitelli:2021mmm,mazzitelli:2024ura,Biello:2024pgo}.
-
-In the case of \bbH{} production in the 4FS, the two-loop virtual correction required for NNLO accuracy is not available in exact form with finite \(m_b\). To circumvent this, the NNLO+PS prediction relies on an approximate treatment of the two-loop amplitude: the known massless result is massified by retaining all logarithmic and constant terms, while dropping terms that are power-suppressed in \(m_b / m_{H}\). This massification procedure, developed in \citeres{Mitov:2006xs,Wang:2023qbf}, allows one to capture the dominant virtual corrections in the small-\(m_b\) limit. The massless full-colour two-loop amplitudes used as input are taken from~\citere{Badger:2024mir}. Different from the studies in~\citere{Biello:2024pgo}, which relied on the leading-colour approximation~\cite{badger:2021ega}, here we perform a phenomenological analysis using events generated with the full-colour library of~\citere{Badger:2024mir} as two-loop input for the massification. The NNLO calculation is thus complete in full colour, up to power-suppressed bottom-mass effects in the two-loop term.
+In the case of \bbH{} production in the 4FS, the two-loop virtual corrections, required for NNLO accuracy,
+are not known in exact form with finite $m_b$. Instead, the two-loop amplitude is approximated in the NNLO+PS
+prediction by a small-mass expansion $m_b$, i.e.\ all logarithmically enhanced terms and constant terms are retained,
+while dropping terms that are power-suppressed $m_b$. 
+This massification procedure, developed in \citeres{Mitov:2006xs,Wang:2023qbf}, allows us to capture the dominant 
+virtual corrections in the small-$m_b$ limit. The massless full-colour two-loop amplitudes, which provide the constant
+terms, are taken from~\citere{Badger:2024mir}. Different from the studies in \citere{Biello:2024pgo}, which relied on 
+the leading-colour approximation~\cite{badger:2021ega}, here we perform a phenomenological analysis using events 
+generated with the full-colour library of~\citere{Badger:2024mir} for the two-loop constant terms in the massification. 
+The NNLO calculation is thus complete in full colour, up to power-suppressed in the bottom mass, which are neglected
+only in the two-loop amplitude.
 
 \subsubsection{Results and flavour-scheme comparison}
 The setup for the phenomenological results presented here—including input parameters, renormalisation and factorisation scale choices and PDFs —follows the conventions outlined in \sct{sec:setup}. We now compare theoretical predictions obtained in the 5FS and 4FS for Higgs production in association with bottom quarks. The results are organised in two stages: first, we consider fully inclusive observables that do not rely on identifying bottom quarks in the final state; subsequently, we turn to observables involving b-jets, with a careful definition of flavour-tagged jets for a meaningful comparison between schemes.
