@@ -360,7 +360,7 @@ a common computational setup detailed in~\sct{sec:setup}. Updated inclusive cros
 reported in~\sct{sec:matchedinclusivenumbers}, which are obtained by an interpolation of existing LHCHWG data of the 
 matched NLO 4FS and NNLO 5FS predictions from the \nlonnllpart{} calculation at 13 and 14 TeV. 
 In~\sct{sec:resummation}, we present the resummed Higgs transverse momentum spectrum in the 5FS 
-at next-to-next-to-next-to leading logarithmic  (N$^3$LL$'$) accuracy.
+at next-to-next-to-next-to leading logarithmic  (N$^3$LL$^{\prime}$) accuracy.
 Section~\ref{sec:MCyb} discusses recent developments of Monte Carlo event generators and compares NNLO+PS results
 from \minnlo{} and \GENEVA{} in the 5FS, consideres \minnlo{} predictions for heavy Higgs bosons in BSM scenarios, 
 and subsequently examines NNLO+PS predictions from \minnlo{} in the 4FS.
@@ -503,12 +503,12 @@ At small $q_T \ll m_H$,
 this requires the all-order resummation of logarithms of $q_T/m_H$ that would
 otherwise spoil the convergence of perturbation theory in this regime.
 
-In this section, we provide recent results for the resummed $q_T$ spectrum for $b\bar{b}\to H$ at N$^3$LL$'$ order matched to fixed NNLO and approximate N$^3$LO in the 5FS \cite{Cal:2023mib}. Previously the spectrum was calculated to NNLL$^{'}+$NNLO accuracy\footnote{We use the logarithmic counting of ref.~\cite{Berger:2010xi}, where the prime denotes inclusion of higher order boundary terms.} ~\cite{Harlander:2014hya} using the CSS formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use soft-collinear effective theory (SCET)
+In this section, we provide recent results for the resummed $q_T$ spectrum for $b\bar{b}\to H$ at N$^3$LL$^{\prime}$ order matched to fixed NNLO and approximate N$^3$LO in the 5FS \cite{Cal:2023mib}. Previously the spectrum was calculated to NNLL$^{\prime}+$NNLO accuracy\footnote{We use the logarithmic counting of ref.~\cite{Berger:2010xi}, where the prime denotes inclusion of higher order boundary terms.} ~\cite{Harlander:2014hya} using the CSS formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use soft-collinear effective theory (SCET)
 \cite{Bauer:2000yr,Bauer:2001ct,Bauer:2001yt,Bauer:2002nz,Beneke:2002ph} to resum the logarithms of $q_T/m_H$ which is equivalent to a modern formulation of the CSS formalism.
 We employ the rapidity
 renormalisation group~\cite{Chiu:2012ir} together with the
 exponential regulator~\cite{Li:2016axz} for which the ingredients
-required for the resummation at N$^3$LL$'$ are known.
+required for the resummation at N$^3$LL$^{\prime}$ are known.
 The singular cross section can be written in a factorized form as
 \begin{align} \label{tmd_factorization}
 \frac{\mathrm{d} \sigma^\mathrm{sing}}{\mathrm{d} Y \mathrm{d}^2 \qt}
@@ -531,7 +531,7 @@ eq.~(\ref{tmd_factorization}) turn into products in $b_T$ space.
 			\includegraphics[width=.55\textwidth, page=1]{plots/5fs/resummation/ptzoom_Higgs__resum.pdf}
 		\end{tabular}
 		\vspace*{1ex}
-		\caption{Higgs transverse-momentum spectrum predicted by the analytic resummed prediction at $\text{NNLO+NLO}$ (orange, dashed), $\text{N}^3\text{LL+NNLO}$ (blue, dotted) and $\text{N}^3\text{LL'+aN}^3\text{LO}$ (green, solid) accuracy.\label{fig:resumplot}}
+		\caption{Higgs transverse-momentum spectrum predicted by the analytic resummed prediction at $\text{NNLO+NLO}$ (orange, dashed), $\text{N}^3\text{LL+NNLO}$ (blue, dotted) and $\text{N}^3\text{LL$^{\prime}$+aN}^3\text{LO}$ (green, solid) accuracy.\label{fig:resumplot}}
 	\end{center}
 \end{figure}
 To perform the all-order resummation, each function is first evaluated at its own
@@ -541,7 +541,7 @@ values , each function is free of large logarithms and can
 therefore be evaluated in fixed-order perturbation theory. Next, all functions
 are evolved from their respective boundary conditions to a common arbitrary point
 $(\mu, \nu)$ by solving their coupled system of renormalisation group equations. For more details we refer to Refs.~\cite{Ebert:2016gcn,Ebert:2020dfc,Cal:2023mib}.
-For the resummation at N$^3$LL$'$ we require the N$^3$LO
+For the resummation at N$^3$LL$^{\prime}$ we require the N$^3$LO
 boundary conditions for the hard function~\cite{Gehrmann:2014vha,
 	Ebert:2017uel}, and the beam and soft functions~\cite{Lubbert:2016rku,
 	Li:2016ctv, Billis:2019vxg, Luo:2019szz, Ebert:2020yqt}. We also need the 3-loop
@@ -554,7 +554,7 @@ $\Gamma_\mathrm{cusp}$~\cite{Korchemsky:1987wg, moch:2004pa, Bruser:2019auj,
 function~\cite{Tarasov:1980au, Larin:1993tp, vanRitbergen:1997va,
 	Czakon:2004bu}.
 
-To arrive at a consistent prediction, we need to match the N$^3$LL$'$ resummed cross section to a NNLO Higgs+jet prediction for which we rely on an approximation. 
+To arrive at a consistent prediction, we need to match the N$^3$LL$^{\prime}$ resummed cross section to a NNLO Higgs+jet prediction for which we rely on an approximation. 
 Our aN$^3$LO fixed-order cross section must contain the correct singular terms which are part of $\mathrm{d} \sigma^\mathrm{sing}$.
 Further, there are large cancellations between the singular and the non-singular cross sections at large values of $q_T$ which must not be spoil in the approximation procedure.
 To satisfy both requirements,
@@ -564,7 +564,7 @@ After the decorrelation procedure, we perform a Pad\'e-like approximation for th
 Our numerical results for the
 resummed and fixed-order singular contributions are obtained with
 \textsc{SCETlib}~\cite{scetlib}.
-In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$'+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$'+$aN$^3$LO which are shown in section~\ref{sec:lightYukawa}.
+In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ at different resummation orders up to the highest N$^3$LL$^{\prime}+$aN$^3$LO. The bands show the perturbative uncertainty estimate. For a detailed breakdown of the uncertainties, we refer to Ref.~\cite{Cal:2023mib}. We observe excellent perturbative convergence, with reduced uncertainties at each higher order. In Ref.~\cite{Cal:2023mib}, we also provide the $q_T$ spectra for $c\bar{c}\to H$ and $s\bar{s}\to H$ at N$^3$LL$^{\prime}+$aN$^3$LO which are shown in section~\ref{sec:lightYukawa}.
 
 %%%%%%%%% MONTE CARLO SECTION %%%%%%%%%%
 \section{Monte Carlo simulations at NNLO+PS}\label{sec:MCyb}
@@ -754,11 +754,27 @@ over radiation, where any difference is beyond NNLO QCD and should be
 covered by scale uncertainties.
 
 \subsubsection{Numerical comparison of \minnlo{} and \GENEVA{} predictions}
-In this section, we present a numerical comparison between two Monte Carlo (MC) generators for \bbtoH{} production in the 5FS in the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. {\it\bf MW: I don't get this} The \minnlo{} predictions use a four-loop running as implemented in~\citere{harlander:2002wh,baikov_2014}, while the \GENEVA{} generator employs a three-loop running derived from SCET. This difference is numerically small and can be safely neglected in the following comparison. Both the MC generators produce events that are showered using~\PYTHIA{8} with a local recoil.
+In this section, we present a numerical comparison between two Monte Carlo (MC) generators for \bbtoH{} production in the 5FS in the \minnlo{} and \GENEVA{} frameworks. The settings adopted are described in~\sct{sec:setup}, with the only notable difference being the treatment of the running bottom-quark Yukawa coupling. 
+The \minnlo{} predictions follow the setup in \sct{sec:setup} using a four-loop running 
+\cite{harlander:2002wh,baikov_2014} to evolve the bottom Yukawa from 
+the input to the hard scale using, while the \GENEVA{} generator employs a three-loop running throughout derived from SCET. This difference is numerically very small and can be safely neglected in the following comparison. Both the MC generators produce events that are showered using~\PYTHIA{8} with a local recoil.
 
-To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed towards large transverse momenta using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2019whf}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well below the differences observed between the predictions of the two Monte Carlo generators.
+To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed towards large transverse momenta using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2019whf}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well within the \minnlo{} scale uncertainties.
 
 The \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables with NNLO QCD predictions. Moreover, it applies default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
+
+
+
+\begin{figure}[t!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-ptH.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-genevaspec-ptHzoom.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Comparison of \minnlo{} (blue, dashed) and \GENEVA{} (brown, dotted) predictions at NNLO+PS level for the transverse momentum distribution of the Higgs boson, where \GENEVA{} uses their default cumulant scale choice. The zoomed version on the right shows also the alternative spectrum scale choice of the \GENEVA{} generator (red, solid).\label{fig:genevaptH}}
+\end{center}
+\end{figure}
 
 We start the comparison by focusing on the transverse momentum spectrum of the Higgs boson in~\fig{fig:genevaptH}. The left plot shows the spectrum in a large range. As 
 expected, we observe good agreement between \minnlo{} and \GENEVA{} predictions
@@ -792,32 +808,27 @@ the bottom mass threshold.
 \begin{figure}[t!]
 \begin{center}
 \begin{tabular}{cc}
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-ptH.pdf}&
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-genevaspec-ptHzoom.pdf}
-\end{tabular}
-\vspace*{1ex}
-\caption{Comparison of \minnlo{} (blue, dashed) and \GENEVA{} (brown, dotted) predictions at NNLO+PS level for the transverse momentum distribution of the Higgs boson. The zoom version shows an alternative scale choice of the \GENEVA{} generator (red, solid).\label{fig:genevaptH}}
-\end{center}
-\end{figure}
-
-We compare the transverse momentum spectrum of the Higgs boson with the resummed analytic predictions discussed in~\sct{sec:resummation}. In the left plot of~\fig{fig:resVSMCs}, we show the Monte Carlo predictions against the $\text{N}^3\text{LL}+\text{NNLO}$ result. By construction, the \GENEVA{} prediction with the spectrum scale choice matches the analytic result exactly before the parton shower, and the shower does not introduce sizable numerical effects due to the local dipole
-recoil prescription selected in the calculations. On the other hand, the cumulant scale choice shows good agreement in the resummation region ($p_{\text{T,H}} < 20$\,GeV), but begins to substantially deviate at higher transverse momenta, as already observed in~\fig{fig:genevaptH}. The \minnlo{} prediction also shows good agreement within its scale uncertainty band, with the largest deviations appearing at very low transverse momenta, in the region well covered by the resummation scale variation. In the right of~\fig{fig:resVSMCs}, we present the comparison of the same MCs spectra against the more accurate $\text{N}^3\text{LL'+aN}^3\text{LO}$. The inclusion of higher-order corrections in the analytic spectrum results in a negative shift relative to both the \minnlo{} and \GENEVA{} predictions across the entire phase space, with a mostly flat effect for $p_{\text{T,H}} > 10$,GeV. Compared to the others, the \GENEVA{} prediction with the spectrum scale choice lies closer to the analytic result.
-
-
-\begin{figure}[t!]
-\begin{center}
-\begin{tabular}{cc}
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/n3llnnloresvsMCs-withspectrum.pdf}&
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/n3llan3loresvsMCs-withspectrum.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Comparison of the Higgs transverse-momentum spectrum predicted by analytic resummed predictions (green, solid) at $\text{N}^3\text{LL+NNLO}$ (left plot) and at $\text{N}^3\text{LL'+aN}^3\text{LO}$ against the results obtained by the two Monte Carlo generators: \minnlo{} (blue, dashed) and \GENEVA{} with cumulant (brown, dotted) and spectrum (red, solid) scale choices. \label{fig:resVSMCs}}
+\caption{Comparison of the Higgs transverse-momentum spectrum predicted by analytic resummed predictions (green, solid) at $\text{N}^3\text{LL+NNLO}$ (left plot) and at $\text{N}^3\text{LL$^{\prime}$+aN}^3\text{LO}$ against the results obtained by the two Monte Carlo generators: \minnlo{} (blue, dashed) and \GENEVA{} with cumulant (brown, dotted) and spectrum (red, solid) scale choices. \label{fig:resVSMCs}}
 \end{center}
 \end{figure}
 
-We conclude the section by presenting a comparison of two angular observables in~\fig{fig:genevay}. The left plot shows the NNLO-accurate Higgs rapidity distribution, displaying good agreement between the \minnlo{} prediction and the \GENEVA{} result using the cumulant scale choice. The right plot illustrates an example of an observable that depends on the leading jet. Here, we apply a flavour-blind anti-$k_T$ clustering algorithm with radius $R = 0.4$ and compute the rapidity difference between the Higgs boson and the highest-$p_T$ jet, requiring a minimum jet transverse momentum of 20\,GeV. We observe good agreement between the central predictions. However, the associated scale uncertainties differ significantly between the two generators, with \GENEVA{} exhibiting a larger theoretical uncertainty at low values of the rapidity difference.
+We compare the transverse momentum spectrum of the Higgs boson with the resummed analytic predictions discussed in~\sct{sec:resummation}. In the left plot of~\fig{fig:resVSMCs}, we show the Monte Carlo predictions against the $\text{N}^3\text{LL}+\text{NNLO}$ result. By construction, the \GENEVA{} prediction with the spectrum scale choice matches the analytic result exactly before the parton shower, and the shower does not introduce sizable numerical effects due to the local dipole
+recoil prescription selected in the shower settings of the calculations. On the other hand, the cumulant scale choice shows good agreement in the resummation region ($p_{\text{T,H}} < 20$\,GeV), but begins to substantially deviate with increasing
+uncertainties at higher transverse momenta, as already observed in~\fig{fig:genevaptH}. The \minnlo{} prediction also shows good agreement with $\text{N}^3\text{LL}+\text{NNLO}$ result within its scale uncertainty band, with the largest deviations appearing at very low transverse momenta, well covered by the resummation scale variation.
+In that region, $p_T\lesssim m_b$, the massless calculation actually 
+breaks down and finite bottom mass effects become relevant, as pointed out before.
+It therefore includes spurious effects induced by the PDF evolution, which turn 
+the $\text{N}^3\text{LL}^{\prime}+\text{NNLO}$ cross section negative below $4$\,GeV, where
+the figure has been cut for that reason.
+In the right plot of~\fig{fig:resVSMCs}, we present the comparison of the same MCs spectra against the $\text{N}^3\text{LL$^{\prime}$+aN}^3\text{LO}$ calculation. The inclusion of higher-order corrections in the analytic spectrum results in a negative shift relative to both the \minnlo{} and \GENEVA{} predictions across the entire distribution, with a mostly flat effect for $p_{\text{T,H}} > 10$,GeV. Compared to the others, the \GENEVA{} prediction with the spectrum scale choice lies closer to the analytic result.
 
-\begin{figure}[h!]
+
+
+\begin{figure}[b!]
 \begin{center}
 \begin{tabular}{cc}
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-yh.pdf}&
@@ -828,13 +839,19 @@ We conclude the section by presenting a comparison of two angular observables in
 \end{center}
 \end{figure}
 
+We conclude the section by presenting a comparison of two angular observables in~\fig{fig:genevay}. The left plot shows the NNLO-accurate Higgs rapidity distribution, displaying ecellent agreement between the \minnlo{} prediction and the \GENEVA{} result using the cumulant scale choice, in terms of shape, normalization and size of the scale uncertainties. 
+The right plot illustrates an example of an observable that depends on the leading jet. Here, we apply a flavour-blind anti-$k_T$ clustering algorithm with radius $R = 0.4$ and compute the rapidity difference between the Higgs boson and the highest-$p_T$ jet, requiring a minimum jet transverse momentum of 20\,GeV. We observe excellent agreement between the central \minnlo{} and 
+\GENEVA{} predictions, with some moderate differences only in the very forward region. However, the associated scale uncertainties differ significantly between the two generators, with \GENEVA{} exhibiting a much larger theoretical uncertainty at central
+rapidities.
+
+
 \subsubsection{Heavy-Higgs for BSM studies in \minnlo{}}
 
 The Higgs production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In some models, \bbH{} can become the dominant production mode of exotic Higgs states. The \minnlo{} generator presented in section~\ref{sec:5FSNNLOPS} is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II Two-Higgs-Doublet Model (2HDM)~\cite{Branco:2011iw} at leading order but deviates from it at higher orders. MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
 \begin{align}
 	\tan\beta=\frac{v_u}{v_d}\,.
 \end{align}
-The other indipendent parameter is the CP-even Higgs mixing angle $\alpha$. This results in five physical Higgs bosons: two CP-even (H,H'), one CP-odd (A) and two charged Higgs bosons ($\text{H}^{\pm}$). The lightest Higgs boson ($\text{H}$) in MSSM can mimic the SM Higgs, but has different properties depending on model parameters. The tree-level mass of $\text{H}$ is bounded from above by $m_Z |\cos 2\beta|$, where $m_Z$ is the Z-boson mass. However, radiative corrections (mainly from the SUSY partners of the bottom and top quarks) can significantly alter the tree-level prediction, allowing for $m_H\sim 125$\,GeV~\cite{Heinemeyer:2011aa,Bechtle:2012jw,Draper:2016pys,Bechtle:2016kui,Haber:2017erd}. We perform the NNLO+PS prediction in the benchmark configuration known as $M_H^{125}$ scenario~\cite{Bagnaschi:2018ofa}, where all superparticles are chosen to be so heavy that the presence of these effects has only a mild impact on the production and decay of MSSM Higgs bosons. As a result, the phenomenology of this scenario at the LHC closely resembles that of a Type-II 2HDM with Higgs couplings inspired by the MSSM. For the chosen mass of the supersymmetric partners, we refer to eq. (4) of~\citere{Bagnaschi:2018ofa}. SUSY particles affect the bottom Yukawa coupling, encoded on the resummation of loop-induced effects, which are $\tan\beta$-enhanced. We stress that the NNLO+PS calculation in the massless scheme contains only terms proportional to the squared bottom Yukawa coupling. As a result, predictions in the MSSM scenario differ from those in the SM solely by an overall rescaling factor. In the case of the CP-odd Higgs production, we have:
+The other indipendent parameter is the CP-even Higgs mixing angle $\alpha$. This results in five physical Higgs bosons: two CP-even (H,H$^{\prime}$), one CP-odd (A) and two charged Higgs bosons ($\text{H}^{\pm}$). The lightest Higgs boson ($\text{H}$) in MSSM can mimic the SM Higgs, but has different properties depending on model parameters. The tree-level mass of $\text{H}$ is bounded from above by $m_Z |\cos 2\beta|$, where $m_Z$ is the Z-boson mass. However, radiative corrections (mainly from the SUSY partners of the bottom and top quarks) can significantly alter the tree-level prediction, allowing for $m_H\sim 125$\,GeV~\cite{Heinemeyer:2011aa,Bechtle:2012jw,Draper:2016pys,Bechtle:2016kui,Haber:2017erd}. We perform the NNLO+PS prediction in the benchmark configuration known as $M_H^{125}$ scenario~\cite{Bagnaschi:2018ofa}, where all superparticles are chosen to be so heavy that the presence of these effects has only a mild impact on the production and decay of MSSM Higgs bosons. As a result, the phenomenology of this scenario at the LHC closely resembles that of a Type-II 2HDM with Higgs couplings inspired by the MSSM. For the chosen mass of the supersymmetric partners, we refer to eq. (4) of~\citere{Bagnaschi:2018ofa}. SUSY particles affect the bottom Yukawa coupling, encoded on the resummation of loop-induced effects, which are $\tan\beta$-enhanced. We stress that the NNLO+PS calculation in the massless scheme contains only terms proportional to the squared bottom Yukawa coupling. As a result, predictions in the MSSM scenario differ from those in the SM solely by an overall rescaling factor. In the case of the CP-odd Higgs production, we have:
 \begin{align}
 	\dd \sigma_{b\bar b \text{A}}^{\text{MSSM}} = \dd \sigma_{\bbH{}}^{\text{SM}} \cdot (\tilde g_b^{\phi})^2\,,	\label{eq:BSMYuk}
 \end{align}
@@ -1236,7 +1253,7 @@ A value of \( \bar\kappa_q = 1 \) corresponds to a Yukawa coupling for quark \( 
 \( \bar \kappa_s \simeq 2.2 \cdot 10^{-2} \).
 The High-Luminosity Large Hadron Collider prospects~\cite{deBlas:2019rxi} shows that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_u|\leq 0.66$, $|\bar \kappa_d|\leq 0.70$, $|\bar \kappa_s|\leq 0.66$ at 95\% CL when using the transverse momentum distribution.
 
-In ref.~\cite{Cal:2023mib}, resummed predictions for the Higgs transverse momentum spectrum were obtained for $c\bar{c}H$ and $s\bar{s}H$ channels at N$^3$LL$'$+aN$^3$LO accuracy. These resummed calculations (at a lower, N$^3$LL accuracy) were used to construct a \textsc{Geneva} NNLO+PS generator for the $c\bar{c}H$ process in ref.~\cite{Gavardi:2025zpf} which combines the advantages of having a high resummation accuracy with a fully differential event generator.
+In ref.~\cite{Cal:2023mib}, resummed predictions for the Higgs transverse momentum spectrum were obtained for $c\bar{c}H$ and $s\bar{s}H$ channels at N$^3$LL$^{\prime}$+aN$^3$LO accuracy. These resummed calculations (at a lower, N$^3$LL accuracy) were used to construct a \textsc{Geneva} NNLO+PS generator for the $c\bar{c}H$ process in ref.~\cite{Gavardi:2025zpf} which combines the advantages of having a high resummation accuracy with a fully differential event generator.
 
 In addition, light-quark fusion has recently been implemented in the fully-differential \minnlo{} generator. In this paper, we present the novel NNLO+PS simulations with a detailed phenomenological study for Higgs-boson production with diphoton decay, $q\bar q\rightarrow \text{H}\rightarrow \gamma\gamma$. The simulations are produced using the \minnlo{} \bbH{} generator in the massless scheme as a starting point. The code modifies the flavour of the initial-state partons via the \texttt{whichlightquark} flag, which is set to the Monte Carlo ID number corresponding to the chosen flavour. The generator consistently calls the appropriate analytic amplitudes, with the sole exception of the double real corrections, which are evaluated numerically using the \OpenLoops{} \texttt{bbhjj} library with a suitable flipping of the parton flavours. The number of active massless species is always set to \( n_f = 5 \), including in the running of the strong coupling and Yukawa factors. The theoretical uncertainty is estimated through the standard 7-point scale variation of the factorisation scale for the PDFs and the renormalisation scale with a correlated variation of Yukawa and strong coupling scales.
 
@@ -1245,7 +1262,7 @@ We begin the phenomenological analysis by focusing on the transverse-momentum sp
 
 Although the small masses of the first- and second-generation quarks make their contributions challenging to detect experimentally, the shape of the Higgs transverse-momentum distribution provides a potential handle to disentangle them from the dominant gluon-fusion channel. In particular, the softer spectrum associated with the charm-quark contribution, combined with the intermediate size of its Standard Model Yukawa coupling, makes this observable especially promising for setting experimental constraints in the $c\bar c \text{H}$ mode.
 
-This shape behaviour for the Higgs transverse-momentum spectrum has also been observed with the analytic description of this observable at N$^3$LL$'$+aN$^3$LO accuracy~\cite{Cal:2023mib} which is shown in the right panel of~\fig{fig:lightpTHzoom}.
+This shape behaviour for the Higgs transverse-momentum spectrum has also been observed with the analytic description of this observable at N$^3$LL$^{\prime}$+aN$^3$LO accuracy~\cite{Cal:2023mib} which is shown in the right panel of~\fig{fig:lightpTHzoom}.
 We note that the spectra are normalised to the N$^3$LO cross sections obtained from \texttt{n3loxs}~\cite{Baglio:2022wzu} which uses the results from refs.~\cite{duhr:2019kwi,Duhr:2020kzd}\footnote{The code was modified to obtain the N$^3$LO cross sections for  $c\bar c \text{H}$ and  $s\bar s \text{H}$}.
 At NNLL+NLO accuracy, the spectra of the different flavour channels already exhibit different shapes, which are confirmed at the more accurate \nnnres{} level with a substantial reduction of the scale uncertainty. The uncertainties for $b\bar b \text{H}$ are noticeably larger compared to the other channels.
 In fact, the relative uncertainties for $b\bar b \text{H}$ at
@@ -1263,7 +1280,7 @@ theorem are no longer valid for $p_T<4\, \GeV$.
 	\includegraphics[width=.45\textwidth, page=1]{plots/5fs/light/ptHzoom_qqHres.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Transverse-momentum spectra of the Higgs boson obtained with \minnlo{} (left) and at N$^3$LL$'$+aN$^3$LO, normalised to the total cross sections, for the different flavour-channel annihilation: bottom (blue, dashed), charm (green, solid), strange (pink, long-dashed), and down (brown, dotted), and  up (black, dotted-dashed) flavours.
+\caption{Transverse-momentum spectra of the Higgs boson obtained with \minnlo{} (left) and at N$^3$LL$^{\prime}$+aN$^3$LO, normalised to the total cross sections, for the different flavour-channel annihilation: bottom (blue, dashed), charm (green, solid), strange (pink, long-dashed), and down (brown, dotted), and  up (black, dotted-dashed) flavours.
 \label{fig:lightpTHzoom}}
 \end{center}
 \end{figure}
@@ -1335,7 +1352,7 @@ The main origin of this effect is the rapidity constraint defined in~\eqn{eq:aaf
 In this section, we have presented the NNLO+PS generator for Higgs production via light-parton fusion with decay into photons as a potential tool to constrain light-quark Yukawa couplings. We conclude by noting that alternative channels sensitive to light-quark Yukawa couplings have been experimentally investigated recently, such as the Higgs decay rate into four leptons~\cite{CMS:2025xkn}.
 
 \section{Conclusions}\label{sec:conclusions}
-In the present paper, we have presented updated predictions for \bbH{} production at the LHC at a centre-of-mass energy of 13.6 TeV. All cross-sections are computed following the recommendations of the LHC Higgs Working Group. We first reported matched inclusive numbers obtained using the \nlonnllpart{} method with interpolations of the 13 TeV and 14 TeV cross-sections. The matching of the different flavour schemes has been performed only at the inclusive level for \bbH{} production, while differential matched predictions can be obtained using, for example, the methods presented in~\citeres{Gauld:2021zmq,guzzi:2024can}. In addition, we reported analytic predictions for the transverse momentum spectrum of the Higgs boson at $\text{N}^3\text{LL'}+\text{aN}^3\text{LO}$. Matching with the exact $\text{N}^3\text{LO}$ prediction is highly desirable due to the importance of this observable in experimental studies of Higgs production via bottom-quark fusion.
+In the present paper, we have presented updated predictions for \bbH{} production at the LHC at a centre-of-mass energy of 13.6 TeV. All cross-sections are computed following the recommendations of the LHC Higgs Working Group. We first reported matched inclusive numbers obtained using the \nlonnllpart{} method with interpolations of the 13 TeV and 14 TeV cross-sections. The matching of the different flavour schemes has been performed only at the inclusive level for \bbH{} production, while differential matched predictions can be obtained using, for example, the methods presented in~\citeres{Gauld:2021zmq,guzzi:2024can}. In addition, we reported analytic predictions for the transverse momentum spectrum of the Higgs boson at $\text{N}^3\text{LL}^{\prime}+\text{aN}^3\text{LO}$. Matching with the exact $\text{N}^3\text{LO}$ prediction is highly desirable due to the importance of this observable in experimental studies of Higgs production via bottom-quark fusion.
 
 We then presented the first numerical comparison of the \minnlo{} and \GENEVA{} generators for \bbtoH{} production in the massless scheme at NNLO+PS accuracy. They are compatible within theoretical uncertainties for the observables studied, showing good agreement with resummation results for the Higgs transverse momentum spectrum. We also included a proof-of-concept study of the \minnlo{} generator for BSM scenarios involving heavy-Higgs production in the enhanced bottom-quark channel. The NNLO corrections for the bottom-Yukawa contribution in the massive scheme have recently been computed with all-order parton shower matching in the \minnlo{} framework, with updated cross-sections compared against the massless prediction and lower-order results. The increasing QCD accuracy in this process shows improved compatibility between the two scheme choices and a corresponding reduction in theoretical uncertainty in the \bbH{} modelling.
 
