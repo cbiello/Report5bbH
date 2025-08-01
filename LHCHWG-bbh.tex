@@ -1230,7 +1230,7 @@ $m(\gamma_1, \gamma_2)=m_H$, which trivially fulfills the first condition and si
     105\,\GeV < m(\gamma_1, \gamma_2) < 160\,\GeV, \quad |\eta(\gamma_i)|< 2.37, \quad
     \frac{p_T(\gamma_1)}{m(\gamma_1, \gamma_2)} > 0.35, \quad \frac{p_T(\gamma_2)}{m(\gamma_1, \gamma_2)} > 0.25\,.
 \end{equation}
-The presence of two $b$ jets and two photons satisfying the above requirements defines the \emph{fiducial} region. This selection can be further refined in the context of $HH$ analyses by imposing a cut on the variable
+The presence of two $b$-jets and two photons satisfying the above requirements defines the \emph{fiducial} region. This selection can be further refined in the context of $HH$ analyses by imposing a cut on the variable
 \begin{equation}
 \label{eq:mbbggs}
     \mbbggs = m_{2b2\gamma} - m(b_1,b_2) - m(\gamma_1,\gamma_2) + 2m_H \,.
@@ -1247,19 +1247,19 @@ This observable is used in $HH$ searches~\cite{HDBS-2021-10,HDBS-2019-27,CMS-HIG
   \hline \hline
    \begin{tabular}{@{}c@{}} No cut \end{tabular}
 %  \multirow{1}{*}{\makecell{No cut}} 
-	   & $1180_{-15\%}^{+19\%}$ & $1696 ^{+62\%} _{-35\%}$  & $000_{-00\%}^{+00\%}$\\
+	   & $1180_{-15\%}^{+19\%}$ & $1696 ^{+62\%} _{-35\%}$  & $7574_{-8\%}^{+8\%}$ & $2774_{-7\%}^{+7\%}$ \\
   \hline
    \begin{tabular}{@{}c@{}} Fid. cuts \end{tabular}
  % \multirow{1}{*}{\makecell{Fid. cuts}} 
-	   &$5.60_{-10\%}^{+1.9\%}$ & $18 ^{+55\%} _{-33\%}$ & $000_{-00\%}^{+00\%}$ \\
+	   &$5.60_{-10\%}^{+1.9\%}$ & $18 ^{+55\%} _{-33\%}$ & $31.6_{-18\%}^{+18\%}$ & $20.5_{-18\%}^{+18\%}$ \\
    \hline
   \begin{tabular}{@{}c@{}} Fid. cuts \\+ $\mbbggs<500\,\GeV$  \end{tabular}
   %\multirow{1}{*}{\makecell{Fid. cuts \\+ $\mbbggs<500\,\GeV$}} 
-	  & $5.5_{-10\%}^{+2.0\%}$ & $ 12 ^{+57\%} _{-33\%}$ & $000_{-00\%}^{+00\%}$\\
+	  & $5.5_{-10\%}^{+2.0\%}$ & $ 12 ^{+57\%} _{-33\%}$ & $23.3_{-20\%}^{+20\%}$ & $15.4_{-20\%}^{+20\%}$ \\
    \hline
     \begin{tabular}{@{}c@{}} Fid. cuts \\+ $\mbbggs<350\,\GeV$  \end{tabular}
     %\multirow{1}{*}{\makecell{Fid. cuts \\+ $\mbbggs<350\,\GeV$}} 
-    & $4.8_{-10\%}^{+2.8\%}$ & $5.5 ^{+60\%} _{-34\%}$ & $000_{-00\%}^{+00\%}$ \\
+    & $4.8_{-10\%}^{+2.8\%}$ & $5.5 ^{+60\%} _{-34\%}$ & $11.5_{-20\%}^{+20\%}$ & $7.76_{-20\%}^{+20\%}$ \\
    \hline
 \end{tabular}
   \end{center}
@@ -1276,7 +1276,7 @@ Uncertainties due to renormalisation and factorisation scale variations are quot
 central value following the standard 9-point prescription. Additional theoretical uncertainties such as those associated with variations of the shower starting scale, 
 the choice of parton shower algorithm, or modifications to the MC@NLO matching procedure~\cite{frixione:2002ik,frederix:2020trv} were examined 
 in \citere{manzoni:2023qaf} and found to be subleading. 
-{\sc NNLOPS} uncertainties are evaluated via multiple sources, accounting for the modelling of jet multiplicity, the Higgs boson $\ptH$, $\ptHjj$, and $\mjj$~\cite{deFlorian:2016spz,Liu:2013hba,stewart:2013faa,Boughezal:2013oha,Stewart:2011cf,Gangal:2013nxa}, as discussed in \citere{ATLAS:2022tnm}. Parton shower uncertanties are also neglected for the {\sc NNLOPS} prediction, but they could be sizeable. 
+{\sc NNLOPS} uncertainties are evaluated via multiple sources, accounting for the modelling of jet multiplicity, the Higgs boson $\ptH$, $\ptHjj$, and $\mjj$~\cite{deFlorian:2016spz,Liu:2013hba,stewart:2013faa,Boughezal:2013oha,Stewart:2011cf,Gangal:2013nxa}, as discussed in \citere{ATLAS:2022tnm}. Parton shower uncertanties are also not shown for the {\sc NNLOPS} prediction, but they are expected to be sizeable: a comparison with an alternative parton shower ({\sc Herwig7}~\cite{Bellm:2015jjp}) yields differences in the fiducial $b\bar{b}H$ ($y_t^2$) cross section ranging from 3\% up to 17\% (depending on the kinematic region).
 %---------------Table------------------------------------------------------------------------------------------
 
 
@@ -1374,11 +1374,11 @@ the {\sc MadGraph5\_aMC@NLO} sample for bbH{} production.
 \begin{small}%
 \tabcolsep5pt
 \begin{tabular}{cccc}%
-$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
-$125.00$  \\
-$125.09$ \\
-$125.10$  \\
-$125.20$ \\
+$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)}$[\%] & $\Delta_{\mathrm{PDF}}$[\%]  \\\hline
+$125.00$  & $723.0$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
+$125.09$  & $717.0$ & $+63\% / -36\%$ & $\pm 1.7\%$ \\
+$125.10$  & $715.2$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
+$125.20$  & $722.1$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
 \end{tabular}%
 \end{small}%
 \end{center}%
@@ -1392,11 +1392,11 @@ $125.20$ \\
 \begin{small}%
 \tabcolsep5pt
 \begin{tabular}{cccc}%
-$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)\oplus\mu_{B}}$[\%] & $\Delta_{\mathrm{PDF}\oplus\alpha_s}$[\%]  \\\hline
-$125.00$ \\
-$125.09$\\
-$125.10$  \\
-$125.20$ \\
+$m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)}$[\%] & $\Delta_{\mathrm{PDF}}$[\%]  \\\hline
+$125.00$ & $667.4$ & $+62\% / -35\%$ & $\pm 1.7\%$ \\
+$125.09$ & $659.5$ & $+62\% / -35\%$ & $\pm 1.7\%$ \\
+$125.10$ & $659.4$ & $+62\% / -35\%$ & $\pm 1.7\%$ \\
+$125.20$ & $662.2$ & $+62\% / -35\%$ & $\pm 1.7\%$ \\
 \end{tabular}%
 \end{small}%
 \end{center}%
@@ -1404,6 +1404,22 @@ $125.20$ \\
 \label{tab:bbHyt13}
 \end{table}
 
+\begin{table}[ht!]
+  \begin{center}%
+  \begin{small}%
+  \tabcolsep5pt
+  \begin{tabular}{cccc}%
+  $m_h$[GeV] & $\sigma^{}$[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)}$[\%] & $\Delta_{\mathrm{PDF}}$[\%]  \\\hline
+  $125.00$ & $762.8$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
+  $125.09$ & $761.8$ & $+62\% / -35\%$ & $\pm 1.7\%$ \\
+  $125.10$ & $765.4$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
+  $125.20$ & $756.1$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
+  \end{tabular}%
+  \end{small}%
+  \end{center}%
+  \caption{Total \bbH{} cross sections for the $y_t^2$ contribution in the SM for a LHC CM energy of $\sqrt{s}=14$ TeV.}
+  \label{tab:bbHyt14}
+  \end{table}
 
 To prevent double counting of events featuring $gg \to H$ production with two $b$-jets, the {\sc NNLOPS} sample is filtered to exclude any event that contains 
 {\it at least} one bottom quark, whether originating from the hard scattering or from parton showering. 
