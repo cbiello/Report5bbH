@@ -1352,14 +1352,24 @@ By normalising to unity these shape effects are disentangled from the even large
 \end{center}
 \end{figure}
 
-\subsection{Combination of 4FS \boldmath{$y_t^2$} contribution with POWHEG NNLOPS}
-
-In analyses focusing on final states containing $b$-jets, it is essential to accurately model the contributions from light-flavor and charm jets that may enter the event selection due to mis-tagging. To facilitate the use of the {\sc MadGraph5\_aMC@NLO} sample in experimental physics studies while maintaining a realistic description of all jet flavour components, the $gg \to b\bar{b}H$ process is supplemented with the {\sc NNLOPS} $H + j$ sample. The {\sc NNLOPS} simulation includes the $gg \to H$ process accompanied by light-flavor and charm jets, which are not represented in the {\sc MadGraph5\_aMC@NLO} sample.
-
-To prevent double counting of events featuring $gg \to H$ production with two $b$-jets, the {\sc NNLOPS} sample is filtered to exclude any event that contains at least one bottom quark, whether originating from the hard scatter or from parton showering. To ensure complete orthogonality between the samples, events with a single bottom quark need also to be removed from the {\sc NNLOPS} sample. This excludes $g + b \to b + H$ contributions, which are already accounted for in the {\sc MadGraph5\_aMC@NLO} prediction via unresolved $g \to b\bar{b}$ splittings. This effectively removes the $b\bar{b}H$ component from {\sc NNLOPS} sample. The filtered {\sc NNLOPS} sample can then be reliably combined with the {\sc MadGraph5\_aMC@NLO} prediction for $gg \to b\bar{b}H$. Although this method involves combining results from the 5FS and 4FS, it provides a coherent and practical approach for estimating the $gg \to H$ plus $b$-jets contribution at analysis level. This strategy is consistent with approaches used in similar contexts, such as the modelling of $Z$ boson production with two bottom quarks in Ref.~\cite{bagnaschi:2018dnh}, and the treatment of the $t\bar{t}+b\bar{b}$ process in~\citere{PhysRevD.93.014019}.  As discussed in~\citere{}, the filtering efficiency, defined as the fraction of {\sc NNLOPS} events surviving the bottom quark veto, is found to be 94\%. The filtered {\sc NNLOPS} sample is then normalized to the inclusive $gg \to H$ cross section at N$^3$LO, after subtracting $\sigma_{gg \to \bbH}^{\text{NLO}}$ for the $y_t^2$ component as listed in~\tab{tab:bbHyt13p6}~and~\tab{tab:bbHyt13}. The comparison of nominal and filtered {\sc NNLOPS} samples is discussed in~\citere{atlaspub}.
+%\subsection{Combining inclusive \boldmath{$H$} @ NNLO+PS and \boldmath{$y_t^2$} \bbH{}  contribution in the 4FS}
+%\subsection{Combining \boldmath{$y_t^2$} \bbH{} contribution and inclusive $H$@NNLO+PS in the 4FS}
+\subsection{Combining \boldmath{$y_t^2$} \bbH{} component and inclusive Higgs production in the 4FS}
 
 
-\begin{table}[ht!]
+In analyses focusing on final states containing $b$-jets, it is essential to accurately model the contributions 
+from light-flavour and charm jets that may enter the event selection due to mis-tagging. 
+To facilitate the use of the {\sc MadGraph5\_aMC@NLO} sample in experimental studies, 
+while maintaining a realistic description of all jet flavour components, 
+the $y_t^2$ contribution to the \bbH{} process at NLO+PS 
+is supplemented with the inclusive Higgs production sample (including higher-order light-jet multiplicities) 
+provided by the {\sc NNLOPS} generator, consistently within the 4FS.
+The {\sc NNLOPS} simulation includes the inclusive description of the $gg \to H$ process at NNLO, but also describes 
+one accompanied light-flavour and charm jets at NLO and two of them at LO, which are not represented in 
+the {\sc MadGraph5\_aMC@NLO} sample for bbH{} production.
+
+
+\begin{table}[t]
 \begin{center}%
 \begin{small}%
 \tabcolsep5pt
@@ -1377,7 +1387,7 @@ $125.20$ \\
 \end{table}
 
 
-\begin{table}[ht!]
+\begin{table}[b]
 \begin{center}%
 \begin{small}%
 \tabcolsep5pt
@@ -1393,6 +1403,24 @@ $125.20$ \\
 \caption{Total \bbH{} cross sections for the $y_t^2$ contribution in the SM for a LHC CM energy of $\sqrt{s}=13$ TeV.}
 \label{tab:bbHyt13}
 \end{table}
+
+
+To prevent double counting of events featuring $gg \to H$ production with two $b$-jets, the {\sc NNLOPS} sample is filtered to exclude any event that contains 
+{\it at least} one bottom quark, whether originating from the hard scattering or from parton showering. 
+Removing events with a single bottom quark from the {\sc NNLOPS} sample ensures complete orthogonality of configurations between the two samples. 
+This excludes $g  b \to b H$ contributions, which are already accounted for in the {\sc MadGraph5\_aMC@NLO} prediction via initial-state $g \to b\bar{b}$ splittings. Thus, by effectively removing the $b\bar{b}H$ component from the {\sc NNLOPS} sample, it is turned 
+into a 4FS description of Higgs production accompanied by 
+only light jets. The filtered {\sc NNLOPS} sample can then be combined with the {\sc MadGraph5\_aMC@NLO} one for 
+$b\bar{b}H$ production at NLO+PS by simply adding the two contributions, obtaining a full description of Higgs production with light- and $b$-jet
+final final states within the 4FS, where inclusive Higgs observables are described at NNLO+PS and $H$+$b$-jet final states at NLO+PS. 
+Although this method combines a 4FS calculation with one that was originally obtained in the 5FS, by dropping consistently all bottom-quark contributions
+in the NNLOPS prediction, it is turned effectively into a 4FS calculation.
+
+One should bear in mind, however, that for full consistency also the PDFs and strong
+coupling need to be updated to 4FS ones within this calculation. In order to exploit the existing NNLOPS samples, this is not done here for practical reasons.
+Still, even with this caveat, the method outlined above provides a coherent and practical approach for estimating the $gg \to H$+$b$-jets contribution at analysis level. 
+This strategy has already been used in similar contexts, such as the modelling of $Z$ boson production with two bottom quarks in \citere{bagnaschi:2018dnh}, and the treatment of the $t\bar{t}+b\bar{b}$ process in \citere{PhysRevD.93.014019}.  
+As discussed in~\citere{}, the filtering efficiency, defined as the fraction of {\sc NNLOPS} events surviving the bottom quark veto, is found to be 94\%. The filtered {\sc NNLOPS} sample is then normalized to the inclusive $gg \to H$ cross section at N$^3$LO after subtracting the $y_t^2$ \bbH{} component as listed in~\tab{tab:bbHyt13p6}~and~\tab{tab:bbHyt13}. The comparison of nominal and filtered {\sc NNLOPS} samples is discussed in~\citere{atlaspub}.
 
 
 
