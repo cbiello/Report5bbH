@@ -1338,7 +1338,7 @@ By normalising to unity, these shape effects are disentangled from the even larg
 
 
 In analyses focusing on final states containing $b$-jets, it is essential to accurately model the contributions 
-from light-flavour and charm jets that may enter the event selection due to mis-tagging. 
+from light-flavour and charm jets that may enter the event selection due to mistagging. 
 To facilitate the use of the {\sc MadGraph5\_aMC@NLO} sample in experimental studies, 
 while maintaining a realistic description of all jet flavour components, 
 the $y_t^2$ contribution to the \bbH{} process at NLO+PS 
@@ -1518,8 +1518,7 @@ NNLO+PS level in the diphoton channel $q\bar q\rightarrow H\rightarrow \gamma\ga
 the \PYTHIA{8} parton shower.
 
 \subsection{Sensitivity of the Higgs $p_T$ spectrum to light-quark Yukawa couplings}
-We begin with the transverse momentum spectrum of the Higgs boson. In~\fig{fig:lightpTHzoom}, we show the normalised distribution for the five different flavour channels obtained from the \minnlo{} generator (in the left plot) and for the down-type quark
-channels at N$^3$LL$^{\prime}$+aN$^3$LO (in the right plot).\footnote{
+We begin with the transverse momentum spectrum of the Higgs boson. In~\fig{fig:lightpTHzoom}, we show the normalised distribution for the five different flavour channels obtained from the \minnlo{} generator (in the left plot) and for the second-/third-generation quark channels at N$^3$LL$^{\prime}$+aN$^3$LO (in the right plot).\footnote{
 We note that the N$^3$LL$^{\prime}$+aN$^3$LO spectra are normalised to the N$^3$LO cross sections obtained from \texttt{n3loxs}~\cite{Baglio:2022wzu}, which uses the results from \citeres{duhr:2019kwi,Duhr:2020kzd}. The code was modified to obtain the N$^3$LO cross sections for  $c\bar c H$ and  $s\bar s H$.}
 By normalising to the total cross section, we remove the dependence on the Yukawa coupling, making the comparison sensitive only to differences in the parton distributions
 in each channel. We observe that the position of the peak varies significantly with the initial-state flavour, with valence-quark channels exhibiting the softest spectrum
@@ -1539,9 +1538,10 @@ In fact, the relative uncertainties for $b\bar b \to H$ at
 a given order are of similar size as those for $s\bar s \to H$ at one lower order.
 The main difference between the channels is the relative size of the PDF luminosities.
 As already pointed out in~\citere{Cal:2023mib} for $b\bar b \to H$, the $b\bar b$ Born channel is numerically suppressed by the small b-quark PDFs, the
-gluon-induced PDF channels, which start at one higher order, play a much more prominent role and explain the observed pattern of uncertainties for the different cases. We note that the right panel of~\fig{fig:lightpTHzoom} is only shown for $p_T> 4\, \GeV$,
+gluon-induced PDF channels, which start at one higher order, play a much more prominent role and explain the observed pattern of uncertainties for the different cases. We note that the $b\bar b \to H$ cross section in the 
+right panel of~\fig{fig:lightpTHzoom} is only shown for $p_T> 4\, \GeV$,
 since with a bottom mass of $m_b \sim 4.18\, \GeV$ the assumption of 
-$m_q \ll p_T$, where our factorization theorem is valid, no longer applies 
+$m_q \ll p_T$, where the factorization theorem is valid, no longer applies 
 for $p_T\lesssim 4\, \GeV$.
 
 \begin{figure}[t!]
@@ -1660,20 +1660,84 @@ The main origin of this effect is the rapidity constraint defined in~\eqn{eq:aaf
 In this section, we have presented the NNLO+PS generator for Higgs production via light-parton fusion with decay into photons as a potential tool to constrain light-quark Yukawa couplings. We conclude by noting that alternative channels sensitive to light-quark Yukawa couplings have been experimentally investigated recently, such as the Higgs decay rate into four leptons~\cite{CMS:2025xkn}.
 
 \section{Conclusions}\label{sec:conclusions}
-In the present paper, we have presented updated predictions for \bbH{} production at the LHC at a centre-of-mass energy of 13.6 TeV. All cross sections are computed following the recommendations of the LHC Higgs Working Group. We first reported matched inclusive numbers obtained using the \nlonnllpart{} method with interpolations of the 13 TeV and 14 TeV cross sections. The matching of the different flavour schemes has been performed only at the inclusive level for \bbH{} production, while differential matched predictions can be obtained using, for example, the methods presented in~\citeres{Gauld:2021zmq,guzzi:2024can}. In addition, we reported analytic predictions for the transverse momentum spectrum of the Higgs boson at $\text{N}^3\text{LL}^{\prime}+\text{aN}^3\text{LO}$. Matching with the exact $\text{N}^3\text{LO}$ prediction is highly desirable due to the importance of this observable in experimental studies of Higgs production via bottom-quark fusion.
+We have reported on new predictions for \bbH{} production at the LHC at a centre-of-mass energy of 13.6 TeV. All cross sections are computed following the recommendations of the LHC Higgs Working Group.
 
-We then presented the first numerical comparison of the \minnlo{} and \GENEVA{} generators for \bbtoH{} production in the massless scheme at NNLO+PS accuracy. They are compatible within theoretical uncertainties for the observables studied, showing good agreement with resummation results for the Higgs transverse momentum spectrum. We also included a proof-of-concept study of the \minnlo{} generator for BSM scenarios involving heavy-Higgs production in the enhanced bottom-quark channel. The NNLO corrections for the bottom-Yukawa contribution in the massive scheme have recently been computed with all-order parton shower matching in the \minnlo{} framework, with updated cross sections compared against the massless prediction and lower-order results. The increasing QCD accuracy in this process shows improved compatibility between the two scheme choices and a corresponding reduction in theoretical uncertainty in the \bbH{} modelling.
+First, we have updated the predictions for the 
+total inclusive cross section by interpolating the 13 TeV and 14 TeV cross section
+numbers from the 4FS and 5FS matched \nlonnllpart{} calculation. 
+So far, the matching of the different flavour schemes has been performed 
+only at the fully inclusive level for \bbH{} production.
+Matched predictions of differential state-of-the-art \bbH{} 
+predictions in 4FS and 5FS could, in principle, be obtained by 
+extending differential matching approaches, such as those 
+discussed in \citeres{Gauld:2021zmq,guzzi:2024can}, to higher orders.
 
-\bbH{} production is an important background for $HH$ searches in all channels involving at least one Higgs boson decaying into two bottom quarks. We discussed the impact of massive scheme predictions in fiducial phase-space regions relevant for $HH$ studies. The top-quark Yukawa contribution is the dominant one, which can be modelled by selecting events from the \textsc{NNLOPS} ggF generator or using the MC@NLO generator for the $y_t^2$ terms at NLO+PS. We included a discussion on the impact of the bottom-Yukawa contribution, with a strong reduction in scale uncertainty using the \minnlo{} code in the 4FS. An important outlook for $HH$ studies is the calculation of \bbH{} production via ggF Higgs boson production at NNLO+PS. Indeed, current \minnlo{} technology enables NNLO corrections for this process, with the main bottleneck being the missing two-loop contribution in the $y_t^2$ channel.
+As far as differential calculations for \bbH{} production are concerned, 
+this report focusses on new state-of-the-art predictions in either scheme.
+Specifically, novel results for the Higgs transverse momentum distribution 
+have been discussed based on the analytic resummation 
+at $\text{N}^3\text{LL}^{\prime}+\text{aN}^3\text{LO}$ accuracy. 
+In the future, this calculation could be extended by the matching with the 
+exact $\text{N}^3\text{LO}$ corrections for Higgs production via 
+bottom-quark fusion.
 
-In the last section of the report, we discuss how to extend \bbH{} studies to Yukawa interactions with lighter quarks (\qqtoH{}). The shape of the transverse momentum spectrum is very sensitive to the different valence- and sea-quark PDFs that induce Higgs boson production. We presented a phenomenological study of \qqtoH{} production with the Higgs decaying into two photons, making use of \minnlo{} predictions in the massless scheme. To improve the theoretical input for constraints on the charm-quark Yukawa coupling in Higgs production, the calculation of NNLO(+PS) corrections for \ccH{} production in the 3FS is feasible with the \minnlo{} method by addressing numerical instabilities and using a well-justified massification of two-loop amplitudes, as performed for \bbH{} production in 4FS.
+We then presented the first numerical comparison of the recently developed 
+\minnlo{} and \GENEVA{} generators for \bbH{} production in the massless scheme
+(i.e.\ the $b\bar b \to H$ process) at NNLO+PS accuracy. 
+We find their predictions to be compatible within the respective theoretical uncertainties 
+for the observables studied, showing good agreement also with the analytically resummed 
+result for the Higgs transverse momentum spectrum. 
+We also included a proof-of-concept study of the \minnlo{} generator for BSM 
+applications involving heavy-Higgs production with an 
+enhanced bottom-quark Yukawa coupling, considering a specific MSSM scenario
+for a still allowed parameter setting.
 
-%In the present paper, we have presented updated predictions for \bbH{} production at the LHC at a centre-of-mass energy of 13.6 TeV. All the cross sections are computed following the recommendations of the LHC Higgs Working Group. We firstly reported matched inclusive numbers obtained using the \nlonnllpart{} method with interpolations of 13 TeV and 14 TeV cross sections. The matching of the different flavour schemes has been performed only at the inclusive level for \bbH{} production, while differential matched prediction can be performed using for examples the methods presented in~\citeres{Gauld:2021zmq,guzzi:2024can}. In addition, we have reported on the analytic predictions for the transverse momentum spectrum of the Higgs boson at $\text{N}^3\text{LL'+aN}^3\text{LO}$. The matching with exact $\text{N}^3\text{LO}$ prediction is highly desirable, due to the importance of this observable in the experimental studies for Higgs production via bottom-quark fusion. 
-%We have then showed the first numerical comparison of the \minnlo{} and \GENEVA{} generators for the \bbtoH{} production in the massless scheme at NNLO+PS accuracy. They are compatible within the theoretical uncertainty for the studied observables, with a good compatibility with resummation results in the Higgs transverse momentum spectrum. We also include a proof-of-concept study of the \minnlo{} generator for BSM studies for heavy-Higgs production in the enhanced bottom-quark channel. The NNLO corrections for the bottom-Yukawa contribution in the massive scheme have been recently computed with an all-order parton shower matching in the \minnlo{} framework with updated cross sections compared against the massless prediction and lower-order predictions. The increasing QCD accuracy in this process shows a better compatibility between the two scheme choices with an associated reduction of the theoretical uncertainty in the \bbH{} modelling.
-%The \bbH{} production is an important background for HH searches in all the channels with at least one Higgs boson decaying into two bottom quarks. We discussed the impact of massive scheme predictions in the fiducial phase-space regions useful for HH studies. The top-quark Yukawa contribution is the dominant contribution, which can be modelled with a selection of events from the {\sc NNLOPS} ggF generator or usingthe MC@NLO generator for the $y_t^2$ terms at NLO+PS. We have included a discussion on the impact of the bottom-Yukawa contribution, with a strong reduction of the scale uncertainty using the \minnlo{} code in 4FS. An important outlook for HH studies is the calculation of the \bbH{} production via ggF Higgs boson production at NNLO+PS. Indeed, the current \minnlo{} technology enables NNLO corrections for this process with the main bottleneck provided by the missing two-loop contribution in the $y_t^2$ channel.
-%In the last section of the report, we discuss how to extend the \bbH{} studies for Yukawa interactions with lighter quarks (\qqtoH{}). The shape of the transverse momentum spectrum is very sensitive to the different valence- and sea-quark PDFs that induce the Higgs boson production. We have presented a phenomenological study for \qqtoH{} production with the Higgs decaying into two photons, making use of novel \minnlo{} predictions in the massless scheme. In order to improve the theoretical input for constraints in the charm-quark Yukawa coupling in Higgs production, the calculation of NNLO(+PS) corrections for \ccH{} production in the 3FS is possible by addressing numerical instabilities and using a well-justified massification of two-loop amplitudes as performed in \bbH{} in 4FS.
+Also the NNLO corrections to \bbH{} production in the massive scheme 
+have recently been computed, including parton shower matching, in the \minnlo{} 
+framework. We have studied the sizeable NNLO effects, and we compared 4FS 
+and 5FS \minnlo{} predictions. For the first time, 4FS and 5FS predictions are finally
+in full agreement, when the cross section in both schemes is computed to NNLO
+in QCD. Thus, the inclusion of NNLO corrections in the massive scheme, finally
+resolves the long-standing 4FS--5FS discrepancy and 
+discussion about the {\it correct} flavour scheme for the \bbH{} process.
+As a result, the corresponding theoretical uncertainty in the modelling of the 
+\bbH{} signal cross section is substantially reduced.
 
-\textbf{Citation policy. }The present work consists of contributions from different collaborations. If some of the results are employed for scientific publications, together with this work, one should cite the corresponding work in~\citeres{manzoni:2023qaf,Cal:2023mib,Biello:2024vdh,Biello:2024pgo,Gavardi:2025zpf}.
+Apart from single-Higgs production, the \bbH{} process is an important background to
+$HH$ searches in all channels involving at least one Higgs boson decaying into two
+bottom quarks. 
+We have discussed the impact of 4FS predictions in the fiducial phase-space region
+relevant for $HH$ studies. For the $y_b^2$ contribution, we have employed the
+previously introduced \minnlo{} generator. Also in this case, the inclusion of the NNLO
+QCD corrections leads to a strong reduction of the scale uncertainties.
+The $y_t^2$ contribution, on the other hand,
+which is even larger than the $y_b^2$ one, is modelled from the
+NLO+PS generator developed within {\sc MadGraph5\_aMC@NLO}. 
+So far, the $y_t^2$ contribution was modelled in the 5FS by selecting events 
+from the \textsc{NNLOPS} generator for inclusive Higgs production in 
+gluon fusion, which is effectively only LO accurate for \bbH{} final state, and
+was assigned with a $100$\% uncertainty.
+Since also Higgs plus light jet contributions can enter the $HH$ selection 
+through mistagging, we have suggested a consistent approach within the 4FS
+to combine those contributions from NNLOPS generator (removing all \bbH{} final states)
+with the more accurate NLO+PS calculation for \bbH{} production.
+As an important outlook for $HH$ studies, the $y_t^2$ \bbH{} component could be 
+obtained at NNLO+PS in the future, by using the available \minnlo{} technology, with 
+the main bottleneck being the missing two-loop amplitudes.
+
+In the last section of the report, we have discussed light-quark Yukawa contributions
+to Higgs-boson production. The production mechanism corresponds exactly to 
+the on of \bbH{} production in the massless scheme, i.e.\ \qqtoH{}. We find that 
+the shape of the transverse momentum spectrum is very sensitive to the different 
+initial state quarks, due to PDF effects. We have also considered 
+\qqtoH{} production with the Higgs decaying into two photons, 
+making use of the possibility to decay the Higgs boson through \PYTHIA{8}
+within the \minnlo{} generator. To further improve the theoretical modeling
+of \ccH{} final states, which can be important to extract the charm-quark Yukawa coupling, 
+the NNLO(+PS) calculation of \ccH{} production in the massive scheme (i.e.\ a three 
+flavour scheme) could be considered within the \minnlo{} framework.
+
+\textbf{Citation policy. }The present work consists of contributions from different collaborations. If some of the results are employed for scientific publications, together with this work, one should cite the corresponding work in~\citeres{deutschmann:2018avk,manzoni:2023qaf,Cal:2023mib,Biello:2024vdh,Biello:2024pgo,Gavardi:2025zpf}.
 
 \textbf{Data Availability Statement.} All data used to produce the plots are available upon request by contacting the LHCHWG bbH/bH theory conveners via email.
 
