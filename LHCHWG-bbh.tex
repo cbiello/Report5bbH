@@ -246,6 +246,27 @@ a bottom-quark pair, see \fig{fig:bbhyt}. The dominant contribution to this proc
 to the squared top Yukawa coupling ($y_t^2$). Interference effects between the 
 two production mechanisms are of order $y_t\,y_b$, but they are bottom-mass suppressed and appear only if the bottom quark is considered in a massive scheme.
 
+\begin{figure}[t]
+\begin{center}
+    \includegraphics[height=2cm]{./diags/gg-bbH.pdf}\hspace*{2cm}
+    \includegraphics[height=2cm]{./diags/qq-bbH.pdf}\hspace*{2cm}
+    \includegraphics[height=2cm]{./diags/bb-H.pdf}
+	\vspace{0.2cm}
+  \caption{Typical LO Feynman diagrams contributing to $\bbH$ production in the four-flavour scheme (left, centre) and the five-flavour scheme (right).}
+  \label{fig:bbhlo}
+\end{center}
+\end{figure}
+
+\begin{figure}[b]
+\begin{center}
+    \includegraphics[height=2.15cm]{./diags/gg-bbH1loop2tb_4F.pdf}\hspace{1.2cm}
+    \includegraphics[height=2.15cm]{./diags/gg-bbH1loop5tb.pdf}\hspace{1.2cm}
+    \includegraphics[height=2.15cm]{./diags/qq-bbH1loop2tb.pdf}
+  \caption{Typical one-loop Feynman diagrams for $\bbH$ production in the four-flavour scheme involving a $\yt$ coupling.}
+  \label{fig:bbhyt}
+\end{center}
+\end{figure}
+
 We can thus write the \bbH{} cross section as follows:
 \begin{equation}
 \begin{split}
@@ -271,16 +292,6 @@ dominant one, i.e.\ even larger than the gluon-fusion mechanism. In addition, \b
 one of the two Higgs bosons decays to bottom quarks.
 
 The calculation of the $b\bar bH$ cross section can be performed in two different schemes. In the four-flavour scheme (4FS), the bottom quarks are massive and thus no bottom PDFs are taken into account so that the bottom quarks are entirely generated in the final state starting from quark-antiquark and gluon-gluon initial states at LO, see \fig{fig:bbhlo}\,(left, center). The calculation requires 4FS PDFs and a 4FS strong coupling $\alpha_s$ in order to avoid artificial large logarithms at higher orders. The 4FS calculation has been performed at NLO QCD some time ago \cite{dittmaier:2003ej,dawson:2003kb}, while NNLO QCD results became available only very recently \cite{Biello:2024pgo}.
-\begin{figure}[hbt]
-\begin{center}
-    \includegraphics[height=2cm]{./diags/gg-bbH.pdf}\hspace*{2cm}
-    \includegraphics[height=2cm]{./diags/qq-bbH.pdf}\hspace*{2cm}
-    \includegraphics[height=2cm]{./diags/bb-H.pdf}
-	\vspace{0.2cm}
-  \caption{Typical LO Feynman diagrams contributing to $\bbH$ production in the four-flavour scheme (left, centre) and the five-flavour scheme (right).}
-  \label{fig:bbhlo}
-\end{center}
-\end{figure}
 
 In the 4FS, the integration over the transverse momenta of the final-state bottom quarks, however, generates logarithmic contributions in the 
 bottom mass that might reduce the perturbative convergence. In order to resum these logarithms, bottom densities need to be introduced by
@@ -319,15 +330,6 @@ This reduces the sensitivity of the $b\bar bH$ cross section to the bottom Yukaw
 For heavy Higgs bosons in BSM scenarios with an enhanced bottom-Yukawa coupling, however, the radiation off bottom quarks is the dominant contribution,
 while all top-quark Yukawa induced become subleading.
 
-\begin{figure}
-\begin{center}
-    \includegraphics[height=2.15cm]{./diags/gg-bbH1loop2tb_4F.pdf}\hspace{1.2cm}
-    \includegraphics[height=2.15cm]{./diags/gg-bbH1loop5tb.pdf}\hspace{1.2cm}
-    \includegraphics[height=2.15cm]{./diags/qq-bbH1loop2tb.pdf}
-  \caption{Typical one-loop Feynman diagrams for $\bbH$ production in the four-flavour scheme involving a $\yt$ coupling.}
-  \label{fig:bbhyt}
-\end{center}
-\end{figure}
 
 Finally, while the discussion up to here focused on QCD corrections, it is worth mentioning that EW corrections for \bbH{} production have also been computed in the 
 4FS. %\footnote{Since EW renormalisation enforces the relation between $y_b$ and $m_b$, it is not consistent to compute NLO EW corrections in the 5FS.}
@@ -405,6 +407,7 @@ the resummation of large collinear logarithmic contributions, while the 4FS capt
 As already introduced in the introduction, two main approaches exist that have been applied to obtain the \bbH{} cross section at 
 high accuracy: \fonll{}~\cite{forte:2015hba,forte:2016sja,Duhr:2020kzd} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf}. 
 
+
 FONLL-B~\cite{forte:2015hba,forte:2016sja} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf} match the NNLO 5FS and the NLO 4FS cross section.
 Both approaches yield results that are fully consistent with each other, as shown in~\citere{LHCHiggsCrossSectionWorkingGroup:2016ypw}. 
 The novel FONLL-C matching~\cite{Duhr:2020kzd} adds the \fnnnlo{} corrections in the 5FS to FONLL-B. The \nlonnllpart{} combination introduces a resummation scale $\muB$, which enables an estimate of the 
@@ -418,17 +421,9 @@ The setup of the calculation follows that described in~\sct{sec:setup}, with the
 \end{align}
 in order to ensure a better perturbative convergence.
 
-In~\tab{tab:bbH136lin}, we report the results of the \nlonnllpart{} combination via a linear interpolation between the existing 13 TeV and 14 TeV results, using the relation
-\begin{align}
-\sigma(13.6\,\text{TeV})=0.4\sigma(13.0\,\text{TeV})+0.6\sigma(14.0\,\text{TeV})\,.
-\end{align}
-The cross section is provided together with an overall theoretical uncertainty. This includes the standard 7-point renormalisation and factorisation scale variation, the resummation scale uncertainty, and the uncertainties associated with the parton distribution functions (PDFs) and the strong coupling constant. An alternative cross section estimation is presented in~\tab{tab:bbH136log} where the same numbers have been combined using a logarithmic interpolation. In order to test the accuracy of the interpolation, we have also considered linear interpolation of 13.5 TeV and 14 TeV results. Using the latter, we have estimated the cross section in~\tab{tab:bbH136linalt} with the following linear interpolation,
-\begin{align}
-	\sigma(13.6\,\text{TeV})=0.8\sigma(13.5\,\text{TeV})+0.2\sigma(14.0\,\text{TeV})\,.
-\end{align}
-We observe a good agreement between the cross section values obtained with different interpolations or different choices of boundary conditions. Due to the good accuracy of the interpolation and the substantial theoretical and parametric uncertainty, dedicated runs at 13.6 TeV are not required.
 
-\begin{table}[ht!]
+
+\begin{table}[t]
 \begin{center}%
 \begin{small}%
 \tabcolsep5pt
@@ -445,7 +440,7 @@ $125.20$ & $566.3$ & $\pm8.63$ & ${{+3.35}}/{-3.44}$
 \label{tab:bbH136lin}
 \end{table}
 
-\begin{table}[ht!]
+\begin{table}[t]
 \begin{center}%
 \begin{small}%
 \tabcolsep5pt
@@ -462,7 +457,7 @@ $125.20$ & $565.3$ & $\pm8.64$ & ${{+3.35}}/{-3.45}$
 \label{tab:bbH136log}
 \end{table}
 
-\begin{table}[ht!]
+\begin{table}[t]
 \begin{center}%
 \begin{small}%
 \tabcolsep5pt
@@ -476,6 +471,17 @@ $125.09$ & $566.4$ & $\pm8.92$ & ${{+3.43}}/{-3.51}$
 \caption{Total \bbH{} cross sections in the SM for a LHC CM energy of $\sqrt{s}=13.6$ TeV obtained via linear interpolation of results from 13.5 TeV and 14 TeV.}
 \label{tab:bbH136linalt}
 \end{table}
+
+In~\tab{tab:bbH136lin}, we report the results of the \nlonnllpart{} combination via a linear interpolation between the existing 13 TeV and 14 TeV results, using the relation
+\begin{align}
+\sigma(13.6\,\text{TeV})=0.4\sigma(13.0\,\text{TeV})+0.6\sigma(14.0\,\text{TeV})\,.
+\end{align}
+The cross section is provided together with an overall theoretical uncertainty. This includes the standard 7-point renormalisation and factorisation scale variation, the resummation scale uncertainty, and the uncertainties associated with the parton distribution functions (PDFs) and the strong coupling constant. An alternative cross section estimation is presented in~\tab{tab:bbH136log} where the same numbers have been combined using a logarithmic interpolation. In order to test the accuracy of the interpolation, we have also considered linear interpolation of 13.5 TeV and 14 TeV results. Using the latter, we have estimated the cross section in~\tab{tab:bbH136linalt} with the following linear interpolation,
+\begin{align}
+	\sigma(13.6\,\text{TeV})=0.8\sigma(13.5\,\text{TeV})+0.2\sigma(14.0\,\text{TeV})\,.
+\end{align}
+We observe a good agreement between the cross section values obtained with different interpolations or different choices of boundary conditions. Due to the good accuracy of the interpolation and the substantial theoretical and parametric uncertainty, dedicated runs at 13.6 TeV are not required.
+
 
 \section{Transverse momentum resummation at third order}
 \label{sec:resummation}
@@ -808,7 +814,7 @@ In the right plot of~\fig{fig:resVSMCs}, we present the comparison of the same M
 
 
 
-\begin{figure}[b!]
+\begin{figure}[t!]
 \begin{center}
 \begin{tabular}{cc}
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/genevaminnlo/minnloKQvar-geneva-yh.pdf}&
@@ -1285,6 +1291,17 @@ two, while for $\mbbggs<350$\,GeV $y_b^2$ and $y_t^2$ contributions are already 
 The latter is the fiducial region most sensitive to the trilinear Higgs coupling. Hence, the accurate modelling 
 of both, $y_b^2$ and $y_t^2$ components, is important to fully control the \bbH{} background.
 
+\begin{figure}[b!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/4fs/pt_Higgs-EXP-fid-FC.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/4fs/mass_2b2gam-EXP-fid-FC.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Transverse momentum spectrum of the Higgs boson and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs} in the fiducial volume described by the cuts~(\ref{eq:ptjcuts}-\ref{eq:photoncuts}).\label{fig:4fsFID}}
+\end{center}
+\end{figure}
+
 We continue by considering differential distributions in the $HH$ signal region in \fig{fig:4fsFID} and \ref{fig:4fsNNLOPS}, including 
 the Higgs transverse momentum spectrum (left figures) and the $\mbbggs$ distribution (right figures).
 For the $y_b^2$ component in \fig{fig:4fsFID} we compare 4FS predictions at NLO+PS and NNLO+PS. We find that the inclusion 
@@ -1308,17 +1325,6 @@ By normalising to unity, these shape effects are disentangled from the even larg
 %\caption{The left plot represents the number of \texttt{EXP} $b$-jets in the NLO+PS and NNLO+PS bottom-Yukawa-induced events. The right plot shows the impact of NNLO corrections in the invariant-mass spectrum of the leading two b-jets.\label{fig:4fsMBB}}
 %\end{center}
 %\end{figure}
-
-\begin{figure}[t!]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=.45\textwidth, page=1]{plots/4fs/pt_Higgs-EXP-fid-FC.pdf}&
-\includegraphics[width=.45\textwidth, page=1]{plots/4fs/mass_2b2gam-EXP-fid-FC.pdf}
-\end{tabular}
-\vspace*{1ex}
-\caption{Transverse momentum spectrum of the Higgs boson and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs} in the fiducial volume described by the cuts~(\ref{eq:ptjcuts}-\ref{eq:photoncuts}).\label{fig:4fsFID}}
-\end{center}
-\end{figure}
 
 
 \begin{figure}[t!]
@@ -1348,7 +1354,7 @@ The {\sc NNLOPS} simulation includes the inclusive description of the $gg \to H$
 one accompanied light-flavour and charm jets at NLO and two of them at LO, which are not represented in 
 the {\sc MadGraph5\_aMC@NLO} sample for bbH{} production.
 
-\begin{table}[t]
+\begin{table}[b]
 \begin{center}%
 \begin{small}%
 \tabcolsep5pt
@@ -1497,7 +1503,6 @@ $ \bar \kappa_s \simeq 2.24 \cdot 10^{-2} $,
 $ \bar \kappa_d \simeq 1.12 \cdot 10^{-3} $,  
 $ \bar \kappa_u \simeq 5.17 \cdot 10^{-4} $.
 The High-Luminosity Large Hadron Collider prospects~\cite{Cepeda:2019klc} show that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_c|\leq 3.34$, $|\bar \kappa_d|\leq 0.39$, $|\bar \kappa_u|\leq 0.33$ at 95\% CL when using kinematical distributions, in particular the transverse momentum spectrum. In~\citere{Cepeda:2019klc} other methods for constraining light quark Yukawa couplings, such as exclusive decays, have been discussed, leading to an global expectation of $|\bar \kappa_c|\leq 0.52$, $|\bar \kappa_s|\leq 0.31$, $|\bar \kappa_d|\leq 0.34$, $|\bar \kappa_u|\leq 0.33$.
-%CB: updated constraints (including the charm) with more recent and detailed ref.
 
 We present results for Higgs production induced by light-quark Yukawa interactions
 based on two different calculations:
@@ -1639,26 +1644,14 @@ The results in the ratio are normalised to the prediction for down-quark fusion 
 \end{center}
 \end{figure}
 
-\begin{figure}[t!]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/light/yphoton1.pdf}&
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/light/y_Higgs-aafid.pdf}
-\end{tabular}
-\vspace*{1ex}
-\caption{Rapidity distribution of the hardest photon without cuts (left) and within the fiducial region defined in~\eqn{eq:aafidmycuts} (right).
-The results in the ratio are normalised to the prediction for down-quark fusion (brown, dotted) and compared to those for up- (black, dotted-dashed), strange- (pink, long-dashed), and charm-quark (green, solid) fusion.\label{fig:lightrapidity}}
-\end{center}
-\end{figure}
-
 Finally, we discuss the impact of the fiducial cuts on 
 differential distributions of the Higgs boson in the various quark channels.
 In the left (right) plot of \fig{fig:lightpTH}, we show the transverse momentum spectrum of the Higgs boson, reconstructed from the diphoton pair in the inclusive (fiducial) 
-phase space. It displays similar shapes across the different flavour channels, with normalisation reflecting the corresponding total cross sections. The second plot in \fig{fig:lightpTH} shows the same distribution, but for events where the photons pass the fiducial cuts. In this scenario, more pronounced differences in shape emerge among the various channels. In particular, the up-quark contribution—about 1.5 times larger than the down-quark prediction in the fully inclusive case because of PDF enhancement—has a strong reduction in the fiducial region. Indeed, at intermediate values of transverse momentum, the up- and down-quark channels yield comparable results when the same Yukawa strength is assumed. Moreover, once the relative mass suppression in the Yukawa couplings is taken into account, the up-quark prediction falls below the down-quark one.
+phase space. We observe that the shape of the different distributions change ?mildly?,
+when fiducial cuts on the photons are included.
 
-The main origin of this effect is the rapidity constraint defined in~\eqn{eq:aafidmycuts}. Indeed, the parton distribution functions influence the photon rapidity shape, yielding distinctive behaviour in the up-quark channel. The first plot in \fig{fig:lightrapidity} shows the rapidity distribution of the photon with the highest transverse momentum across the different channels; similar patterns are observed for the second photon. For strange- and charm-quark fusion, as well as for the bottom-quark case, the distribution peaks around zero rapidity. In contrast, valence quark channels exhibit different shapes due to their characteristic parton luminosities. The down-quark channel shows a plateau for $|y_\gamma| < 2$, whereas the up-quark channel features a distribution not centred around zero rapidity, with a significant fraction of the cross section residing at larger rapidity values. As a result, the cut $|y_\gamma| < 2.37$ has a more pronounced impact on the up-quark distribution, removing a larger portion of the cross section when applying the fiducial selection. We have confirmed a similar trend at leading order, with a shape validated using the mass-rapidity scan of PDF4LHC luminosities obtained using \texttt{APFEL}~\cite{Bertone:2013vaa}. This distinctive behaviour, more evident here than in neutral Drell–Yan due to the higher Higgs mass, provides a useful handle for differential studies, as the rapidity spectrum in light-quark fusion differs markedly from dominant production modes. We conclude by presenting the Higgs boson rapidity, reconstructed from the two photons that satisfy the fiducial cuts in \eqn{eq:aafidmycuts}, as shown in the second plot of \fig{fig:lightrapidity}. In the exclusive region, the up-quark behaviour is more similar to the down-quark, with a cross section between 1.1 and 1.3 times that of the down-quark process. The charm-quark and the strange-quark exhibit a steeper distribution compared to the Higgs boson from down-quark fusion.
-
-In this section, we have presented the NNLO+PS generator for Higgs production via light-parton fusion with decay into photons as a potential tool to constrain light-quark Yukawa couplings. We conclude by noting that alternative channels sensitive to light-quark Yukawa couplings have been experimentally investigated recently, such as the reinterpretation of $WW\gamma$ analysis~\cite{CMS:2023rcv} and the Higgs decay rate into four leptons~\cite{CMS:2025xkn}. Novel approaches to probe the light-quark Yukawa couplings have also been discussed recently in~\citeres{Balzani:2023jas,Alasfar:2022vqw,Alasfar:2019pmn}.
+We note that alternative channels sensitive to light-quark Yukawa couplings h
+ave been experimentally investigated recently, such as the reinterpretation of $WW\gamma$ analysis~\cite{CMS:2023rcv} and the Higgs decay rate into four leptons~\cite{CMS:2025xkn}. Novel approaches to probe the light-quark Yukawa couplings have also been discussed recently in~\citeres{Balzani:2023jas,Alasfar:2022vqw,Alasfar:2019pmn}.
 
 \section{Conclusions}\label{sec:conclusions}
 We have reported on new predictions for \bbH{} production at the LHC at a centre-of-mass energy of 13.6 TeV. All cross sections are computed following the recommendations of the LHC Higgs Working Group.
