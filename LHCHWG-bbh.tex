@@ -267,7 +267,7 @@ two production mechanisms are of order $y_t\,y_b$, but they are bottom-mass supp
 \end{center}
 \end{figure}
 
-We can thus write the \bbH{} cross section as follows:
+We can thus write the \bbH{} cross section, in the massive scheme, as follows:
 \begin{equation}
 \begin{split}
     {\rm d} \sigma & = \ybsq{}\,\alpha_s^2\left( \Delta_{\ybsq}^{(0)} + \mathcal O(\alpha_s) \right) +y_t y_b\, \alpha_s^3\left( \Delta_{\ybyt}^{(0)} + \mathcal O(\alpha_s)  \right) + \ytsq{} \,\alpha_s^4\left( \Delta_{\ytsq}^{(0)} + \mathcal O(\alpha_s)  \right)\, ,
@@ -279,8 +279,8 @@ to the loop-induced gluon fusion process, and the central one is their interfere
 by the $\mathcal O(\alpha_s)$ (and higher) corrections, 
 are typically computed separately for each process, with the caveat that at higher orders in QCD the two processes mix, giving rise 
 to their $y_t y_b$ interference contributions. Notice that the loop-induced gluon fusion contribution is formally a NNLO (relative $\alpha_s^2$) correction
-due to the loop suppression, which however is negated by its $y_t^2/y_b^2$ enhancement compared to the LO $y_b^2$ cross section.
-The cross section of the $y_t^2$ contribution is roughly twice as large as the $y_b^2$ one.
+due to the loop suppression, which however is fully compensated by its $y_t^2/y_b^2$ enhancement compared to the LO $y_b^2$ cross section.
+As a result, the cross section of the $y_t^2$ contribution is roughly twice as large as the $y_b^2$ one.
 There are further relevant \bbH{} production mechanisms, including Higgsstrahlung and vector-boson fusion, 
 but their numerical impact is sufficiently subleading, at least for the inclusive cross section.
 
@@ -313,7 +313,7 @@ These three implementations provide suitable NNLO event generators for the exper
 
 The $y_t^2$-induced contributions to the inclusive \bbH{} cross section (cf.\ \fig{fig:bbhyt}) are not well-defined in the 5FS, since, formally, the rate diverges 
 for massless bottom quarks in fixed-order perturbation theory. Only by selecting bottom-flavoured jets ($b$-jets), with an appropriate
-definition of the jet flavour, fixed-order predictions for the $y_t^2$ contribution in the 5FS are infrared safe. So far, the size of the 
+definition of the jet flavour, and imposing kinematical cuts on them, fixed-order predictions for the $y_t^2$ contribution in the 5FS are infrared safe. So far, the size of the 
 $y_t^2$ contribution to the \bbH{} final state has been estimated effectively only at LO in the 5FS, using the inclusive NNLO+PS 
 generator for gluon fusion \cite{hamilton:2012rf,hamilton:2013fea,hamilton:2015nsa}. In this case, reshuffling of the bottom momenta onto the mass shell and matching to the parton shower, 
 where the bottom quarks are considered as massive particles, renders the selection of bottom quarks in the final state finite, even if the 
@@ -396,7 +396,7 @@ In the Monte Carlo simulations with massless bottom quarks, we consider the Higg
 In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse mass of the \bbH{} system—was often adopted~\cite{Wiesemann:2014ioa}. Such small scale
 resulted in higher 4FS cross sections, which reduced the gap with the 5FS predictions. However, with the inclusion of NNLO QCD corrections in the 4FS, 
 such a scale choice is no longer necessary. Moreover, as shown in~\citere{Biello:2024pgo}, comparisons between dynamical and fixed scales at NNLO 
-show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with a scale of the same order as the Higgs-boson 
+show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with a scale of the order of the Higgs-boson 
 mass providing a natural and consistent choice.
 
 \section{Updated inclusive cross sections at 13.6 TeV}
@@ -419,8 +419,7 @@ The setup of the calculation follows that described in~\sct{sec:setup}, with the
 \begin{align}
 \muF=\frac{1}{4}(m_H+2m_b),\hspace{1cm}\muR=\frac{1}{2}m_H\,,
 \end{align}
-in order to ensure a better perturbative convergence.
-
+in order to ensure a better perturbative convergence in the fully-inclusive calculation.
 
 
 \begin{table}[t]
@@ -505,7 +504,8 @@ where the kinematic quantities $\omega_{a,b}$ and $x_{a,b}$ are given by
 %%%
 \begin{align}
 \omega_{a}=m_H e^{+ Y}, \quad \omega_{b}=m_H e^{-Y} \quad \text{ and} \quad \quad x_{a,b}= \frac{\omega_{a,b}}{E_{cm}}
-\,.\end{align}
+\,,\end{align}
+with $E_{cm}$ denoting the hadronic center-of-mass energy.
 %%%
 The hard function $H_{ab}$ is process dependent and describes physics at the hard scale $\mu\sim m_H$. The beam functions $B_{a,b}$ and the soft function $S_{ab}$ describe collinear and soft radiation at the low scale $\mu \sim q_T$. 
 The term $[B_a\otimes  B_b \otimes S_{ab}]$ is usually evaluated in Fourier-conjugate $b_T$ space, as the convolutions in $q_T$ in
@@ -897,7 +897,7 @@ We have performed the predictions by running the \minnlo{} 5FS generator with a 
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/BSM/y_Higgs.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Higgs transverse momentum and rapidity spectra for \minnlo{} results with the heavy CP-odd Higgs $\text{A}$ compared to SM predictions.\label{fig:SMvsBSM}}
+\caption{Higgs transverse momentum and rapidity spectra for \minnlo{} results with the heavy pseudo-scale Higgs $\text{A}$ compared to SM predictions.\label{fig:SMvsBSM}}
 \end{center}
 \end{figure}
 
@@ -994,7 +994,7 @@ maximum absolute pseudo-rapidity of $2.4$. Note that we have also considered a f
 which enables an IRC-safe definition of anti-$k_T$ $b$-jets also for fixed-order predictions in the massless scheme. 
 Interestingly, we found that all numerical IFN results for the $b\bar b H$ process presented here differ by less than 
 a few percent from the standard experimental definition, which is why we refrain from showing the IFN results and focus 
-on the experimentally feasible standard $b$-jet definition.
+on the experimentally standard $b$-jet definition.
 
 %\begin{table}[b]
 %  \vspace*{0.3ex}
@@ -1071,8 +1071,9 @@ are produced in the $0$-$b$-jet bin. This result is consistent between the 4FS a
 the 5FS predictions a fraction of 85\% of events with no $b$-jets. Requiring at least one $b$-jet leads to a significant reduction in the cross section by a factor 
 of approximately 5, i.e.\ about $20$\% of the events have one or more $b$-jets. Requiring a second $b$-jet further suppresses the rate by roughly 
 an additional order of magnitude, with about 1.4\% of the \bbH{} events having two or more $b$-jets.
-Also these results in remarkable agreement between the 4FS and 5FS NNLO+PS generators (as well as for the 4FS NLO+PS generator), 
-with only the 5FS NLO+PS predictions being quite different. It is reassuring to observe this high level of agreement, despite the fact that 
+%Also these results are in good agreement between the 4FS and 5FS NNLO+PS generators (as well as for the 4FS NLO+PS generator), 
+%with only the 5FS NLO+PS predictions being quite different. 
+It is reassuring to observe this high level of agreement, despite the fact that 
 in the 5FS the accuracy effectively reduces by one order for each required $b$-jet, whereas the 4FS predictions remain genuinely 
 NNLO accurate in all considered $b$-jet categories.
 Also for the absolute cross section numbers at NNLO+PS in the 4FS and 5FS, the inclusion of higher-order corrections 
