@@ -267,7 +267,7 @@ two production mechanisms are of order $y_t\,y_b$, but they are bottom-mass supp
 \end{center}
 \end{figure}
 
-We can thus write the \bbH{} cross section, in the massive scheme, as follows:
+We can thus write the \bbH{} cross section as follows:
 \begin{equation}
 \begin{split}
     {\rm d} \sigma & = \ybsq{}\,\alpha_s^2\left( \Delta_{\ybsq}^{(0)} + \mathcal O(\alpha_s) \right) +y_t y_b\, \alpha_s^3\left( \Delta_{\ybyt}^{(0)} + \mathcal O(\alpha_s)  \right) + \ytsq{} \,\alpha_s^4\left( \Delta_{\ytsq}^{(0)} + \mathcal O(\alpha_s)  \right)\, ,
@@ -313,14 +313,14 @@ These three implementations provide suitable NNLO event generators for the exper
 
 The $y_t^2$-induced contributions to the inclusive \bbH{} cross section (cf.\ \fig{fig:bbhyt}) are not well-defined in the 5FS, since, formally, the rate diverges 
 for massless bottom quarks in fixed-order perturbation theory. Only by selecting bottom-flavoured jets ($b$-jets), with an appropriate
-definition of the jet flavour, and imposing kinematical cuts on them, fixed-order predictions for the $y_t^2$ contribution in the 5FS are infrared safe. So far, the size of the 
+definition of the jet flavour (and imposing kinematical cuts on them) fixed-order predictions for the $y_t^2$ contribution in the 5FS are infrared safe. So far, the size of the 
 $y_t^2$ contribution to the \bbH{} final state has been estimated effectively only at LO in the 5FS, using the inclusive NNLO+PS 
 generator for gluon fusion \cite{hamilton:2012rf,hamilton:2013fea,hamilton:2015nsa}. In this case, reshuffling of the bottom momenta onto the mass shell and matching to the parton shower, 
 where the bottom quarks are considered as massive particles, renders the selection of bottom quarks in the final state finite, even if the 
 underlying perturbative calculation is performed in the 5FS.
 
 In the 4FS, on the other hand, the $y_t^2$ part of the inclusive \bbH{} cross section is finite by construction, since the bottom quarks are treated as massive.
-On top of that, there is the additional  $y_t\,y_b$ interference contribution in the 4FS, which vanishes in the 5FS~\footnote{In our notation, the 5FS corresponds to the massless treatment of all power corrections with $m_b=0$. Alternatively, viewing the 5FS as the leading-power contribution in the bottom-quark mass allows the inclusion of the dominant interference term, $\mathcal{O}(y_by_tm_b)$, as performed in~\citere{Dawson:2004sh}.}.
+On top of that, there is the additional  $y_t\,y_b$ interference contribution in the 4FS, which vanishes in the 5FS.\footnote{Throughout this contribution, we consider 5FS to correspond to the massless treatment of all power corrections with $m_b=0$. Alternatively, the 5FS can be considered to be the leading-power contribution in the bottom-quark mass, thereby including the dominant interference term of $\mathcal{O}(y_by_tm_b)$, as done in \citere{Dawson:2004sh} for instance.}
 The complete NLO QCD corrections to the top-Yukawa induced terms (both $y_t^2$ and $y_b y_t$ interference) 
 have been obtained in the heavy-top limit (HTL) \cite{deutschmann:2018avk} and turn out to be substantial. This calculation 
 has later been extended in \citere{manzoni:2023qaf} to include the parton-shower matching at NLO (NLO+PS) to study 
@@ -841,7 +841,7 @@ The Higgs production in association with a bottom-quark pair is of particular in
 \begin{align}
 	\tan\beta=\frac{v_u}{v_d}\,.
 \end{align}
-The other independent parameter is the CP-even Higgs mixing angle $\alpha$. This results in five physical Higgs bosons: two CP-even ($h$, $H$), one CP-odd ($A$) and two charged Higgs bosons ($H^{\pm}$). The lightest Higgs boson ($h$) in MSSM can mimic the SM Higgs, but has different properties depending on the model parameters. The tree-level mass of $h$ is bounded from above by $m_Z |\cos 2\beta|$, where $m_Z$ is the Z-boson mass. However, radiative corrections (mainly from the SUSY partners of the bottom and top quarks) can significantly alter the tree-level prediction, allowing for $m_h\sim 125$\,GeV (see e.g.~\cite{Slavich:2020zjv}). We perform the NNLO+PS prediction in the benchmark configuration known as $M_h^{125}$ scenario~\cite{Bagnaschi:2018ofa}, where all superparticles are chosen to be so heavy that the presence of these effects has only a mild impact on the production and decay of the light MSSM Higgs boson. Thus, the phenomenology of this scenario at the LHC closely resembles that of a Type-II 2HDM with Higgs couplings corresponding to the MSSM ones for light scalar states. On the other hand, for heavy bosons, there are large enhancements in the MSSM scenario. Loop effects from SM particles, primarily the top quark, and from SUSY states modify the bottom Yukawa coupling, with these contributions resummed to all orders, which are $\tan\beta$-enhanced. For the chosen mass of the supersymmetric partners, we refer to eq.\,(4) of~\citere{Bagnaschi:2018ofa}. We stress that the NNLO+PS calculation in the massless scheme contains only terms proportional to the squared bottom Yukawa coupling. As a result, \bbH{} predictions in the MSSM scenario differ from those in the SM solely by an overall rescaling factor. In the case of the CP-odd Higgs production, we have\footnote{Using chirality arguments, predictions for pseudo-scale $b\bar bA$ production can be obtained from the $b\bar b h$ simulation by employing a heavy-boson mass and an effective Yukawa coupling, while neglecting the suppressed non-factorising SUSY-QCD corrections. The latter have been shown to be numerically small in~\citere{Dittmaier:2014sva}.}:
+The other independent parameter is the CP-even Higgs mixing angle $\alpha$. This results in five physical Higgs bosons: two CP-even ($h$, $H$), one CP-odd ($A$) and two charged Higgs bosons ($H^{\pm}$). The lightest Higgs boson ($h$) in MSSM can mimic the SM Higgs, but has different properties depending on the model parameters. The tree-level mass of $h$ is bounded from above by $m_Z |\cos 2\beta|$, where $m_Z$ is the Z-boson mass. However, radiative corrections (mainly from the SUSY partners of the bottom and top quarks) can significantly alter the tree-level prediction, allowing for $m_h\sim 125$\,GeV (see e.g.~\cite{Slavich:2020zjv}). We perform the NNLO+PS prediction in the benchmark configuration known as $M_h^{125}$ scenario~\cite{Bagnaschi:2018ofa}, where all superparticles are chosen to be so heavy that the presence of these effects has only a mild impact on the production and decay of the light MSSM Higgs boson. Thus, the phenomenology of this scenario at the LHC closely resembles that of a Type-II 2HDM with Higgs couplings corresponding to the MSSM ones for light scalar states. On the other hand, for heavy bosons, there are large enhancements in the MSSM scenario. Loop effects from SM particles, primarily the top quark, and from SUSY states modify the bottom Yukawa coupling, with these contributions resummed to all orders, which are $\tan\beta$-enhanced. For the chosen mass of the supersymmetric partners, we refer to eq.\,(4) of~\citere{Bagnaschi:2018ofa}. We stress that the NNLO+PS calculation in the massless scheme contains only terms proportional to the squared bottom Yukawa coupling. As a result, \bbH{} predictions in the MSSM scenario differ from those in the SM solely by an overall rescaling factor. In the case of the CP-odd Higgs production, we have\footnote{Using chirality arguments, predictions for pseudo-scalar $b\bar bA$ production can be obtained from the $b\bar b h$ simulation by employing a heavy-boson mass and an effective Yukawa coupling, while neglecting the suppressed non-factorising SUSY-QCD corrections. The latter have been shown to be numerically small in~\citere{Dittmaier:2014sva}.}:
 \begin{align}
 	\dd \sigma_{b\bar b A}^{\text{MSSM}} = \dd \sigma_{b\bar b h}^{\text{SM}} \cdot (\tilde g_b^{A})^2\,,	\label{eq:BSMYuk}
 \end{align}
@@ -850,39 +850,8 @@ with
 	\tilde{g}_b^A = \frac{\tan \beta}{1 + \Delta_b} \left( 1 - \Delta_b \frac{1}{\tan^2\beta} \right)\,.
 \end{align}
 The parameter $ \Delta_b $ resums higher-order sbottom contributions~\cite{Banks:1987iu,Hall:1993gn,Carena:1994bv,Carena:2000uj,Guasch:2003cv}. In~\citere{Guasch:2003cv} the resummation effects has been studied in a systematic power-counting framework, estimating the uncertainties when keeping only the one-loop effects in the $ \Delta_b $ determination. In order to reduce them, several two-loop calculations have been performed~\cite{Noth:2008tw,Noth:2010jy,Mihaila:2010mp,Crivellin:2012zz} and electroweak and diagonal contributions~\cite{Ghezzi:2017enb} have been computed recently.  All these corrections have been incorporated into the resummation parameter $ \Delta_b $ for this benchmark, with its numerical value determined using the \texttt{Hdecay} code~\cite{Djouadi:1997yw,Djouadi:2018xqq}. 
-%The parameters $ g_f^\phi $ represent the genuine Yukawa couplings, which depend on the two angles governing the Higgs-matter interactions as defined in~\tab{tab:MSSMcoup}.\\
-%\begin{table}[h]
-%    \centering
-%    \begin{tabular}{|c|c|c|}
-%        \hline
-%        \textbf{Coupling} & \textbf{MSSM value} \\
-%        \hline
-%        $g_u^H$ &  $\cos\alpha / \sin\beta$ \\
-%        $g_d^H$ &  $-\sin\alpha / \cos\beta$ \\
-%        $g_u^{H'}$ & $\sin\alpha / \sin\beta$ \\
-%        $g_d^{H'}$ & $\cos\alpha / \cos\beta$ \\
-%        $g_u^A$ & $\cot\beta$ \\
-%        $g_d^A$ & $\tan\beta$ \\
-%        \hline
-%    \end{tabular}
-%    \caption{Relative couplings $g_f^\phi$ with respect to the SM Yukawa coupling. The bottom Yukawa values correspond to the down-type couplings.}\label{tab:MSSMcoup}
-%\end{table}
 Following the current constraints on the $M_h^{125}$ scenario, where the lightest Higgs has a mass of $m_h= 125$\,GeV and is consistent with experimental observations, we consider the case of a CP-odd Higgs boson with a mass of 1.4 TeV and $\tan\beta = 20$, a point in the parameter space which is currently not excluded. 
 We have performed the predictions by running the \minnlo{} 5FS generator with a heavy Higgs-boson mass and adjusted the Yukawa coupling according to~\eqn{eq:BSMYuk}.
-
-\begin{comment}
-\begin{figure}[t!]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/BSM/y_H-ptj30__A-1400GeV-.pdf}&
-\includegraphics[width=.45\textwidth, page=1]{plots/5fs/BSM/y_H-ptj60__A-1400GeV-.pdf}
-\end{tabular}
-\vspace*{1ex}
-\caption{Comparison of \minnlo{} results before (LHE) and after (PY8) parton shower for the rapidity distribution of the pseudo-scalar Higgs boson 
- with $m_A=1.4$ TeV and $\tan\beta=20$, including a cut on the jet transverse momentum of 30\,GeV (left) and 60\,GeV (right). \label{fig:yA}}
-\end{center}
-\end{figure}
-\end{comment}
 
 \begin{figure}[t!]
 \begin{center}
@@ -891,7 +860,7 @@ We have performed the predictions by running the \minnlo{} 5FS generator with a 
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/BSM/y_Higgs__A-1400GeV-PY8-kQ0.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Comparison of \minlo{} and \minnlo{} results for transverse momentum and rapidity distributions of the pseudo-scale Higgs boson with $m_A=1.4$ TeV and $\tan\beta=20$. \label{fig:MiNLOBSM}}
+\caption{Comparison of \minlo{} and \minnlo{} results for transverse momentum and rapidity distributions of the pseudo-scalar Higgs boson with $m_A=1.4$ TeV and $\tan\beta=20$. \label{fig:MiNLOBSM}}
 \end{center}
 \end{figure}
 
@@ -902,19 +871,9 @@ We have performed the predictions by running the \minnlo{} 5FS generator with a 
 \includegraphics[width=.45\textwidth, page=1]{plots/5fs/BSM/y_Higgs.pdf}
 \end{tabular}
 \vspace*{1ex}
-\caption{Higgs transverse momentum and rapidity spectra for \minnlo{} results with the heavy pseudo-scale Higgs $\text{A}$ compared to SM predictions.\label{fig:SMvsBSM}}
+\caption{Higgs transverse momentum and rapidity spectra for \minnlo{} results with the heavy pseudo-scalar Higgs $\text{A}$ compared to SM predictions.\label{fig:SMvsBSM}}
 \end{center}
 \end{figure}
-
-\begin{comment}
-In~\fig{fig:yA}, we present a comparison of the rapidity distribution of the pseudo-scalar Higgs boson, requiring a flavour-blind anti-$k_T$ jet with radius $R = 0.4$ and 
-a minimum jet transverse momentum of 30\,GeV (left plot) and 60\,GeV (right plot). We compare the results before and after interfacing the LHE events with \PYTHIA{8}. 
-Since the jet spectrum becomes slightly harder after the shower, the NNLO+PS prediction features a higher rapidity distribution in the 
-presence of a jet when shower effects are included. The shower effect becomes stronger for the 60\,GeV jet compared to the 30\,GeV one. 
-In terms of shape, \PYTHIA{8} has a rather flat impact on the LHE predictions, although it tends to slightly increase the forward rapidity region, which becomes 
-more pronounced with a higher jet transverse momentum cut. Note that we have verified that in the absence of any jet cuts, the shower does not change the 
-Higgs rapidity, as expected.  
-\end{comment}
 
 In~\fig{fig:MiNLOBSM}, we present a comparison between \minnlo{}  and \minlo{} predictions. 
 The left plot shows the transverse momentum spectrum.
@@ -999,7 +958,7 @@ maximum absolute pseudo-rapidity of $2.4$. Note that we have also considered a f
 which enables an IRC-safe definition of anti-$k_T$ $b$-jets also for fixed-order predictions in the massless scheme. 
 Interestingly, we found that all numerical IFN results for the $b\bar b H$ process presented here differ by less than 
 a few percent from the standard experimental definition, which is why we refrain from showing the IFN results and focus 
-on the experimentally standard $b$-jet definition.
+on the standard $b$-jet definition that is straightforward to apply in experimental analyses.
 
 %\begin{table}[b]
 %  \vspace*{0.3ex}
@@ -1076,9 +1035,9 @@ are produced in the $0$-$b$-jet bin. This result is consistent between the 4FS a
 the 5FS predictions a fraction of 85\% of events with no $b$-jets. Requiring at least one $b$-jet leads to a significant reduction in the cross section by a factor 
 of approximately 5, i.e.\ about $20$\% of the events have one or more $b$-jets. Requiring a second $b$-jet further suppresses the rate by roughly 
 an additional order of magnitude, with about 1.4\% of the \bbH{} events having two or more $b$-jets.
-%Also these results are in good agreement between the 4FS and 5FS NNLO+PS generators (as well as for the 4FS NLO+PS generator), 
-%with only the 5FS NLO+PS predictions being quite different. 
-It is reassuring to observe this high level of agreement, despite the fact that 
+These relative $b$-jet acceptances are in remarkable agreement between the 4FS and 5FS NNLO+PS generators (in fact, also
+compared to the 4FS NLO+PS generator), while
+the 5FS NLO+PS predictions being quite different. It is reassuring to observe this high level of agreement, despite the fact that 
 in the 5FS the accuracy effectively reduces by one order for each required $b$-jet, whereas the 4FS predictions remain genuinely 
 NNLO accurate in all considered $b$-jet categories.
 Also for the absolute cross section numbers at NNLO+PS in the 4FS and 5FS, the inclusion of higher-order corrections 
@@ -1268,7 +1227,7 @@ We start by comparing the numerical results for \bbH{} $y_t^2$ component, comput
 expected rate obtained from the {\sc NNLOPS} simulation, with and without $g\rightarrow b\bar{b}$ splitting included in the parton shower. 
 All rates include the Higgs branching ratio into photons, $\textrm{BR}(H \to \gamma\gamma) = 0.227\%$~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}. 
 Uncertainties due to renormalisation and factorisation scale variations are quoted, where each scale is independently varied by a factor of two around the 
-central value following the 9-point prescription~\footnote{The theoretical uncertainty in this section is estimated from the envelope of the nine scale variations, following~\citere{manzoni:2023qaf}, in contrast to the other sections where the standard 7-point prescription with the constraint $1/2 \leq \muR/\muF \leq 2$ was employed.}. Additional theoretical uncertainties, such as those associated with variations of the shower starting scale, 
+central value following the 9-point prescription~\footnote{The theoretical uncertainty in this section is estimated from the envelope of the nine scale variations, following~\citere{manzoni:2023qaf}, in contrast to the other sections where the standard 7-point prescription with the constraint $1/2 \leq \muR/\muF \leq 2$ is employed.}. Additional theoretical uncertainties, such as those associated with variations of the shower starting scale, 
 the choice of parton shower algorithm, or modifications to the MC@NLO matching procedure~\cite{frixione:2002ik,frederix:2020trv} were examined 
 in \citere{manzoni:2023qaf} and found to be subleading. 
 {\sc NNLOPS} uncertainties are evaluated via multiple sources, accounting for the modelling of jet multiplicity, the Higgs boson $\ptH$, $\ptHjj$, and $\mjj$~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw,Liu:2013hba,stewart:2013faa,Boughezal:2013oha,Stewart:2011cf,Gangal:2013nxa}, as discussed in \citere{ATLAS:2022tnm}. Parton shower uncertanties are also not shown for the {\sc NNLOPS} prediction, but they are expected to be sizeable: a comparison with an alternative parton shower ({\sc Herwig7}~\cite{Bellm:2015jjp}) yields differences in the fiducial $b\bar{b}H$ ($y_t^2$) cross section ranging from 3\% up to 17\% (depending on the kinematic region).
@@ -1375,7 +1334,7 @@ $14$ & $763$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
 \end{tabular}%
 \end{small}%
 \end{center}%
-\caption{Total \bbH{} cross sections for the $y_t^2$ contribution in the SM at LHC center-of-mass energies of $\sqrt{s} = 13$~TeV, $13.6$~TeV, and $14$~TeV. The cross sections are evaluated for a Higgs mass of $m_h = 125$~GeV employing the PDF4LHC21\_40\_nf4 (LHAPDF ID \texttt{93500}) set for the parton distribution functions. Variations in the cross section due to changes in $m_h$ between $125$~GeV and $125.20$~GeV are negligible compared to the scale uncertainty.}
+\caption{Total \bbH{} cross sections for the $y_t^2$ contribution in the SM at LHC center-of-mass energies of $\sqrt{s} = 13$~TeV, $13.6$~TeV, and $14$~TeV. The cross sections are evaluated for a Higgs mass of $m_h = 125$~GeV and the PDF4LHC21\_40\_nf4 (LHAPDF ID \texttt{93500}) set is employed for the parton distribution functions. Variations in the cross section due to changes in $m_h$ between $125$~GeV and $125.20$~GeV are negligible compared to the scale uncertainty.}
 \label{tab:bbHytxsec}
 \end{table}
 %\begin{table}[t]
@@ -1506,7 +1465,7 @@ comparable size.
 
 A value of $ \bar\kappa_q = 1 $ corresponds to a Yukawa coupling for quark $ q $ equal in strength to that of the bottom quark. Thus, the normalised couplings take the following values in the SM:  
 $ \bar \kappa_b = 1 $, $ \bar \kappa_c \simeq 2.3 \cdot 10^{-1} $, $ \bar \kappa_s \simeq 1.9 \cdot 10^{-2} $, $ \bar \kappa_d \simeq 2.7 \cdot 10^{-3} $, $ \bar \kappa_u \simeq 4.4 \cdot 10^{-4} $.
-The numerical values are obtained by using the PDG values of the quark masses in the $\overline{\text{MS}}$ scheme~\cite{ParticleDataGroup:2024cfk} as boundary conditions and evolving them to the hard scale $m_H$ using a four-loop running routine. The High-Luminosity Large Hadron Collider prospects~\cite{Cepeda:2019klc} show that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_c|\leq 3.34$, $|\bar \kappa_d|\leq 0.39$, $|\bar \kappa_u|\leq 0.33$ at 95\% CL when using kinematical distributions, in particular the transverse momentum spectrum. In~\citere{Cepeda:2019klc} other methods for constraining light quark Yukawa couplings, such as exclusive decays, have been discussed, leading to an global expectation of $|\bar \kappa_c|\leq 0.52$, $|\bar \kappa_s|\leq 0.31$, $|\bar \kappa_d|\leq 0.34$, $|\bar \kappa_u|\leq 0.33$.
+The numerical values are obtained by using the PDG values of the quark masses in the $\overline{\text{MS}}$ scheme~\cite{ParticleDataGroup:2024cfk} as boundary conditions and evolving them to the hard scale $m_H$ using four-loop running. The High-Luminosity Large Hadron Collider prospects~\cite{Cepeda:2019klc} show that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_c|\leq 3.34$, $|\bar \kappa_d|\leq 0.39$, $|\bar \kappa_u|\leq 0.33$ at 95\% CL when using kinematical distributions, in particular the transverse momentum spectrum. In~\citere{Cepeda:2019klc} other methods for constraining light quark Yukawa couplings, such as exclusive decays, have been discussed, leading to an global expectation of $|\bar \kappa_c|\leq 0.52$, $|\bar \kappa_s|\leq 0.31$, $|\bar \kappa_d|\leq 0.34$, $|\bar \kappa_u|\leq 0.33$.
 
 We present results for Higgs production induced by light-quark Yukawa interactions
 based on two different calculations:
@@ -1626,7 +1585,7 @@ PDF, with the light quarks receiving the strongest enhancement, which reduces
 as the quark mass increases.
 There is a good agreement between the fixed-order NNLO and \minnlo{} cross 
 sections, particularly in the down- and up-quark channels. Scale uncertainties are significantly reduced for the lighter quark channels. Most notably 
-bottom-quark fusion includes larger contributions due to the less accurate bottom 
+bottom-quark fusion includes larger uncertainties due to the less accurate bottom 
 PDFs, as discussed before.
 
 In the last column of~\tab{tab:qqH_xs} we report the integrated cross sections 
@@ -1723,7 +1682,8 @@ Since also Higgs plus light jet contributions can enter the $HH$ selection
 through mistagging, we have suggested a consistent approach within the 4FS
 to combine those contributions from NNLOPS generator (removing all \bbH{} final states)
 with the more accurate NLO+PS calculation for \bbH{} production.
-As an important outlook for $HH$ studies, the $y_t^2$ \bbH{} component in the HTL approximation could in the future be obtained at NNLO+PS using the existing \minnlo{} framework, with the main limitation being the absence of the required two-loop amplitudes. Moreover, the NLO calculation of the $y_t^2$ \bbH{} contribution beyond the HTL approximation—requiring the corresponding exact two-loop virtual corrections—would be highly valuable to further reduce the theoretical uncertainty.
+As an important outlook for $HH$ studies, the $y_t^2$ \bbH{} component in the HTL approximation could in the future be obtained at NNLO+PS using the existing \minnlo{} framework, with the main limitation being the absence of the required two-loop amplitudes. Moreover, the NLO calculation of the $y_t^2$ \bbH{} contribution beyond the HTL approximation,
+which requires the corresponding exact two-loop virtual amplitude, would be highly valuable to further reduce the theoretical uncertainty.
 
 In the last section of the report, we have discussed light-quark Yukawa contributions
 to Higgs-boson production. The production mechanism corresponds exactly to 
