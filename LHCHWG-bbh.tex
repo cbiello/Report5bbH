@@ -1040,6 +1040,10 @@ compared to the 4FS NLO+PS generator), while
 the 5FS NLO+PS predictions being quite different. It is reassuring to observe this high level of agreement, despite the fact that 
 in the 5FS the accuracy effectively reduces by one order for each required $b$-jet, whereas the 4FS predictions remain genuinely 
 NNLO accurate in all considered $b$-jet categories.
+Note that for the \minnlo{} 4FS predictions the inclusive cross section 
+and $0$-$b$-jet bin feature larger uncertainties that the more exclusive $2$-$b$-jet selection,
+which could be related to a lower sensitivity to logarithmic corrections in the bottom mass
+when two hard $b$-jets are required.
 Also for the absolute cross section numbers at NNLO+PS in the 4FS and 5FS, the inclusion of higher-order corrections 
 via \minnlo{} improves the overall consistency between the two schemes considerably, especially in the $b$-jet-vetoed cross sections,
 which are a factor of two apart in the NLO-accurate predictions. Similarly, the one(two)-$b$-jet cross section at NNLO+PS, which is only NLO-accurate (LO-accurate) in the 5FS, 
@@ -1164,7 +1168,7 @@ This setup achieves NNLO accuracy for inclusive Higgs boson observables, but onl
 in which the Higgs boson is produced in association with two additional $b$-jets. In the {\sc NNLOPS} calculation, the 
 renormalisation and factorisation scales are set to $\mu_R = \mu_F = m_H/2$, the PDF4LHC21 parton distribution functions 
 are used~\cite{PDF4LHCWorkingGroup:2022cjn}, and \PYTHIA{8} is employed both for parton showering and for simulating 
-the decay of the Higgs boson into two photons.
+the decay of the Higgs boson into two photons, which are kept stable in the showering process.
 
 The $HH$ signal region is inspired by the $HH \to b\bar{b}\gamma\gamma$ final state~\cite{HDBS-2021-10,CMS-HIG-19-018}. Specifically, we require two $b$-tagged anti-$k_T$~\cite{Cacciari:2005hq,Cacciari:2008gp,Cacciari:2011ma} jets satisfying
 \begin{equation}
@@ -1223,8 +1227,8 @@ Cross sections in ab for the $y_b^2$ and $y_t^2$ contributions to $pp \to b \bar
 \end{table}
 
 We present inclusive and fiducial cross section yields in \tab{tab:XS-fid}.
-We start by comparing the numerical results for \bbH{} $y_t^2$ component, computed at NLO in the 4FS using {\sc MadGraph5\_aMC@NLO}, with the 
-expected rate obtained from the {\sc NNLOPS} simulation, with and without $g\rightarrow b\bar{b}$ splitting included in the parton shower. 
+We start by comparing the numerical results for \bbH{} $y_t^2$ component, computed at NLO in the 4FS using {\sc MadGraph5\_aMC@NLO} (second column), with the 
+expected rate obtained from the {\sc NNLOPS} simulation, with (third column) and without $g\rightarrow b\bar{b}$ splitting included in the parton shower (fourth column). 
 All rates include the Higgs branching ratio into photons, $\textrm{BR}(H \to \gamma\gamma) = 0.227\%$~\cite{LHCHiggsCrossSectionWorkingGroup:2016ypw}. 
 Uncertainties due to renormalisation and factorisation scale variations are quoted, where each scale is independently varied by a factor of two around the 
 central value following the 9-point prescription~\footnote{The theoretical uncertainty in this section is estimated from the envelope of the nine scale variations, following~\citere{manzoni:2023qaf}, in contrast to the other sections where the standard 7-point prescription with the constraint $1/2 \leq \muR/\muF \leq 2$ is employed.}. Additional theoretical uncertainties, such as those associated with variations of the shower starting scale, 
@@ -1235,8 +1239,8 @@ in \citere{manzoni:2023qaf} and found to be subleading.
 
 
 Significant differences are observed between the {\sc MadGraph5\_aMC@NLO} predictions and 
-the {\sc NNLOPS} ones, with the {\sc NNLOPS} fiducial cross section nearly twice as large when 
-the $g\rightarrow b\bar{b}$ splittings are included in the parton shower. 
+the {\sc NNLOPS} ones, with the {\sc NNLOPS} fiducial cross section up to twice as large (depending
+on the cuts) when the $g\rightarrow b\bar{b}$ splittings are included in the parton shower. 
 As discussed in \citere{manzoni:2023qaf}, the parton shower induces a double counting of 
 $gg\to H$ + 2~$b$-jets contributions, by dressing the inclusive production of the Higgs boson with hard $b$-jet
 radiation, which are already included at the hard matrix-element level in the {\sc NNLOPS} calculation. 
@@ -1247,7 +1251,7 @@ that \bbH{} production is the major background, reducing this uncertainty throug
 accurate simulations for the $y_t^2$ contribution to the \bbH{} background will be 
 instrumental for future $HH$ measurements.
 
-We also quote the rates for the \bbH{} $y_b^2$ component in \tab{tab:XS-fid}, which are evaluated at NNLO+PS 
+We also quote the rates for the \bbH{} $y_b^2$ component in \tab{tab:XS-fid} (first column), which are evaluated at NNLO+PS 
 accuracy with the \minnlo{} generator introduced in \sct{sec:bbH4FS}. 
 In all fiducial $HH$ categories, the $y_b^2$ and $y_t^2$ contributions to the \bbH{} cross section are of the same order 
 as the $HH$ signal cross section~\cite{manzoni:2023qaf} (not included in the table), highlighting the importance of their 
@@ -1454,10 +1458,10 @@ and we write the cross section as follows:
 \end{align}
 All interference effects at higher orders are mass suppressed, and they
 vanish in the massless treatment with $ n_f = 5 $. 
-We have introduced the coupling $\bar\kappa_q=y_q^2(m_H)/y_b^2(m_H)$, which denotes the ratio of the 
+We have introduced the coupling $\bar\kappa_q=y_q(m_H)/y_b(m_H)$, which denotes the ratio of the 
 Yukawa coupling of a light quark to the Standard-Model Yukawa coupling of the bottom quark, both evaluated in the \MSbar{} scheme at the scale $m_H$, and the 
 cross section with the corresponding Yukawa coupling stripped off, 
-$\bar\sigma_{q\bar q\to H} =\sigma_{q\bar q\to H}/y_q^2(m_H)$
+$\bar\sigma_{q\bar q\to H} =\sigma_{q\bar q\to H}\cdot y_b^2(m_H)/y_q^2(m_H)$.
 In other words, the cross sections in \eqn{eq:light-cs} are obtained 
 using the appropriate quark PDF, while assigning the Yukawa interaction 
 to the strength of the bottom-quark coupling. This is done here to obtain cross sections of
@@ -1614,9 +1618,9 @@ phase space. The distributions are normalised to their respective integrated
 cross sections.
 We observe that the shape of the different distributions changes 
 relatively mildly when fiducial cuts on the photons are included. Moreover,
-the peak positions stay in the same place. As a result, any shape correction in 
-experimental measurements between the inclusive and fiducial phase space
-would play a rather minor role.
+the peak positions stay in the same place. As a result, extrapolations 
+from the fiducial to the inclusive phase-space in experimental measurements
+should have a rather minor effect on the shape of the distribution.
 
 We note that alternative channels sensitive to light-quark Yukawa couplings have been experimentally investigated recently, such as the reinterpretation of $WW\gamma$ analysis~\cite{CMS:2023rcv} and the Higgs decay rate into four leptons~\cite{CMS:2025xkn}. Novel approaches to probe the light-quark Yukawa couplings have also been discussed recently in~\citeres{Balzani:2023jas,Alasfar:2022vqw,Alasfar:2019pmn}.
 
