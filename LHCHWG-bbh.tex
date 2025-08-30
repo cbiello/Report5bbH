@@ -286,7 +286,9 @@ but their numerical impact is sufficiently subleading, at least for the inclusiv
 
 For fully inclusive Higgs production, the radiation off bottom quarks is about two orders of magnitude smaller than the dominant gluon-fusion cross section and ranks at the same size as $t\bar tH$ production. $b\bar bH$ production yields therefore a subleading, but yet relevant 
 contribution to the inclusive Higgs cross section, especially in the precision age of the LHC. However, as soon as $b$ tagging is applied 
-in experimental analyses, the $b\bar bH$ production rates are further reduced significantly so that the measurement of the \bbH{} process in the 
+in experimental analyses, the $b\bar bH$ signal yields are further reduced significantly. 
+As a result of the small signal yield and involved experimental signature,
+the measurement of the \bbH{} process in the 
 SM has not been achieved yet at the LHC. In the MSSM or the 2HDM of type II, on the other hand, the bottom Yukawa coupling is strongly enhanced for large values of $\tan\beta = v_2/v_1$, where $v_{1,2}$ denote the vacuum expectation values of the two scalar CP-even Higgs fields so that this production becomes the
 dominant one, i.e.\ even larger than the gluon-fusion mechanism. In addition, \bbH{} production is a major background to di-Higgs searches, where at least 
 one of the two Higgs bosons decays to bottom quarks.
@@ -326,13 +328,12 @@ have been obtained in the heavy-top limit (HTL) \cite{deutschmann:2018avk} and t
 has later been extended in \citere{manzoni:2023qaf} to include the parton-shower matching at NLO (NLO+PS) to study 
 \bbH{} production as a background to di-Higgs searches. 
 The $y_t\,y_b$ interference amounts to about 10\% \cite{dittmaier:2003ej,dawson:2003kb} compared to the inclusive $y_b^2$ cross section, while the $y_t^2$ contribution is roughly twice as large as the $y_b^2$ one \cite{deutschmann:2018avk}.
-This reduces the sensitivity of the $b\bar bH$ cross section to the bottom Yukawa coupling substantially in the SM.
+This reduces the sensitivity of the $b\bar bH$ process to the bottom Yukawa coupling substantially in the SM.
 For heavy Higgs bosons in BSM scenarios with an enhanced bottom-Yukawa coupling, however, the radiation off bottom quarks is the dominant contribution,
 while all top-quark Yukawa induced become subleading.
 
 
-Finally, while the discussion up to here focused on QCD corrections, it is worth mentioning that EW corrections for \bbH{} production have also been computed in the 
-4FS. %\footnote{Since EW renormalisation enforces the relation between $y_b$ and $m_b$, it is not consistent to compute NLO EW corrections in the 5FS.}
+Finally, while the discussion up to here focused on QCD corrections, it is worth mentioning that electroweak (EW) corrections for \bbH{} production have also been computed in the 4FS.
 In particular, they have been first evaluated for the sole $gg$-induced mechanism~\cite{Zhang:2017mdz}, and then computed for the full production
 process~\cite{Pagani:2020rsg}, and they turn out to be rather small (at the few-percent level). 
 In the latter case, complete-NLO corrections (including QCD and EW corrections)
@@ -344,10 +345,10 @@ further reducing the sensitivity to the bottom Yukawa coupling in \bbH{} final s
 In this contribution, we present updated cross section predictions for Higgs production in association with bottom quarks in both the 4FS and the 5FS. 
 To provide a consistent overview of state-of-the-art \bbH{} predictions at 13.6 TeV centre-of-mass energy, all results are obtained using 
 a common computational setup detailed in~\sct{sec:setup}. Updated inclusive cross section predictions at 13.6 TeV are 
-reported in~\sct{sec:matchedinclusivenumbers}, which are obtained by an interpolation of existing LHCHWG data of the 
+reported in~\sct{sec:matchedinclusivenumbers}, which are obtained by an interpolation of existing LHC Higgs Working Group (LHCHWG) data \cite{addRef} of the 
 matched NLO 4FS and NNLO 5FS predictions from the \nlonnllpart{} calculation at 13 and 14 TeV. 
 In~\sct{sec:resummation}, we present the resummed Higgs transverse momentum spectrum in the 5FS 
-at next-to-next-to-next-to leading logarithmic  (N$^3$LL$^{\prime}$) accuracy.
+at next-to-next-to-next-to leading logarithmic  (N$^3$LL) accuracy.
 Section~\ref{sec:MCyb} discusses recent developments of Monte Carlo event generators and compares NNLO+PS results
 from \minnlo{} and \GENEVA{} in the 5FS, consideres \minnlo{} predictions for heavy Higgs bosons in BSM scenarios, 
 and subsequently examines NNLO+PS predictions from \minnlo{} in the 4FS.
@@ -404,7 +405,7 @@ mass providing a natural and consistent choice.
 In this section, we report predictions for the inclusive \bbH{}  cross section at 13.6 TeV. 
 The best description of the \bbH{} process is obtained by combining the calculations in the massless and massive schemes. The 5FS computation includes 
 the resummation of large collinear logarithmic contributions, while the 4FS captures all mass effects order by order in perturbative QCD. 
-As already introduced in the introduction, two main approaches exist that have been applied to obtain the \bbH{} cross section at 
+As already mentioned in the introduction, two main approaches exist that have been applied to obtain the \bbH{} cross section at 
 high accuracy: \fonll{}~\cite{forte:2015hba,forte:2016sja,Duhr:2020kzd} and \nlonnllpart{}~\cite{Bonvini:2015pxa,Bonvini:2016fgf}. 
 
 
@@ -485,10 +486,10 @@ We observe a good agreement between the cross section values obtained with diffe
 \label{sec:resummation}
 The Higgs transverse momentum spectrum provides a promising approach for extracting the Yukawa coupling from Higgs production processes, because its shape is sensitive to the precise value of the coupling.
 In particular, one can exploit the pattern of QCD emissions from the incoming quarks and gluons to discriminate between the gluon and various quark channels in the initial state~\cite{Ebert:2016idf}.
-That is, the radiation pattern for different initial states yields different shapes for the transverse momentum ($q_T$) spectrum of the recoiling Higgs boson. As a result, a precise measurement and fit to the Higgs $q_T$ spectrum, especially at small $q_T$, allows one to gain sensitivity to the quark Yukawa couplings~\cite{Bishara:2016jga, Soreq:2016rae}.
+That is, the radiation pattern for different initial states yields different shapes for the transverse momentum ($q_T$) spectrum of the recoiling Higgs boson. As a result, a precise measurement of the Higgs $q_T$ spectrum, especially at small $q_T$, allows one to gain sensitivity to the quark Yukawa couplings~\cite{Bishara:2016jga, Soreq:2016rae}.
 At small $q_T \ll m_H$, this requires the all-order resummation of logarithms of $q_T/m_H$ that would otherwise spoil the convergence of perturbation theory in this regime.
 
-In this section, we provide recent results for the resummed $q_T$ spectrum for $b\bar{b}\to H$ at N$^3$LL$^{\prime}$ order matched to fixed NNLO and approximate N$^3$LO in the 5FS \cite{Cal:2023mib}. Previously, the spectrum was calculated to NNLL$^{\prime}+$NNLO accuracy\footnote{We use the logarithmic counting of~\citere{Berger:2010xi}, where the prime denotes inclusion of higher order boundary terms.} ~\cite{Harlander:2014hya} using the CSS formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use soft-collinear effective theory (SCET)
+In this section, we provide recent results for the resummed $q_T$ spectrum for $b\bar{b}\to H$ at N$^3$LL$^{\prime}$ order matched to fixed NNLO and approximate N$^3$LO in the 5FS \cite{Cal:2023mib}.\footnote{We use the logarithmic counting of~\citere{Berger:2010xi}, where the prime denotes inclusion of higher order boundary terms.} Previously, the spectrum was calculated to NNLL$^{\prime}+$NNLO accuracy~\cite{Harlander:2014hya} using the CSS formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use soft-collinear effective theory (SCET)
 \cite{Bauer:2000yr,Bauer:2001ct,Bauer:2001yt,Bauer:2002nz,Beneke:2002ph} to resum the logarithms of $q_T/m_H$ which is equivalent to a modern formulation of the CSS formalism.
 We employ the rapidity
 renormalisation group~\cite{Chiu:2012ir} together with the
@@ -548,8 +549,8 @@ To arrive at a consistent prediction, we need to match the N$^3$LL$^{\prime}$ re
 Our aN$^3$LO fixed-order cross section must contain the correct singular terms which are part of $\mathrm{d} \sigma^\mathrm{sing}$.
 Further, there are large cancellations between the singular and the non-singular cross sections at large values of $q_T$, which must not be spoiled in the approximation procedure.
 To satisfy both requirements,
-we developed a general method to decorrelate the singular and nonsingular contributions in~\citere{Cal:2023mib} which involves shifting a correlated piece between the singular and the non-singular~\cite{Dehnadi:2022prz}.
-After the decorrelation procedure, we perform a Pad\'e-like approximation for the nonsingular $\mathcal{O}\left(\alpha_s^3\right)$ coefficient. 
+we developed a general method to decorrelate the singular and non-singular contributions in~\citere{Cal:2023mib} which involves shifting a correlated piece between the singular and the non-singular~\cite{Dehnadi:2022prz}.
+After the decorrelation procedure, we perform a Pad\'e-like approximation for the non-singular $\mathcal{O}\left(\alpha_s^3\right)$ coefficient. 
 
 Our numerical results for the
 resummed and fixed-order singular contributions are obtained with
@@ -561,7 +562,8 @@ In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ 
 \section{Monte Carlo simulations at NNLO+PS}\label{sec:MCyb}
 This section highlights recent advancements in Monte Carlo simulations for modelling the $y_b^2$ contribution to \bbH{} production. The first matching with parton showers was carried out in the 5FS scheme in~\citere{Biello:2024vdh} using the \minnlo{} method. More recently, the \GENEVA{} approach has been applied to 
 simulate \bbtoH{} production in the 5FS~\cite{Gavardi:2025zpf}. In this section, we present the numerical comparison of the two matching 
-methods for this process using the LHCHWG setup.
+methods for this process using the LHCHWG-recommended setup 
+detailed in \sct{sec:setup}.
 
 We continue by discussing BSM studies using the \minnlo{} generator for an example scenario in the Minimal Supersymmetric Model (MSSM) used as a proof-of-concept. 
 The last part of the section is dedicated to the recently developed NNLO+PS Monte Carlo generator in the 4FS using the \minnlo{} method~\cite{Biello:2024pgo}, 
@@ -623,6 +625,9 @@ the first shower emission.
   F^{\scriptscriptstyle\rm corr}\!\left(\Phi_{\scriptscriptstyle\rm
     FJ}\right)\right\},
 \end{equation}
+with $e^{-\tilde{S}}$ denoting the Sudakov form factor and 
+the factor $F^{\scriptscriptstyle\rm corr}$ spreading the NNLO corrections
+in the full phase space.
 Note that it is crucial to choose a jet-resolution variable 
 consistent with the ordering variable in the parton shower in order not to break
 its logarithmic accuracy. For instance, in the case of standard leading logarithmic (LL) 
@@ -911,7 +916,8 @@ by the factorisation theorem, which is expressed in Fourier-conjugate (impact-pa
   \vec{\pt} } e^{-S_{c\bar{c}} \left(\frac{b_0}{b}\right)}\sum_{i,j} \Tr({\mathbf H}_{c\bar{c}}{\mathbf \Delta})\,\,
   ({C}_{ci}\otimes f_i) \,({C}_{\bar{c} j}\otimes f_j) \,,
 \end{align}
-where $b_0=2 e^{-\gamma_\text{E}}$. The factor $e^{-S_{c\bar{c}}}$ represents the same Sudakov radiator that appears in the small-$p_{T}$ resummation for 
+where $|M^{(0)}_{c\bar{c}}|^2$ is the squared LO matrix element,
+$m_{Q\bar{Q}{\rm F}}$ the invariant mass of the $Q\bar{Q}F$  system and $b_0=2 e^{-\gamma_\text{E}}$. The factor $e^{-S_{c\bar{c}}}$ represents the same Sudakov radiator that appears in the small-$p_{T}$ resummation for 
 colour-singlet production.  In \eqn{eq:facformula}, the sum over $c=q,\bar{q},g$ spans all possible flavour assignments for the incoming partons, with the first parton carrying flavour $c$ and the second parton carrying flavour $\bar{c}$. The collinear coefficient functions
 $C_{ij} = C_{ij}\bigl(z,\,p_{1},\,p_{2},\,\vec{b};\,\alpha_{s}(b_{0}/b)\bigr)$ arise from collinear emissions, which include
 also the constant terms, and the parton densities $f_{i}$ are evaluated at the soft scale $b_{0}/b$.  The composite factor
@@ -1000,13 +1006,13 @@ on the standard $b$-jet definition that is straightforward to apply in experimen
     \makecell[c]{\shortstack{\rule{0pt}{2ex}\minnlo{} \\ 5FS} } &  
     \makecell[c]{\shortstack{\rule{0pt}{2ex}\minnlo{} \\ 4FS} } \\
     \hline \hline
-	    inclusive & $725.4(2)_{-10\%}^{+11\%}$ & $ 389.0(1)_{-20\%}^{+24\%}$ & $ 574.8(4)_{-8.0\%}^{+4.5\%}$ & $ 519.6(3)_{-15\%}^{+19\%}$\\
+	    inclusive & $725.4(2)_{-10\%}^{+11\%}$  fb& $ 389.0(1)_{-20\%}^{+24\%}$ fb& $ 574.8(4)_{-8.0\%}^{+4.5\%}$  fb& $ 519.6(3)_{-15\%}^{+19\%}$ fb\\
      \hline
-        H $+$ $0\,b\text{-jets}$\;  & $619.5(9)_{-10\%}^{+11\%}$ & $ 312.1(4)_{-20\%}^{+23\%}$ & $ 458.1(3)_{-7.8\%}^{+3.3\%}$&$ 420.2(2)_{-15\%}^{+21\%}$ \\
+        H $+$ $0\,b\text{-jets}$\;  & $619.5(9)_{-10\%}^{+11\%}$  fb& $ 312.1(4)_{-20\%}^{+23\%}$  fb& $ 458.1(3)_{-7.8\%}^{+3.3\%}$ fb&$ 420.2(2)_{-15\%}^{+21\%}$  fb\\
         \hline
-	    \;H $+\geq$$1\,b\text{-jets}$ & $105.9(1)_{-10\%}^{+10\%}$ & $ 76.91(6)_{-20\%}^{+26\%}$ & $ 116.7(1)_{-8.7\%}^{+9.4\%}$& $ 99.38(2)_{-12\%}^{+7.5\%}$\\
+	    \;H $+\geq$$1\,b\text{-jets}$ & $105.9(1)_{-10\%}^{+10\%}$  fb& $ 76.91(6)_{-20\%}^{+26\%}$  fb& $ 116.7(1)_{-8.7\%}^{+9.4\%}$ fb& $ 99.38(2)_{-12\%}^{+7.5\%}$ fb\\
       \hline
-	    \;H $+\geq$$2\,b\text{-jets}$ & $5.992(3)_{-10\%}^{+10\%} $ & $ 5.116(2)_{-23\%}^{+32\%}$ & $ 8.621(3)_{-10\%}^{+11\%}$& $ 7.154(6)_{-10\%}^{+1.7\%}$ \\
+	    \;H $+\geq$$2\,b\text{-jets}$ & $5.992(3)_{-10\%}^{+10\%} $  fb& $ 5.116(2)_{-23\%}^{+32\%}$  fb& $ 8.621(3)_{-10\%}^{+11\%}$ fb& $ 7.154(6)_{-10\%}^{+1.7\%}$  fb\\
        \hline
     \end{tabular}
   \end{center}
@@ -1152,7 +1158,7 @@ As a result, the 4FS provides a more reliable and accurate prediction, especiall
 In this section, we study \bbH{} production as a background to di-Higgs searches at the LHC. To this end, we 
 consider Monte-Carlo predictions in the 4FS for both the $y_b^2$ and  $y_t^2$ contributions to the \bbH{} cross section
 with fiducial cuts relevant to select a $HH$ signal at the LHC~\cite{HDBS-2021-18,CMS-HIG-22-001}.\footnote{The $y_t y_b$ interference contribution is 
-about $-10\%$ at NLO+PS, which is less than the respective scale uncertainties  $y_b^2$ and  $y_t^2$ cross section. It therefore does not play a relevant
+about $-10\%$ at NLO+PS, which is less than the respective scale uncertainties of the $y_b^2$ and  $y_t^2$ cross section. It therefore does not play a relevant
 role for the considerations in this section and can be safely neglected.}
 Our study closely follows the work presented in \citere{manzoni:2023qaf}, with the main differences being the updated 
 collider energy and input parameters, as described in \sct{sec:setup}, as well as novel predictions for the $y_b^2$ component
@@ -1170,7 +1176,8 @@ renormalisation and factorisation scales are set to $\mu_R = \mu_F = m_H/2$, the
 are used~\cite{PDF4LHCWorkingGroup:2022cjn}, and \PYTHIA{8} is employed both for parton showering and for simulating 
 the decay of the Higgs boson into two photons, which are kept stable in the showering process.
 
-The $HH$ signal region is inspired by the $HH \to b\bar{b}\gamma\gamma$ final state~\cite{HDBS-2021-10,CMS-HIG-19-018}. Specifically, we require two $b$-tagged anti-$k_T$~\cite{Cacciari:2005hq,Cacciari:2008gp,Cacciari:2011ma} jets satisfying
+The $HH$ signal region is inspired by the $HH \to b\bar{b}\gamma\gamma$ final state~\cite{HDBS-2021-10,CMS-HIG-19-018}. Specifically, we require two $b$-tagged anti-$k_T$~\cite{Cacciari:2005hq,Cacciari:2008gp,Cacciari:2011ma} jets with
+a radius of $R=0.4$ satisfying
 \begin{equation}
 \label{eq:ptjcuts}
 p_T(j) > 25\,\GeV \qquad {\rm and} \qquad |\eta(j)| < 2.5\,,
@@ -1193,7 +1200,10 @@ The presence of two $b$-jets and two photons satisfying the above requirements d
 \label{eq:mbbggs}
     \mbbggs = m_{2b2\gamma} - m(b_1,b_2) - m(\gamma_1,\gamma_2) + 2m_H \,.
 \end{equation}
-This observable is used in $HH$ searches~\cite{HDBS-2021-10,HDBS-2019-27,CMS-HIG-19-018,ATLAS:2025hhd} to separate the selected events into two regions of phase space: one that is more sensitive to potential modifications of the Higgs self-coupling ($m_{2b2\gamma}^{*} < 350$~GeV), and one that is more sensitive to the \textit{continuum} production ($m_{2b2\gamma}^{*} > 350$~GeV). We consider two scenarios in which the fiducial selection includes the requirements $\mbbggs < 500$\,GeV and $\mbbggs < 350$\,GeV, respectively. 
+This observable is used in $HH$ searches~\cite{HDBS-2021-10,HDBS-2019-27,CMS-HIG-19-018,ATLAS:2025hhd} to define selection cuts that enhance the sensitivity
+to an anomalous trilinear Higgs coupling. 
+Here, we consider two scenarios 
+in which the fiducial selection includes the requirements $\mbbggs < 500$\,GeV and $\mbbggs < 350$\,GeV, respectively. 
 
 \begin{table}[b]
   \vspace*{0.3ex}
@@ -1205,19 +1215,19 @@ This observable is used in $HH$ searches~\cite{HDBS-2021-10,HDBS-2019-27,CMS-HIG
   \hline \hline
    \begin{tabular}{@{}c@{}} No cut \end{tabular}
 %  \multirow{1}{*}{\makecell{No cut}} 
-	   & $1180_{-15\%}^{+19\%}$ & $1696 ^{+62\%} _{-35\%}$  & $7574_{-8\%}^{+8\%}$ & $2774_{-7\%}^{+7\%}$ \\
+	   & $1180_{-15\%}^{+19\%}$  ab& $1696^{+62\%} _{-35\%}$   ab& $7574_{-8\%}^{+8\%}$  ab& $2774_{-7\%}^{+7\%}$  ab\\
   \hline
    \begin{tabular}{@{}c@{}} Fid. cuts \end{tabular}
  % \multirow{1}{*}{\makecell{Fid. cuts}} 
-	   &$5.6_{-10\%}^{+2.8\%}$ & $18 ^{+55\%} _{-33\%}$ & $31.6_{-18\%}^{+18\%}$ & $20.5_{-18\%}^{+18\%}$ \\
+	   &$5.6_{-10\%}^{+2.8\%}$  ab& $18 ^{+55\%} _{-33\%}$  ab& $31.6_{-18\%}^{+18\%}$  ab& $20.5_{-18\%}^{+18\%}$  ab\\
    \hline
   \begin{tabular}{@{}c@{}} Fid. cuts +\\ $\mbbggs<500\,\GeV$  \end{tabular}
   %\multirow{1}{*}{\makecell{Fid. cuts \\+ $\mbbggs<500\,\GeV$}} 
-	  & $5.5_{-10\%}^{+2.8\%}$ & $ 12 ^{+57\%} _{-33\%}$ & $23.3_{-20\%}^{+20\%}$ & $15.4_{-20\%}^{+20\%}$ \\
+	  & $5.5_{-10\%}^{+2.8\%}$ ab & $ 12 ^{+57\%} _{-33\%}$  ab& $23.3_{-20\%}^{+20\%}$  ab& $15.4_{-20\%}^{+20\%}$  ab\\
    \hline
     \begin{tabular}{@{}c@{}} Fid. cuts +\\ $\mbbggs<350\,\GeV$  \end{tabular}
     %\multirow{1}{*}{\makecell{Fid. cuts \\+ $\mbbggs<350\,\GeV$}} 
-    & $4.8_{-10\%}^{+3.1\%}$ & $5.5 ^{+60\%} _{-34\%}$ & $11.5_{-20\%}^{+20\%}$ & $7.76_{-20\%}^{+20\%}$ \\
+    & $4.8_{-10\%}^{+3.1\%}$  ab& $5.5 ^{+60\%} _{-34\%}$  ab& $11.5_{-20\%}^{+20\%}$  ab& $7.76_{-20\%}^{+20\%}$  ab\\
    \hline
 \end{tabular}
   \end{center}
@@ -1251,6 +1261,17 @@ that \bbH{} production is the major background, reducing this uncertainty throug
 accurate simulations for the $y_t^2$ contribution to the \bbH{} background will be 
 instrumental for future $HH$ measurements.
 
+\begin{figure}[b!]
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=.45\textwidth, page=1]{plots/4fs/pt_Higgs-EXP-fid-FC.pdf}&
+\includegraphics[width=.45\textwidth, page=1]{plots/4fs/mass_2b2gam-EXP-fid-FC.pdf}
+\end{tabular}
+\vspace*{1ex}
+\caption{Transverse momentum spectrum of the Higgs boson and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs} in the fiducial volume described by the cuts~(\ref{eq:ptjcuts}-\ref{eq:photoncuts}).\label{fig:4fsFID}}
+\end{center}
+\end{figure}
+
 We also quote the rates for the \bbH{} $y_b^2$ component in \tab{tab:XS-fid} (first column), which are evaluated at NNLO+PS 
 accuracy with the \minnlo{} generator introduced in \sct{sec:bbH4FS}. 
 In all fiducial $HH$ categories, the $y_b^2$ and $y_t^2$ contributions to the \bbH{} cross section are of the same order 
@@ -1262,17 +1283,6 @@ $y_b^2$ component increases. For the fiducial region with $\mbbggs<500$\,GeV, th
 two, while for $\mbbggs<350$\,GeV $y_b^2$ and $y_t^2$ contributions are already comparably large. 
 The latter is the fiducial region most sensitive to the trilinear Higgs coupling. Hence, the accurate modelling 
 of both, $y_b^2$ and $y_t^2$ components, is important to fully control the \bbH{} background.
-
-\begin{figure}[b!]
-\begin{center}
-\begin{tabular}{cc}
-\includegraphics[width=.45\textwidth, page=1]{plots/4fs/pt_Higgs-EXP-fid-FC.pdf}&
-\includegraphics[width=.45\textwidth, page=1]{plots/4fs/mass_2b2gam-EXP-fid-FC.pdf}
-\end{tabular}
-\vspace*{1ex}
-\caption{Transverse momentum spectrum of the Higgs boson and invariant mass $\mbbggs$ as defined in~\eqn{eq:mbbggs} in the fiducial volume described by the cuts~(\ref{eq:ptjcuts}-\ref{eq:photoncuts}).\label{fig:4fsFID}}
-\end{center}
-\end{figure}
 
 We continue by considering differential distributions in the $HH$ signal region in \fig{fig:4fsFID} and \ref{fig:4fsNNLOPS}, including 
 the Higgs transverse momentum spectrum (left figures) and the $\mbbggs$ distribution (right figures).
@@ -1330,11 +1340,12 @@ the {\sc MadGraph5\_aMC@NLO} sample for bbH{} production.
 \begin{center}%
 \begin{small}%
 \tabcolsep5pt
-\begin{tabular}{cccc}%
-$\sqrt{s}$~[TeV] & $\sigma^{}$~[fb] & $\Delta_{\left(\mu_{R},\mu_{F}\right)}$~[\%] & $\Delta_{\mathrm{PDF}}$~[\%]  \\\hline
-$13$ & $667$ & $+62\% / -35\%$ & $\pm 1.7\%$ \\
-$13.6$  & $723$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
-$14$ & $763$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
+\begin{tabular}{|c|c|c|c|}%
+\hline
+$\sqrt{s}$ & $\sigma^{}$ & $\Delta_{\left(\mu_{R},\mu_{F}\right)}$ & $\Delta_{\mathrm{PDF}}$  \\\hline\hline
+$13.0$\,TeV & $667$ fb & $+62\% / -35\%$ & $\pm 1.7\%$ \\\hline
+$13.6$\,TeV  & $723$ fb & $+62\% / -36\%$ & $\pm 1.7\%$ \\\hline
+$14.0$\,TeV & $763$ fb & $+62\% / -36\%$ & $\pm 1.7\%$ \\\hline
 \end{tabular}%
 \end{small}%
 \end{center}%
@@ -1394,7 +1405,7 @@ $14$ & $763$ & $+62\% / -36\%$ & $\pm 1.7\%$ \\
 %  \end{table}
 
 To prevent double counting of events featuring $gg \to H$ production with two $b$-jets, the {\sc NNLOPS} sample is filtered to exclude any event that contains 
-{\it at least} one bottom quark, whether originating from the hard scattering or from parton showering. 
+{\it at least} one bottom quark, regardless whether it originates from the hard scattering or from parton showering. 
 Removing events with a single bottom quark from the {\sc NNLOPS} sample ensures complete orthogonality of configurations between the two samples. 
 This excludes $g  b \to b H$ contributions, which are already accounted for in the {\sc MadGraph5\_aMC@NLO} prediction via initial-state $g \to b\bar{b}$ splittings. Thus, by effectively removing the $b\bar{b}H$ component from the {\sc NNLOPS} sample, it is turned 
 into a 4FS description of Higgs production accompanied by 
@@ -1469,7 +1480,7 @@ comparable size.
 
 A value of $ \bar\kappa_q = 1 $ corresponds to a Yukawa coupling for quark $ q $ equal in strength to that of the bottom quark. Thus, the normalised couplings take the following values in the SM:  
 $ \bar \kappa_b = 1 $, $ \bar \kappa_c \simeq 2.3 \cdot 10^{-1} $, $ \bar \kappa_s \simeq 1.9 \cdot 10^{-2} $, $ \bar \kappa_d \simeq 2.7 \cdot 10^{-3} $, $ \bar \kappa_u \simeq 4.4 \cdot 10^{-4} $.
-The numerical values are obtained by using the PDG values of the quark masses in the $\overline{\text{MS}}$ scheme~\cite{ParticleDataGroup:2024cfk} as boundary conditions and evolving them to the hard scale $m_H$ using four-loop running. The High-Luminosity Large Hadron Collider prospects~\cite{Cepeda:2019klc} show that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_c|\leq 3.34$, $|\bar \kappa_d|\leq 0.39$, $|\bar \kappa_u|\leq 0.33$ at 95\% CL when using kinematical distributions, in particular the transverse momentum spectrum. In~\citere{Cepeda:2019klc} other methods for constraining light quark Yukawa couplings, such as exclusive decays, have been discussed, leading to an global expectation of $|\bar \kappa_c|\leq 0.52$, $|\bar \kappa_s|\leq 0.31$, $|\bar \kappa_d|\leq 0.34$, $|\bar \kappa_u|\leq 0.33$.
+The numerical values are obtained by using the PDG values of the quark masses in the $\overline{\text{MS}}$ scheme~\cite{ParticleDataGroup:2024cfk} as boundary conditions and evolving them to the hard scale $m_H$ using four-loop running. The High-Luminosity LHC prospects~\cite{Cepeda:2019klc} show that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_c|\leq 3.34$, $|\bar \kappa_d|\leq 0.39$, $|\bar \kappa_u|\leq 0.33$ at 95\% CL when using kinematical distributions, in particular the transverse momentum spectrum. In~\citere{Cepeda:2019klc} other methods for constraining light quark Yukawa couplings, such as exclusive decays, have been discussed, leading to an global expectation of $|\bar \kappa_c|\leq 0.52$, $|\bar \kappa_s|\leq 0.31$, $|\bar \kappa_d|\leq 0.34$, $|\bar \kappa_u|\leq 0.33$.
 
 We present results for Higgs production induced by light-quark Yukawa interactions
 based on two different calculations:
