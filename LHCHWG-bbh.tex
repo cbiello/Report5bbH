@@ -392,12 +392,12 @@ calculation, i.e.\ two-loop running for NLO predictions and three-loop running f
 Predictions involving the top-quark Yukawa contribution employ the on-shell definition of the coupling. A top-quark mass of $172.5$\,GeV is used throughout the simulations.
 
 \subsection{Scale settings}
-In the Monte Carlo simulations with massless bottom quarks, we consider the Higgs mass as the central value for the factorisation ($\muF$) and renormalisation ($\muR$) scales. The theory uncertainty is estimated using the standard 7-point variation, i.e.\ by changing the scales by a factor of 2 with the constraint $\frac{1}{2}\leq\muR/\muF\leq 2$ in order to avoid large logarithmic effects. The renormalisation scales associated with the Yukawa coupling and the strong coupling are simultaneously rescaled by the same factor. We have performed detailed studies on the impact of this correlation and found that such a correlated variation provides a reliable estimate of the overall renormalisation uncertainty.
+A scale choice of the order of the Higgs-boson mass is recommended for the factorisation ($\muF$) and renormalisation ($\muR$) scales. The precise choices of these scales are specified in this Report before the predictions are presented. The theory uncertainty is estimated using the standard 7-point variation, i.e.\ by changing the scales by a factor of 2 with the constraint $\frac{1}{2}\leq\muR/\muF\leq 2$ in order to avoid large logarithmic effects. The renormalisation scales associated with the Yukawa coupling and the strong coupling are simultaneously rescaled by the same factor. We have performed detailed studies on the impact of this correlation and found that such a correlated variation provides a reliable estimate of the overall renormalisation uncertainty.
 
-In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse mass of the \bbH{} system—was often adopted~\cite{Wiesemann:2014ioa}. Such small scale
+In earlier 4FS predictions, a dynamical scale—specifically, one quarter of the transverse mass of the \bbH{} system—was often adopted for the Yukawa coupling~\cite{Wiesemann:2014ioa}. Such small scale
 resulted in higher 4FS cross sections, which reduced the gap with the 5FS predictions. However, with the inclusion of NNLO QCD corrections in the 4FS, 
 such a scale choice is no longer necessary. Moreover, as shown in~\citere{Biello:2024pgo}, comparisons between dynamical and fixed scales at NNLO 
-show minimal differences. Consequently, we recommend aligning the scale choices in the 4FS and 5FS at NNLO QCD accuracy, with a scale of the order of the Higgs-boson 
+show minimal differences. Consequently, we recommend aligning the scale choices of the Yukawa coupling in the 4FS and 5FS at NNLO QCD accuracy, with a scale of the order of the Higgs-boson 
 mass providing a natural and consistent choice.
 
 \section{Updated inclusive cross sections at 13.6 TeV}
@@ -416,11 +416,11 @@ matching uncertainties.
 The $y_by_t$  contribution is easily included as a fixed-order non-singular term, since these interference effects are power corrections that 
 vanish to all perturbative orders in the small bottom-quark mass limit.
 
-The setup of the calculation follows that described in~\sct{sec:setup}, with the only difference being the choice of the central scales, which are set to
+The setup of the calculation follows that described in~\sct{sec:setup}, with the choice of the following central scales,
 \begin{align}
 \muF=\frac{1}{4}(m_H+2m_b),\hspace{1cm}\muR=\frac{1}{2}m_H\,,
 \end{align}
-in order to ensure a better perturbative convergence in the fully-inclusive calculation.
+in order to ensure a good perturbative convergence in the fully-inclusive calculation.
 
 \begin{table}[t]
 \begin{center}%
@@ -565,7 +565,7 @@ In \fig{fig:resumplot}, we show the resummed $q_T$ spectrum for $b\bar{b}\to H$ 
 This section highlights recent advancements in Monte Carlo simulations for modelling the $y_b^2$ contribution to \bbH{} production. The first matching with parton showers was carried out in the 5FS scheme in~\citere{Biello:2024vdh} using the \minnlo{} method. More recently, the \GENEVA{} approach has been applied to 
 simulate \bbtoH{} production in the 5FS~\cite{Gavardi:2025zpf}. In this section, we present the numerical comparison of the two matching 
 methods for this process using the LHCHWG-recommended setup 
-detailed in \sct{sec:setup}.
+detailed in \sct{sec:setup}. We specify that, in the Monte Carlo simulations with massless bottom quarks, we consider the Higgs mass as the central value for the factorisation ($\muF$) and renormalisation ($\muR$) scales. 
 
 We continue by discussing BSM studies using the \minnlo{} generator for an example scenario in the Minimal Supersymmetric Model (MSSM) used as a proof-of-concept. 
 The last part of the section is dedicated to the recently developed NNLO+PS Monte Carlo generator in the 4FS using the \minnlo{} method~\cite{Biello:2024pgo}, 
@@ -956,7 +956,9 @@ The NNLO calculation is thus complete in full colour, up to power-suppressed in 
 only in the two-loop amplitude.
 
 \subsubsection{Results and flavour-scheme comparison}
-The setup for the phenomenological results presented here---including input parameters, renormalisation and factorisation scale choices as well as PDFs---has been outlined in \sct{sec:setup}. We discuss the new theoretical predictions obtained at NNLO+PS in the 4FS for Higgs radiation off bottom quarks, and we compare them to the NNLO+PS results
+The setup for the phenomenological results presented here---including input parameters and PDFs---has been outlined in \sct{sec:setup}. In addition, we specify the renormalisation and factorisation scale choices adopted in the \minnlo{} simulations for the Born couplings. The Yukawa coupling is evaluated in the $\overline{\text{MS}}$ scheme at a scale of the Higgs mass, while the Born strong couplings are computed at the scale to one quarter of the transverse mass of the \bbH{} system.
+
+We discuss the new theoretical predictions obtained at NNLO+PS in the 4FS for Higgs radiation off bottom quarks, and we compare them to the NNLO+PS results
 in the 5FS. We start by considering predictions of integrated cross sections in \tab{tab:NNLO4FS_xs}. Apart from the fully inclusive cross section, we consider rates with identified $b$-jets, including a $b$-jet veto, the inclusive one- and two-$b$-jet rates. We define $b$-jets following the 
 standard experimental definition, namely as anti-$k_T$ jets that 
 contain at least one bottom quark/$B$ hadron. 
