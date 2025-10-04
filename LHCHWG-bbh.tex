@@ -713,12 +713,12 @@ A subtlety related to the slicing of the phase space in \GENEVA{} is
 that, since the scales appearing in the resummed cumulant and spectrum
 are a function of the resolution variable $r_0$, the operations of
 setting the scales and integrating the spectrum do not commute. This
-leaves us with two main options. Setting the scales in the spectrum
+leaves us with two main options. Setting the scales in the spectrum (\texttt{spectrum} option)
 provides the best theoretical description of the $r_0$ distribution in
 the region of small $r_0$ at the price of introducing spurious
 subleading contributions in the distributions inclusive over the
 radiation. Setting the scales in the cumulant and defining the
-spectrum as its derivative, on the other hand, enforces the generated
+spectrum as its derivative (\texttt{cumulant} option), on the other hand, enforces the generated
 events to reproduce the exact NNLO inclusive distributions by
 construction. The numerical difference between the two choices is discussed in the following section, specifically in \fig{fig:genevaptH}.
 
@@ -752,7 +752,6 @@ the input to the hard scale, while the \GENEVA{} generator employs a three-loop 
 To account for resummation scale uncertainties, the \minnlo{} results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalisation and factorisation scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed towards large transverse momenta using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2019whf}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well within the \minnlo{} scale uncertainties.
 
 The \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables with NNLO QCD predictions. Moreover, it applies default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
-
 
 
 \begin{figure}[t!]
@@ -1038,10 +1037,9 @@ Next, we compare differential distributions in 4FS and 5FS at NLO+PS and NNLO+PS
 We show the Higgs transverse momentum distribution in \fig{fig:4fsA}. The left plot shows the NLO+PS predictions and the right plot the NNLO+PS ones. 
 At NLO+PS, the 4FS and 5FS predictions differ significantly at low $p_{T,H}$, featuring an entirely different shape. 
 At NNLO+PS, this discrepancy is significantly reduced: \minnlo{} matching brings the two predictions into much better 
-agreement across the full $p_{T,H}$ range. Disregarding the 10\% difference in the normalization that was already observed for 
-the total inclusive cross section, the shape of the two distributions is almost identical, with the exception of the first bin,
-where the 5FS provides an invalid description, as discussed before.
-In particular, in the hard region with $p_{T,H} \gtrsim 75$~GeV, the 4FS and 5FS predictions are fully consistent within uncertainties.
+agreement across the full $p_{T,H}$ range. Disregarding the 10\% difference in the normalisation that was already observed for 
+the total inclusive cross section, the shape of the two distributions is very similar, with the exception of the first bin,
+where the 5FS provides an invalid description, as discussed before. To be more precise, we observe a slightly non-flat behaviour below 70 GeV, which is well improved compared to the NLO result, while in the high-energy region ($p_{T,H} \gtrsim 70$ GeV) the distribution is flat, and the 4FS and 5FS predictions are fully consistent within uncertainties.
 
 \begin{figure}[t!]
 \begin{center}
@@ -1065,7 +1063,7 @@ As a result, the 4FS provides a more reliable and accurate prediction, especiall
 
 \section{Modelling of the \boldmath{$b\bar bH$} background in \boldmath{$HH$} searches}\label{sec:HH}
 
-\subsection{Comparison of 4FS predictions for $y_b^2$ and $y_t^2$ contributions}
+\subsection{Comparison of predictions for $y_b^2$ and $y_t^2$ contributions in $pp\rightarrow b\bar b H$}
 In this section, we study \bbH{} production as a background to di-Higgs searches at the LHC. To this end, we 
 consider Monte-Carlo predictions in the 4FS for both the $y_b^2$ and  $y_t^2$ contributions to the \bbH{} cross section
 with fiducial cuts relevant to select a $HH$ signal at the LHC~\cite{HDBS-2021-18,CMS-HIG-22-001}.\footnote{The $y_t y_b$ interference contribution is 
