@@ -244,7 +244,7 @@ two production mechanisms are of order $y_t\,y_b$, but they are bottom-mass supp
     \includegraphics[height=2cm]{./diags/qq-bbH.pdf}\hspace*{2cm}
     \includegraphics[height=2cm]{./diags/bb-H.pdf}
 	\vspace{0.2cm}
-  \caption{Typical LO Feynman diagrams contributing to $\bbH$ production in the four-flavour scheme (left, centre) and the five-flavour scheme (right). Incoming particles are shown on the left, and final asymptotic states on the right. The Higgs boson is emitted from bottom quarks through the Yukawa coupling $y_b$.}
+  \caption{Typical LO Feynman diagrams contributing to $\bbH$ production in the four-flavour scheme (left, centre) and the five-flavour scheme (right). Incoming particles are shown on the left, and final asymptotic states on the right. In particular, the last diagram represents the LO contribution to the inclusive Higgs-boson production through initial-state bottom-quark fusion mediated by the Yukawa coupling $y_b$. In the five-flavour scheme, this prediction relies on heavy-quark collinear factorisation: the bottom quark is generated through the PDF evolution, and the description is inclusive with respect to the final state-bottom quark radiation.}
   \label{fig:bbhlo}
 \end{center}
 \end{figure}
@@ -751,7 +751,11 @@ The \minnlo{} predictions follow the setup in \sct{sec:setup} using a four-loop 
 \cite{harlander:2002wh,baikov_2014} to evolve the bottom Yukawa from 
 the input to the hard scale, while the \GENEVA{} generator employs a three-loop running throughout derived from SCET. This difference is numerically very small and can be safely neglected in the following comparison. Both the MC generators produce events that are showered using~\PYTHIA{8}~\cite{Bierlich:2022pfr} with a local recoil.
 
-The \minnlo{} generator includes an option to change the scale in the resummed logarithmic terms from the scale $m_X$ by a factor of $\KQ$, where $m_X$ denotes the invariant mass of the final state of the Born process (for $\bbtoH$, this corresponds to the Higgs-boson mass). This scale $Q = \KQ m_X$ controls the matching of resummed and fixed-order contributions within \minnlo{}.\footnote{See section 4.2 of~\citere{mazzitelli:2021mmm} for further details.}. It can be applied to assess the matching uncertainties in the \minnlo{} generator. The $\bbtoH$ results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalization and factorization scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed towards large transverse momenta using modified logarithms with $p=6$, as originally introduced in~\citere{Monni:2019whf}. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well within the \minnlo{} scale uncertainties.
+The \minnlo{} generator includes an option to change the scale in the resummed logarithmic terms from the scale $m_X$ by a factor of $\KQ$, where $m_X$ denotes the invariant mass of the final state of the Born process (for $\bbtoH$, this corresponds to the Higgs-boson mass). This scale $Q = \KQ m_X$ controls the matching of resummed and fixed-order contributions within \minnlo{}\footnote{See section 4.2 of~\citere{mazzitelli:2021mmm} for further details.}. It can be applied to assess the matching uncertainties in the \minnlo{} generator. The $\bbtoH$ results are obtained using the default central value of $\KQ = 0.25$, with the alternative choice $\KQ = 0.5$ included in the uncertainty estimate. The overall theoretical uncertainty is assessed via a 14-point scale variation, combining standard renormalization and factorization scale variations with the additional resummation scale variation. In the matching region, the logarithmic contributions are smoothly suppressed towards large transverse momenta using modified logarithms,
+\begin{align}
+	\ln \frac{Q}{\pt} \rightarrow \frac{1}{p} \ln\left(1+\left(\frac{Q}{\pt}\right)^p\right),
+\end{align}
+as originally introduced in~\citere{Monni:2019whf}. The free positive parameter $p$ is set to the default value, $p=6$. We have tested alternative parameters for the modified logarithms and found only minor effects, which are well within the \minnlo{} scale uncertainties.
 
 The \GENEVA{} generator uses the cumulant scale choices in order to have a better agreement of inclusive observables with NNLO QCD predictions. Moreover, it applies default theoretical-uncertainty estimation with the included matching uncertainty as discussed in~\citere{Gavardi:2025zpf}.
 
@@ -948,7 +952,7 @@ virtual corrections in the small-$m_b$ limit. The massless full-colour two-loop 
 terms, are taken from~\citere{Badger:2024mir}. Different from the studies in \citere{Biello:2024pgo}, which relied on 
 the leading-colour approximation~\cite{badger:2021ega}, here we perform a phenomenological analysis using events 
 generated with the full-colour library of~\citere{Badger:2024mir} for the two-loop constant terms in the massification. 
-The NNLO calculation is thus complete in full colour, up to power-suppressed in the bottom-quark mass, which are neglected
+The NNLO calculation is thus complete in full colour, up to power-suppressed terms in the bottom-quark mass, which are neglected
 only in the two-loop amplitude.
 
 \subsubsection{Results and flavour-scheme comparison}
