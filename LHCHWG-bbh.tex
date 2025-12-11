@@ -216,9 +216,16 @@
 
 
 \abstract{
-We present new state-of-the-art predictions for Standard Model Higgs boson production in association with a bottom-quark pair (\bbH{}). Updated cross sections are computed in accordance with the recommendations of the LHC Higgs Working Group, including the use of the PDF4LHC21 set of parton distribution functions, with a center-of-mass energy of 13.6 TeV. For the total inclusive cross section, we provide matched predictions of the massless five-flavour scheme (5FS) and the massive four-flavour scheme (4FS) at the fixed-order level. We further present recently obtained simulations matched with parton showers in both flavour schemes within the SM, and also discuss them in the context of
-potential BSM scenarios. In the massless scheme, we compare different NNLO+PS predictions obtained through the \minnlo{} and \GENEVA{} generators. 
-In addition, the role of 4FS predictions is studied as a background to $HH$ searches, considering both the top-quark and bottom-quark Yukawa contributions to $b\bar bH$ production. Finally, we analyse the sensitivity of the Higgs transverse momentum spectrum to light-quark Yukawa couplings
+We present new state-of-the-art predictions for Standard Model Higgs
+boson production in association with a bottom-quark pair
+(\bbH{}). Updated cross sections are computed in accordance with the
+recommendations of the LHC Higgs Working Group, including the use of
+the PDF4LHC21 set of parton distribution functions, with a
+center-of-mass energy of 13.6 TeV. For the total inclusive cross
+section, we provide matched predictions of the massless Five-Flavour
+Scheme and the massive Four-Flavour Scheme at the fixed-order level. We further present recently obtained simulations matched with parton showers in both flavour schemes within the SM, and also discuss them in the context of
+potential Beyond the Standard Model scenarios. In the massless scheme, we compare different NNLO+PS predictions obtained through the \minnlo{} and \GENEVA{} generators. 
+In addition, the role of Four-Flavour Scheme predictions is studied as a background to $HH$ searches, considering both the top-quark and bottom-quark Yukawa contributions to $b\bar bH$ production. Finally, we analyse the sensitivity of the Higgs transverse momentum spectrum to light-quark Yukawa couplings
 in the diphoton decay channel based on \minnlo{} simulations.
 }
 
@@ -269,7 +276,8 @@ We can thus write the \bbH{} production cross section as follows:
 where $\Delta_{X}^{(0)}$ is the LO contribution to each coupling structure. The first term corresponds to Higgs radiation off bottom quarks, the last term
 to the loop-induced gluon fusion process, and the central one is their interference. Higher-order corrections, indicated generically
 by the $\mathcal O(\alpha_s)$ (and higher) corrections, 
-are typically computed separately for each process, with the caveat that at higher orders in QCD the two processes mix, giving rise 
+are typically computed separately for each process, with the caveat
+that at higher orders in Quantum Chromodynamics (QCD) the two processes mix, giving rise 
 to their $y_t y_b$ interference contributions. Notice that the loop-induced gluon fusion contribution is formally a NNLO (relative $\alpha_s^2$) correction
 due to the loop suppression, which however is fully compensated by its $y_t^2/y_b^2$ enhancement compared to the LO $y_b^2$ cross section.
 As a result, the cross section of the $y_t^2$ contribution is roughly twice as large as the $y_b^2$ one.
@@ -282,15 +290,21 @@ terms are negligible.
 For fully inclusive Higgs boson production, the radiation off bottom quarks is about two orders of magnitude smaller than the dominant gluon-fusion cross section and ranks at the same size as Higgs production in association with top quarks ($\ttH{}$) production. Higgs boson production in association with bottom quarks yields therefore a subleading, but yet relevant 
 contribution to the inclusive Higgs cross section, especially in the precision age of the LHC. However, when $b$-tagging is applied in experimental analyses, the $\bbH{}$ signal yield drops substantially, as the $b$-jets in this process are typically softer and more forward than those in $\ttH{}$ production. In addition, $\ttH{}$ events feature a more distinctive event topology with electroweak signatures, which allows for more effective background suppression. As a result of the small signal yield and involved experimental signature,
 the measurement of the \bbH{} process in the 
-SM has not been achieved yet at the LHC.\footnote{Although no evidence for an observation of $\bbH{}$ production has been reported so far, dedicated searches have been performed; see, for example,~\citere{CMS:2024goa}.} In the MSSM or the 2HDM of type II, on the other hand, the bottom Yukawa coupling is strongly enhanced for large values of $\tan\beta = v_2/v_1$, where $v_{1,2}$ denote the vacuum expectation values of the neutral components of the two Higgs doublets, so that this production becomes the
+SM has not been achieved yet at the LHC.\footnote{Although no evidence
+for an observation of $\bbH{}$ production has been reported so far,
+dedicated searches have been performed; see, for
+example,~\citere{CMS:2024goa}.} In the MSSM or the Two-Higgs-Doublet
+Model (2HDM) of type II, on the other hand, the bottom Yukawa coupling is strongly enhanced for large values of $\tan\beta = v_2/v_1$, where $v_{1,2}$ denote the vacuum expectation values of the neutral components of the two Higgs doublets, so that this production becomes the
 dominant one, i.e.\ even larger than the gluon-fusion mechanism. In addition, \bbH{} production is a major background to di-Higgs searches, where at least 
 one of the two Higgs bosons decays to bottom quarks.
 
-The calculation of the $b\bar bH$ cross section can be performed in two different schemes. In the four-flavour scheme (4FS), the bottom quarks are massive and thus no bottom PDFs are taken into account so that the bottom quarks are entirely generated in the final state starting from light quark-antiquark and gluon-gluon initial states at LO, see \fig{fig:bbhlo}\,(left, center). The calculation requires 4FS PDFs and a 4FS strong coupling $\alpha_s$ in order to avoid artificially large logarithms at higher orders. The 4FS calculation has been performed at NLO QCD some time ago \cite{dittmaier:2003ej,dawson:2003kb}, while NNLO QCD results became available only very recently \cite{Biello:2024pgo}.
+The calculation of the $b\bar bH$ cross section can be performed in two different schemes. In the Four-Flavour Scheme (4FS), the bottom quarks are massive and thus no bottom Parton Distribution
+    Functions (PDFs) are taken into account so that the bottom quarks are entirely generated in the final state starting from light quark-antiquark and gluon-gluon initial states at LO, see \fig{fig:bbhlo}\,(left, center). The calculation requires 4FS PDFs and a 4FS strong coupling $\alpha_s$ in order to avoid artificially large logarithms at higher orders. The 4FS calculation has been performed at NLO QCD some time ago \cite{dittmaier:2003ej,dawson:2003kb}, while NNLO QCD results became available only very recently \cite{Biello:2024pgo}.
 
 In the 4FS, the integration over the transverse momenta of the final-state bottom quarks, however, generates logarithmic contributions in the 
 bottom-quark mass that might reduce the perturbative convergence. In order to resum these logarithms, bottom-quark densities need to be introduced by
-treating the bottom quark as a massless particle. The DGLAP evolution of the PDFs leads to the resummation. This framework defines the five-flavour scheme (5FS) and starts from a $b\bar b$ initial state at LO, see \fig{fig:bbhlo}\,(right), which neglects the off-shellness and transverse momenta of the initial-state bottom quarks
+treating the bottom quark as a massless particle. The
+Dokshitzer-Gribov-Lipatov-Altarelli-Parisi (DGLAP) evolution of the PDFs leads to the resummation. This framework defines the Five-Flavour Scheme (5FS) and starts from a $b\bar b$ initial state at LO, see \fig{fig:bbhlo}\,(right), which neglects the off-shellness and transverse momenta of the initial-state bottom quarks
 as well as all power corrections in the bottom-quark mass. The first two approximations are resolved by adding higher-order QCD corrections that, order by order, restore the full kinematics of the bottom quarks. However, finite bottom-mass effects cannot be studied in the 5FS, but they can be included
 through a combination with the 4FS calculation. The NLO QCD cross section in the 5FS has been obtained some time 
 ago \cite{dicus:1998hs,balazs:1998bm}. The NNLO QCD corrections \cite{harlander_2003} can range up to several 10\% (depending on the scale settings)
@@ -322,7 +336,7 @@ has later been extended in \citere{manzoni:2023qaf} to include the parton-shower
 \bbH{} production as a background to di-Higgs searches. 
 The $y_t\,y_b$ interference amounts to about 10\% \cite{dittmaier:2003ej,dawson:2003kb} compared to the inclusive $y_b^2$ cross section, while the $y_t^2$ contribution is roughly twice as large as the $y_b^2$ one \cite{deutschmann:2018avk}.
 This reduces the sensitivity of the $b\bar bH$ process to the bottom Yukawa coupling substantially in the SM.
-For heavy Higgs bosons in BSM scenarios with an enhanced bottom-Yukawa coupling, however, the radiation off bottom quarks is the dominant contribution,
+For heavy Higgs bosons in Beyond the Standard Model (BSM) scenarios with an enhanced bottom-Yukawa coupling, however, the radiation off bottom quarks is the dominant contribution,
 while all top-quark Yukawa induced ones become subleading.
 
 
@@ -431,7 +445,7 @@ $125.20$ & $566.3$ & $\pm8.63$ & ${{+3.35}}/{-3.44}$ \\\hline
 \end{tabular}%
 \end{small}%
 \end{center}%
-\caption{Total \bbH{} cross sections in the SM for a LHC CM energy of $\sqrt{s}=13.6$ TeV obtained via linear interpolation of results from 13 TeV and 14 TeV. The results are given with symmetrised uncertainties from the 7-point scale variation combined with the resummation dependency and the parametric uncertainty from PDFs and strong coupling.}
+\caption{Total \bbH{} cross sections in the SM for a LHC center-of-mass energy of $\sqrt{s}=13.6$ TeV obtained via linear interpolation of results from 13 TeV and 14 TeV. The results are given with symmetrised uncertainties from the 7-point scale variation combined with the resummation dependency and the parametric uncertainty from PDFs and strong coupling.}
 \label{tab:bbH136lin}
 \end{table}
 
@@ -449,7 +463,7 @@ $125.20$ & $565.3$ & $\pm8.64$ & ${{+3.35}}/{-3.45}$ \\\hline
 \end{tabular}%
 \end{small}%
 \end{center}%
-\caption{Total \bbH{} cross sections in the SM for a LHC CM energy of $\sqrt{s}=13.6$ TeV obtained via logarithmic interpolation of results from 13 TeV and 14 TeV.}
+\caption{Total \bbH{} cross sections in the SM for a LHC center-of-mass energy of $\sqrt{s}=13.6$ TeV obtained via logarithmic interpolation of results from 13 TeV and 14 TeV.}
 \label{tab:bbH136log}
 \end{table}
 
@@ -465,7 +479,7 @@ $125.09$ & $566.4$ & $\pm8.92$ & ${{+3.43}}/{-3.51}$ \\\hline
 \end{tabular}%
 \end{small}%
 \end{center}%
-\caption{Total \bbH{} cross sections in the SM for a LHC CM energy of $\sqrt{s}=13.6$ TeV obtained via linear interpolation of results from 13.5 TeV and 14 TeV.}
+\caption{Total \bbH{} cross sections in the SM for a LHC center-of-mass energy of $\sqrt{s}=13.6$ TeV obtained via linear interpolation of results from 13.5 TeV and 14 TeV.}
 \label{tab:bbH136linalt}
 \end{table}
 
@@ -473,7 +487,7 @@ In~\tab{tab:bbH136lin}, we report the results of the \nlonnllpart{} combination 
 \begin{align}
 \sigma(13.6\,\text{TeV})=0.4\sigma(13.0\,\text{TeV})+0.6\sigma(14.0\,\text{TeV})\,.
 \end{align}
-The cross section is provided together with an overall theoretical uncertainty. This includes the standard 7-point renormalization and factorization scale variation, the resummation scale uncertainty, and the uncertainties associated with the parton distribution functions (PDFs) and the strong coupling. An alternative cross section estimation is presented in~\tab{tab:bbH136log} where the same numbers have been combined using a logarithmic interpolation. In order to test the accuracy of the interpolation, we have also considered linear interpolation of 13.5 TeV and 14 TeV results. Using the latter, we have estimated the cross section in~\tab{tab:bbH136linalt} with the following linear interpolation,
+The cross section is provided together with an overall theoretical uncertainty. This includes the standard 7-point renormalization and factorization scale variation, the resummation scale uncertainty, and the uncertainties associated with the PDFs and the strong coupling. An alternative cross section estimation is presented in~\tab{tab:bbH136log} where the same numbers have been combined using a logarithmic interpolation. In order to test the accuracy of the interpolation, we have also considered linear interpolation of 13.5 TeV and 14 TeV results. Using the latter, we have estimated the cross section in~\tab{tab:bbH136linalt} with the following linear interpolation,
 \begin{align}
 	\sigma(13.6\,\text{TeV})=0.8\sigma(13.5\,\text{TeV})+0.2\sigma(14.0\,\text{TeV})\,.
 \end{align}
@@ -486,7 +500,14 @@ In particular, one can exploit the pattern of QCD emissions from the incoming qu
 That is, the radiation pattern for different initial states yields different shapes for the transverse momentum ($q_T$) spectrum of the recoiling Higgs boson. As a result, a precise measurement of the Higgs $q_T$ spectrum, especially at small $q_T$, allows one to gain sensitivity to the quark Yukawa couplings~\cite{Bishara:2016jga, Soreq:2016rae}.
 At small $q_T \ll m_H$, this requires the all-order resummation of logarithms of $q_T/m_H$ that would otherwise spoil the convergence of perturbation theory in this regime.
 
-In this section, we provide recent results for the resummed $q_T$ spectrum for $b\bar{b}\to H$ at N$^3$LL$^{\prime}$ order matched to fixed NNLO and approximate N$^3$LO in the 5FS \cite{Cal:2023mib}.\footnote{Here, we use the logarithmic counting of~\citere{Berger:2010xi}, where the prime denotes inclusion of higher order boundary terms.} Previously, the spectrum was calculated to NNLL+NNLO accuracy~\cite{Harlander:2014hya} using the CSS formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use soft-collinear effective theory (SCET)
+In this section, we provide recent results for the resummed $q_T$
+spectrum for $b\bar{b}\to H$ at N$^3$LL$^{\prime}$ order matched to
+fixed NNLO and approximate N$^3$LO in the 5FS
+\cite{Cal:2023mib}.\footnote{Here, we use the logarithmic counting
+of~\citere{Berger:2010xi}, where the prime denotes inclusion of higher
+order boundary terms.} Previously, the spectrum was calculated to
+NNLL+NNLO accuracy~\cite{Harlander:2014hya} using the
+Collins-Soper-Sterman (CSS) formalism~\cite{Collins:1981uk,Collins:1981va, Collins:1984kg}. For this prediction, we use Soft-Collinear Effective Theory (SCET)
 \cite{Bauer:2000yr,Bauer:2001ct,Bauer:2001yt,Bauer:2002nz,Beneke:2002ph} to resum the logarithms of $q_T/m_H$ which is equivalent to a modern formulation of the CSS formalism.
 We employ the rapidity
 renormalization group~\cite{Chiu:2012ir} together with the
@@ -844,7 +865,7 @@ rapidities.
 
 \subsubsection{Heavy-Higgs for BSM studies in \minnlo{}}
 
-Higgs boson production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In many models, \bbH{} production can become the dominant production mode of exotic Higgs states. The \minnlo{} generator, introduced earlier in this section, is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Fayet:1974pd,Fayet:1976et,Fayet:1977yc,Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II Two-Higgs-Doublet Model (2HDM)~\cite{Branco:2011iw} at leading order, but deviates from it at higher corrections. The MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
+Higgs boson production in association with a bottom-quark pair is of particular interest in extensions beyond the Standard Model. Indeed, many BSM scenarios predict modifications to the Higgs-bottom quark coupling, which could lead to observable deviations in the production rates and kinematic distributions of the \bbH{} process. In many models, \bbH{} production can become the dominant production mode of exotic Higgs states. The \minnlo{} generator, introduced earlier in this section, is built within the Standard Model framework, but can be easily extended to accommodate BSM predictions. To illustrate its potential, we consider a specific example of how the NNLO+PS generator can be adapted for BSM scenarios. We specifically consider the Minimal Supersymmetric Standard Model (MSSM)~\cite{Fayet:1974pd,Fayet:1976et,Fayet:1977yc,Ovrut:1984uc,Haber:1984rc,Gunion:1984yn}, which corresponds to a Type-II 2HDM~\cite{Branco:2011iw} at leading order, but deviates from it at higher corrections. The MSSM enforces relations between the Higgs sector and the superpartners of SM particles. Unlike the SM, the MSSM requires two Higgs doublets ($H_u$ and $H_d$) to give mass to both up-type and down-type fermions. An important parameter of the model is the ratio of vacuum expectation values ($v_u$ and $v_d$) of the two SU(2) doublets,
 \begin{align}
 	\tan\beta=\frac{v_u}{v_d}\,.
 \end{align}
@@ -1340,7 +1361,14 @@ comparable size.
 
 A value of $ \bar\kappa_q = 1 $ corresponds to a Yukawa coupling for quark $ q $ equal in strength to that of the bottom quark. Thus, the normalised couplings take the following values in the SM:  
 $ \bar \kappa_b = 1 $, $ \bar \kappa_c \simeq 2.3 \cdot 10^{-1} $, $ \bar \kappa_s \simeq 1.9 \cdot 10^{-2} $, $ \bar \kappa_d \simeq 2.7 \cdot 10^{-3} $, $ \bar \kappa_u \simeq 4.4 \cdot 10^{-4} $.
-The numerical values are obtained by using the PDG values of the quark masses in the $\overline{\text{MS}}$ scheme~\cite{ParticleDataGroup:2024cfk} as boundary conditions and evolving them to the hard scale $m_H$ using four-loop running. The High-Luminosity LHC prospects~\cite{Cepeda:2019klc} show that the light-quark Yukawa coupling can be constrained to $|\bar \kappa_c|\leq 3.34$, $|\bar \kappa_d|\leq 0.39$, $|\bar \kappa_u|\leq 0.33$ at 95\% CL when using kinematical distributions, in particular the transverse momentum spectrum. In~\citere{Cepeda:2019klc} other methods for constraining light quark Yukawa couplings, such as exclusive decays, have been discussed, leading to an global expectation of $|\bar \kappa_c|\leq 0.52$, $|\bar \kappa_s|\leq 0.31$, $|\bar \kappa_d|\leq 0.34$, $|\bar \kappa_u|\leq 0.33$.
+The numerical values are obtained by using the Particle Data Group (PDG) values of the quark
+masses in the $\overline{\text{MS}}$
+scheme~\cite{ParticleDataGroup:2024cfk} as boundary conditions and
+evolving them to the hard scale $m_H$ using four-loop running. The
+High-Luminosity LHC prospects~\cite{Cepeda:2019klc} show that the
+light-quark Yukawa coupling can be constrained to $|\bar \kappa_c|\leq
+3.34$, $|\bar \kappa_d|\leq 0.39$, $|\bar \kappa_u|\leq 0.33$ at 95\%
+Confidence Level when using kinematical distributions, in particular the transverse momentum spectrum. In~\citere{Cepeda:2019klc} other methods for constraining light quark Yukawa couplings, such as exclusive decays, have been discussed, leading to an global expectation of $|\bar \kappa_c|\leq 0.52$, $|\bar \kappa_s|\leq 0.31$, $|\bar \kappa_d|\leq 0.34$, $|\bar \kappa_u|\leq 0.33$.
 
 We present results for Higgs boson production induced by light-quark Yukawa interactions
 based on two different calculations:
